@@ -10,26 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Novus_Daedalus
 {
     /// <summary>
-    /// Logica di interazione per MainWindow.xaml
+    /// Logica di interazione per MetroIndex.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MetroIndex : Window
     {
-        public MainWindow()
+        public MetroIndex()
         {
             InitializeComponent();
         }
 
-        private void LoginClick(object sender, RoutedEventArgs e)
+        private void ChiudiButton(object sender, RoutedEventArgs e)
         {
-            // View Expense Report
-            MetroIndex metroIndex = new MetroIndex();
-            metroIndex.Show();
+            this.Close();
         }
     }
 }
