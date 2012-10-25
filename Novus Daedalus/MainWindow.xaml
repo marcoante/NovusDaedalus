@@ -1,0 +1,14 @@
+﻿<Window x:Class="Novus_Daedalus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Novus Daedalus - Login" Height="534" WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\AndSpa\Documents\Visual Studio 2012\Projects\Novus Daedalus\Novus Daedalus\pantherblueWallpaper.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="411*"/>
+        </Grid.ColumnDefinitions>
+
+    </Grid>
+</Window>
