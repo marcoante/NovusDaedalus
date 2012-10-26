@@ -10,23 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Novus_Daedalus
+namespace Novus_Daedalus.View
 {
     /// <summary>
-    /// Logica di interazione per MetroIndex.xaml
+    /// Logica di interazione per Officina.xaml
     /// </summary>
-    public partial class MetroIndex : Window
+    public partial class Officina : Page
     {
-        public MetroIndex()
+        private Controller.Officina Officina_Controller;
+        public Officina()
         {
             InitializeComponent();
+            Officina_Controller = new Controller.Officina();
+
         }
 
-        private void ChiudiButton(object sender, RoutedEventArgs e)
+        private void Chiudi_Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Officina_Controller.chiudi(NavigationService);
         }
     }
 }

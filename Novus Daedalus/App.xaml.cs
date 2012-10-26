@@ -13,5 +13,11 @@ namespace Novus_Daedalus
     /// </summary>
     public partial class App : Application
     {
+        void App_Startup(object sender, StartupEventArgs e)
+        {
+            this.Properties["db_connection"] = new Model.novus_daedalus_dbEntities();
+            this.Properties["User"] = null;
+            this.Properties["Scheda"] = null;
+        }
     }
 }
