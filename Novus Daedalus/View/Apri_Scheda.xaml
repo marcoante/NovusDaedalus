@@ -7,6 +7,12 @@
         <CollectionViewSource x:Key="schedaViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:scheda}, CreateList=True}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource schedaViewSource}" Margin="0,0,2,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF1B39F7" Offset="0.363"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <DataGrid x:Name="schedaDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="87,10,0,60" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" HorizontalAlignment="Left" Width="106">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
