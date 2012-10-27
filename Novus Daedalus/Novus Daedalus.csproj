@@ -156,6 +156,9 @@
     <Compile Include="View\DaedalusMainPage.xaml.cs">
       <DependentUpon>DaedalusMainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Magazzino.xaml.cs">
+      <DependentUpon>Magazzino.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
     </Compile>
@@ -183,6 +186,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DaedalusMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Magazzino.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

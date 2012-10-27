@@ -29,6 +29,10 @@ namespace Novus_Daedalus.View
         private void MainPageLoaded(object sender, RoutedEventArgs e)
         {
             Benvenuto_label.Content = "Benvenuto " + ((Model.utente)Application.Current.Properties["User"]).persona.Nome;
+            if (Application.Current.Properties["Scheda"] != null)
+                Scheda_Label.Content = "scheda numero: ";
+            else
+                Scheda_Label.Content = "nessuna scheda selezionata";
         }
 
         private void PersoneButtonClick(object sender, RoutedEventArgs e)
@@ -73,12 +77,17 @@ namespace Novus_Daedalus.View
 
         private void MagazzinoButtonClick(object sender, RoutedEventArgs e)
         {
-            if (Application.Current.Properties["Scheda"] == null)
+            /*if (Application.Current.Properties["Scheda"] == null)
             {
                 MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
                     "oppure il pulsante \"Nuova iscrizione\"");
                 return;
             }
+            else
+            {
+                NavigationService.Navigate(new View.Magazzino());
+            }*/
+            NavigationService.Navigate(new View.Magazzino());
         }
 
         private void ApriSchedaButtonClick(object sender, RoutedEventArgs e)

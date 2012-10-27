@@ -1,0 +1,26 @@
+﻿<Page x:Class="Novus_Daedalus.View.Magazzino"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="555.605" d:DesignWidth="1137.377"
+	Title="Magazzino">
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FFC307A1" Offset="0.587"/>
+        </LinearGradientBrush>
+    </Page.Background>
+
+    <Grid x:Name="Modifica_Button">
+        <Button x:Name="Chiudi_Magazzino_Button" Content="Chiudi magazzino" HorizontalAlignment="Left" Margin="1024,524,0,0" VerticalAlignment="Top" Width="103" Click="Chiudi_Magazzino_Button_Click" Cursor="Hand"/>
+        <Label x:Name="Dati_di_Gestione_Label" Content="Dati di gestione" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="Esame_Imputazioni_Button" Content="Esame imputazioni" HorizontalAlignment="Left" Margin="1005,58,0,0" VerticalAlignment="Top" Height="31" Width="122" Foreground="White" Background="#FFD80F0F" Cursor="Hand"/>
+        <Button Content="Modifica" HorizontalAlignment="Left" Margin="1005,94,0,0" VerticalAlignment="Top" Width="122" Height="31" Foreground="White" Background="#FFF7D603" Cursor="Hand"/>
+        <Button x:Name="ristruttura_Button" Content="Ristruttura magazzino" HorizontalAlignment="Left" Margin="1005,130,0,0" VerticalAlignment="Top" Height="31" Foreground="White" Background="#FF15E845" Cursor="Hand"/>
+        <Button x:Name="Controllo_Recidiva_Button" Content="Controllo recidiva" HorizontalAlignment="Left" Margin="1005,166,0,0" VerticalAlignment="Top" Width="122" Height="31" Foreground="White" Background="#FF4FEEDF" Cursor="Hand"/>
+        <Label x:Name="Capi_di_Imputazione_Label" Content="Capi di imputazione" HorizontalAlignment="Left" Margin="10,413,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+    </Grid>
+</Page>
