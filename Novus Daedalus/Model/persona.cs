@@ -16,7 +16,10 @@ namespace Novus_Daedalus.Model
     {
         public persona()
         {
-            this.utenti = new HashSet<utenti>();
+            this.utente = new HashSet<utente>();
+            this.atto = new HashSet<atto>();
+            this.cosa = new HashSet<cosa>();
+            this.reato = new HashSet<reato>();
             this.scheda = new HashSet<scheda>();
         }
     
@@ -35,10 +38,13 @@ namespace Novus_Daedalus.Model
         public virtual difensore difensore { get; set; }
         public virtual gip gip { get; set; }
         public virtual indagato indagato { get; set; }
-        public virtual ICollection<utenti> utenti { get; set; }
         public virtual persona_informata persona_informata { get; set; }
         public virtual persona_offesa persona_offesa { get; set; }
-        public virtual ICollection<scheda> scheda { get; set; }
         public virtual pm pm { get; set; }
+        public virtual ICollection<utente> utente { get; set; }
+        public virtual ICollection<atto> atto { get; set; }
+        public virtual ICollection<cosa> cosa { get; set; }
+        public virtual ICollection<reato> reato { get; set; }
+        public virtual ICollection<scheda> scheda { get; set; }
     }
 }

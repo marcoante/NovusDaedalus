@@ -17,33 +17,29 @@ namespace Novus_Daedalus.View
     /// <summary>
     /// Logica di interazione per Apri_Scheda.xaml
     /// </summary>
-    public partial class Apri_Scheda : Window
+    public partial class ApriScheda : Window
     {
-        private Controller.Scheda scheda_controller;
-
-        public Apri_Scheda()
+        public ApriScheda()
         {
             InitializeComponent();
-            scheda_controller = new Controller.Scheda();
         }
 
-        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        private void ApriSchedaLoaded(object sender, RoutedEventArgs e)
         {
 
             System.Windows.Data.CollectionViewSource schedaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("schedaViewSource")));
             // Caricare i dati impostando la proprietà CollectionViewSource.Source:
             // schedaViewSource.Source = [origine dati generica]
-            schedaViewSource.Source = scheda_controller.binding_source;
+            schedaViewSource.Source = ((Model.novus_daedalus_dbEntities)Application.Current.Properties["db_connection"]).scheda.ToList();
         }
 
-        private void Annulla_Button_Click(object sender, RoutedEventArgs e)
+        private void AnnullaButtonClick(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
-        private void Apri_Button_Click(object sender, RoutedEventArgs e)
+        private void ApriButtonClick(object sender, RoutedEventArgs e)
         {
-            scheda_controller.Apri();
         }
     }
 }

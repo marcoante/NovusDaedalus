@@ -42,6 +42,6 @@ namespace Novus_Daedalus.Model
         public DbSet<polizia_giudiziaria> polizia_giudiziaria { get; set; }
         public DbSet<reato> reato { get; set; }
         public DbSet<scheda> scheda { get; set; }
-        public DbSet<utenti> utenti { get; set; }
+        public DbSet<utente> utente { get; set; }
     }
 }

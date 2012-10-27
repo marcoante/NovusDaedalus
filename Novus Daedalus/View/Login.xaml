@@ -3,14 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:Model="clr-namespace:Novus_Daedalus.Model" x:Class="Novus_Daedalus.Login" 
+      xmlns:Model="clr-namespace:Novus_Daedalus.Model" x:Class="Novus_Daedalus.View.Login" 
       mc:Ignorable="d" 
       d:DesignHeight="350" d:DesignWidth="500"
-	Title="Login" Loaded="Login_Loaded">
-
-    <Page.Resources>
-        <CollectionViewSource x:Key="utentiViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:utenti}, CreateList=True}"/>
-    </Page.Resources>
+	Title="Login">
 
     <Grid>
         <Grid.Background>
@@ -19,12 +15,12 @@
                 <GradientStop Color="#FF5445E8" Offset="0.355"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="222,157,0,0" VerticalAlignment="Top" Width="75" Click="Login_Button_Click"/>
+        <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="222,157,0,0" VerticalAlignment="Top" Width="75" Click="LoginButtonClick"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="154,92,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="157,118,0,0" VerticalAlignment="Top" Foreground="White"/>
         <TextBox x:Name="Username_Textbox" HorizontalAlignment="Left" Height="23" Margin="222,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <PasswordBox x:Name="Password_Textbox" HorizontalAlignment="Left" Margin="222,122,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="Crea_utente_button" Content="Crea utente" HorizontalAlignment="Left" Margin="397,157,0,0" VerticalAlignment="Top" Width="75" Click="Crea_utente_button_Click"/>
+        <Button x:Name="Crea_utente_button" Content="Crea utente" HorizontalAlignment="Left" Margin="397,157,0,0" VerticalAlignment="Top" Width="75" Click="CreaUtenteButtonClick"/>
 
     </Grid>
 </Page>

@@ -14,16 +14,21 @@ namespace Novus_Daedalus.Model
     
     public partial class scheda
     {
-        public int Id { get; set; }
-        public int IdRegistro { get; set; }
-        public string CodiceFiscalePersona { get; set; }
-        public int IdReato { get; set; }
-        public int IdAtto { get; set; }
-        public int IdCosa { get; set; }
+        public scheda()
+        {
+            this.atto = new HashSet<atto>();
+            this.cosa = new HashSet<cosa>();
+            this.reato = new HashSet<reato>();
+            this.persona = new HashSet<persona>();
+        }
     
-        public virtual atto atto { get; set; }
-        public virtual cosa cosa { get; set; }
-        public virtual persona persona { get; set; }
-        public virtual reato reato { get; set; }
+        public int Id { get; set; }
+        public Nullable<int> NumeroRegistro { get; set; }
+        public Nullable<System.DateTime> DataRegistrazione { get; set; }
+    
+        public virtual ICollection<atto> atto { get; set; }
+        public virtual ICollection<cosa> cosa { get; set; }
+        public virtual ICollection<reato> reato { get; set; }
+        public virtual ICollection<persona> persona { get; set; }
     }
 }

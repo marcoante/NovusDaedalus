@@ -20,52 +20,81 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class DaedalusMainPage : Page
     {
-        private Controller.Daedalus_Main_Page Main_Page_Controller;
         public DaedalusMainPage()
         {
             InitializeComponent();
-            this.Benvenuto_label.Content = "benvenuto " + ((Model.utenti) Application.Current.Properties["User"]).persona.Nome;
-            Main_Page_Controller = new Controller.Daedalus_Main_Page();
+
         }
 
-        private void Persone_Button_Click(object sender, RoutedEventArgs e)
+        private void MainPageLoaded(object sender, RoutedEventArgs e)
         {
-            Main_Page_Controller.Apri_Persone();
+            Benvenuto_label.Content = "Benvenuto " + ((Model.utente)Application.Current.Properties["User"]).persona.Nome;
         }
 
-        private void Laboratorio_Button_Click(object sender, RoutedEventArgs e)
+        private void PersoneButtonClick(object sender, RoutedEventArgs e)
         {
-            Main_Page_Controller.Apri_Laboratorio();
+            if (Application.Current.Properties["Scheda"] == null)
+            {
+                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
+                    "oppure il pulsante \"Nuova iscrizione\"");
+                return;
+            }
         }
 
-        private void Seguiti_Button_Click(object sender, RoutedEventArgs e)
+        private void LaboratorioButtonClick(object sender, RoutedEventArgs e)
         {
-            Main_Page_Controller.Apri_Seguiti();
+            if (Application.Current.Properties["Scheda"] == null)
+            {
+                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
+                    "oppure il pulsante \"Nuova iscrizione\"");
+                return;
+            }
         }
 
-        private void Atti_Button_Click(object sender, RoutedEventArgs e)
+        private void SeguitiButtonClick(object sender, RoutedEventArgs e)
         {
-            Main_Page_Controller.Apri_Atti();
+            if (Application.Current.Properties["Scheda"] == null)
+            {
+                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
+                    "oppure il pulsante \"Nuova iscrizione\"");
+                return;
+            }
         }
 
-        private void Magazzino_Button_Click(object sender, RoutedEventArgs e)
+        private void AttiButtonClick(object sender, RoutedEventArgs e)
         {
-            Main_Page_Controller.Apri_Magazzino();
+            if (Application.Current.Properties["Scheda"] == null)
+            {
+                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
+                    "oppure il pulsante \"Nuova iscrizione\"");
+                return;
+            }
         }
 
-        private void Apri_Scheda_Button_Click(object sender, RoutedEventArgs e)
+        private void MagazzinoButtonClick(object sender, RoutedEventArgs e)
         {
-            Main_Page_Controller.Apri_Scheda();
+            if (Application.Current.Properties["Scheda"] == null)
+            {
+                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
+                    "oppure il pulsante \"Nuova iscrizione\"");
+                return;
+            }
         }
 
-        private void Logout_Button_Click(object sender, RoutedEventArgs e)
+        private void ApriSchedaButtonClick(object sender, RoutedEventArgs e)
         {
-            Main_Page_Controller.Logout(NavigationService);
+            new View.ApriScheda().Show();
         }
 
-        private void Officina_Button_Click(object sender, RoutedEventArgs e)
+        private void LogoutButtonClick(object sender, RoutedEventArgs e)
         {
-            Main_Page_Controller.Apri_Officina(NavigationService);
+            Application.Current.Properties["User"] = null;
+            NavigationService.GoBack();
+        }
+
+        private void OfficinaButtonClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new View.Officina());
         }
     }
 }

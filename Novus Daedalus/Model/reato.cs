@@ -17,7 +17,9 @@ namespace Novus_Daedalus.Model
         public reato()
         {
             this.iscrizione = new HashSet<iscrizione>();
-            this.scheda = new HashSet<scheda>();
+            this.persona = new HashSet<persona>();
+            this.atto = new HashSet<atto>();
+            this.cosa = new HashSet<cosa>();
         }
     
         public int Id { get; set; }
@@ -25,8 +27,12 @@ namespace Novus_Daedalus.Model
         public string NomenIuris { get; set; }
         public string Luogo { get; set; }
         public Nullable<System.DateTime> Data { get; set; }
+        public Nullable<int> IdScheda { get; set; }
     
         public virtual ICollection<iscrizione> iscrizione { get; set; }
-        public virtual ICollection<scheda> scheda { get; set; }
+        public virtual scheda scheda { get; set; }
+        public virtual ICollection<persona> persona { get; set; }
+        public virtual ICollection<atto> atto { get; set; }
+        public virtual ICollection<cosa> cosa { get; set; }
     }
 }

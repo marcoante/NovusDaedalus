@@ -20,17 +20,14 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class Officina : Page
     {
-        private Controller.Officina Officina_Controller;
         public Officina()
         {
             InitializeComponent();
-            Officina_Controller = new Controller.Officina();
-
         }
 
-        private void Chiudi_Button_Click(object sender, RoutedEventArgs e)
+        private void ChiudiButtonClick(object sender, RoutedEventArgs e)
         {
-            Officina_Controller.chiudi(NavigationService);
+            NavigationService.GoBack();
         }
     }
 }

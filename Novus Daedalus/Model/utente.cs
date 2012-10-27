@@ -12,11 +12,11 @@ namespace Novus_Daedalus.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class utenti
+    public partial class utente
     {
-        public string username { get; set; }
-        public string password { get; set; }
-        public string CF { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string CodiceFiscaleUtente { get; set; }
     
         public virtual persona persona { get; set; }
     }

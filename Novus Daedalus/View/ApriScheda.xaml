@@ -1,8 +1,8 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.Apri_Scheda"
-        Title="Apri_Scheda" Height="300" Width="285" Loaded="Window_Loaded_1">
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.ApriScheda"
+        Title="Apri_Scheda" Height="300" Width="285" Loaded="ApriSchedaLoaded">
     <Window.Resources>
         <CollectionViewSource x:Key="schedaViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:scheda}, CreateList=True}"/>
     </Window.Resources>
@@ -19,8 +19,8 @@
                 <DataGridTextColumn x:Name="idRegistroColumn" Binding="{Binding IdRegistro}" Header="Id Registro" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="Apri_Button" Content="Apri" HorizontalAlignment="Left" Margin="185,238,0,0" VerticalAlignment="Top" Width="75" Click="Apri_Button_Click"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="75" Click="Annulla_Button_Click"/>
+        <Button x:Name="Apri_Button" Content="Apri" HorizontalAlignment="Left" Margin="185,238,0,0" VerticalAlignment="Top" Width="75" Click="ApriButtonClick"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
 
     </Grid>
 </Window>
