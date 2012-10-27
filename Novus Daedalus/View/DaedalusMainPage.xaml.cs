@@ -20,6 +20,8 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class DaedalusMainPage : Page
     {
+        public string modalità_magazzino = null;
+
         public DaedalusMainPage()
         {
             InitializeComponent();
@@ -47,12 +49,13 @@ namespace Novus_Daedalus.View
 
         private void LaboratorioButtonClick(object sender, RoutedEventArgs e)
         {
-            if (Application.Current.Properties["Scheda"] == null)
+            /*if (Application.Current.Properties["Scheda"] == null)
             {
                 MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
                     "oppure il pulsante \"Nuova iscrizione\"");
                 return;
-            }
+            }*/
+            new View.Laboratorio_Selezione_Modalità(this).Show();
         }
 
         private void SeguitiButtonClick(object sender, RoutedEventArgs e)
@@ -77,7 +80,7 @@ namespace Novus_Daedalus.View
 
         private void MagazzinoButtonClick(object sender, RoutedEventArgs e)
         {
-            /*if (Application.Current.Properties["Scheda"] == null)
+            if (Application.Current.Properties["Scheda"] == null)
             {
                 MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
                     "oppure il pulsante \"Nuova iscrizione\"");
@@ -86,7 +89,7 @@ namespace Novus_Daedalus.View
             else
             {
                 NavigationService.Navigate(new View.Magazzino());
-            }*/
+            }
             NavigationService.Navigate(new View.Magazzino());
         }
 
