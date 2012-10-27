@@ -16,9 +16,9 @@ namespace Novus_Daedalus.Model
     {
         public cosa()
         {
-            this.atto = new HashSet<atto>();
-            this.persona = new HashSet<persona>();
-            this.reato = new HashSet<reato>();
+            this.atto_cosa = new HashSet<atto_cosa>();
+            this.persona_cosa = new HashSet<persona_cosa>();
+            this.reato_cosa = new HashSet<reato_cosa>();
         }
     
         public int Id { get; set; }
@@ -30,9 +30,9 @@ namespace Novus_Daedalus.Model
         public string AttoOrigine { get; set; }
         public Nullable<int> IdScheda { get; set; }
     
+        public virtual ICollection<atto_cosa> atto_cosa { get; set; }
+        public virtual ICollection<persona_cosa> persona_cosa { get; set; }
+        public virtual ICollection<reato_cosa> reato_cosa { get; set; }
         public virtual scheda scheda { get; set; }
-        public virtual ICollection<atto> atto { get; set; }
-        public virtual ICollection<persona> persona { get; set; }
-        public virtual ICollection<reato> reato { get; set; }
     }
 }

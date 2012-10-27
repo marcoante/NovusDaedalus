@@ -4,30 +4,43 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d2249e23887a4588bddd9a2a6f0cc37a" Name="Diagramma1">
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.atto" Width="1.5" PointX="5.25" PointY="22" IsExpanded="true" />
+      <Diagram DiagramId="9135813026a84941a157f19c55e5b5b5" Name="Diagramma1">
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.atto" Width="1.5" PointX="5.25" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.atto_cosa" Width="1.5" PointX="7.5" PointY="40.875" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.collaboratore" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.consulente" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.cosa" Width="1.5" PointX="7.5" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.consulente" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.cosa" Width="1.5" PointX="5.25" PointY="42.375" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.difensore" Width="1.5" PointX="3" PointY="17.625" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.gip" Width="1.5" PointX="3" PointY="20.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.indagato" Width="1.5" PointX="8.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.indagato" Width="1.5" PointX="5.25" PointY="21.875" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.interprete" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.iscrizione" Width="1.5" PointX="10.5" PointY="20.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.notizia_reato" Width="1.5" PointX="8.25" PointY="26.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_informata" Width="1.5" PointX="3" PointY="22.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_offesa" Width="1.5" PointX="3" PointY="24.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.pm" Width="1.5" PointX="3" PointY="27.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.polizia_giudiziaria" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.reato" Width="1.5" PointX="12.75" PointY="22.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.scheda" Width="1.5" PointX="3" PointY="29.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.utente" Width="1.5" PointX="3" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.iscrizione" Width="1.5" PointX="10.5" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.notizia_reato" Width="1.5" PointX="8.25" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona" Width="1.5" PointX="0.75" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_atto" Width="1.5" PointX="7.5" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_cosa" Width="1.5" PointX="7.5" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_informata" Width="1.5" PointX="3" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_offesa" Width="1.5" PointX="3" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_reato" Width="1.5" PointX="10.5" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.pm" Width="1.5" PointX="3" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.polizia_giudiziaria" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.reato" Width="1.5" PointX="5.25" PointY="46.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.reato_atto" Width="1.5" PointX="7.5" PointY="43.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.reato_cosa" Width="1.5" PointX="7.5" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.scheda" Width="1.5" PointX="3" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.utente" Width="1.5" PointX="3" PointY="50.25" IsExpanded="true" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdAtto_AttoCosa" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdAtto_PersonaAtto" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdAtto_ReatoAtto" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.IdSchedaAtto" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdCosa_AttoCosa" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdScheda_AttoCosa" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscaleCollaboratore" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscaleConsulente" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscaleInterprete" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscalePoliziaGiudiziaria" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdCosa_PersonaCosa" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdCosa_ReatoCosa" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.IdSchedaCosa" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscaleDifensore" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscaleDifensore1" ManuallyRouted="false" />
@@ -38,17 +51,22 @@
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscalePMIscrizione" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.IdNotiziaReatoIscrizione" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.IdReatoIscrizione" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaAtto" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaCosa" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaReato" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscalePersonaInformata" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscalePersonaOffesa" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscalePm" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.CodiceFiscaleUtente" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IsScheda_PersonaAtto" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdScheda_PersonaCosa" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdReato_PersonaReato" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdScheda_PersonaReato" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdReato_ReatoAtto" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdReato_ReatoCosa" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.IdSchedaReato" ManuallyRouted="false" />
-        <AssociationConnector Association="novus_daedalus_dbModel.atto_cosa" ManuallyRouted="false" />
-        <AssociationConnector Association="novus_daedalus_dbModel.persona_atto" ManuallyRouted="false" />
-        <AssociationConnector Association="novus_daedalus_dbModel.persona_cosa" ManuallyRouted="false" />
-        <AssociationConnector Association="novus_daedalus_dbModel.persona_reato" ManuallyRouted="false" />
-        <AssociationConnector Association="novus_daedalus_dbModel.reato_atto" ManuallyRouted="false" />
-        <AssociationConnector Association="novus_daedalus_dbModel.reato_cosa" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdScheda_ReatoAtto" ManuallyRouted="false" />
+        <AssociationConnector Association="novus_daedalus_dbModel.IdScheda_ReatoCosa" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.scheda_persona" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

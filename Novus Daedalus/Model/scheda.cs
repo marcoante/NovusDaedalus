@@ -17,8 +17,14 @@ namespace Novus_Daedalus.Model
         public scheda()
         {
             this.atto = new HashSet<atto>();
+            this.atto_cosa = new HashSet<atto_cosa>();
             this.cosa = new HashSet<cosa>();
+            this.persona_atto = new HashSet<persona_atto>();
+            this.persona_cosa = new HashSet<persona_cosa>();
+            this.persona_reato = new HashSet<persona_reato>();
             this.reato = new HashSet<reato>();
+            this.reato_atto = new HashSet<reato_atto>();
+            this.reato_cosa = new HashSet<reato_cosa>();
             this.persona = new HashSet<persona>();
         }
     
@@ -27,8 +33,14 @@ namespace Novus_Daedalus.Model
         public Nullable<System.DateTime> DataRegistrazione { get; set; }
     
         public virtual ICollection<atto> atto { get; set; }
+        public virtual ICollection<atto_cosa> atto_cosa { get; set; }
         public virtual ICollection<cosa> cosa { get; set; }
+        public virtual ICollection<persona_atto> persona_atto { get; set; }
+        public virtual ICollection<persona_cosa> persona_cosa { get; set; }
+        public virtual ICollection<persona_reato> persona_reato { get; set; }
         public virtual ICollection<reato> reato { get; set; }
+        public virtual ICollection<reato_atto> reato_atto { get; set; }
+        public virtual ICollection<reato_cosa> reato_cosa { get; set; }
         public virtual ICollection<persona> persona { get; set; }
     }
 }

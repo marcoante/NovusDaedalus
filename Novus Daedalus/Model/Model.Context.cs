@@ -26,6 +26,7 @@ namespace Novus_Daedalus.Model
         }
     
         public DbSet<atto> atto { get; set; }
+        public DbSet<atto_cosa> atto_cosa { get; set; }
         public DbSet<collaboratore> collaboratore { get; set; }
         public DbSet<consulente> consulente { get; set; }
         public DbSet<cosa> cosa { get; set; }
@@ -36,11 +37,16 @@ namespace Novus_Daedalus.Model
         public DbSet<iscrizione> iscrizione { get; set; }
         public DbSet<notizia_reato> notizia_reato { get; set; }
         public DbSet<persona> persona { get; set; }
+        public DbSet<persona_atto> persona_atto { get; set; }
+        public DbSet<persona_cosa> persona_cosa { get; set; }
         public DbSet<persona_informata> persona_informata { get; set; }
         public DbSet<persona_offesa> persona_offesa { get; set; }
+        public DbSet<persona_reato> persona_reato { get; set; }
         public DbSet<pm> pm { get; set; }
         public DbSet<polizia_giudiziaria> polizia_giudiziaria { get; set; }
         public DbSet<reato> reato { get; set; }
+        public DbSet<reato_atto> reato_atto { get; set; }
+        public DbSet<reato_cosa> reato_cosa { get; set; }
         public DbSet<scheda> scheda { get; set; }
         public DbSet<utente> utente { get; set; }
     }
