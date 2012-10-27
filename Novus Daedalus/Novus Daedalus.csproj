@@ -156,6 +156,12 @@
     <Compile Include="View\DaedalusMainPage.xaml.cs">
       <DependentUpon>DaedalusMainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Laboratorio_Assemblaggio.xaml.cs">
+      <DependentUpon>Laboratorio_Assemblaggio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laboratorio_Autocomposizione.xaml.cs">
+      <DependentUpon>Laboratorio_Autocomposizione.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Laboratorio_Selezione_Modalità.xaml.cs">
       <DependentUpon>Laboratorio_Selezione_Modalità.xaml</DependentUpon>
     </Compile>
@@ -165,6 +171,14 @@
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Laboratorio_Assemblaggio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Laboratorio_Autocomposizione.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Laboratorio_Selezione_Modalità.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -20,7 +20,6 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class DaedalusMainPage : Page
     {
-        public string modalità_magazzino = null;
 
         public DaedalusMainPage()
         {

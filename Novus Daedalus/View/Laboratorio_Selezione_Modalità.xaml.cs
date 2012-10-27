@@ -29,13 +29,13 @@ namespace Novus_Daedalus.View
 
         private void Autocomposizione_Button_Click(object sender, RoutedEventArgs e)
         {
-            Main_Page_Istance.modalità_magazzino = "autocomposizione";
+            Main_Page_Istance.NavigationService.Navigate(new Laboratorio_Autocomposizione());
             this.Close();
         }
 
         private void Assemblaggio_Button_Click(object sender, RoutedEventArgs e)
         {
-            Main_Page_Istance.modalità_magazzino = "assemblaggio";
+            Main_Page_Istance.NavigationService.Navigate(new Laboratorio_Assemblaggio());
             this.Close();
         }
     }
