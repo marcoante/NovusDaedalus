@@ -20,9 +20,19 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class Laboratorio_Autocomposizione : Page
     {
+        /*variabile che indica il tipo di reato selezionato, se = 0 nessun reato è stato
+        selezionato, quindi bisogna ritornare errore
+        */ 
+        private int reato = 0;
+
         public Laboratorio_Autocomposizione()
         {
             InitializeComponent();
+        }
+
+        private void Laboratorio_Autocomposizione_Loaded(object sender, RoutedEventArgs e)
+        {
+            new Laboratorio_Selezione_Reato(this).Show();
         }
 
         private void Chiudi_Button_Click(object sender, RoutedEventArgs e)

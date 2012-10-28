@@ -40,12 +40,17 @@
     <Reference Include="MVCSharp">
       <HintPath>.\MVCSharp.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -150,6 +155,11 @@
     <Compile Include="Model\utente.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="novus_daedalus_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>novus_daedalus_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\ApriScheda.xaml.cs">
       <DependentUpon>ApriScheda.xaml</DependentUpon>
     </Compile>
@@ -164,6 +174,9 @@
     </Compile>
     <Compile Include="View\Laboratorio_Selezione_Modalità.xaml.cs">
       <DependentUpon>Laboratorio_Selezione_Modalità.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laboratorio_Selezione_Reato.xaml.cs">
+      <DependentUpon>Laboratorio_Selezione_Reato.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Magazzino.xaml.cs">
       <DependentUpon>Magazzino.xaml</DependentUpon>
@@ -180,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Laboratorio_Selezione_Modalità.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Laboratorio_Selezione_Reato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,6 +270,17 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
+    </None>
+    <None Include="novus_daedalus_dbDataSet.xsc">
+      <DependentUpon>novus_daedalus_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="novus_daedalus_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>novus_daedalus_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="novus_daedalus_dbDataSet.xss">
+      <DependentUpon>novus_daedalus_dbDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.scheda.datasource" />
