@@ -47,6 +47,10 @@ namespace Novus_Daedalus.View
 
             //rendo la pagina di provenienza di nuovo attiva
             Laboratorio_Pagina.IsEnabled = true;
+
+            //inizializzo la pagina di provenienza
+
+            //chiudo questa finestra
             this.Close();
         }
 

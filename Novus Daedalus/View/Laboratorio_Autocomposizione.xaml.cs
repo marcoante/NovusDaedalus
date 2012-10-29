@@ -39,5 +39,10 @@ namespace Novus_Daedalus.View
         {
             NavigationService.GoBack();
         }
+
+        private void Menù_principale_Button_Click(object sender, RoutedEventArgs e)
+        {
+            new Laboratorio_Avviso_Chiusura(this).Show();
+        }
     }
 }

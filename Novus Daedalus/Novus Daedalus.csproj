@@ -172,6 +172,9 @@
     <Compile Include="View\Laboratorio_Autocomposizione.xaml.cs">
       <DependentUpon>Laboratorio_Autocomposizione.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Laboratorio_Avviso_Chiusura.xaml.cs">
+      <DependentUpon>Laboratorio_Avviso_Chiusura.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Laboratorio_Selezione_Modalità.xaml.cs">
       <DependentUpon>Laboratorio_Selezione_Modalità.xaml</DependentUpon>
     </Compile>
@@ -189,6 +192,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Laboratorio_Autocomposizione.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Laboratorio_Avviso_Chiusura.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

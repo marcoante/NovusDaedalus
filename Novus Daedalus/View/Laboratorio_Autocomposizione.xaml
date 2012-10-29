@@ -13,9 +13,14 @@
         </LinearGradientBrush>
     </Page.Background>
 
-    <Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi laboratorio" HorizontalAlignment="Left" Margin="350,314,0,0" VerticalAlignment="Top" Click="Chiudi_Button_Click"/>
+    <Grid x:Name="Laboratorio___Modalità_autocomposizione" Cursor="Hand">
+        <Button x:Name="Chiudi_Button" Content="Salva e Chiudi" HorizontalAlignment="Left" Margin="370,314,0,0" VerticalAlignment="Top" Click="Chiudi_Button_Click" Cursor="Hand"/>
         <Label x:Name="Modalità_Label" Content="Laboratorio - Modalità autocomposizione" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="Casistica_Button" Content="Casistica" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="75" Cursor="Hand"/>
+        <Button x:Name="Dati_Button" Content="Dati" HorizontalAlignment="Left" Margin="90,41,0,0" VerticalAlignment="Top" Width="75" Cursor="Hand"/>
+        <Button x:Name="Reato_Tentato_Button" Content="Reato tentato" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top" Cursor="Hand"/>
+        <Button x:Name="Aggravanti_Button" Content="Aggravanti" HorizontalAlignment="Left" Margin="253,41,0,0" VerticalAlignment="Top" Width="75" Cursor="Hand"/>
+        <Button x:Name="Menù_principale_Button" Content="Menù principale" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Cursor="Hand" Click="Menù_principale_Button_Click"/>
 
     </Grid>
 </Page>
