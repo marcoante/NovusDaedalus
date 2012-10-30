@@ -1,6 +1,4 @@
 ﻿<NavigationWindow x:Class="Novus_Daedalus.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Novus Daedalus - Login" Height="350" Width="500" WindowState="Maximized" Foreground="#FF54BD9C" ShowsNavigationUI="False" Source="View/Login.xaml">
-        
-</NavigationWindow>
+        Title="Novus Daedalus - Login" Height="350" Width="500" WindowState="Maximized" Foreground="#FF54BD9C" ShowsNavigationUI="False" Source="View/Login.xaml"/>

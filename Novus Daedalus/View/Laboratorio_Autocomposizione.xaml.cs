@@ -20,10 +20,10 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class Laboratorio_Autocomposizione : Page
     {
-        /*variabile che indica il tipo di reato selezionato, se = 0 nessun reato è stato
+        /*variabile che indica il tipo di reato selezionato, se null nessun reato è stato
         selezionato, quindi bisogna ritornare errore
         */ 
-        private int reato = 0;
+        private Model.reato reato = null;
 
         public Laboratorio_Autocomposizione()
         {
