@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Novus_Daedalus.View
 {
     /// <summary>
-    /// Logica di interazione per Magazzino.xaml
+    /// Logica di interazione per Magazzino_Esame_Imputazioni.xaml
     /// </summary>
-    public partial class Magazzino : Page
+    public partial class Magazzino_Esame_Imputazioni : Window
     {
-        public Magazzino()
+        public Magazzino_Esame_Imputazioni()
         {
             InitializeComponent();
-        }
-
-        private void Chiudi_Magazzino_Button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.GoBack();
-        }
-
-        private void Esame_Imputazioni_Button_Click(object sender, RoutedEventArgs e)
-        {
-            new Magazzino_Selezione_Imputazioni(this).Show();
         }
     }
 }

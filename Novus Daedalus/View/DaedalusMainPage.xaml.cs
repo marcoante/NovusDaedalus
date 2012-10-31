@@ -79,7 +79,7 @@ namespace Novus_Daedalus.View
 
         private void MagazzinoButtonClick(object sender, RoutedEventArgs e)
         {
-            if (Application.Current.Properties["Scheda"] == null)
+            /*if (Application.Current.Properties["Scheda"] == null)
             {
                 MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
                     "oppure il pulsante \"Nuova iscrizione\"");
@@ -88,7 +88,7 @@ namespace Novus_Daedalus.View
             else
             {
                 NavigationService.Navigate(new View.Magazzino());
-            }
+            }*/
             NavigationService.Navigate(new View.Magazzino());
         }
 

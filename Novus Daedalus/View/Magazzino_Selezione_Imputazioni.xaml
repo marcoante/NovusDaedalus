@@ -1,0 +1,11 @@
+﻿<Window x:Class="Novus_Daedalus.View.Magazzino_Selezione_Imputazioni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Magazzino_Selezione_Imputazioni" Height="340.637" Width="340.637" Loaded="Magazzino_Selezione_Imputazioni_Loaded" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Background="#FF5B2D2D">
+        <Label x:Name="Selezione_Imputazioni_Label" Content="Seleziona un capo di imputazione" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Left" Width="188"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Right" Margin="0,301,248,0" IsCancel="True" Cursor="Hand" Click="Annulla_Button_Click" Height="22" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Ok_Button" Content="Ok" Margin="248,301,0,0" IsDefault="True" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Cursor="Hand"/>
+
+    </Grid>
+</Window>

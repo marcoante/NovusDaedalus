@@ -184,6 +184,12 @@
     <Compile Include="View\Magazzino.xaml.cs">
       <DependentUpon>Magazzino.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Magazzino_Esame_Imputazioni.xaml.cs">
+      <DependentUpon>Magazzino_Esame_Imputazioni.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Magazzino_Selezione_Imputazioni.xaml.cs">
+      <DependentUpon>Magazzino_Selezione_Imputazioni.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
     </Compile>
@@ -235,6 +241,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Magazzino.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Magazzino_Esame_Imputazioni.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Magazzino_Selezione_Imputazioni.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
