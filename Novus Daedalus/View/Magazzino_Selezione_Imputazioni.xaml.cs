@@ -20,10 +20,13 @@ namespace Novus_Daedalus.View
     public partial class Magazzino_Selezione_Imputazioni : Window
     {
         private Magazzino pagina = null;
-        public Magazzino_Selezione_Imputazioni(Magazzino pagina)
+        private string motivo = null;
+
+        public Magazzino_Selezione_Imputazioni(Magazzino pagina, string motivo)
         {
             InitializeComponent();
             this.pagina = pagina;
+            this.motivo = motivo;
         }
 
         private void Magazzino_Selezione_Imputazioni_Loaded(object sender, RoutedEventArgs e)
@@ -46,8 +49,10 @@ namespace Novus_Daedalus.View
             //riabilito la pagina di provenienza
             pagina.IsEnabled = true;
             
-            //lancio la schermata per l'esame delle imputazioni (AGGIUNGERE PARAMTERI)
-            new Magazzino_Esame_Imputazioni().Show();
+            //se il motivo è esame lancio la schermata per l'esame delle imputazioni (AGGIUNGERE PARAMTERI)
+            if(motivo=="esame")
+                new Magazzino_Esame_Imputazioni().Show();
+            //altrimenti il motivo è modifica e lancio la schermata per la modifica dei capi di imputazione
 
             //chiudo questa finestra
             this.Close();

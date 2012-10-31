@@ -107,5 +107,15 @@ namespace Novus_Daedalus.View
         {
             NavigationService.Navigate(new View.Officina());
         }
+
+        private void Informazioni_Generali_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.Properties["Scheda"] == null)
+            {
+                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
+                    "oppure il pulsante \"Nuova iscrizione\"");
+                return;
+            }
+        }
     }
 }
