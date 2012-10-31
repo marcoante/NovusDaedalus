@@ -193,6 +193,9 @@
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Selezione_Tipo_Atti.xaml.cs">
+      <DependentUpon>Selezione_Tipo_Atti.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\Laboratorio_Assemblaggio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -253,6 +256,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Officina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Selezione_Tipo_Atti.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

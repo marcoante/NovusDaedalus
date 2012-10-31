@@ -69,12 +69,13 @@ namespace Novus_Daedalus.View
 
         private void AttiButtonClick(object sender, RoutedEventArgs e)
         {
-            if (Application.Current.Properties["Scheda"] == null)
+            /*if (Application.Current.Properties["Scheda"] == null)
             {
                 MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
                     "oppure il pulsante \"Nuova iscrizione\"");
                 return;
-            }
+            }*/
+            new Selezione_Tipo_Atti().Show();
         }
 
         private void MagazzinoButtonClick(object sender, RoutedEventArgs e)
