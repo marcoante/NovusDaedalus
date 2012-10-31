@@ -23,5 +23,19 @@ namespace Novus_Daedalus.View
         {
             InitializeComponent();
         }
+
+        private void Magazzino_Esame_Imputazioni_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Codice eseguito al caricamento della pagina(DA AGGIORNARE)
+            Capo_Imputazione_Label.Content = "Esame del capo A di imputazione";
+            Testo_Imputazione_Label.Content = "Testo dell'imputazione di prova..potrebbe essere un vero capo, in realtà è solo una prova LOL :D";
+            Persone_Accusate_Label.Content = "Mario rossi (sempre il solito)";
+            Elementi_da_provare_Label.Content = "Tutti gli elementi da provare";
+        }
+
+        private void Chiudi_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

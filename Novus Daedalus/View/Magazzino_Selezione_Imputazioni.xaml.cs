@@ -28,12 +28,28 @@ namespace Novus_Daedalus.View
 
         private void Magazzino_Selezione_Imputazioni_Loaded(object sender, RoutedEventArgs e)
         {
+            //disabilito la pagina di provenienza
             pagina.IsEnabled = false;
         }
 
         private void Annulla_Button_Click(object sender, RoutedEventArgs e)
         {
+            //riabilito la pagina di provenienza
             pagina.IsEnabled = true;
+
+            //chiudo questa finestra
+            this.Close();
+        }
+
+        private void Ok_Button_Click(object sender, RoutedEventArgs e)
+        {
+            //riabilito la pagina di provenienza
+            pagina.IsEnabled = true;
+            
+            //lancio la schermata per l'esame delle imputazioni (AGGIUNGERE PARAMTERI)
+            new Magazzino_Esame_Imputazioni().Show();
+
+            //chiudo questa finestra
             this.Close();
         }
     }
