@@ -122,7 +122,7 @@ namespace Novus_Daedalus.View
         private void NuovaIscrizioneButtonClick(object sender, RoutedEventArgs e)
         {
             NuovaIscrizione.MainWindow nuova_iscrizione_window = new NuovaIscrizione.MainWindow();
-            nuova_iscrizione_window.Show();
+            nuova_iscrizione_window.ShowDialog();
         }
     }
 }
