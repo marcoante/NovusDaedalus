@@ -48,7 +48,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             set_dati_indagato_window = new SetDatiIndagato(nuova_iscrizione_data);
             // Si registra l'handler per l'inserimento di un nuovo indagato
             set_dati_indagato_window.evento_indagato_creato += new SetIndagatoHandler(IndagatoCreatoHandler);
-            set_dati_indagato_window.Show();
+            set_dati_indagato_window.ShowDialog();
         }
 
         void IndagatoCreatoHandler(object sender, DatiIndagatoEventArgs dati_evento)
@@ -69,7 +69,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 set_dati_indagato_window = new SetDatiIndagato(nuova_iscrizione_data, (Model.persona)personaDataGrid.SelectedItem);
                 // Si registra l'handler per la modifica di un indagato
                 set_dati_indagato_window.evento_indagato_modificato += new SetIndagatoHandler(IndagatoModificatoHandler);
-                set_dati_indagato_window.Show();
+                set_dati_indagato_window.ShowDialog();
             }
         }
 
