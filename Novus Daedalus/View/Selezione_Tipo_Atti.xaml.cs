@@ -23,5 +23,20 @@ namespace Novus_Daedalus.View
         {
             InitializeComponent();
         }
+
+        private void Sviluppo_Click(object sender, RoutedEventArgs e)
+        {
+            Griglia.RowDefinitions[1].Height = new GridLength(172, GridUnitType.Star);
+        }
+
+        private void Gestione_Click(object sender, RoutedEventArgs e)
+        {
+            Griglia.RowDefinitions[1].Height = new GridLength(0, GridUnitType.Star);
+        }
+
+        private void Conclusione_Click(object sender, RoutedEventArgs e)
+        {
+            Griglia.RowDefinitions[1].Height = new GridLength(0, GridUnitType.Star);
+        }
     }
 }
