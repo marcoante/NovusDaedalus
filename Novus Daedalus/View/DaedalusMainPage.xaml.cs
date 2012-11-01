@@ -118,5 +118,11 @@ namespace Novus_Daedalus.View
                 return;
             }
         }
+
+        private void NuovaIscrizioneButtonClick(object sender, RoutedEventArgs e)
+        {
+            NuovaIscrizione.MainWindow nuova_iscrizione_window = new NuovaIscrizione.MainWindow();
+            nuova_iscrizione_window.Show();
+        }
     }
 }

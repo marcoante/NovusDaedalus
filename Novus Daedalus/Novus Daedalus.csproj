@@ -86,12 +86,14 @@
     <Compile Include="Model\difensore.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ErrorsToMessageConverter.cs" />
     <Compile Include="Model\gip.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\indagato.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\indagato_extended.cs" />
     <Compile Include="Model\interprete.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -125,6 +127,7 @@
     <Compile Include="Model\persona_cosa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\persona_extended.cs" />
     <Compile Include="Model\persona_informata.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -190,6 +193,16 @@
     <Compile Include="View\Magazzino_Selezione_Imputazioni.xaml.cs">
       <DependentUpon>Magazzino_Selezione_Imputazioni.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NuovaIscrizione\InserisciIndagati.xaml.cs">
+      <DependentUpon>InserisciIndagati.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NuovaIscrizione\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NuovaIscrizione\NuovaIscrizione.cs" />
+    <Compile Include="View\NuovaIscrizione\SetDatiIndagato.xaml.cs">
+      <DependentUpon>SetDatiIndagato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
     </Compile>
@@ -252,6 +265,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Magazzino_Selezione_Imputazioni.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NuovaIscrizione\InserisciIndagati.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NuovaIscrizione\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NuovaIscrizione\SetDatiIndagato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
