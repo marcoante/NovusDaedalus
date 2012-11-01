@@ -2,10 +2,11 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.NuovaIscrizione.SetDatiIndagato"
-        Title="Inserisci i dati dell'indagato" Height="544.776" Width="332.149" Loaded="SetDatiIndagatoLoaded" xmlns:local="clr-namespace:Novus_Daedalus.Model">
+        xmlns:src="clr-namespace:Novus_Daedalus.Model"
+        Title="Inserisci i dati dell'indagato" Height="544.776" Width="298.149" Loaded="SetDatiIndagatoLoaded" xmlns:local="clr-namespace:Novus_Daedalus.Model">
     <Window.Resources>
-        <CollectionViewSource x:Key="personaViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:persona}, CreateList=True}"/>
-        <CollectionViewSource x:Key="indagatoViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:indagato}, CreateList=True}"/>
+        <src:persona x:Key="personaViewSource"/>
+        <src:indagato x:Key="indagatoViewSource"/>
         <!-- Convertitore per i messaggi di convalida -->
         <local:ErrorsToMessageConverter x:Key="eToMConverter" />
     </Window.Resources>
@@ -32,158 +33,161 @@
                 </Setter>
             </Style>
         </Grid.Resources>
-
-        <Grid x:Name="grid1" DataContext="{StaticResource personaViewSource}" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="285">
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Codice Fiscale:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="codiceFiscaleTextBox" HorizontalAlignment="Left" Height="24" Margin="1,3,-129,5" Grid.Row="0" Text="{Binding CodiceFiscale, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="189" Grid.Column="1"/>
+        <Grid x:Name="Dati_Persona_Grid" HorizontalAlignment="Left" Height="265" VerticalAlignment="Top" Width="295">
+            <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Codice Fiscale:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="codiceFiscaleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-40,4" Grid.Row="0" Text="{Binding CodiceFiscale, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="164"/>
+            </Grid>
+            <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-82,4" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="206"/>
+            </Grid>
+            <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="cognomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-62,4" Grid.Row="0" Text="{Binding Cognome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="186"/>
+            </Grid>
+            <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="219">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <RadioButton x:Name="sessoMRadioButton" Grid.Column="1" HorizontalAlignment="Left" Margin="16,8,0,8" Grid.Row="0" VerticalAlignment="Center" Content="M" IsChecked="True"/>
+                <RadioButton x:Name="sessoFRadioButton" Content="F" Grid.Column="1" HorizontalAlignment="Left" Margin="67,8,0,0" VerticalAlignment="Top"/>
+            </Grid>
+            <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="luogoNascitaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-39,4" Grid.Row="0" Text="{Binding LuogoNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="163"/>
+            </Grid>
+            <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <DatePicker x:Name="dataNascitaDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-24,4" Grid.Row="0" SelectedDate="{Binding DataNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="172"/>
+            </Grid>
+            <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="domicilioTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-64,4" Grid.Row="0" Text="{Binding Domicilio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="188"/>
+            </Grid>
         </Grid>
-        <Button x:Name="Inserisci_Button" Content="Ok" HorizontalAlignment="Left" Margin="239,483,0,0" VerticalAlignment="Top" Width="75" Click="InserisciButtonClick"/>
-        <Grid x:Name="grid2" DataContext="{StaticResource personaViewSource}" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="283">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="1,3,-96,5" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="230"/>
+        <Grid x:Name="Dati_Indagato_Grid" HorizontalAlignment="Left" Height="190" Margin="0,265,0,0" VerticalAlignment="Top" Width="295">
+            <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Stato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <ComboBox x:Name="statoComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="77,5,-78,5" Grid.Row="0" VerticalAlignment="Center" Width="137">
+                    <ComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel/>
+                        </ItemsPanelTemplate>
+                    </ComboBox.ItemsPanel>
+                    <ComboBoxItem Content="Libertà" IsSelected="True"/>
+                    <ComboBoxItem Content="Libertà con interdizioni"/>
+                    <ComboBoxItem Content="Libertà con obblighi o divieti"/>
+                    <ComboBoxItem Content="Arresti domiciliari"/>
+                    <ComboBoxItem Content="Custodia cautelare"/>
+                    <ComboBoxItem Content="Arresto"/>
+                    <ComboBoxItem Content="Fermo"/>
+                </ComboBox>
+            </Grid>
+            <Grid x:Name="grid9" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="CF Primo Difensore:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="difensore1TextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-13,4" Grid.Row="0" Text="{Binding Difensore1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="137"/>
+            </Grid>
+            <Grid x:Name="grid10" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="CF Secondo Difensore:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="difensore2TextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="0" Text="{Binding Difensore2, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="123"/>
+            </Grid>
+            <Grid x:Name="grid11" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Qualità Difesa:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="qualitàDifesaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-41,4" Grid.Row="0" Text="{Binding QualitàDifesa, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="165"/>
+            </Grid>
+            <Grid x:Name="grid12" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="261">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Precedenti Penali:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <ComboBox x:Name="precedenti_penaliComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="16,3,-144,0" VerticalAlignment="Top" Width="134">
+                    <ComboBoxItem Content="Si" IsSelected="True"/>
+                    <ComboBoxItem Content="No"/>
+                    <ComboBoxItem Content="Non verificati"/>
+                </ComboBox>
+            </Grid>
         </Grid>
-        <Grid x:Name="grid3" DataContext="{StaticResource personaViewSource}" HorizontalAlignment="Left" Margin="8,84,0,0" VerticalAlignment="Top" Width="285">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="cognomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="1,3,-83,5" Grid.Row="0" Text="{Binding Cognome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="212"/>
-        </Grid>
-        <Grid x:Name="grid4" DataContext="{StaticResource personaViewSource}" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="283">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <RadioButton x:Name="sessoRadioButton" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding Sesso, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="10,8,-1,8" Grid.Row="0" VerticalAlignment="Center" Content="M" GroupName="Sesso"/>
-        </Grid>
-        <RadioButton Content="F" HorizontalAlignment="Left" Margin="124,129,0,0" VerticalAlignment="Top" GroupName="Sesso"/>
-        <Grid x:Name="grid5" DataContext="{StaticResource indagatoViewSource}" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="283">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Stato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="statoComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="49,5,-104,5" Grid.Row="0" VerticalAlignment="Center" Width="187">
-                <ComboBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel/>
-                    </ItemsPanelTemplate>
-                </ComboBox.ItemsPanel>
-                <ComboBoxItem Content="Libertà" IsSelected="True"/>
-                <ComboBoxItem Content="Libertà con interdizioni"/>
-                <ComboBoxItem Content="Libertà con obblighi o divieti"/>
-                <ComboBoxItem Content="arresti domiciliari"/>
-                <ComboBoxItem Content="Custodia cautelare"/>
-                <ComboBoxItem Content="Arresto"/>
-                <ComboBoxItem Content="Fermo"/>
-            </ComboBox>
-        </Grid>
-        <Grid x:Name="grid6" DataContext="{StaticResource personaViewSource}" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="283">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="luogoNascitaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="1,2,-60,6" Grid.Row="0" Text="{Binding LuogoNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="187"/>
-        </Grid>
-        <Grid x:Name="grid7" DataContext="{StaticResource personaViewSource}" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Width="283">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <DatePicker x:Name="dataNascitaDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="1,4,-44,4" Grid.Row="0" SelectedDate="{Binding DataNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="196"/>
-        </Grid>
-        <Grid x:Name="grid8" DataContext="{StaticResource personaViewSource}" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Width="283">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="domicilioTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="10,3,-84,5" Grid.Row="0" Text="{Binding Domicilio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="203"/>
-        </Grid>
-        <Grid x:Name="grid9" DataContext="{StaticResource indagatoViewSource}" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Codice Fiscale Difensore 1:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="difensore1TextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="2,2,0,6" Grid.Row="0" Text="{Binding Difensore1, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="124"/>
-        </Grid>
-        <Grid x:Name="grid10" DataContext="{StaticResource indagatoViewSource}" HorizontalAlignment="Left" Margin="10,343,0,0" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Codice Fiscale Difensore 2:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="difensore2TextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="2,2,0,6" Grid.Row="0" Text="{Binding Difensore2, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="124"/>
-        </Grid>
-        <Grid x:Name="grid11" DataContext="{StaticResource indagatoViewSource}" HorizontalAlignment="Left" Margin="10,380,0,0" VerticalAlignment="Top" Width="283">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Qualità Difesa:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="qualitàDifesaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="1,3,-60,5" Grid.Row="0" Text="{Binding QualitàDifesa, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="189"/>
-        </Grid>
-        <Grid x:Name="grid12" DataContext="{StaticResource indagatoViewSource}" HorizontalAlignment="Left" Margin="10,417,0,0" VerticalAlignment="Top" Width="252">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Precedenti Penali:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <RadioButton x:Name="PrecedentiPenaliNoRadioButton" Content="No" Grid.Column="1" HorizontalAlignment="Left" Margin="38,8,-32,0" VerticalAlignment="Top" GroupName="PrecedentiPenali"/>
-        </Grid>
-        <RadioButton x:Name="PrecedentiPenaliSiRadioButton" Content="Si" HorizontalAlignment="Left" Margin="124,425,0,0" VerticalAlignment="Top" GroupName="PrecedentiPenali"/>
-        <RadioButton x:Name="PrecedentiPenaliNullRadioButton" Content="Non verificati" HorizontalAlignment="Left" Margin="196,425,0,0" VerticalAlignment="Top" GroupName="PrecedentiPenali" IsChecked="True"/>
+        <Button x:Name="Inserisci_Button" Content="Ok" HorizontalAlignment="Left" Margin="197,483,0,0" VerticalAlignment="Top" Width="75" Click="InserisciButtonClick" RenderTransformOrigin="-0.2,0.5"/>
         <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,483,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
-
     </Grid>
 </Window>

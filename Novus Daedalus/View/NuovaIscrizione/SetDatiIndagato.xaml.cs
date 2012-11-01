@@ -32,8 +32,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         // Dati sulla nuova iscrizione
         private NuovaIscrizione nuova_iscrizione_data;
 
-        private List<Model.persona> persona_indagata_binding_source;
-        private List<Model.indagato> indagato_binding_source;
+        private Model.persona persona_indagata_binding_source;
+        private Model.indagato indagato_binding_source;
 
         // Costruttore per la modalità di creazione nuovo indagato
         public SetDatiIndagato(NuovaIscrizione nuova_iscrizione_data)
@@ -49,10 +49,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             p.Ruolo = "indagato";
             p.Sesso = true;
 
-            persona_indagata_binding_source = new List<Model.persona>();
-            indagato_binding_source = new List<Model.indagato>();
-            persona_indagata_binding_source.Add(p);
-            indagato_binding_source.Add(i);
+            persona_indagata_binding_source = p;
+            indagato_binding_source = i;
 
             modalità_modifica = false;
         }
@@ -70,10 +68,13 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             i.persona = p;
             p.indagato = i;
 
-            persona_indagata_binding_source = new List<Model.persona>();
-            indagato_binding_source = new List<Model.indagato>();
-            persona_indagata_binding_source.Add(p);
-            indagato_binding_source.Add(i);
+            if (p.Sesso == true) sessoMRadioButton.IsChecked = true;
+            else sessoFRadioButton.IsChecked = true;
+            statoComboBox.Text = i.Stato;
+            precedenti_penaliComboBox.Text = i.PrecedentiPenali;
+
+            persona_indagata_binding_source = p;
+            indagato_binding_source = i;
 
             modalità_modifica = true;
         }
@@ -81,21 +82,14 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void SetDatiIndagatoLoaded(object sender, RoutedEventArgs e)
         {
-            System.Windows.Data.CollectionViewSource personaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource")));
-            // Caricare i dati impostando la proprietà CollectionViewSource.Source:
-            // personaViewSource.Source = [origine dati generica]
-            personaViewSource.Source = persona_indagata_binding_source;
-
-            System.Windows.Data.CollectionViewSource indagatoViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("indagatoViewSource")));
-            // Caricare i dati impostando la proprietà CollectionViewSource.Source:
-            // indagatoViewSource.Source = [origine dati generica]
-            indagatoViewSource.Source = indagato_binding_source;
+            Dati_Persona_Grid.DataContext = persona_indagata_binding_source;
+            Dati_Indagato_Grid.DataContext = indagato_binding_source;
         }
 
         private void InserisciButtonClick(object sender, RoutedEventArgs e)
         {
             // Si controlla se tutti i dati obbligatori di una persona indagata sono presenti
-            if (!indagato_binding_source.First().persona.IsValid)
+            if (!indagato_binding_source.persona.IsValid)
             {
                 MessageBox.Show("Uno o più dati anagrafici dell'indagato sono mancanti.");
                 return;
@@ -103,37 +97,37 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             // Se il nuovo indagato ha un codice fiscale già presente nell'elenco dei nuovi indagati
             // si mostra un messaggio di errore
             Model.persona find_result_persona;
-            find_result_persona = nuova_iscrizione_data.Persone_indagate_list.Find(item => item.CodiceFiscale == indagato_binding_source.First().persona.CodiceFiscale);
+            find_result_persona = nuova_iscrizione_data.Persone_indagate_list.Find(item => item.CodiceFiscale == indagato_binding_source.persona.CodiceFiscale);
             if (find_result_persona != null)
             {
                 if (modalità_modifica == false)
                 {
                     MessageBox.Show("L'indagato con Codice Fiscale \"" +
-                        indagato_binding_source.First().persona.CodiceFiscale +
+                        indagato_binding_source.persona.CodiceFiscale +
                         "\" è già stato inserito.");
                     return;
                 }
                 else if (find_result_persona.CodiceFiscale != indagato_originale.persona.CodiceFiscale)
                 {
                     MessageBox.Show("L'indagato con Codice Fiscale \"" +
-                        indagato_binding_source.First().persona.CodiceFiscale +
+                        indagato_binding_source.persona.CodiceFiscale +
                         "\" è già stato inserito.");
                     return;
                 }
             }
 
             // Si impostano alcuni campi dell'indagato, a seconda delle selezioni dell'utente
-            indagato_binding_source.First().Stato = statoComboBox.Text;
-            if (PrecedentiPenaliSiRadioButton.IsChecked == true) indagato_binding_source.First().PrecedentiPenali = "Si";
-            else if (PrecedentiPenaliNoRadioButton.IsChecked == false) indagato_binding_source.First().PrecedentiPenali = "No";
-            else indagato_binding_source.First().PrecedentiPenali = "Non verificati";
+            indagato_binding_source.Stato = statoComboBox.Text;
+            if (sessoMRadioButton.IsChecked == true) indagato_binding_source.persona.Sesso = true;
+            else indagato_binding_source.persona.Sesso = false;
+            indagato_binding_source.PrecedentiPenali = precedenti_penaliComboBox.Text;
 
             // Se si è in modalità modifica si invoca l'evento indagato modificato,
             // che verrà gestito dalla pagina "Inserisci indagati"
             // Altrimenti si invoca l'evento indagato creato, che verrà gestito
             // sempre dalla pagina "Inserisci indagati"
-            if (modalità_modifica) On_evento_indagato_modificato(new DatiIndagatoEventArgs(persona_indagata_binding_source.First(), indagato_originale.persona));
-            else On_evento_indagato_creato(new DatiIndagatoEventArgs(persona_indagata_binding_source.First()));
+            if (modalità_modifica) On_evento_indagato_modificato(new DatiIndagatoEventArgs(persona_indagata_binding_source, indagato_originale.persona));
+            else On_evento_indagato_creato(new DatiIndagatoEventArgs(persona_indagata_binding_source));
             Close();
         }
 
