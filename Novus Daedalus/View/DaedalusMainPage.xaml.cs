@@ -124,5 +124,10 @@ namespace Novus_Daedalus.View
             NuovaIscrizione.MainWindow nuova_iscrizione_window = new NuovaIscrizione.MainWindow();
             nuova_iscrizione_window.ShowDialog();
         }
+
+        private void Posta_Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

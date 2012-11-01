@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="603.433" d:DesignWidth="828.358"
+      d:DesignHeight="613.433" d:DesignWidth="1138.358"
 	Title="DaedalusMainPage" Loaded="MainPageLoaded">
     <Page.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,20 +13,23 @@
         </LinearGradientBrush>
     </Page.Background>
 
-    <Grid>
+    <Grid Cursor="Hand">
         <Button x:Name="Nuova_Iscrizione_Button" Content="Nuova iscrizione" HorizontalAlignment="Left" Margin="50,194,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand" Click="NuovaIscrizioneButtonClick"/>
         <Label x:Name="Benvenuto_label" Content="Label" HorizontalAlignment="Left" Margin="50,74,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" FontFamily="Times New Roman"/>
         <Button x:Name="Apri_Scheda_Button" Content="Apri scheda" HorizontalAlignment="Left" Margin="50,239,0,0" VerticalAlignment="Top" Width="123" Height="40" Click="ApriSchedaButtonClick" Cursor="Hand"/>
-        <Button x:Name="Laboratorio_Button" Content="Laboratorio" HorizontalAlignment="Left" Margin="213,194,0,0" VerticalAlignment="Top" Width="123" Height="67" Background="#FF44D301" BorderThickness="0" Click="LaboratorioButtonClick" Cursor="Hand"/>
-        <Button x:Name="Magazzino_Button" Content="Magazzino" HorizontalAlignment="Left" Margin="213,266,0,0" VerticalAlignment="Top" Width="123" Height="67" Background="#FFC307A1" BorderThickness="0" Click="MagazzinoButtonClick" Cursor="Hand"/>
-        <Button x:Name="Persone_Button" Content="Persone" HorizontalAlignment="Left" Margin="341,194,0,0" VerticalAlignment="Top" Width="123" Height="67" Background="#FF36C8D6" BorderThickness="0" Click="PersoneButtonClick" Cursor="Hand"/>
-        <Button x:Name="Atti_Button" Content="Atti" HorizontalAlignment="Left" Margin="341,266,0,0" VerticalAlignment="Top" Width="123" Height="67" Background="#FFF17F0C" BorderThickness="0" Click="AttiButtonClick" Cursor="Hand"/>
-        <Button x:Name="Seguiti_Button" Content="Seguiti" HorizontalAlignment="Left" Margin="469,194,0,0" VerticalAlignment="Top" Width="123" Height="67" Background="#FFF9D90A" BorderThickness="0" Click="SeguitiButtonClick" Cursor="Hand"/>
-        <Button x:Name="Officina_Button" Content="Officina" HorizontalAlignment="Left" Margin="469,266,0,0" VerticalAlignment="Top" Width="123" Height="67" Background="#FFD41212" BorderThickness="0" Click="OfficinaButtonClick" Cursor="Hand"/>
-        <Button x:Name="Impostazioni_Button" Content="Impostazioni" HorizontalAlignment="Left" Margin="50,284,0,0" VerticalAlignment="Top" Width="123" Height="49" Cursor="Hand"/>
-        <Button x:Name="Logout_Button" Content="Logout" HorizontalAlignment="Left" Margin="517,393,0,0" VerticalAlignment="Top" Width="75" Click="LogoutButtonClick" Cursor="Hand"/>
+        <Button x:Name="Laboratorio_Button" Content="Laboratorio" HorizontalAlignment="Left" Margin="213,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF44D301" BorderThickness="0" Click="LaboratorioButtonClick" Cursor="Hand"/>
+        <Button x:Name="Magazzino_Button" Content="Magazzino" HorizontalAlignment="Left" Margin="213,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFC307A1" BorderThickness="0" Click="MagazzinoButtonClick" Cursor="Hand"/>
+        <Button x:Name="Persone_Button" Content="Persone" HorizontalAlignment="Left" Margin="398,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF36C8D6" BorderThickness="0" Click="PersoneButtonClick" Cursor="Hand"/>
+        <Button x:Name="Atti_Button" Content="Atti" HorizontalAlignment="Left" Margin="398,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF17F0C" BorderThickness="0" Click="AttiButtonClick" Cursor="Hand"/>
+        <Button x:Name="Seguiti_Button" Content="Seguiti" HorizontalAlignment="Left" Margin="583,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF9D90A" BorderThickness="0" Click="SeguitiButtonClick" Cursor="Hand"/>
+        <Button x:Name="Officina_Button" Content="Officina" HorizontalAlignment="Left" Margin="583,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFD41212" BorderThickness="0" Click="OfficinaButtonClick" Cursor="Hand"/>
+        <Button x:Name="Impostazioni_Button" Content="Impostazioni" HorizontalAlignment="Left" Margin="50,284,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand"/>
+        <Button x:Name="Logout_Button" Content="Logout" Margin="1053,581,0,0" Click="LogoutButtonClick" Cursor="Hand" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
         <Label x:Name="Scheda_Label" Content="" HorizontalAlignment="Left" Margin="638,74,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" FontFamily="Times New Roman"/>
-        <Button x:Name="Informazioni_Generali_Button" Content="Informazioni generali" HorizontalAlignment="Left" Margin="597,194,0,0" VerticalAlignment="Top" Width="123" Height="67" Click="Informazioni_Generali_Button_Click" Cursor="Hand"/>
+        <Button x:Name="Informazioni_Generali_Button" Content="Informazioni generali" HorizontalAlignment="Left" Margin="213,404,0,0" VerticalAlignment="Top" Width="180" Height="100" Click="Informazioni_Generali_Button_Click" Cursor="Hand" Background="#FFA26B98"/>
+        <Button x:Name="Modifica_Scheda_Button" Content="Modifica scheda" HorizontalAlignment="Left" Margin="768,302,0,0" VerticalAlignment="Top" Width="180" Height="97" Background="#FF529E4E" Cursor="Hand"/>
+        <Button x:Name="Posta_Button" Content="Posta" HorizontalAlignment="Left" Margin="768,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF95FFFF" Cursor="Hand" Click="Posta_Button_Click"/>
+        <Button x:Name="Anteprima_Button" Content="Anteprima" HorizontalAlignment="Left" Margin="50,329,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand"/>
 
     </Grid>
 </Page>
