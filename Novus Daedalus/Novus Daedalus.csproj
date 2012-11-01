@@ -336,6 +336,8 @@
       <DependentUpon>novus_daedalus_dbDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Novus_Daedalus.Model.indagato.datasource" />
+    <None Include="Properties\DataSources\Novus_Daedalus.Model.persona.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.scheda.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
