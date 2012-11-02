@@ -27,7 +27,6 @@ namespace Novus_Daedalus.View
         {
             InitializeComponent();
             this.Laboratorio_Pagina = pagina;
-            Laboratorio_Pagina.IsEnabled = false;
         }
 
         private void Laboratorio_Selezione_Reato1_Loaded_1(object sender, RoutedEventArgs e)
@@ -56,7 +55,7 @@ namespace Novus_Daedalus.View
 
         private void Chiudi_Button_Click(object sender, RoutedEventArgs e)
         {
-            /*senza rendere la pagina di provenienza di nuovo attiva,
+            /*
              * il sistema torna alla Deadalus_Main_Page
              */
             Laboratorio_Pagina.NavigationService.GoBack();

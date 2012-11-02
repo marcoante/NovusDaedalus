@@ -23,7 +23,7 @@
         <Button x:Name="Atti_Button" Content="Atti" HorizontalAlignment="Left" Margin="398,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF17F0C" BorderThickness="0" Click="AttiButtonClick" Cursor="Hand"/>
         <Button x:Name="Seguiti_Button" Content="Seguiti" HorizontalAlignment="Left" Margin="583,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF9D90A" BorderThickness="0" Click="SeguitiButtonClick" Cursor="Hand"/>
         <Button x:Name="Officina_Button" Content="Officina" HorizontalAlignment="Left" Margin="583,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFD41212" BorderThickness="0" Click="OfficinaButtonClick" Cursor="Hand"/>
-        <Button x:Name="Impostazioni_Button" Content="Impostazioni" HorizontalAlignment="Left" Margin="50,284,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand"/>
+        <Button x:Name="Impostazioni_Button" Content="Impostazioni" HorizontalAlignment="Left" Margin="50,284,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand" Click="Impostazioni_Button_Click"/>
         <Button x:Name="Logout_Button" Content="Logout" Margin="1053,581,0,0" Click="LogoutButtonClick" Cursor="Hand" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
         <Label x:Name="Scheda_Label" Content="" HorizontalAlignment="Left" Margin="638,74,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" FontFamily="Times New Roman"/>
         <Button x:Name="Informazioni_Generali_Button" Content="Informazioni generali" HorizontalAlignment="Left" Margin="213,404,0,0" VerticalAlignment="Top" Width="180" Height="100" Click="Informazioni_Generali_Button_Click" Cursor="Hand" Background="#FFA26B98"/>

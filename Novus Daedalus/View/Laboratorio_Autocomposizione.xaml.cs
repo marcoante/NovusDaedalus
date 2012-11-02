@@ -32,7 +32,7 @@ namespace Novus_Daedalus.View
 
         private void Laboratorio_Autocomposizione_Loaded(object sender, RoutedEventArgs e)
         {
-            new Laboratorio_Selezione_Reato(this).Show();
+            new Laboratorio_Selezione_Reato(this).ShowDialog();
         }
 
         private void Chiudi_Button_Click(object sender, RoutedEventArgs e)
@@ -42,7 +42,7 @@ namespace Novus_Daedalus.View
 
         private void Menù_principale_Button_Click(object sender, RoutedEventArgs e)
         {
-            new Laboratorio_Avviso_Chiusura(this).Show();
+            new Laboratorio_Avviso_Chiusura(this).ShowDialog();
         }
     }
 }

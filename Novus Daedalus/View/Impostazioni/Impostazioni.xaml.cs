@@ -10,27 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Novus_Daedalus.View
+namespace Novus_Daedalus.View.Impostazioni
 {
     /// <summary>
-    /// Logica di interazione per Laboratorio_Avviso_Chiusura.xaml
+    /// Logica di interazione per Impostazioni.xaml
     /// </summary>
-    public partial class Laboratorio_Avviso_Chiusura : Window
+    public partial class Impostazioni : Page
     {
-        private Laboratorio_Autocomposizione pagina = null;
-
-        public Laboratorio_Avviso_Chiusura(Laboratorio_Autocomposizione pagina_laboratorio)
+        public Impostazioni()
         {
             InitializeComponent();
-            pagina = pagina_laboratorio;
         }
 
         private void Chiudi_Button_Click(object sender, RoutedEventArgs e)
         {
-            pagina.NavigationService.GoBack();
-            this.Close();
+            NavigationService.GoBack();
         }
     }
 }
