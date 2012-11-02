@@ -117,6 +117,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             }
 
             // Si impostano alcuni campi dell'indagato, a seconda delle selezioni dell'utente
+            indagato_binding_source.CodiceFiscale = persona_indagata_binding_source.CodiceFiscale;
             indagato_binding_source.Stato = statoComboBox.Text;
             if (sessoMRadioButton.IsChecked == true) indagato_binding_source.persona.Sesso = true;
             else indagato_binding_source.persona.Sesso = false;
