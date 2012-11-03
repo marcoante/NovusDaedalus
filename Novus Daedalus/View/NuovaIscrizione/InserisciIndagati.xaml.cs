@@ -117,6 +117,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             //{
             //    MessageBox.Show(ex.Message);
             //}
+            InserisciReati reati_window = new InserisciReati(nuova_iscrizione_data);
+            NavigationService.Navigate(reati_window);
         }
           
     }

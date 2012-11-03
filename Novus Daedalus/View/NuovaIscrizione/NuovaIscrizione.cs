@@ -20,7 +20,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         // Lista degli indagati che non sono ancora inseriti nel db (tabella indagato), prima della nuova iscrizione;
         // in caso di annullamento della nuova iscrizione, è necessario eliminarli dal db.
         private List<Model.indagato> indagati_rollback;
-        //private List<Model.reato> reati_list;
+
+        // Lista dei reati da inserire nella scheda
+        private List<Model.reato> reati_list;
 
         // La nuova scheda
         private Model.scheda nuova_scheda;
@@ -32,6 +34,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public NuovaIscrizione()
         {
             persone_indagate_list = new List<Model.persona>();
+            reati_list = new List<Model.reato>();
             persone_indagate_rollback = new List<Model.persona>();
             indagati_rollback = new List<Model.indagato>();
             nuova_scheda = new Model.scheda();
@@ -42,6 +45,11 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public List<Model.persona> Persone_indagate_list
         {
             get { return persone_indagate_list; }
+        }
+
+        public List<Model.reato> Reati_list
+        {
+            get { return reati_list; }
         }
 
         public List<Model.persona> Persone_indagate_rollback

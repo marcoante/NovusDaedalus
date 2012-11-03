@@ -199,6 +199,9 @@
     <Compile Include="View\NuovaIscrizione\InserisciIndagati.xaml.cs">
       <DependentUpon>InserisciIndagati.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NuovaIscrizione\InserisciReati.xaml.cs">
+      <DependentUpon>InserisciReati.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NuovaIscrizione\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -276,6 +279,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\NuovaIscrizione\InserisciIndagati.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NuovaIscrizione\InserisciReati.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

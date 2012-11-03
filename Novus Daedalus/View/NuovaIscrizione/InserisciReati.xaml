@@ -1,0 +1,27 @@
+﻿<Page x:Class="Novus_Daedalus.View.NuovaIscrizione.InserisciReati"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="379.105"
+	Title="InserisciReati" Width="398.507">
+
+    <Grid>
+        <Label Content="Inserisci i dati sui reati:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <DataGrid Margin="10,44,103,77" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nomen iuris"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Codice"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descrizione" Width="163"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Aggiungi_Button" Content="Aggiungi" HorizontalAlignment="Left" Margin="301,44,0,0" VerticalAlignment="Top" Width="75" Click="AggiungiButtonClick"/>
+        <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="301,71,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
+        <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="301,98,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
+        <Button x:Name="Avanti_Button" Content="Avanti &gt;" HorizontalAlignment="Left" Margin="301,347,0,0" VerticalAlignment="Top" Width="75" Click="AvantiButtonClick"/>
+        <Button x:Name="Indietro_Button" Content="&lt; Indietro" HorizontalAlignment="Left" Margin="221,347,0,0" VerticalAlignment="Top" Width="75" Click="IndietroButtonClick"/>
+
+    </Grid>
+</Page>
