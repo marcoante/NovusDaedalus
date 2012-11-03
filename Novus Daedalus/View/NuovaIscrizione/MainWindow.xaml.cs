@@ -23,6 +23,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public MainWindow()
         {
             InitializeComponent();
+            Application.Current.Properties["nuova_iscrizione"] = new NuovaIscrizione();
         }
     }
 }

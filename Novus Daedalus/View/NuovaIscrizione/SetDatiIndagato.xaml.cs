@@ -36,11 +36,11 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         private Model.indagato indagato_binding_source;
 
         // Costruttore per la modalità di creazione nuovo indagato
-        public SetDatiIndagato(NuovaIscrizione nuova_iscrizione_data)
+        public SetDatiIndagato()
         {
             InitializeComponent();
 
-            this.nuova_iscrizione_data = nuova_iscrizione_data;
+            nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
 
             Model.persona p = new Model.persona();
             Model.indagato i = new Model.indagato();
@@ -56,11 +56,11 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         }
 
         // Costruttore per la modalità modifica di un indagato già esistente
-        public SetDatiIndagato(NuovaIscrizione nuova_iscrizione_data, Model.persona persona_indagata)
+        public SetDatiIndagato(Model.persona persona_indagata)
         {
             InitializeComponent();
 
-            this.nuova_iscrizione_data = nuova_iscrizione_data;
+            nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
             this.indagato_originale = persona_indagata.indagato;
 
             Model.persona p = new Model.persona(persona_indagata);

@@ -30,11 +30,11 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public InserisciIndagati()
         {
             InitializeComponent();
-            nuova_iscrizione_data = new NuovaIscrizione();
         }
 
         private void InserisciIndagatiLoaded(object sender, RoutedEventArgs e)
         {
+            nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
             persone_indagate_binding_source = nuova_iscrizione_data.Persone_indagate_list;
 
             System.Windows.Data.CollectionViewSource personaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource")));
@@ -45,7 +45,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void AggiungiIndagatoButtonClick(object sender, RoutedEventArgs e)
         {
-            set_dati_indagato_window = new SetDatiIndagato(nuova_iscrizione_data);
+            set_dati_indagato_window = new SetDatiIndagato();
             // Si registra l'handler per l'inserimento di un nuovo indagato
             set_dati_indagato_window.evento_indagato_creato += new SetIndagatoHandler(IndagatoCreatoHandler);
             set_dati_indagato_window.ShowDialog();
@@ -66,7 +66,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             if (personaDataGrid.SelectedItem == null) MessageBox.Show("Devi selezionare un indagato dalla lista, prima di poterlo modificare.");
             else
             {
-                set_dati_indagato_window = new SetDatiIndagato(nuova_iscrizione_data, (Model.persona)personaDataGrid.SelectedItem);
+                set_dati_indagato_window = new SetDatiIndagato((Model.persona)personaDataGrid.SelectedItem);
                 // Si registra l'handler per la modifica di un indagato
                 set_dati_indagato_window.evento_indagato_modificato += new SetIndagatoHandler(IndagatoModificatoHandler);
                 set_dati_indagato_window.ShowDialog();
@@ -87,7 +87,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void RimuoviButtonClick(object sender, RoutedEventArgs e)
         {
-            if (personaDataGrid.SelectedItem == null) MessageBox.Show("Devi selezionare un indagato dalla lista, prima di poterlo rimuovere");
+            if (personaDataGrid.SelectedItem == null) MessageBox.Show("Devi selezionare un indagato dalla lista, prima di poterlo rimuovere.");
             else
             {
                 // Si rimuove dall'elenco la persona indagata selezionata
@@ -117,7 +117,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             //{
             //    MessageBox.Show(ex.Message);
             //}
-            InserisciReati reati_window = new InserisciReati(nuova_iscrizione_data);
+            InserisciReati reati_window = new InserisciReati();
             NavigationService.Navigate(reati_window);
         }
           

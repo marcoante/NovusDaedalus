@@ -24,6 +24,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         // Lista dei reati da inserire nella scheda
         private List<Model.reato> reati_list;
 
+        private List<Model.persona_reato> persone_reati_ass;
+
         // La nuova scheda
         private Model.scheda nuova_scheda;
 
@@ -37,6 +39,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             reati_list = new List<Model.reato>();
             persone_indagate_rollback = new List<Model.persona>();
             indagati_rollback = new List<Model.indagato>();
+            persone_reati_ass = new List<Model.persona_reato>();
             nuova_scheda = new Model.scheda();
             nuova_scheda.DataRegistrazione = DateTime.Now.Date;
             db_connection.scheda.Add(nuova_scheda);
@@ -61,6 +64,13 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         {
             get { return indagati_rollback; }
         }
+
+        public List<Model.persona_reato> Persone_reati_ass
+        {
+            get { return persone_reati_ass; }
+        }
+
+
 
         public void PersoneIndagate_SaveChanges()
         {

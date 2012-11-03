@@ -18,6 +18,8 @@ namespace Novus_Daedalus
             this.Properties["db_connection"] = new Model.novus_daedalus_dbEntities();
             this.Properties["User"] = null;
             this.Properties["Scheda"] = null;
+
+            this.Properties["nuova_iscrizione_data"] = null;
         }
     }
 }

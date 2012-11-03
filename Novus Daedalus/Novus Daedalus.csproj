@@ -227,8 +227,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NuovaIscrizione\NuovaIscrizione.cs" />
+    <Compile Include="View\NuovaIscrizione\ReatoIndagati.cs" />
     <Compile Include="View\NuovaIscrizione\SetDatiIndagato.xaml.cs">
       <DependentUpon>SetDatiIndagato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NuovaIscrizione\SetDatiReato.xaml.cs">
+      <DependentUpon>SetDatiReato.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
@@ -343,6 +347,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\NuovaIscrizione\SetDatiReato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Officina.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -401,6 +409,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.indagato.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.persona.datasource" />
+    <None Include="Properties\DataSources\Novus_Daedalus.Model.reato.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.scheda.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

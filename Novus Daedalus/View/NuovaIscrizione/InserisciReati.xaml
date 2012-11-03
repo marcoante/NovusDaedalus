@@ -3,16 +3,21 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Model="clr-namespace:Novus_Daedalus.Model"
       mc:Ignorable="d" 
       d:DesignHeight="379.105"
-	Title="InserisciReati" Width="398.507">
+	Title="InserisciReati" Width="398.507" Loaded="InserisciReatiLoaded">
 
-    <Grid>
+    <Page.Resources>
+        <CollectionViewSource x:Key="reatiViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}" />
+    </Page.Resources>
+
+    <Grid x:Name="InserisciReati1" DataContext="{StaticResource reatiViewSource}">
         <Label Content="Inserisci i dati sui reati:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <DataGrid Margin="10,44,103,77" AutoGenerateColumns="False">
+        <DataGrid x:Name="reatoDataGrid" Margin="10,44,103,77" AutoGenerateColumns="False" ItemsSource="{Binding}" EnableRowVirtualization="True" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nomen iuris"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Codice"/>
+                <DataGridTextColumn Binding="{Binding NomenIuris}" ClipboardContentBinding="{x:Null}" Header="Nomen iuris"/>
+                <DataGridTextColumn Binding="{Binding Codice}" ClipboardContentBinding="{x:Null}" Header="Codice"/>
                 <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descrizione" Width="163"/>
             </DataGrid.Columns>
         </DataGrid>
