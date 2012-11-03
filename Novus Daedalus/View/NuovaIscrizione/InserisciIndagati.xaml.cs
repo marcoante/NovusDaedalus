@@ -37,6 +37,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
             persone_indagate_binding_source = nuova_iscrizione_data.Persone_indagate_list;
 
+            nuova_iscrizione_data.Reati_list.Clear();
+            nuova_iscrizione_data.Persone_reati_ass.Clear();
+
             System.Windows.Data.CollectionViewSource personaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource")));
             // Caricare i dati impostando la proprietà CollectionViewSource.Source:
             // notizia_reatoViewSource.Source = [origine dati generica]
