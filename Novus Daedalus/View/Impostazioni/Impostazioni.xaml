@@ -12,5 +12,14 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Width="75" Click="Chiudi_Button_Click"/>
+        <Button x:Name="Sedi_Dibattimento_Button" Content="Sedi di dibattimento" HorizontalAlignment="Left" Margin="15,125,0,0" VerticalAlignment="Top" Click="Sedi_Dibattimento_Button_Click"/>
+        <Label Content="Sede della Procura della Repubblica:" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="Sede_Procura_Repubblica_Label" Content="Sede attuale" HorizontalAlignment="Left" Margin="222,15,0,0" VerticalAlignment="Top" Foreground="#FF51D4C3"/>
+        <Button x:Name="Modifica_Procura_Repubblica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="405,19,0,0" VerticalAlignment="Top" Width="75" Cursor="Hand"/>
+        <Label Content="Sede della procura generale:" HorizontalAlignment="Left" Margin="15,71,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="Sede_Provura_Generale_Label" Content="Sede attuale" HorizontalAlignment="Left" Margin="180,71,0,0" VerticalAlignment="Top" Foreground="#FF51D4C3"/>
+        <Button x:Name="modifica_Procura_Generale_Button" Content="Modifica" HorizontalAlignment="Left" Margin="405,71,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Qualità_Utente_Button" Content="Qualità utente" HorizontalAlignment="Left" Margin="15,178,0,0" VerticalAlignment="Top" Click="Qualità_Utente_Button_Click"/>
+        <Button x:Name="Referenti_Button" Content="Referenti" HorizontalAlignment="Left" Margin="15,234,0,0" VerticalAlignment="Top" Width="75" Click="Referenti_Button_Click"/>
     </Grid>
 </Page>

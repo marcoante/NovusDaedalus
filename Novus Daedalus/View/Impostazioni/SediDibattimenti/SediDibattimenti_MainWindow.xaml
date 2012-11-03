@@ -1,0 +1,4 @@
+﻿<NavigationWindow x:Class="Novus_Daedalus.View.Impostazioni.SediDibattimenti.SediDibattimenti_MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SediDibattimenti_MainWindow" Height="500" Width="500" Source="SediDibattimenti1.xaml" ShowsNavigationUI="False"/>

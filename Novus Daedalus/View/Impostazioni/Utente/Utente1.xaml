@@ -1,0 +1,28 @@
+﻿<Page x:Class="Novus_Daedalus.View.Impostazioni.Utente.Utente1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+	Title="Utente1" Background="Black">
+
+    <Grid>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="42,447,0,0" VerticalAlignment="Top" Width="75" IsCancel="True"/>
+        <Label Content="Magistrato" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Cognome:" HorizontalAlignment="Left" Margin="39,67,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="237,67,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Qualità:" HorizontalAlignment="Left" Margin="42,109,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="Cognome_Label" Content="Cognome" HorizontalAlignment="Left" Margin="104,67,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
+        <Label x:Name="Nome_Label" Content="Nome" HorizontalAlignment="Left" Margin="287,67,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
+        <Label x:Name="Qualità_Label" Content="Qualità" HorizontalAlignment="Left" Margin="93,109,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
+        <Button x:Name="Modifica_Magistrato_Button" Content="Modifica" HorizontalAlignment="Left" Margin="255,113,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Assistente del P.M." HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Cognome:" HorizontalAlignment="Left" Margin="39,210,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="Cognome_Assistente_Label" Content="Cognome" HorizontalAlignment="Left" Margin="104,210,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="237,210,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="Nome_Assistente_Label" Content="Nome" HorizontalAlignment="Left" Margin="287,210,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
+        <Button x:Name="Modifica_Assistente_Button" Content="Modifica" HorizontalAlignment="Left" Margin="362,214,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Page>

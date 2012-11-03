@@ -1,0 +1,4 @@
+﻿<NavigationWindow x:Class="Novus_Daedalus.View.Impostazioni.Utente.Utente_MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Utente_MainWindow" Height="500" Width="500" ShowsNavigationUI="False" Source="Utente1.xaml"/>

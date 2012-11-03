@@ -172,6 +172,27 @@
     <Compile Include="View\Impostazioni\Impostazioni.xaml.cs">
       <DependentUpon>Impostazioni.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Impostazioni\Referenti\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Impostazioni\Referenti\Referenti1.xaml.cs">
+      <DependentUpon>Referenti1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Impostazioni\SediDibattimenti\SediDibattimenti1.xaml.cs">
+      <DependentUpon>SediDibattimenti1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Impostazioni\SediDibattimenti\SediDibattimenti2.xaml.cs">
+      <DependentUpon>SediDibattimenti2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Impostazioni\SediDibattimenti\SediDibattimenti_MainWindow.xaml.cs">
+      <DependentUpon>SediDibattimenti_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Impostazioni\Utente\Utente1.xaml.cs">
+      <DependentUpon>Utente1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Impostazioni\Utente\Utente_MainWindow.xaml.cs">
+      <DependentUpon>Utente_MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Laboratorio_Assemblaggio.xaml.cs">
       <DependentUpon>Laboratorio_Assemblaggio.xaml</DependentUpon>
     </Compile>
@@ -216,6 +237,34 @@
       <DependentUpon>Selezione_Tipo_Atti.xaml</DependentUpon>
     </Compile>
     <Page Include="View\Impostazioni\Impostazioni.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Impostazioni\Referenti\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Impostazioni\Referenti\Referenti1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Impostazioni\SediDibattimenti\SediDibattimenti1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Impostazioni\SediDibattimenti\SediDibattimenti2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Impostazioni\SediDibattimenti\SediDibattimenti_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Impostazioni\Utente\Utente1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Impostazioni\Utente\Utente_MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

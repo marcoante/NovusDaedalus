@@ -29,5 +29,23 @@ namespace Novus_Daedalus.View.Impostazioni
         {
             NavigationService.GoBack();
         }
+
+        private void Sedi_Dibattimento_Button_Click(object sender, RoutedEventArgs e)
+        {
+            SediDibattimenti.SediDibattimenti_MainWindow Impostazione_Sedi_Dibattimento = new SediDibattimenti.SediDibattimenti_MainWindow();
+            Impostazione_Sedi_Dibattimento.ShowDialog();
+        }
+
+        private void Qualità_Utente_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Utente.Utente_MainWindow Impostazione_Utente = new Utente.Utente_MainWindow();
+            Impostazione_Utente.ShowDialog();
+        }
+
+        private void Referenti_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Referenti.MainWindow Impostazione_Referenti = new Referenti.MainWindow();
+            Impostazione_Referenti.ShowDialog();
+        }
     }
 }
