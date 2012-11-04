@@ -152,6 +152,7 @@
     <Compile Include="Model\reato_cosa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\reato_extended.cs" />
     <Compile Include="Model\scheda.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

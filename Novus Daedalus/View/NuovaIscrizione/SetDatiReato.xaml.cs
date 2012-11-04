@@ -90,6 +90,13 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void InserisciButtonClick(object sender, RoutedEventArgs e)
         {
+            // Si controlla se tutti i dati obbligatori di una persona indagata sono presenti
+            if (!reato_binding_source.IsValid)
+            {
+                MessageBox.Show("Uno o più dati del reato sono mancanti.");
+                return;
+            }
+
             // Si impostano alcuni campi del reato, a seconda delle selezioni dell'utente
             reato_binding_source.NomenIuris = nomenIurisComboBox.Text;
 
