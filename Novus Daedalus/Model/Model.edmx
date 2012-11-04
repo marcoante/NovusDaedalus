@@ -382,8 +382,8 @@
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Codice" Type="varchar" MaxLength="255" />
           <Property Name="NomenIuris" Type="varchar" MaxLength="255" />
-          <Property Name="Luogo" Type="varchar" MaxLength="255" />
-          <Property Name="Data" Type="date" />
+          <Property Name="Luogo" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Data" Type="date" Nullable="false" />
           <Property Name="IdScheda" Type="int" />
         </EntityType>
         <EntityType Name="reato_atto">
@@ -1420,8 +1420,8 @@
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Codice" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="NomenIuris" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Luogo" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Data" Type="DateTime" Precision="0" />
+          <Property Name="Luogo" Type="String" MaxLength="255" Unicode="false" FixedLength="false" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Precision="0" Nullable="false" />
           <Property Name="IdScheda" Type="Int32" />
           <NavigationProperty Name="iscrizione" Relationship="novus_daedalus_dbModel.IdReatoIscrizione" FromRole="reato" ToRole="iscrizione" />
           <NavigationProperty Name="persona_reato" Relationship="novus_daedalus_dbModel.IdReato_PersonaReato" FromRole="reato" ToRole="persona_reato" />
