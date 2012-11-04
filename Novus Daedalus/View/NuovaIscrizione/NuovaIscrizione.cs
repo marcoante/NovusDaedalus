@@ -13,6 +13,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         // Lista delle persona indagate
         private List<Model.persona> persone_indagate_list;
 
+        // Lista delle persone offese
+        private List<Model.persona> persone_offese_list;
+
         // Lista dei reati da inserire nella scheda
         private List<Model.reato> reati_list;
 
@@ -28,6 +31,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public NuovaIscrizione()
         {
             persone_indagate_list = new List<Model.persona>();
+            persone_offese_list = new List<Model.persona>();
             reati_list = new List<Model.reato>();
             persone_reati_ass = new List<Model.persona_reato>();
             nuova_scheda = new Model.scheda();
@@ -38,6 +42,11 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public List<Model.persona> Persone_indagate_list
         {
             get { return persone_indagate_list; }
+        }
+
+        public List<Model.persona> Persone_offese_list
+        {
+            get { return persone_offese_list; }
         }
 
         public List<Model.reato> Reati_list
@@ -57,7 +66,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             foreach (Model.persona p in persone_indagate_list)
             {
                 Model.persona persona_query_result = db_connection.persona.Find(p.CodiceFiscale);
-                PersonaIndagataObject_Update(p, persona_query_result);
+                PersonaObject_Update(p, persona_query_result);
                 if (persona_query_result != null)
                 {
                     Model.indagato indagato_query_result = db_connection.indagato.Find(p.indagato.CodiceFiscale);
@@ -66,14 +75,17 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             }
         }
 
-        private void PersonaIndagataObject_Update(Model.persona nuova_persona, Model.persona vecchia_persona)
+        private void PersonaObject_Update(Model.persona nuova_persona, Model.persona vecchia_persona)
         {
             if (vecchia_persona == null)
             {
                 try
                 {
                     db_connection.persona.Add(nuova_persona);
-                    db_connection.indagato.Add(nuova_persona.indagato);
+                    if(nuova_persona.indagato != null)
+                        db_connection.indagato.Add(nuova_persona.indagato);
+                    else
+                        db_connection.persona_offesa.Add(nuova_persona.persona_offesa);
                     nuova_scheda.persona.Add(nuova_persona);
                     db_connection.SaveChanges();
                 }
@@ -152,5 +164,43 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             }
             db_connection.SaveChanges();
         }
+
+        public void PersoneOffese_SaveChanges()
+        {
+            foreach (Model.persona p in persone_offese_list)
+            {
+                Model.persona persona_query_result = db_connection.persona.Find(p.CodiceFiscale);
+                PersonaObject_Update(p, persona_query_result);
+                if (persona_query_result != null)
+                {
+                    Model.persona_offesa po_query_result = db_connection.persona_offesa.Find(p.persona_offesa.CodiceFiscale);
+                    POObject_Update(p.persona_offesa, po_query_result);
+                }
+            }
+        }
+
+        private void POObject_Update(Model.persona_offesa nuova_po, Model.persona_offesa vecchia_po)
+        {
+            if (vecchia_po == null)
+            {
+                try
+                {
+                    db_connection.persona_offesa.Add(nuova_po);
+                    db_connection.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    db_connection.persona_offesa.Remove(nuova_po);
+                    throw ex;
+                }
+            }
+            else
+            {
+                vecchia_po.Escusso = nuova_po.Escusso;
+                db_connection.SaveChanges();
+            }
+        }
+
+
     }
 }

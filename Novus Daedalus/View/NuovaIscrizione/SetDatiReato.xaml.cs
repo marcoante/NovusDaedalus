@@ -29,6 +29,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public event SetReatoHandler evento_reato_modificato;
 
         private List<ReatoIndagati> indagati_binding_source;
+        private List<ReatoPO> po_binding_source;
         private NuovaIscrizione nuova_iscrizione_data;
 
         private Model.reato reato_binding_source;
@@ -38,6 +39,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             InitializeComponent();
             nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
             indagati_binding_source = new List<ReatoIndagati>();
+            po_binding_source = new List<ReatoPO>();
 
             reato_binding_source = new Model.reato();
             modalità_modifica = false;
@@ -49,6 +51,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             InitializeComponent();
             nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
             indagati_binding_source = new List<ReatoIndagati>();
+            po_binding_source = new List<ReatoPO>();
 
             reato_originale = reato;
             nomenIurisComboBox.Text = reato_originale.NomenIuris;
@@ -65,7 +68,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void SetDatiReatoLoaded(object sender, RoutedEventArgs e)
         {
-
             Dati_Reato_Grid.DataContext = reato_binding_source;
 
             foreach (Model.persona p in nuova_iscrizione_data.Persone_indagate_list)
@@ -80,6 +82,19 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 indagati_binding_source.Add(ri);
             }
             Reato_Indagati_List_View.DataContext = indagati_binding_source;
+
+            foreach (Model.persona p in nuova_iscrizione_data.Persone_offese_list)
+            {
+                ReatoPO rp = new ReatoPO();
+                rp.PersonaOffesa = p;
+                if (modalità_modifica == true
+                    && nuova_iscrizione_data.Persone_reati_ass.Find(r => r.reato.NomenIuris == reato_originale.NomenIuris && r.persona.CodiceFiscale == p.CodiceFiscale) != null)
+                    rp.IsSelected = true;
+                else
+                    rp.IsSelected = false;
+                po_binding_source.Add(rp);
+            }
+            Reato_PO_List_View.DataContext = po_binding_source;
         }
 
 
@@ -134,6 +149,14 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 }
             }
 
+            foreach (ReatoPO rp in po_binding_source)
+            {
+                if (rp.IsSelected == true)
+                {
+                    event_data.Persone_offese_associate.Add(rp.PersonaOffesa);
+                }
+            }
+
             // Se si è in modalità modifica si invoca l'evento reato modificato,
             // che verrà gestito dalla pagina "Inserisci reati"
             // Altrimenti si invoca l'evento reato creato, che verrà gestito
@@ -175,10 +198,13 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private List<Model.persona> persone_indagate_associate;
 
+        private List<Model.persona> persone_offese_associate;
+
         public DatiReatoEventArgs(Model.reato nuovo_reato)
         {
             this.nuovo_reato = nuovo_reato;
             persone_indagate_associate = new List<Model.persona>();
+            persone_offese_associate = new List<Model.persona>();
         }
 
         public DatiReatoEventArgs(Model.reato nuovo_reato, Model.reato reato_originale)
@@ -186,6 +212,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             this.nuovo_reato = nuovo_reato;
             this.reato_originale = reato_originale;
             persone_indagate_associate = new List<Model.persona>();
+            persone_offese_associate = new List<Model.persona>();
         }
 
         public Model.reato Nuovo_reato
@@ -204,6 +231,12 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         {
             get { return persone_indagate_associate; }
             set { persone_indagate_associate = value; }
+        }
+
+        public List<Model.persona> Persone_offese_associate
+        {
+            get { return persone_offese_associate; }
+            set { persone_offese_associate = value; }
         }
     }
 }

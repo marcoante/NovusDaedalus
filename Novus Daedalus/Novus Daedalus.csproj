@@ -134,6 +134,7 @@
     <Compile Include="Model\persona_offesa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\persona_offesa_extended.cs" />
     <Compile Include="Model\persona_reato.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -221,6 +222,9 @@
     <Compile Include="View\NuovaIscrizione\InserisciIndagati.xaml.cs">
       <DependentUpon>InserisciIndagati.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NuovaIscrizione\InserisciPersoneOffese.xaml.cs">
+      <DependentUpon>InserisciPersoneOffese.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NuovaIscrizione\InserisciReati.xaml.cs">
       <DependentUpon>InserisciReati.xaml</DependentUpon>
     </Compile>
@@ -229,8 +233,12 @@
     </Compile>
     <Compile Include="View\NuovaIscrizione\NuovaIscrizione.cs" />
     <Compile Include="View\NuovaIscrizione\ReatoIndagati.cs" />
+    <Compile Include="View\NuovaIscrizione\ReatoPO.cs" />
     <Compile Include="View\NuovaIscrizione\SetDatiIndagato.xaml.cs">
       <DependentUpon>SetDatiIndagato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NuovaIscrizione\SetDatiPO.xaml.cs">
+      <DependentUpon>SetDatiPO.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NuovaIscrizione\SetDatiReato.xaml.cs">
       <DependentUpon>SetDatiReato.xaml</DependentUpon>
@@ -336,6 +344,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\NuovaIscrizione\InserisciPersoneOffese.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\NuovaIscrizione\InserisciReati.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -345,6 +357,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\NuovaIscrizione\SetDatiIndagato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NuovaIscrizione\SetDatiPO.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

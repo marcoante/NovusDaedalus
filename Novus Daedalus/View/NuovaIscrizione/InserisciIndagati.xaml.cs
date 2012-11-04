@@ -39,6 +39,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
             nuova_iscrizione_data.Reati_list.Clear();
             nuova_iscrizione_data.Persone_reati_ass.Clear();
+            nuova_iscrizione_data.Persone_offese_list.Clear();
 
             System.Windows.Data.CollectionViewSource personaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource")));
             // Caricare i dati impostando la proprietà CollectionViewSource.Source:
@@ -120,8 +121,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             //{
             //    MessageBox.Show(ex.Message);
             //}
-            InserisciReati reati_window = new InserisciReati();
-            NavigationService.Navigate(reati_window);
+            InserisciPersoneOffese po_window = new InserisciPersoneOffese();
+            NavigationService.Navigate(po_window);
         }
           
     }

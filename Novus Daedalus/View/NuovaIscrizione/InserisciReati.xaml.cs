@@ -60,6 +60,14 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 ass.reato = dati_evento.Nuovo_reato;
                 nuova_iscrizione_data.Persone_reati_ass.Add(ass);
             }
+
+            foreach (Model.persona p in dati_evento.Persone_offese_associate)
+            {
+                Model.persona_reato ass = new Model.persona_reato();
+                ass.persona = p;
+                ass.reato = dati_evento.Nuovo_reato;
+                nuova_iscrizione_data.Persone_reati_ass.Add(ass);
+            }
             // Si aggiorna il data grid contenete l'elenco dei nuovi indagati
             reatoDataGrid.SelectedItem = dati_evento.Nuovo_reato;
             reatoDataGrid.Items.Refresh();
@@ -90,6 +98,14 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 nuova_iscrizione_data.Persone_reati_ass.RemoveAll(r => r.reato.NomenIuris == dati_evento.Reato_originale.NomenIuris && r.persona.CodiceFiscale == p.CodiceFiscale);
             }
             foreach (Model.persona p in dati_evento.Persone_indagate_associate)
+            {
+                Model.persona_reato ass = new Model.persona_reato();
+                ass.persona = p;
+                ass.reato = dati_evento.Nuovo_reato;
+                nuova_iscrizione_data.Persone_reati_ass.Add(ass);
+            }
+
+            foreach (Model.persona p in dati_evento.Persone_offese_associate)
             {
                 Model.persona_reato ass = new Model.persona_reato();
                 ass.persona = p;
@@ -140,6 +156,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 {
                     MessageBox.Show("Attenzione, non è stato associato alcun reato a carico dell'indagato " +
                         p.Nome + " " + p.Cognome);
+                    return;
                 }
             }
 
@@ -151,6 +168,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             //{
             //    MessageBox.Show(ex.Message);
             //}
+            MessageBox.Show("ok");
         }
     }
 }
