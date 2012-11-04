@@ -13,14 +13,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         // Lista delle persona indagate
         private List<Model.persona> persone_indagate_list;
 
-        // Lista delle persone indagate che non sono ancora inserite nel db (tabella persona), prima della nuova iscrizione;
-        // in caso di annullamento della nuova iscrizione, è necessario eliminarle dal db.
-        private List<Model.persona> persone_indagate_rollback;
-
-        // Lista degli indagati che non sono ancora inseriti nel db (tabella indagato), prima della nuova iscrizione;
-        // in caso di annullamento della nuova iscrizione, è necessario eliminarli dal db.
-        private List<Model.indagato> indagati_rollback;
-
         // Lista dei reati da inserire nella scheda
         private List<Model.reato> reati_list;
 
@@ -37,8 +29,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         {
             persone_indagate_list = new List<Model.persona>();
             reati_list = new List<Model.reato>();
-            persone_indagate_rollback = new List<Model.persona>();
-            indagati_rollback = new List<Model.indagato>();
             persone_reati_ass = new List<Model.persona_reato>();
             nuova_scheda = new Model.scheda();
             nuova_scheda.DataRegistrazione = DateTime.Now.Date;
@@ -53,16 +43,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public List<Model.reato> Reati_list
         {
             get { return reati_list; }
-        }
-
-        public List<Model.persona> Persone_indagate_rollback
-        {
-            get { return persone_indagate_rollback; }
-        }
-
-        public List<Model.indagato> Indagati_rollback
-        {
-            get { return indagati_rollback; }
         }
 
         public List<Model.persona_reato> Persone_reati_ass
@@ -94,14 +74,12 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 {
                     db_connection.persona.Add(nuova_persona);
                     db_connection.indagato.Add(nuova_persona.indagato);
-                    persone_indagate_rollback.Add(nuova_persona);
                     nuova_scheda.persona.Add(nuova_persona);
                     db_connection.SaveChanges();
                 }
                 catch (Exception ex)
                 {
                     db_connection.persona.Remove(nuova_persona);
-                    persone_indagate_rollback.Remove(nuova_persona);
                     throw ex;
                 }
             }
@@ -142,13 +120,11 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 try
                 {
                     db_connection.indagato.Add(nuovo_indagato);
-                    indagati_rollback.Add(nuovo_indagato);
                     db_connection.SaveChanges();
                 }
                 catch (Exception ex)
                 {
                     db_connection.indagato.Remove(nuovo_indagato);
-                    indagati_rollback.Remove(nuovo_indagato);
                     throw ex;
                 }
             }
@@ -161,6 +137,20 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 vecchio_indagato.Difensore2 = nuovo_indagato.Difensore2;
                 db_connection.SaveChanges();
             }
+        }
+
+
+        public void Reati_SaveChanges()
+        {
+            foreach (Model.reato r in reati_list)
+            {
+                db_connection.reato.Add(r);
+            }
+            foreach (Model.persona_reato pr in Persone_reati_ass)
+            {
+                db_connection.persona_reato.Add(pr);
+            }
+            db_connection.SaveChanges();
         }
     }
 }

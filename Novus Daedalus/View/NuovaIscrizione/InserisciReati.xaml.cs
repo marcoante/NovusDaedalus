@@ -134,7 +134,23 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void AvantiButtonClick(object sender, RoutedEventArgs e)
         {
+            foreach (Model.persona p in nuova_iscrizione_data.Persone_indagate_list)
+            {
+                if (nuova_iscrizione_data.Persone_reati_ass.Find(item => item.persona == p) == null)
+                {
+                    MessageBox.Show("Attenzione, non è stato associato alcun reato a carico dell'indagato " +
+                        p.Nome + " " + p.Cognome);
+                }
+            }
 
+            //try
+            //{
+            //    nuova_iscrizione_data.Reati_SaveChanges();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
     }
 }
