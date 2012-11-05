@@ -30,6 +30,8 @@
         <Button x:Name="Posta_Button" Content="Posta" HorizontalAlignment="Left" Margin="768,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF95FFFF" Cursor="Hand" Click="Posta_Button_Click"/>
         <Button x:Name="Anteprima_Button" Content="Anteprima" HorizontalAlignment="Left" Margin="50,329,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand" IsEnabled="False"/>
         <Button x:Name="Esci_Button" Content="Esci da daedalus" HorizontalAlignment="Left" Margin="10,552,0,0" VerticalAlignment="Top" Height="51" Click="Esci_Button_Click"/>
+        <StackPanel x:Name="Scadenze_Importanti_panel" HorizontalAlignment="Left" Height="357" Margin="965,194,0,0" VerticalAlignment="Top" Width="163" Background="#B27C7777"/>
+        <Label Content="Scadenze importanti" HorizontalAlignment="Left" Margin="965,163,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold" FontSize="16"/>
 
     </Grid>
 </Page>

@@ -36,6 +36,8 @@ namespace Novus_Daedalus.View
                 Scheda_Label.Content = "scheda numero: ";
             else
                 Scheda_Label.Content = "nessuna scheda selezionata";
+
+            //inizializzazione scadenze importanti
         }
 
         private void PersoneButtonClick(object sender, RoutedEventArgs e)
