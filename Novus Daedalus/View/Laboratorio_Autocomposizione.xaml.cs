@@ -24,6 +24,7 @@ namespace Novus_Daedalus.View
         selezionato, quindi bisogna ritornare errore
         */ 
         private Model.reato reato = null;
+        Laboratorio_Selezione_Reato lab_Selezione_reato = null;
 
         public Laboratorio_Autocomposizione()
         {
@@ -32,7 +33,16 @@ namespace Novus_Daedalus.View
 
         private void Laboratorio_Autocomposizione_Loaded(object sender, RoutedEventArgs e)
         {
-            new Laboratorio_Selezione_Reato(this).ShowDialog();
+            lab_Selezione_reato = new Laboratorio_Selezione_Reato();
+            lab_Selezione_reato.evento_reato_selezionato += new ReatoSelezionatoHandler(SelezioneReatoHandler);
+            lab_Selezione_reato.ShowDialog();
+        }
+
+        void SelezioneReatoHandler(object sender, DatiReatoEventArgs dati_reato)
+        {
+            reato = dati_reato.Reato_selezionato;
+            MessageBox.Show(reato.NomenIuris);
+            //inizializzazione pagina
         }
 
         private void Chiudi_Button_Click(object sender, RoutedEventArgs e)

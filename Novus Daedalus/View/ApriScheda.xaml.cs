@@ -19,6 +19,12 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class ApriScheda : Window
     {
+        //Connessione al db
+        Model.novus_daedalus_dbEntities DB_connection = null;
+
+        // Eventi che segnalano alla pagina "DaedalusMainPage" la selezione di una scheda
+        public event SchedaSelezionataHandler evento_scheda_selezionata;
+
         public ApriScheda()
         {
             InitializeComponent();
@@ -26,11 +32,12 @@ namespace Novus_Daedalus.View
 
         private void ApriSchedaLoaded(object sender, RoutedEventArgs e)
         {
+            DB_connection = new Model.novus_daedalus_dbEntities();
 
             System.Windows.Data.CollectionViewSource schedaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("schedaViewSource")));
             // Caricare i dati impostando la proprietà CollectionViewSource.Source:
             // schedaViewSource.Source = [origine dati generica]
-            schedaViewSource.Source = ((Model.novus_daedalus_dbEntities)Application.Current.Properties["db_connection"]).scheda.ToList();
+            schedaViewSource.Source = DB_connection.scheda.ToList();
         }
 
         private void AnnullaButtonClick(object sender, RoutedEventArgs e)
@@ -40,6 +47,17 @@ namespace Novus_Daedalus.View
 
         private void ApriButtonClick(object sender, RoutedEventArgs e)
         {
+            Application.Current.Properties["Scheda"] = (Model.scheda)schedaDataGrid.SelectedItem;
+            On_evento_scheda_selezionata();
+            this.Close();
+        }
+
+        protected virtual void On_evento_scheda_selezionata()
+        {
+            if (evento_scheda_selezionata!= null) evento_scheda_selezionata(this);
         }
     }
+
+    // Gestione degli eventi per la selezione di un reato
+    public delegate void SchedaSelezionataHandler(object sender);
 }

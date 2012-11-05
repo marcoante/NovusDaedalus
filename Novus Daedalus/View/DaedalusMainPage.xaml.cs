@@ -21,6 +21,8 @@ namespace Novus_Daedalus.View
     public partial class DaedalusMainPage : Page
     {
 
+        ApriScheda apriSchedaPage = null;
+
         public DaedalusMainPage()
         {
             InitializeComponent();
@@ -95,7 +97,15 @@ namespace Novus_Daedalus.View
 
         private void ApriSchedaButtonClick(object sender, RoutedEventArgs e)
         {
-            new View.ApriScheda().Show();
+            apriSchedaPage = new View.ApriScheda();
+            apriSchedaPage.evento_scheda_selezionata += new SchedaSelezionataHandler(SelezioneSchedaHandler);
+            apriSchedaPage.ShowDialog();
+        }
+
+        void SelezioneSchedaHandler(object sender)
+        {
+            //inizializzazione pagina
+            Scheda_Label.Content = "Scheda selezionata: "+((Model.scheda)Application.Current.Properties["Scheda"]).NumeroRegistro;
         }
 
         private void LogoutButtonClick(object sender, RoutedEventArgs e)
