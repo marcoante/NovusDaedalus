@@ -246,6 +246,18 @@
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Posta\Posta_Generica.xaml.cs">
+      <DependentUpon>Posta_Generica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Posta\Posta_MainWindow.xaml.cs">
+      <DependentUpon>Posta_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Posta\Posta_Selezione_Tipo.xaml.cs">
+      <DependentUpon>Posta_Selezione_Tipo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Posta\Posta_Ufficio_Giudiziario.xaml.cs">
+      <DependentUpon>Posta_Ufficio_Giudiziario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Selezione_Tipo_Atti.xaml.cs">
       <DependentUpon>Selezione_Tipo_Atti.xaml</DependentUpon>
     </Compile>
@@ -369,6 +381,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Officina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Posta\Posta_Generica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Posta\Posta_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Posta\Posta_Selezione_Tipo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Posta\Posta_Ufficio_Giudiziario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -32,12 +32,12 @@ namespace Novus_Daedalus.View
 
         private void Esame_Imputazioni_Button_Click(object sender, RoutedEventArgs e)
         {
-            new Magazzino_Selezione_Imputazioni(this, "esame").Show();
+            new Magazzino_Selezione_Imputazioni(this, "esame").ShowDialog();
         }
 
         private void Modifica_Button_Click(object sender, RoutedEventArgs e)
         {
-            new Magazzino_Selezione_Imputazioni(this, "modifica").Show();
+            new Magazzino_Selezione_Imputazioni(this, "modifica").ShowDialog();
         }
     }
 }

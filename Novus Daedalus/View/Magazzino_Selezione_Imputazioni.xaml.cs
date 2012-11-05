@@ -31,26 +31,16 @@ namespace Novus_Daedalus.View
 
         private void Magazzino_Selezione_Imputazioni_Loaded(object sender, RoutedEventArgs e)
         {
-            //disabilito la pagina di provenienza
-            pagina.IsEnabled = false;
         }
 
         private void Annulla_Button_Click(object sender, RoutedEventArgs e)
         {
-            //riabilito la pagina di provenienza
-            pagina.IsEnabled = true;
-
-            //chiudo questa finestra
-            this.Close();
         }
 
         private void Ok_Button_Click(object sender, RoutedEventArgs e)
-        {
-            //riabilito la pagina di provenienza
-            pagina.IsEnabled = true;
-            
+        {            
             //se il motivo è esame lancio la schermata per l'esame delle imputazioni (AGGIUNGERE PARAMTERI)
-            if(motivo=="esame")
+            if (motivo == "esame")
                 new Magazzino_Esame_Imputazioni().Show();
             //altrimenti il motivo è modifica e lancio la schermata per la modifica dei capi di imputazione
 

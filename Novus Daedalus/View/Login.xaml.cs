@@ -66,5 +66,10 @@ namespace Novus_Daedalus.View
             ((Model.novus_daedalus_dbEntities)Application.Current.Properties["db_connection"]).utente.Add(utente_prova);
             ((Model.novus_daedalus_dbEntities)Application.Current.Properties["db_connection"]).SaveChanges();
         }
+
+        private void Esci_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

@@ -1,0 +1,16 @@
+﻿<Page x:Class="Novus_Daedalus.View.Posta.Posta_Selezione_Tipo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+	Title="Posta_Selezione_Tipo" Background="Black">
+
+    <Grid>
+        <Button x:Name="Ufficio_Giudiziario_Button" Content="Ad ufficio giudiziario" HorizontalAlignment="Left" Margin="186,209,0,0" VerticalAlignment="Top" Click="Ufficio_Giudiziario_Button_Click"/>
+        <Button x:Name="Generica_Button" Content="Generica" HorizontalAlignment="Left" Margin="186,262,0,0" VerticalAlignment="Top" Width="129" Click="Generica_Button_Click"/>
+        <Button Content="Chiudi" HorizontalAlignment="Left" Margin="10,453,0,0" VerticalAlignment="Top" Width="75" IsCancel="True"/>
+
+    </Grid>
+</Page>

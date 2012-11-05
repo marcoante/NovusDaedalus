@@ -137,12 +137,18 @@ namespace Novus_Daedalus.View
 
         private void Posta_Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            Posta.Posta_MainWindow posta_window = new Posta.Posta_MainWindow();
+            posta_window.ShowDialog();
         }
 
         private void Impostazioni_Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Impostazioni.Impostazioni());
+        }
+
+        private void Esci_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
