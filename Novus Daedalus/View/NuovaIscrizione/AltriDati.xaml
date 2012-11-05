@@ -24,12 +24,18 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Fonte notizia di reato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-                    <ComboBox x:Name="fonteComboBox" Grid.Column="1" DisplayMemberPath="Fonte" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-1,5" Grid.Row="0" VerticalAlignment="Center" Width="125">
+                    <ComboBox x:Name="fonteComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-1,5" Grid.Row="0" VerticalAlignment="Center" Width="125">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <VirtualizingStackPanel/>
                             </ItemsPanelTemplate>
                         </ComboBox.ItemsPanel>
+                        <ComboBoxItem Content="Ufficio di P.G." IsSelected="True"/>
+                        <ComboBoxItem Content="Privato"/>
+                        <ComboBoxItem Content="Gruppo esponenziale"/>
+                        <ComboBoxItem Content="Ente pubblico"/>
+                        <ComboBoxItem Content="Ufficio giudiziario"/>
+                        <ComboBoxItem Content="Acquisizione diretta"/>
                     </ComboBox>
                 </Grid>
                 <Grid x:Name="Specie_Grid" Margin="10,115,10,0" VerticalAlignment="Top">
@@ -41,12 +47,16 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Specie notizia di reato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-                    <ComboBox x:Name="specieComboBox" Grid.Column="1" DisplayMemberPath="Specie" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,0,5" Grid.Row="0" VerticalAlignment="Center" Width="120">
+                    <ComboBox x:Name="specieComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,0,5" Grid.Row="0" VerticalAlignment="Center" Width="120">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <VirtualizingStackPanel/>
                             </ItemsPanelTemplate>
                         </ComboBox.ItemsPanel>
+                        <ComboBoxItem Content="Denunzia" IsSelected="True"/>
+                        <ComboBoxItem Content="Querela"/>
+                        <ComboBoxItem Content="Esposto"/>
+                        <ComboBoxItem Content="Azione di ufficio"/>
                     </ComboBox>
                 </Grid>
                 <Grid x:Name="grid3" Margin="10,152,10,0" VerticalAlignment="Top">
@@ -58,12 +68,16 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Stato dell'indagine:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-                    <ComboBox x:Name="statoComboBox" Grid.Column="1" DisplayMemberPath="Stato" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-15,5" Grid.Row="0" VerticalAlignment="Center" Width="139">
+                    <ComboBox x:Name="statoComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-15,5" Grid.Row="0" VerticalAlignment="Center" Width="139">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <VirtualizingStackPanel/>
                             </ItemsPanelTemplate>
                         </ComboBox.ItemsPanel>
+                        <ComboBoxItem Content="Non esaminato" IsSelected="True"/>
+                        <ComboBoxItem Content="Necessarie ulteriori investigazioni"/>
+                        <ComboBoxItem Content="Indagine compiuta"/>
+                        <ComboBoxItem Content="Indagine conclusa"/>
                     </ComboBox>
                 </Grid>
                 <Grid x:Name="grid4" Margin="10,189,10,0" VerticalAlignment="Top">
@@ -75,12 +89,13 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Referente:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-                    <ComboBox x:Name="referenteComboBox" Grid.Column="1" DisplayMemberPath="Referente" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-62,5" Grid.Row="0" VerticalAlignment="Center" Width="186">
+                    <ComboBox x:Name="referenteComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-62,5" Grid.Row="0" VerticalAlignment="Center" Width="186">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <VirtualizingStackPanel/>
                             </ItemsPanelTemplate>
                         </ComboBox.ItemsPanel>
+                        <ComboBoxItem Content="Non designato" IsSelected="True"/>
                     </ComboBox>
                 </Grid>
                 <Grid x:Name="grid5" Margin="10,226,10,0" VerticalAlignment="Top">
@@ -120,12 +135,19 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Archiviazione immediata:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-                    <ComboBox x:Name="archiviazioneImmediataComboBox" Grid.Column="1" DisplayMemberPath="ArchiviazioneImmediata" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,0,5" Grid.Row="0" VerticalAlignment="Center" Width="109">
+                    <ComboBox x:Name="archiviazioneImmediataComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,0,5" Grid.Row="0" VerticalAlignment="Center" Width="109">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <VirtualizingStackPanel/>
                             </ItemsPanelTemplate>
                         </ComboBox.ItemsPanel>
+                        <ComboBoxItem Content="No" IsSelected="True"/>
+                        <ComboBoxItem Content="Fatto non configurante reato"/>
+                        <ComboBoxItem Content="Questione civilistica"/>
+                        <ComboBoxItem Content="Querela mancante"/>
+                        <ComboBoxItem Content="Querela tardiva"/>
+                        <ComboBoxItem Content="Violazione amministrativa"/>
+                        <ComboBoxItem Content="Altro"/>
                     </ComboBox>
                 </Grid>
                 <Grid x:Name="grid7" Margin="10,78,10,0" VerticalAlignment="Top">
@@ -137,12 +159,17 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Indagini PG:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-                    <ComboBox x:Name="indaginiPGComboBox" Grid.Column="1" DisplayMemberPath="IndaginiPG" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-52,5" Grid.Row="0" VerticalAlignment="Center" Width="176">
+                    <ComboBox x:Name="indaginiPGComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-52,5" Grid.Row="0" VerticalAlignment="Center" Width="176">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <VirtualizingStackPanel/>
                             </ItemsPanelTemplate>
                         </ComboBox.ItemsPanel>
+                        <ComboBoxItem Content="No" IsSelected="True"/>
+                        <ComboBoxItem Content="Identificazione indagato"/>
+                        <ComboBoxItem Content="Indagini e relazione"/>
+                        <ComboBoxItem Content="Acquisizione indagini"/>
+                        <ComboBoxItem Content="Altro"/>
                     </ComboBox>
                 </Grid>
                 <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Height="86" Width="270">
@@ -154,12 +181,12 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Memo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-                    <TextBox x:Name="memoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="70" Margin="3,6,-78,-42" Grid.Row="0" Text="{Binding Memo, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="203"/>
+                    <TextBox x:Name="memoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="70" Margin="3,6,-78,-42" Grid.Row="0" Text="{Binding Memo, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="203" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"/>
                 </Grid>
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="118" Margin="10,206,0,0" VerticalAlignment="Top" Width="270">
                     <Grid x:Name="UffComp_Grid">
                         <Label Content="Ufficio competente:" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
-                        <RadioButton x:Name="TribRadioButton" Content="Procura presso il Tribunale" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton"/>
+                        <RadioButton x:Name="TribRadioButton" Content="Procura presso il Tribunale" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton" IsChecked="True"/>
                         <RadioButton x:Name="TribMinRadioButton" Content="Procura presso il Tribunale per i minorenni" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton"/>
                         <Grid x:Name="grid9" HorizontalAlignment="Left" Margin="0,73,0,0" VerticalAlignment="Top">
                             <Grid.ColumnDefinitions>
