@@ -26,7 +26,7 @@ namespace Novus_Daedalus.Model
         public string Codice { get; set; }
         public string NomenIuris { get; set; }
         public string Luogo { get; set; }
-        public Nullable<System.DateTime> Data { get; set; }
+        public System.DateTime Data { get; set; }
         public Nullable<int> IdScheda { get; set; }
     
         public virtual ICollection<iscrizione> iscrizione { get; set; }

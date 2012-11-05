@@ -219,6 +219,9 @@
     <Compile Include="View\Magazzino_Selezione_Imputazioni.xaml.cs">
       <DependentUpon>Magazzino_Selezione_Imputazioni.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NuovaIscrizione\AltriDati.xaml.cs">
+      <DependentUpon>AltriDati.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NuovaIscrizione\InserisciIndagati.xaml.cs">
       <DependentUpon>InserisciIndagati.xaml</DependentUpon>
     </Compile>
@@ -352,6 +355,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\NuovaIscrizione\AltriDati.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\NuovaIscrizione\InserisciIndagati.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -453,6 +460,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.indagato.datasource" />
+    <None Include="Properties\DataSources\Novus_Daedalus.Model.notizia_reato.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.persona.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.reato.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.scheda.datasource" />

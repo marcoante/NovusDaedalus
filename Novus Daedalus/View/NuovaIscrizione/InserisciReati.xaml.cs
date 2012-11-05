@@ -26,6 +26,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private SetDatiReato set_dati_reato_window;
 
+        private AltriDati altri_dati_window;
+
         public InserisciReati()
         {
             InitializeComponent();
@@ -34,6 +36,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         private void InserisciReatiLoaded(object sender, RoutedEventArgs e)
         {
             nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
+            nuova_iscrizione_data.Nuova_scheda = null;
+            nuova_iscrizione_data.Notizia_reato = null;
             reati_binding_source = nuova_iscrizione_data.Reati_list;
 
             System.Windows.Data.CollectionViewSource reatiViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("reatiViewSource")));
@@ -159,16 +163,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                     return;
                 }
             }
-
-            //try
-            //{
-            //    nuova_iscrizione_data.Reati_SaveChanges();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            MessageBox.Show("ok");
+            altri_dati_window = new AltriDati();
+            NavigationService.Navigate(altri_dati_window);
         }
     }
 }

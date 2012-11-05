@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="novus_daedalus_dbModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="novus_daedalus_dbModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="novus_daedalus_dbModelStoreContainer">
           <EntitySet Name="atto" EntityType="novus_daedalus_dbModel.Store.atto" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="atto_cosa" EntityType="novus_daedalus_dbModel.Store.atto_cosa" store:Type="Tables" Schema="novus_daedalus_db" />
@@ -279,21 +279,10 @@
             <PropertyRef Name="CodiceFiscalePM" />
             <PropertyRef Name="IdReato" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="IdNotiziaReato" Type="int" Nullable="false" />
           <Property Name="CodiceFiscaleIndagato" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="CodiceFiscalePM" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="IdReato" Type="int" Nullable="false" />
-          <Property Name="Ufficio" Type="varchar" MaxLength="255" />
-          <Property Name="Sede" Type="varchar" MaxLength="255" />
-          <Property Name="Referente" Type="varchar" MaxLength="255" />
-          <Property Name="DataIscrizione" Type="date" />
-          <Property Name="DataScadenza" Type="date" />
-          <Property Name="Stato" Type="varchar" MaxLength="255" />
-          <Property Name="ArchiviazioneImmediata" Type="varchar" MaxLength="255" />
-          <Property Name="AvvisoArchiviazione" Type="bool" />
-          <Property Name="Memo" Type="bool" />
-          <Property Name="IndaginiPG" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="notizia_reato">
           <Key>
@@ -409,8 +398,18 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="NumeroRegistro" Type="int" />
+          <Property Name="NumeroRegistro" Type="varchar" MaxLength="255" />
           <Property Name="DataRegistrazione" Type="date" />
+          <Property Name="Ufficio" Type="varchar" MaxLength="255" />
+          <Property Name="Sede" Type="varchar" MaxLength="255" />
+          <Property Name="Referente" Type="varchar" MaxLength="255" />
+          <Property Name="DataIscrizione" Type="date" />
+          <Property Name="DataScadenza" Type="date" />
+          <Property Name="Stato" Type="varchar" MaxLength="255" />
+          <Property Name="ArchiviazioneImmediata" Type="varchar" MaxLength="255" />
+          <Property Name="AvvisoArchiviazione" Type="bool" />
+          <Property Name="Memo" Type="varchar" MaxLength="255" />
+          <Property Name="IndaginiPG" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="scheda_persona">
           <Key>
@@ -988,7 +987,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="novus_daedalus_dbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1286,21 +1286,10 @@
             <PropertyRef Name="CodiceFiscalePM" />
             <PropertyRef Name="IdReato" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="IdNotiziaReato" Type="Int32" Nullable="false" />
           <Property Name="CodiceFiscaleIndagato" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="CodiceFiscalePM" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="IdReato" Type="Int32" Nullable="false" />
-          <Property Name="Ufficio" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Sede" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Referente" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="DataIscrizione" Type="DateTime" Precision="0" />
-          <Property Name="DataScadenza" Type="DateTime" Precision="0" />
-          <Property Name="Stato" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="ArchiviazioneImmediata" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="AvvisoArchiviazione" Type="Boolean" />
-          <Property Name="Memo" Type="Boolean" />
-          <Property Name="IndaginiPG" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="indagato" Relationship="novus_daedalus_dbModel.CodiceFiscaleIndagatoIscrizione" FromRole="iscrizione" ToRole="indagato" />
           <NavigationProperty Name="pm" Relationship="novus_daedalus_dbModel.CodiceFiscalePMIscrizione" FromRole="iscrizione" ToRole="pm" />
           <NavigationProperty Name="notizia_reato" Relationship="novus_daedalus_dbModel.IdNotiziaReatoIscrizione" FromRole="iscrizione" ToRole="notizia_reato" />
@@ -1420,8 +1409,8 @@
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Codice" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="NomenIuris" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Luogo" Type="String" MaxLength="255" Unicode="false" FixedLength="false" Nullable="false" />
-          <Property Name="Data" Type="DateTime" Precision="0" Nullable="false" />
+          <Property Name="Luogo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IdScheda" Type="Int32" />
           <NavigationProperty Name="iscrizione" Relationship="novus_daedalus_dbModel.IdReatoIscrizione" FromRole="reato" ToRole="iscrizione" />
           <NavigationProperty Name="persona_reato" Relationship="novus_daedalus_dbModel.IdReato_PersonaReato" FromRole="reato" ToRole="persona_reato" />
@@ -1457,9 +1446,19 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="NumeroRegistro" Type="Int32" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NumeroRegistro" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="DataRegistrazione" Type="DateTime" Precision="0" />
+          <Property Name="Ufficio" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Sede" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Referente" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="DataIscrizione" Type="DateTime" Precision="0" />
+          <Property Name="DataScadenza" Type="DateTime" Precision="0" />
+          <Property Name="Stato" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ArchiviazioneImmediata" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="AvvisoArchiviazione" Type="Boolean" />
+          <Property Name="Memo" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="IndaginiPG" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdSchedaAtto" FromRole="scheda" ToRole="atto" />
           <NavigationProperty Name="atto_cosa" Relationship="novus_daedalus_dbModel.IdScheda_AttoCosa" FromRole="scheda" ToRole="atto_cosa" />
           <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdSchedaCosa" FromRole="scheda" ToRole="cosa" />
@@ -2113,21 +2112,10 @@
           <EntitySetMapping Name="iscrizione">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.iscrizione">
               <MappingFragment StoreEntitySet="iscrizione">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdNotiziaReato" ColumnName="IdNotiziaReato" />
                 <ScalarProperty Name="CodiceFiscaleIndagato" ColumnName="CodiceFiscaleIndagato" />
                 <ScalarProperty Name="CodiceFiscalePM" ColumnName="CodiceFiscalePM" />
                 <ScalarProperty Name="IdReato" ColumnName="IdReato" />
-                <ScalarProperty Name="Ufficio" ColumnName="Ufficio" />
-                <ScalarProperty Name="Sede" ColumnName="Sede" />
-                <ScalarProperty Name="Referente" ColumnName="Referente" />
-                <ScalarProperty Name="DataIscrizione" ColumnName="DataIscrizione" />
-                <ScalarProperty Name="DataScadenza" ColumnName="DataScadenza" />
-                <ScalarProperty Name="Stato" ColumnName="Stato" />
-                <ScalarProperty Name="ArchiviazioneImmediata" ColumnName="ArchiviazioneImmediata" />
-                <ScalarProperty Name="AvvisoArchiviazione" ColumnName="AvvisoArchiviazione" />
-                <ScalarProperty Name="Memo" ColumnName="Memo" />
-                <ScalarProperty Name="IndaginiPG" ColumnName="IndaginiPG" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2253,6 +2241,16 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
                 <ScalarProperty Name="DataRegistrazione" ColumnName="DataRegistrazione" />
+                <ScalarProperty Name="Ufficio" ColumnName="Ufficio" />
+                <ScalarProperty Name="Sede" ColumnName="Sede" />
+                <ScalarProperty Name="Referente" ColumnName="Referente" />
+                <ScalarProperty Name="DataIscrizione" ColumnName="DataIscrizione" />
+                <ScalarProperty Name="DataScadenza" ColumnName="DataScadenza" />
+                <ScalarProperty Name="Stato" ColumnName="Stato" />
+                <ScalarProperty Name="ArchiviazioneImmediata" ColumnName="ArchiviazioneImmediata" />
+                <ScalarProperty Name="AvvisoArchiviazione" ColumnName="AvvisoArchiviazione" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="IndaginiPG" ColumnName="IndaginiPG" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

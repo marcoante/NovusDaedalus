@@ -115,14 +115,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void AvantiButtonClick(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
-            //    nuova_iscrizione_data.PersoneOffese_SaveChanges();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
             InserisciReati reati_window = new InserisciReati();
             NavigationService.Navigate(reati_window);
         }

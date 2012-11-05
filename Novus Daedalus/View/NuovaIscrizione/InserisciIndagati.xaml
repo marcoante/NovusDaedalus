@@ -4,9 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:Model="clr-namespace:Novus_Daedalus.Model" x:Class="Novus_Daedalus.View.NuovaIscrizione.InserisciIndagati" 
-      mc:Ignorable="d" 
-      d:DesignHeight="379.105"
-	Title="InserisciIndagati" Width="398.507" Loaded="InserisciIndagatiLoaded">
+      mc:Ignorable="d"
+	Title="InserisciIndagati" Width="398.507" Loaded="InserisciIndagatiLoaded" Height="383.105">
 
     <Page.Resources>
         <CollectionViewSource x:Key="personaViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:persona}, CreateList=True}" />
@@ -17,10 +16,10 @@
         <Button x:Name="Aggiungi_Indagato_Button" Content="Aggiungi" HorizontalAlignment="Left" Margin="301,44,0,0" VerticalAlignment="Top" Width="75" Click="AggiungiIndagatoButtonClick"/>
         <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="301,71,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
         <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="301,98,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,347,0,14" Width="75" Click="AnnullaButtonClick"/>
         <Button x:Name="Avanti_Button" Content="Avanti &gt;" HorizontalAlignment="Left" Margin="301,347,0,0" VerticalAlignment="Top" Width="75" Click="AvantiButtonClick"/>
 
-        <DataGrid x:Name="personaDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,44,103,77" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True">
+        <DataGrid x:Name="personaDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,44,103,0" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" Height="258" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="codiceFiscaleColumn" Binding="{Binding CodiceFiscale}" Header="Codice fiscale" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="nomeColumn" Binding="{Binding Nome}" Header="Nome" Width="SizeToHeader"/>

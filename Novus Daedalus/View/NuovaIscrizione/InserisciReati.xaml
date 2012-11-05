@@ -4,9 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:Model="clr-namespace:Novus_Daedalus.Model"
-      mc:Ignorable="d" 
-      d:DesignHeight="379.105"
-	Title="InserisciReati" Width="398.507" Loaded="InserisciReatiLoaded">
+      mc:Ignorable="d"
+	Title="InserisciReati" Width="398.507" Loaded="InserisciReatiLoaded" Height="383.105">
 
     <Page.Resources>
         <CollectionViewSource x:Key="reatiViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}" />
@@ -14,7 +13,7 @@
 
     <Grid x:Name="InserisciReati1" DataContext="{StaticResource reatiViewSource}">
         <Label Content="Inserisci i dati sui reati:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <DataGrid x:Name="reatoDataGrid" Margin="10,44,103,77" AutoGenerateColumns="False" ItemsSource="{Binding}" EnableRowVirtualization="True" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True">
+        <DataGrid x:Name="reatoDataGrid" Margin="10,44,103,0" AutoGenerateColumns="False" ItemsSource="{Binding}" EnableRowVirtualization="True" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" Height="258" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding NomenIuris}" ClipboardContentBinding="{x:Null}" Header="Nomen iuris"/>
                 <DataGridTextColumn Binding="{Binding Codice}" ClipboardContentBinding="{x:Null}" Header="Codice"/>
@@ -24,7 +23,7 @@
         <Button x:Name="Aggiungi_Button" Content="Aggiungi" HorizontalAlignment="Left" Margin="301,44,0,0" VerticalAlignment="Top" Width="75" Click="AggiungiButtonClick"/>
         <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="301,71,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
         <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="301,98,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,347,0,14" Width="75" Click="AnnullaButtonClick"/>
         <Button x:Name="Avanti_Button" Content="Avanti &gt;" HorizontalAlignment="Left" Margin="301,347,0,0" VerticalAlignment="Top" Width="75" Click="AvantiButtonClick"/>
         <Button x:Name="Indietro_Button" Content="&lt; Indietro" HorizontalAlignment="Left" Margin="221,347,0,0" VerticalAlignment="Top" Width="75" Click="IndietroButtonClick"/>
 

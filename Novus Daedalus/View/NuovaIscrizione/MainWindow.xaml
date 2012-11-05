@@ -1,5 +1,5 @@
 ﻿<NavigationWindow x:Name="NuovaIscrizioneMainWindow" x:Class="Novus_Daedalus.View.NuovaIscrizione.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Nuova iscrizione" Height="411.941" Width="402.985" ShowsNavigationUI="False" Source="InserisciIndagati.xaml">
+        Title="Nuova iscrizione" Height="411.941" Width="402.985" ShowsNavigationUI="False" Source="InserisciIndagati.xaml" SizeToContent="WidthAndHeight">
 </NavigationWindow>

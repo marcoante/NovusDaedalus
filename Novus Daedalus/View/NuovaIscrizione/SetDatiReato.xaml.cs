@@ -42,6 +42,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             po_binding_source = new List<ReatoPO>();
 
             reato_binding_source = new Model.reato();
+            reato_binding_source.Data = System.DateTime.Now;
             modalità_modifica = false;
         }
 

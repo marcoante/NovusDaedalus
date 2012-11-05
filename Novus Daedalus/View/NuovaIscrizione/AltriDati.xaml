@@ -1,0 +1,184 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Model="clr-namespace:Novus_Daedalus.Model" x:Class="Novus_Daedalus.View.NuovaIscrizione.AltriDati" 
+      mc:Ignorable="d"
+	Title="AltriDati" Width="609" Height="418" Loaded="AltriDatiLoaded">
+
+    <Page.Resources>
+        <Model:notizia_reato x:Key="notizia_reatoViewSource"/>
+        <Model:scheda x:Key="schedaViewSource"/>
+    </Page.Resources>
+
+    <Grid x:Name="Window_Grid">
+        <Border BorderBrush="Black" BorderThickness="1" Height="335" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="292">
+            <Grid x:Name="AltriDati_Grid" Margin="0,0,0,-1">
+                <Grid x:Name="Fonte_Grid" Margin="10,78,10,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Fonte notizia di reato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="fonteComboBox" Grid.Column="1" DisplayMemberPath="Fonte" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-1,5" Grid.Row="0" VerticalAlignment="Center" Width="125">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </Grid>
+                <Grid x:Name="Specie_Grid" Margin="10,115,10,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Specie notizia di reato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="specieComboBox" Grid.Column="1" DisplayMemberPath="Specie" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,0,5" Grid.Row="0" VerticalAlignment="Center" Width="120">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </Grid>
+                <Grid x:Name="grid3" Margin="10,152,10,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Stato dell'indagine:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="statoComboBox" Grid.Column="1" DisplayMemberPath="Stato" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-15,5" Grid.Row="0" VerticalAlignment="Center" Width="139">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </Grid>
+                <Grid x:Name="grid4" Margin="10,189,10,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Referente:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="referenteComboBox" Grid.Column="1" DisplayMemberPath="Referente" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-62,5" Grid.Row="0" VerticalAlignment="Center" Width="186">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </Grid>
+                <Grid x:Name="grid5" Margin="10,226,10,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Avviso di archiviazione:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <CheckBox x:Name="avvisoArchiviazioneCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding AvvisoArchiviazione, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                </Grid>
+                <Label Content="Altri dati:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Grid x:Name="Num_Proc_Grid" Margin="10,41,10,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Numero del procedimento:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="numeroRegistroTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="0" Text="{Binding NumeroRegistro, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="97"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Height="335" Margin="307,10,10,0" VerticalAlignment="Top" >
+            <Grid x:Name="AttiNote_Grid" HorizontalAlignment="Left" Width="290">
+                <Label Content="Atti e note:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="270">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Archiviazione immediata:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="archiviazioneImmediataComboBox" Grid.Column="1" DisplayMemberPath="ArchiviazioneImmediata" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,0,5" Grid.Row="0" VerticalAlignment="Center" Width="109">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </Grid>
+                <Grid x:Name="grid7" Margin="10,78,10,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Indagini PG:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="indaginiPGComboBox" Grid.Column="1" DisplayMemberPath="IndaginiPG" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-52,5" Grid.Row="0" VerticalAlignment="Center" Width="176">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </Grid>
+                <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Height="86" Width="270">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Memo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="memoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="70" Margin="3,6,-78,-42" Grid.Row="0" Text="{Binding Memo, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="203"/>
+                </Grid>
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="118" Margin="10,206,0,0" VerticalAlignment="Top" Width="270">
+                    <Grid x:Name="UffComp_Grid">
+                        <Label Content="Ufficio competente:" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+                        <RadioButton x:Name="TribRadioButton" Content="Procura presso il Tribunale" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton"/>
+                        <RadioButton x:Name="TribMinRadioButton" Content="Procura presso il Tribunale per i minorenni" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton"/>
+                        <Grid x:Name="grid9" HorizontalAlignment="Left" Margin="0,73,0,0" VerticalAlignment="Top">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Sede:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="sedeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Sede, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
+        <Button x:Name="CreaScheda_Button" Content="Crea scheda" HorizontalAlignment="Left" Margin="524,382,0,0" VerticalAlignment="Top" Width="75" Click="CreaSchedaButtonClick"/>
+        <Button x:Name="Indietro_Button" Content="&lt; Indietro" HorizontalAlignment="Left" Margin="444,382,0,0" VerticalAlignment="Top" Width="75" Click="IndietroButtonClick"/>
+
+    </Grid>
+</Page>

@@ -24,6 +24,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         // La nuova scheda
         private Model.scheda nuova_scheda;
 
+        private Model.notizia_reato notizia_reato;
+
         // Connessione al db
         private Model.novus_daedalus_dbEntities db_connection = new Model.novus_daedalus_dbEntities();
 
@@ -34,9 +36,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             persone_offese_list = new List<Model.persona>();
             reati_list = new List<Model.reato>();
             persone_reati_ass = new List<Model.persona_reato>();
-            nuova_scheda = new Model.scheda();
-            nuova_scheda.DataRegistrazione = DateTime.Now.Date;
-            db_connection.scheda.Add(nuova_scheda);
         }
 
         public List<Model.persona> Persone_indagate_list
@@ -59,9 +58,21 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             get { return persone_reati_ass; }
         }
 
+        public Model.scheda Nuova_scheda
+        {
+            get { return nuova_scheda; }
+            set { nuova_scheda = value; }
+        }
+
+        public Model.notizia_reato Notizia_reato
+        {
+            get { return notizia_reato; }
+            set { notizia_reato = value; }
+        }
 
 
-        public void PersoneIndagate_SaveChanges()
+
+        private void PersoneIndagate_SaveChanges()
         {
             foreach (Model.persona p in persone_indagate_list)
             {
@@ -152,7 +163,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         }
 
 
-        public void Reati_SaveChanges()
+        private void Reati_SaveChanges()
         {
             foreach (Model.reato r in reati_list)
             {
@@ -160,12 +171,13 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             }
             foreach (Model.persona_reato pr in Persone_reati_ass)
             {
+                pr.IdScheda = nuova_scheda.Id;
                 db_connection.persona_reato.Add(pr);
             }
             db_connection.SaveChanges();
         }
 
-        public void PersoneOffese_SaveChanges()
+        private void PersoneOffese_SaveChanges()
         {
             foreach (Model.persona p in persone_offese_list)
             {
@@ -199,6 +211,16 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 vecchia_po.Escusso = nuova_po.Escusso;
                 db_connection.SaveChanges();
             }
+        }
+
+        public void Scheda_SaveChanges()
+        {
+            db_connection.notizia_reato.Add(notizia_reato);
+            db_connection.scheda.Add(nuova_scheda);
+            db_connection.SaveChanges();
+            PersoneIndagate_SaveChanges();
+            PersoneOffese_SaveChanges();
+            Reati_SaveChanges();
         }
 
 

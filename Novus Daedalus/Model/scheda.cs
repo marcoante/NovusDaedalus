@@ -29,8 +29,18 @@ namespace Novus_Daedalus.Model
         }
     
         public int Id { get; set; }
-        public Nullable<int> NumeroRegistro { get; set; }
+        public string NumeroRegistro { get; set; }
         public Nullable<System.DateTime> DataRegistrazione { get; set; }
+        public string Ufficio { get; set; }
+        public string Sede { get; set; }
+        public string Referente { get; set; }
+        public Nullable<System.DateTime> DataIscrizione { get; set; }
+        public Nullable<System.DateTime> DataScadenza { get; set; }
+        public string Stato { get; set; }
+        public string ArchiviazioneImmediata { get; set; }
+        public Nullable<bool> AvvisoArchiviazione { get; set; }
+        public string Memo { get; set; }
+        public string IndaginiPG { get; set; }
     
         public virtual ICollection<atto> atto { get; set; }
         public virtual ICollection<atto_cosa> atto_cosa { get; set; }
