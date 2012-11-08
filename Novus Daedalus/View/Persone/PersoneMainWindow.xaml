@@ -1,0 +1,35 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.Persone.PersoneMainWindow"
+        Title="Persone" Height="429.866" Width="474.97" Loaded="Window_Loaded_1">
+    <Window.Resources>
+        <CollectionViewSource x:Key="personaViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:persona}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource personaViewSource}">
+        <Label Content="Persone coinvolte nel procedimento:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+
+        <DataGrid x:Name="personaDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,44,0,0" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" Height="220" VerticalAlignment="Top" HorizontalAlignment="Left" Width="354">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="codiceFiscaleColumn" Binding="{Binding CodiceFiscale}" Header="Codice Fiscale" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="nomeColumn" Binding="{Binding Nome}" Header="Nome" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="cognomeColumn" Binding="{Binding Cognome}" Header="Cognome" Width="SizeToHeader"/>
+                <DataGridTemplateColumn x:Name="dataNascitaColumn" Header="Data Nascita" Width="SizeToHeader">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Name="dataNascitaColumn" Text="{Binding DataNascita, StringFormat=d}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="ruoloColumn" Binding="{Binding Ruolo}" Header="Ruolo" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Aggiungi_Button" Content="Aggiungi" Margin="369,44,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
+        <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="369,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="369,106,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Dati_Button" Content="Visualizza dati completi" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Width="167" Height="50"/>
+        <Button x:Name="Contatto_Button" Content="Contatto" HorizontalAlignment="Left" Margin="197,269,0,0" Width="167" Height="50" VerticalAlignment="Top"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="369,364,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

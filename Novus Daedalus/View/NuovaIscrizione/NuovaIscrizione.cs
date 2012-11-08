@@ -167,6 +167,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         {
             foreach (Model.reato r in reati_list)
             {
+                r.IdScheda = nuova_scheda.Id;
                 db_connection.reato.Add(r);
             }
             foreach (Model.persona_reato pr in Persone_reati_ass)

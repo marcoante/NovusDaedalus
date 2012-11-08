@@ -48,6 +48,8 @@ namespace Novus_Daedalus.View
                     "oppure il pulsante \"Nuova iscrizione\"");
                 return;
             }
+            Persone.PersoneMainWindow persone_window = new Persone.PersoneMainWindow();
+            persone_window.ShowDialog();
         }
 
         private void LaboratorioButtonClick(object sender, RoutedEventArgs e)
