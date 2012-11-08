@@ -48,6 +48,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             p.indagato = i;
             p.Ruolo = "indagato";
             p.Sesso = true;
+            p.NumeroEscussioni = 0;
 
             persona_indagata_binding_source = p;
             indagato_binding_source = i;

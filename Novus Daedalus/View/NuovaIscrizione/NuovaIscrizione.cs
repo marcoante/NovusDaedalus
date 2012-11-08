@@ -172,8 +172,11 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             }
             foreach (Model.persona_reato pr in Persone_reati_ass)
             {
-                pr.IdScheda = nuova_scheda.Id;
-                db_connection.persona_reato.Add(pr);
+                Model.persona_reato new_pr_ass = new Model.persona_reato();
+                new_pr_ass.IdScheda = nuova_scheda.Id;
+                new_pr_ass.persona = db_connection.persona.Find(pr.persona.CodiceFiscale);
+                new_pr_ass.reato = db_connection.reato.Find(pr.reato.Id);
+                db_connection.persona_reato.Add(new_pr_ass);
             }
             db_connection.SaveChanges();
         }

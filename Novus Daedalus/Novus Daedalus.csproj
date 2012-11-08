@@ -249,6 +249,9 @@
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Persone\MostraPersona.xaml.cs">
+      <DependentUpon>MostraPersona.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Persone\PersoneMainWindow.xaml.cs">
       <DependentUpon>PersoneMainWindow.xaml</DependentUpon>
     </Compile>
@@ -391,6 +394,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Officina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Persone\MostraPersona.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

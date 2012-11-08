@@ -39,5 +39,15 @@ namespace Novus_Daedalus.View.Persone
             // personaViewSource.Source = [origine dati generica]
             personaViewSource.Source = scheda.persona;
         }
+
+        private void DatiButtonClick(object sender, RoutedEventArgs e)
+        {
+            Model.persona selezione = (Model.persona)personaDataGrid.SelectedItem;
+            if (selezione.indagato == null)
+            {
+                MostraPersona dati_persona_window = new MostraPersona(selezione);
+                dati_persona_window.ShowDialog();
+            }
+        }
     }
 }
