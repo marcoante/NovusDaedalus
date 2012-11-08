@@ -1,9 +1,9 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.Persone.MostraPersona"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.Persone.MostraIndagato"
         xmlns:src="clr-namespace:Novus_Daedalus.Model"
-        Title="Dati sulla persona" Height="592.179" Width="317.911" Loaded="MostraPersona_Loaded">
+        Title="Dati sull'indagato" Height="779.104" Width="317.911" Loaded="MostraIndagato_Loaded">
     <Window.Resources>
         <src:persona x:Key="personaViewSource"/>
         <CollectionViewSource x:Key="reatoViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}"/>
@@ -108,8 +108,8 @@
             <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBlock x:Name="sessoTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Sesso}" VerticalAlignment="Center"/>
         </Grid>
-        <Label Content="Reati collegati:" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
-        <ListView x:Name="Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,395,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <Label Content="Reati collegati:" HorizontalAlignment="Left" Margin="10,547,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <ListView x:Name="Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="9,578,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Resources>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -135,6 +135,63 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="221,526,0,0" VerticalAlignment="Top" Width="75" Click="ChiudiButtonClick"/>
+        <Grid x:Name="DatiIndagato_Grid" HorizontalAlignment="Left" Height="199" Margin="0,338,0,0" VerticalAlignment="Top" Width="310">
+            <Grid x:Name="grid10" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Stato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBlock x:Name="statoTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Stato}" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="grid11" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Precedenti Penali:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBlock x:Name="precedentiPenaliTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding PrecedentiPenali}" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="grid12" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Difensore 1:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBlock x:Name="difensore1TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Difensore1}" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="grid13" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Difensore 2:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBlock x:Name="difensore2TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Difensore2}" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="grid14" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Qualità Difesa:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBlock x:Name="qualitàDifesaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding QualitàDifesa}" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="220,713,0,0" VerticalAlignment="Top" Width="75" Click="ChiudiButtonClick"/>
     </Grid>
 </Window>

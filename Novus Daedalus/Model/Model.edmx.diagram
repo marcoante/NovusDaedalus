@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="aec227d225aa40fa83532ade82b6dba2" Name="Diagramma1">
+      <Diagram DiagramId="26d05c1aeb604f529f23ec20e6471f3f" Name="Diagramma1">
         <EntityTypeShape EntityType="novus_daedalus_dbModel.atto" Width="1.5" PointX="5.25" PointY="39.875" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.atto_cosa" Width="1.5" PointX="7.5" PointY="43" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.collaboratore" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />

@@ -15,25 +15,25 @@ using System.Windows.Shapes;
 namespace Novus_Daedalus.View.Persone
 {
     /// <summary>
-    /// Logica di interazione per MostraPersona.xaml
+    /// Logica di interazione per MostraIndagato.xaml
     /// </summary>
-    public partial class MostraPersona : Window
+    public partial class MostraIndagato : Window
     {
         private Model.persona p;
         private Model.novus_daedalus_dbEntities db_connection;
 
-        public MostraPersona()
+        public MostraIndagato()
         {
             InitializeComponent();
         }
 
-        public MostraPersona(Model.persona p)
+        public MostraIndagato(Model.persona p)
         {
             InitializeComponent();
             this.p = p;
         }
 
-        private void MostraPersona_Loaded(object sender, RoutedEventArgs e)
+        private void MostraIndagato_Loaded(object sender, RoutedEventArgs e)
         {
             db_connection = new Model.novus_daedalus_dbEntities();
 
@@ -43,8 +43,10 @@ namespace Novus_Daedalus.View.Persone
             else
                 sessoTextBlock.Text = "F";
 
+            DatiIndagato_Grid.DataContext = p.indagato;
+
             List<Model.reato> reati_collegati = new List<Model.reato>();
-            foreach(Model.persona_reato pr in p.persona_reato)
+            foreach (Model.persona_reato pr in p.persona_reato)
             {
                 reati_collegati.Add(db_connection.reato.Find(pr.IdReato));
             }
