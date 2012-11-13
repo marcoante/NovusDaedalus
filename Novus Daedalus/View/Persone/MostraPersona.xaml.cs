@@ -20,7 +20,6 @@ namespace Novus_Daedalus.View.Persone
     public partial class MostraPersona : Window
     {
         private Model.persona p;
-        private Model.novus_daedalus_dbEntities db_connection;
 
         public MostraPersona()
         {
@@ -35,18 +34,17 @@ namespace Novus_Daedalus.View.Persone
 
         private void MostraPersona_Loaded(object sender, RoutedEventArgs e)
         {
-            db_connection = new Model.novus_daedalus_dbEntities();
 
             Window_Grid.DataContext = p;
-            if (p.Sesso == true)
+            if (p.Sesso == "M")
                 sessoTextBlock.Text = "M";
             else
                 sessoTextBlock.Text = "F";
 
             List<Model.reato> reati_collegati = new List<Model.reato>();
-            foreach(Model.persona_reato pr in p.persona_reato)
+            foreach(Model.PersonaReato pr in p.PersonaReato)
             {
-                reati_collegati.Add(db_connection.reato.Find(pr.IdReato));
+                reati_collegati.Add(pr.reato);
             }
             Reati_List_View.DataContext = reati_collegati;
         }

@@ -22,7 +22,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
     {
         private NuovaIscrizione nuova_iscrizione_data;
 
-        private List<Model.reato> reati_binding_source;
+        //private List<Model.reato> reati_binding_source;
 
         private SetDatiReato set_dati_reato_window;
 
@@ -38,10 +38,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
             nuova_iscrizione_data.Nuova_scheda = null;
             nuova_iscrizione_data.Notizia_reato = null;
-            reati_binding_source = nuova_iscrizione_data.Reati_list;
 
             System.Windows.Data.CollectionViewSource reatiViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("reatiViewSource")));
-            reatiViewSource.Source = reati_binding_source;
+            reatiViewSource.Source = nuova_iscrizione_data.Reati_list;
         }
 
 
@@ -59,7 +58,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             nuova_iscrizione_data.Reati_list.Add(dati_evento.Nuovo_reato);
             foreach (Model.persona p in dati_evento.Persone_indagate_associate)
             {
-                Model.persona_reato ass = new Model.persona_reato();
+                Model.PersonaReato ass = new Model.PersonaReato();
                 ass.persona = p;
                 ass.reato = dati_evento.Nuovo_reato;
                 nuova_iscrizione_data.Persone_reati_ass.Add(ass);
@@ -67,7 +66,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
             foreach (Model.persona p in dati_evento.Persone_offese_associate)
             {
-                Model.persona_reato ass = new Model.persona_reato();
+                Model.PersonaReato ass = new Model.PersonaReato();
                 ass.persona = p;
                 ass.reato = dati_evento.Nuovo_reato;
                 nuova_iscrizione_data.Persone_reati_ass.Add(ass);
@@ -94,24 +93,28 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         void ReatoModificatoHandler(object sender, DatiReatoEventArgs dati_evento)
         {
             // Si rimuove dall'elenco l'oggetto corrispondente al reato da modificare
-            nuova_iscrizione_data.Reati_list.RemoveAll(item => item.NomenIuris == dati_evento.Reato_originale.NomenIuris);
+            nuova_iscrizione_data.Reati_list.Remove((Model.reato) reatoDataGrid.SelectedItem);
             // Si inserisce nell'elenco l'indagato modificato
             nuova_iscrizione_data.Reati_list.Add(dati_evento.Nuovo_reato);
             foreach (Model.persona p in nuova_iscrizione_data.Persone_indagate_list)
             {
-                nuova_iscrizione_data.Persone_reati_ass.RemoveAll(r => r.reato.NomenIuris == dati_evento.Reato_originale.NomenIuris && r.persona.CodiceFiscale == p.CodiceFiscale);
+                nuova_iscrizione_data.Persone_reati_ass.RemoveAll(r => r.reato.NomenIuris == dati_evento.Reato_originale.NomenIuris && r.persona.Equals(p));
             }
             foreach (Model.persona p in dati_evento.Persone_indagate_associate)
             {
-                Model.persona_reato ass = new Model.persona_reato();
+                Model.PersonaReato ass = new Model.PersonaReato();
                 ass.persona = p;
                 ass.reato = dati_evento.Nuovo_reato;
                 nuova_iscrizione_data.Persone_reati_ass.Add(ass);
             }
 
+            foreach (Model.persona p in nuova_iscrizione_data.Persone_offese_list)
+            {
+                nuova_iscrizione_data.Persone_reati_ass.RemoveAll(r => r.reato.NomenIuris == dati_evento.Reato_originale.NomenIuris && r.persona.Equals(p));
+            }
             foreach (Model.persona p in dati_evento.Persone_offese_associate)
             {
-                Model.persona_reato ass = new Model.persona_reato();
+                Model.PersonaReato ass = new Model.PersonaReato();
                 ass.persona = p;
                 ass.reato = dati_evento.Nuovo_reato;
                 nuova_iscrizione_data.Persone_reati_ass.Add(ass);
@@ -130,7 +133,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             {
                 // Si rimuove dall'elenco il reato selezionato
                 Model.reato reato_da_rimuovere = (Model.reato)reatoDataGrid.SelectedItem;
-                nuova_iscrizione_data.Reati_list.RemoveAll(item => item.NomenIuris == reato_da_rimuovere.NomenIuris);
+                nuova_iscrizione_data.Reati_list.Remove(reato_da_rimuovere);
                 nuova_iscrizione_data.Persone_reati_ass.RemoveAll(item => item.reato.NomenIuris == reato_da_rimuovere.NomenIuris);
                 // Si aggiorna il data grid contenete l'elenco dei nuovi reati
                 reatoDataGrid.SelectedItem = null;

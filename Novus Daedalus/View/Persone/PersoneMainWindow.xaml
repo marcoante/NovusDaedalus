@@ -11,7 +11,6 @@
 
         <DataGrid x:Name="personaDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,44,0,0" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" Height="220" VerticalAlignment="Top" HorizontalAlignment="Left" Width="354">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="codiceFiscaleColumn" Binding="{Binding CodiceFiscale}" Header="Codice Fiscale" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="nomeColumn" Binding="{Binding Nome}" Header="Nome" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="cognomeColumn" Binding="{Binding Cognome}" Header="Cognome" Width="SizeToHeader"/>
                 <DataGridTemplateColumn x:Name="dataNascitaColumn" Header="Data Nascita" Width="SizeToHeader">
@@ -25,7 +24,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="Aggiungi_Button" Content="Aggiungi" Margin="369,44,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
-        <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="369,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="369,75,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
         <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="369,106,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
         <Button x:Name="Dati_Button" Content="Visualizza dati completi" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Width="167" Height="50" Click="DatiButtonClick"/>
         <Button x:Name="Contatto_Button" Content="Contatto" HorizontalAlignment="Left" Margin="197,269,0,0" Width="167" Height="50" VerticalAlignment="Top"/>

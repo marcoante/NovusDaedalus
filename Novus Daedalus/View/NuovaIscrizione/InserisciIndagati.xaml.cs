@@ -22,8 +22,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
     {
         // Informazioni sulla nuova iscrizione, oggetto usato per il passaggio di dati tra pagine
         private NuovaIscrizione nuova_iscrizione_data;
-        // Lista delle persone indagate da inserire nel data grid
-        private List<Model.persona> persone_indagate_binding_source;
         // Finestra per l'inserimento dei dati di un indagato
         private SetDatiIndagato set_dati_indagato_window;
 
@@ -35,7 +33,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         private void InserisciIndagatiLoaded(object sender, RoutedEventArgs e)
         {
             nuova_iscrizione_data = (NuovaIscrizione)Application.Current.Properties["nuova_iscrizione"];
-            persone_indagate_binding_source = nuova_iscrizione_data.Persone_indagate_list;
 
             nuova_iscrizione_data.Reati_list.Clear();
             nuova_iscrizione_data.Persone_reati_ass.Clear();
@@ -44,7 +41,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             System.Windows.Data.CollectionViewSource personaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource")));
             // Caricare i dati impostando la proprietà CollectionViewSource.Source:
             // notizia_reatoViewSource.Source = [origine dati generica]
-            personaViewSource.Source = persone_indagate_binding_source;
+            personaViewSource.Source = nuova_iscrizione_data.Persone_indagate_list;
         }
 
         private void AggiungiIndagatoButtonClick(object sender, RoutedEventArgs e)
@@ -80,7 +77,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         void IndagatoModificatoHandler(object sender, DatiIndagatoEventArgs dati_evento)
         {
             // Si rimuove dall'elenco l'oggetto corrispondente all'indagato da modificare
-            nuova_iscrizione_data.Persone_indagate_list.RemoveAll(item => item.CodiceFiscale == dati_evento.Persona_indagata_originale.CodiceFiscale);
+            nuova_iscrizione_data.Persone_indagate_list.Remove((Model.persona)personaDataGrid.SelectedItem);
+            //nuova_iscrizione_data.Persone_indagate_list.RemoveAll(item => item.CodiceFiscale == dati_evento.Persona_indagata_originale.CodiceFiscale);
             // Si inserisce nell'elenco l'indagato modificato
             nuova_iscrizione_data.Persone_indagate_list.Add(dati_evento.Nuova_persona_indagata);
             // Si aggiorna il data grid contenete l'elenco dei nuovi indagati
@@ -95,8 +93,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             else
             {
                 // Si rimuove dall'elenco la persona indagata selezionata
-                Model.persona persona_da_rimuovere = (Model.persona)personaDataGrid.SelectedItem;
-                nuova_iscrizione_data.Persone_indagate_list.RemoveAll(item => item.CodiceFiscale == persona_da_rimuovere.CodiceFiscale);
+                nuova_iscrizione_data.Persone_indagate_list.Remove((Model.persona)personaDataGrid.SelectedItem);
+                //Model.persona persona_da_rimuovere = (Model.persona)personaDataGrid.SelectedItem;
+                //nuova_iscrizione_data.Persone_indagate_list.RemoveAll(item => item.CodiceFiscale == persona_da_rimuovere.CodiceFiscale);
                 // Si aggiorna il data grid contenete l'elenco dei nuovi indagati
                 personaDataGrid.SelectedItem = null;
                 personaDataGrid.Items.Refresh();

@@ -9,18 +9,7 @@
         <CollectionViewSource x:Key="reatoViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}"/>
     </Window.Resources>
     <Grid x:Name="Window_Grid">
-        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Codice Fiscale:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBlock x:Name="codiceFiscaleTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding CodiceFiscale}" VerticalAlignment="Center"/>
-        </Grid>
-        <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -31,7 +20,7 @@
             <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBlock x:Name="nomeTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Nome}" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -42,7 +31,7 @@
             <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBlock x:Name="cognomeTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Cognome}" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -53,7 +42,7 @@
             <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBlock x:Name="luogoNascitaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding LuogoNascita}" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -64,7 +53,7 @@
             <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBlock x:Name="dataNascitaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding DataNascita}" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -75,7 +64,7 @@
             <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBlock x:Name="domicilioTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Domicilio}" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -86,7 +75,7 @@
             <Label Content="Nazionalità:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBlock x:Name="nazionalitàTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Nazionalità}" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -97,7 +86,7 @@
             <Label Content="Ruolo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBlock x:Name="ruoloTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Ruolo}" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="grid9" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid9" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -135,7 +124,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Grid x:Name="DatiIndagato_Grid" HorizontalAlignment="Left" Height="199" Margin="0,338,0,0" VerticalAlignment="Top" Width="310">
+        <Grid x:Name="DatiIndagato_Grid" HorizontalAlignment="Left" Height="231" Margin="0,301,0,0" VerticalAlignment="Top" Width="310">
             <Grid x:Name="grid10" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -147,7 +136,7 @@
                 <Label Content="Stato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <TextBlock x:Name="statoTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Stato}" VerticalAlignment="Center"/>
             </Grid>
-            <Grid x:Name="grid11" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
+            <Grid x:Name="grid11" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -158,7 +147,7 @@
                 <Label Content="Precedenti Penali:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <TextBlock x:Name="precedentiPenaliTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding PrecedentiPenali}" VerticalAlignment="Center"/>
             </Grid>
-            <Grid x:Name="grid12" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top">
+            <Grid x:Name="Dif1_Grid" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -166,10 +155,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="Difensore 1:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <Label Content="Primo difensore:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <TextBlock x:Name="difensore1TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Difensore1}" VerticalAlignment="Center"/>
             </Grid>
-            <Grid x:Name="grid13" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top">
+            <Grid x:Name="Dif2_Grid" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -177,10 +166,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="Difensore 2:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <Label Content="Secondo difensore:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <TextBlock x:Name="difensore2TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Difensore2}" VerticalAlignment="Center"/>
             </Grid>
-            <Grid x:Name="grid14" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
+            <Grid x:Name="grid14" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -190,6 +179,17 @@
                 </Grid.RowDefinitions>
                 <Label Content="Qualità Difesa:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <TextBlock x:Name="qualitàDifesaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding QualitàDifesa}" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Inizio Misura Cautelare:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBlock x:Name="inizioMisuraCautelareTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding InizioMisuraCautelare}" VerticalAlignment="Center"/>
             </Grid>
         </Grid>
         <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="220,713,0,0" VerticalAlignment="Top" Width="75" Click="ChiudiButtonClick"/>

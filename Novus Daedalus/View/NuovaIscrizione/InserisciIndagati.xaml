@@ -21,10 +21,9 @@
 
         <DataGrid x:Name="personaDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,44,103,0" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" Height="258" VerticalAlignment="Top">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="codiceFiscaleColumn" Binding="{Binding CodiceFiscale}" Header="Codice fiscale" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="nomeColumn" Binding="{Binding Nome}" Header="Nome" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="cognomeColumn" Binding="{Binding Cognome}" Header="Cognome" Width="SizeToHeader"/>
-                <DataGridTemplateColumn x:Name="dataNascitaColumn" Header="Data di nascita" Width="SizeToHeader">
+                <DataGridTextColumn x:Name="nomeColumn" Binding="{Binding Nome}" Header="Nome" Width="97"/>
+                <DataGridTextColumn x:Name="cognomeColumn" Binding="{Binding Cognome}" Header="Cognome" Width="97"/>
+                <DataGridTemplateColumn x:Name="dataNascitaColumn" Header="Data di nascita" Width="90">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Name="dataNascitaColumn" Text="{Binding DataNascita, StringFormat=d}" />

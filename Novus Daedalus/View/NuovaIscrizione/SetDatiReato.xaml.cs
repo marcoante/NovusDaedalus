@@ -76,7 +76,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 ReatoIndagati ri = new ReatoIndagati();
                 ri.PersonaIndagata = p;
                 if (modalità_modifica == true
-                    && nuova_iscrizione_data.Persone_reati_ass.Find(r => r.reato.NomenIuris == reato_originale.NomenIuris && r.persona.CodiceFiscale == p.CodiceFiscale) != null)
+                    && nuova_iscrizione_data.Persone_reati_ass.Find(r => r.reato.NomenIuris == reato_originale.NomenIuris && r.persona.Equals(p)) != null)
                     ri.IsSelected = true;
                 else
                     ri.IsSelected = false;
@@ -89,13 +89,79 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 ReatoPO rp = new ReatoPO();
                 rp.PersonaOffesa = p;
                 if (modalità_modifica == true
-                    && nuova_iscrizione_data.Persone_reati_ass.Find(r => r.reato.NomenIuris == reato_originale.NomenIuris && r.persona.CodiceFiscale == p.CodiceFiscale) != null)
+                    && nuova_iscrizione_data.Persone_reati_ass.Find(r => r.reato.NomenIuris == reato_originale.NomenIuris && r.persona.Equals(p)) != null)
                     rp.IsSelected = true;
                 else
                     rp.IsSelected = false;
                 po_binding_source.Add(rp);
             }
             Reato_PO_List_View.DataContext = po_binding_source;
+        }
+
+        private void chkAllIndagatiClick(object sender, RoutedEventArgs e)
+        {
+            foreach (ReatoIndagati ri in indagati_binding_source)
+            {
+                if (chkAllIndagati.IsChecked == true)
+                    ri.IsSelected = true;
+                else
+                    ri.IsSelected = false;
+            }
+            Reato_Indagati_List_View.Items.Refresh();
+        }
+
+        private void chkAllPOClick(object sender, RoutedEventArgs e)
+        {
+            foreach (ReatoPO rp in po_binding_source)
+            {
+                if (chkAllPO.IsChecked == true)
+                    rp.IsSelected = true;
+                else
+                    rp.IsSelected = false;
+            }
+            Reato_PO_List_View.Items.Refresh();
+        }
+
+        private void chkIndagatoClick(object sender, RoutedEventArgs e)
+        {
+            bool selected_all = true;
+
+            if (((CheckBox)sender).IsChecked == false)
+            {
+                chkAllIndagati.IsChecked = false;
+                selected_all = false;
+            }
+            else
+            {
+                foreach (ReatoIndagati ri in indagati_binding_source)
+                {
+                    if (ri.IsSelected == false)
+                        selected_all = false;
+                }
+            }
+            if (selected_all)
+                chkAllIndagati.IsChecked = true;
+        }
+
+        private void chkPOClick(object sender, RoutedEventArgs e)
+        {
+            bool selected_all = true;
+
+            if (((CheckBox)sender).IsChecked == false)
+            {
+                chkAllPO.IsChecked = false;
+                selected_all = false;
+            }
+            else
+            {
+                foreach (ReatoPO rp in po_binding_source)
+                {
+                    if (rp.IsSelected == false)
+                        selected_all = false;
+                }
+            }
+            if (selected_all)
+                chkAllPO.IsChecked = true;
         }
 
 
@@ -131,7 +197,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 }
                 else if (find_result_reato.NomenIuris != reato_originale.NomenIuris)
                 {
-                    MessageBox.Show("Il reatoo con Nomen Iuris \"" +
+                    MessageBox.Show("Il reato con Nomen Iuris \"" +
                         reato_binding_source.NomenIuris +
                         "\" è già stato inserito.");
                     return;
@@ -163,11 +229,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             // Altrimenti si invoca l'evento reato creato, che verrà gestito
             // sempre dalla pagina "Inserisci reati"
             if (modalità_modifica)
-            {
-
                 On_evento_reato_modificato(event_data);
-            }
-            else On_evento_reato_creato(event_data);
+            else
+                On_evento_reato_creato(event_data);
             Close();
         }
 

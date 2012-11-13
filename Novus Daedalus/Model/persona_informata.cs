@@ -14,8 +14,7 @@ namespace Novus_Daedalus.Model
     
     public partial class persona_informata
     {
-        public string CodiceFiscale { get; set; }
-        public Nullable<bool> Escusso { get; set; }
+        public int Id { get; set; }
     
         public virtual persona persona { get; set; }
     }

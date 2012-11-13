@@ -16,7 +16,7 @@ namespace Novus_Daedalus.Model
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        public string CodiceFiscaleUtente { get; set; }
+        public Nullable<int> Id { get; set; }
     
         public virtual persona persona { get; set; }
     }

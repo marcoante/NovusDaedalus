@@ -12,6 +12,7 @@ namespace Novus_Daedalus.Model
         // Costruttore per la copia di una persona
         public persona(persona p)
         {
+            this.Id = p.Id;
             this.CodiceFiscale = p.CodiceFiscale;
             this.Nome = p.Nome;
             this.Cognome = p.Cognome;
@@ -22,6 +23,7 @@ namespace Novus_Daedalus.Model
             this.Domicilio = p.Domicilio;
             this.Ruolo = p.Ruolo;
             this.NumeroEscussioni = p.NumeroEscussioni;
+            this.IdScheda = p.IdScheda;
         }
 
         // Messaggi di errore per i controlli sull'input dell'utente
@@ -37,11 +39,6 @@ namespace Novus_Daedalus.Model
             get
             {
                 string result = null;
-                if (columnName == "CodiceFiscale")
-                {
-                    if (string.IsNullOrEmpty(CodiceFiscale))
-                        result = "Il Codice Fiscale è un campo obbligatorio";
-                }
 
                 if (columnName == "Nome")
                 {
@@ -67,8 +64,7 @@ namespace Novus_Daedalus.Model
         {
             get
             {
-                if (this.CodiceFiscale == null || this.CodiceFiscale == ""
-                    || this.Nome == null || this.Nome == ""
+                if (this.Nome == null || this.Nome == ""
                     || this.Cognome == null || this.Cognome == "") return false;
 
                 return true;

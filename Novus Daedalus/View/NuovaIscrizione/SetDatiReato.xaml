@@ -87,15 +87,8 @@
             </ListView.Resources>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Codice Fiscale">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Path=PersonaIndagata.CodiceFiscale}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
                     
-                    <GridViewColumn Header="Nome" >
+                    <GridViewColumn Header="Nome" Width="85" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=PersonaIndagata.Nome}" />
@@ -103,7 +96,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Cognome">
+                    <GridViewColumn Header="Cognome" Width="85">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=PersonaIndagata.Cognome}" />
@@ -112,9 +105,15 @@
                     </GridViewColumn>
 
                     <GridViewColumn Width="110">
+                        <GridViewColumn.Header>
+                            <CheckBox HorizontalAlignment="Center"
+                                  Click="chkAllIndagatiClick"
+                                  VerticalAlignment="Center"
+                                  x:Name="chkAllIndagati"></CheckBox>
+                        </GridViewColumn.Header>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox IsChecked="{Binding Path=IsSelected}" />
+                                <CheckBox IsChecked="{Binding Path=IsSelected}" Click="chkIndagatoClick"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -130,15 +129,8 @@
             </ListView.Resources>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Codice Fiscale">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Path=PersonaOffesa.CodiceFiscale}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
 
-                    <GridViewColumn Header="Nome" >
+                    <GridViewColumn Header="Nome" Width="85">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=PersonaOffesa.Nome}" />
@@ -146,18 +138,25 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Cognome">
+                    <GridViewColumn Header="Cognome" Width="85">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=PersonaOffesa.Cognome}" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+                   
 
                     <GridViewColumn Width="110">
+                        <GridViewColumn.Header>
+                            <CheckBox HorizontalAlignment="Center"
+                                  Click="chkAllPOClick"
+                                  VerticalAlignment="Center"
+                                  x:Name="chkAllPO"></CheckBox>
+                        </GridViewColumn.Header>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox IsChecked="{Binding Path=IsSelected}" />
+                                <CheckBox IsChecked="{Binding Path=IsSelected}"  Click="chkPOClick"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

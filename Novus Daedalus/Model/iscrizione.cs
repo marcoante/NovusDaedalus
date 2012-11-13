@@ -14,14 +14,24 @@ namespace Novus_Daedalus.Model
     
     public partial class iscrizione
     {
-        public int IdNotiziaReato { get; set; }
-        public string CodiceFiscaleIndagato { get; set; }
-        public string CodiceFiscalePM { get; set; }
-        public int IdReato { get; set; }
+        public iscrizione()
+        {
+            this.Iscrive = new HashSet<Iscrive>();
+            this.scheda = new HashSet<scheda>();
+        }
     
-        public virtual indagato indagato { get; set; }
-        public virtual pm pm { get; set; }
-        public virtual notizia_reato notizia_reato { get; set; }
-        public virtual reato reato { get; set; }
+        public int Id { get; set; }
+        public string Ufficio { get; set; }
+        public string Sede { get; set; }
+        public string Referente { get; set; }
+        public Nullable<System.DateTime> Data { get; set; }
+        public Nullable<System.DateTime> DataScadenza { get; set; }
+        public string Stato { get; set; }
+        public string ArchiviazioneImmediata { get; set; }
+        public string Memo { get; set; }
+        public string IndaginiPG { get; set; }
+    
+        public virtual ICollection<Iscrive> Iscrive { get; set; }
+        public virtual ICollection<scheda> scheda { get; set; }
     }
 }

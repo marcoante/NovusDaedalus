@@ -12,14 +12,14 @@ namespace Novus_Daedalus.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class persona_atto
+    public partial class ReatoCosa
     {
-        public string CodiceFiscalePersona { get; set; }
-        public int IdAtto { get; set; }
+        public int IdReato { get; set; }
+        public int IdCosa { get; set; }
         public Nullable<int> IdScheda { get; set; }
     
-        public virtual atto atto { get; set; }
-        public virtual persona persona { get; set; }
+        public virtual cosa cosa { get; set; }
+        public virtual reato reato { get; set; }
         public virtual scheda scheda { get; set; }
     }
 }

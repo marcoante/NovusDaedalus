@@ -14,10 +14,10 @@ namespace Novus_Daedalus.Model
     
     public partial class consulente
     {
-        public string CodiceFiscale { get; set; }
+        public int Id { get; set; }
         public string Professione { get; set; }
         public string AmbienteAttività { get; set; }
     
-        public virtual collaboratore collaboratore { get; set; }
+        public virtual persona persona { get; set; }
     }
 }

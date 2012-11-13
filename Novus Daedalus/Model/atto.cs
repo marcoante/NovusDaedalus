@@ -16,23 +16,23 @@ namespace Novus_Daedalus.Model
     {
         public atto()
         {
-            this.atto_cosa = new HashSet<atto_cosa>();
-            this.persona_atto = new HashSet<persona_atto>();
-            this.reato_atto = new HashSet<reato_atto>();
+            this.AttoCosa = new HashSet<AttoCosa>();
+            this.PersonaAtto = new HashSet<PersonaAtto>();
+            this.ReatoAtto = new HashSet<ReatoAtto>();
         }
     
         public int Id { get; set; }
         public string Scopo { get; set; }
         public string Tipo { get; set; }
         public string Nome { get; set; }
-        public string DataEsecuzione { get; set; }
+        public Nullable<System.DateTime> DataEsecuzione { get; set; }
         public string Stato { get; set; }
         public string Esito { get; set; }
         public Nullable<int> IdScheda { get; set; }
     
-        public virtual ICollection<atto_cosa> atto_cosa { get; set; }
-        public virtual ICollection<persona_atto> persona_atto { get; set; }
-        public virtual ICollection<reato_atto> reato_atto { get; set; }
+        public virtual ICollection<AttoCosa> AttoCosa { get; set; }
+        public virtual ICollection<PersonaAtto> PersonaAtto { get; set; }
+        public virtual ICollection<ReatoAtto> ReatoAtto { get; set; }
         public virtual scheda scheda { get; set; }
     }
 }

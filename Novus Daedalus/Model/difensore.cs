@@ -20,7 +20,7 @@ namespace Novus_Daedalus.Model
             this.indagato1 = new HashSet<indagato>();
         }
     
-        public string CodiceFiscale { get; set; }
+        public int Id { get; set; }
         public string Qualità { get; set; }
     
         public virtual persona persona { get; set; }

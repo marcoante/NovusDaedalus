@@ -14,11 +14,8 @@ namespace Novus_Daedalus.Model
     
     public partial class collaboratore
     {
-        public string CodiceFiscale { get; set; }
+        public int Id { get; set; }
     
         public virtual persona persona { get; set; }
-        public virtual consulente consulente { get; set; }
-        public virtual interprete interprete { get; set; }
-        public virtual polizia_giudiziaria polizia_giudiziaria { get; set; }
     }
 }

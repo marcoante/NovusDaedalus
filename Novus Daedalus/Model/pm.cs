@@ -16,12 +16,12 @@ namespace Novus_Daedalus.Model
     {
         public pm()
         {
-            this.iscrizione = new HashSet<iscrizione>();
+            this.Iscrive = new HashSet<Iscrive>();
         }
     
-        public string CodiceFiscale { get; set; }
+        public int Id { get; set; }
     
-        public virtual ICollection<iscrizione> iscrizione { get; set; }
+        public virtual ICollection<Iscrive> Iscrive { get; set; }
         public virtual persona persona { get; set; }
     }
 }

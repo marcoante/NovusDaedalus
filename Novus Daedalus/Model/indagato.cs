@@ -16,19 +16,20 @@ namespace Novus_Daedalus.Model
     {
         public indagato()
         {
-            this.iscrizione = new HashSet<iscrizione>();
+            this.Iscrive = new HashSet<Iscrive>();
         }
     
-        public string CodiceFiscale { get; set; }
+        public int Id { get; set; }
         public string Stato { get; set; }
         public string PrecedentiPenali { get; set; }
         public string QualitàDifesa { get; set; }
-        public string Difensore1 { get; set; }
-        public string Difensore2 { get; set; }
+        public Nullable<int> Difensore1 { get; set; }
+        public Nullable<int> Difensore2 { get; set; }
+        public Nullable<System.DateTime> InizioMisuraCautelare { get; set; }
     
         public virtual difensore difensore { get; set; }
         public virtual difensore difensore3 { get; set; }
         public virtual persona persona { get; set; }
-        public virtual ICollection<iscrizione> iscrizione { get; set; }
+        public virtual ICollection<Iscrive> Iscrive { get; set; }
     }
 }

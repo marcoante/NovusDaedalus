@@ -11,12 +11,13 @@ namespace Novus_Daedalus.Model
         // Costruttore per la copia di un indagato
         public indagato(indagato i)
         {
-            this.CodiceFiscale = i.CodiceFiscale;
+            this.Id = i.Id;
             this.Stato = i.Stato;
             this.PrecedentiPenali = i.PrecedentiPenali;
             this.QualitàDifesa = i.QualitàDifesa;
             this.Difensore1 = i.Difensore1;
             this.Difensore2 = i.Difensore2;
+            this.InizioMisuraCautelare = i.InizioMisuraCautelare;
         }
     }
 }

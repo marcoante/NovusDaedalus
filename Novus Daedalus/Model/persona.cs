@@ -16,35 +16,39 @@ namespace Novus_Daedalus.Model
     {
         public persona()
         {
-            this.persona_atto = new HashSet<persona_atto>();
-            this.persona_cosa = new HashSet<persona_cosa>();
-            this.persona_reato = new HashSet<persona_reato>();
+            this.PersonaAtto = new HashSet<PersonaAtto>();
+            this.PersonaCosa = new HashSet<PersonaCosa>();
+            this.PersonaReato = new HashSet<PersonaReato>();
             this.utente = new HashSet<utente>();
-            this.scheda = new HashSet<scheda>();
         }
     
+        public int Id { get; set; }
         public string CodiceFiscale { get; set; }
         public string Nome { get; set; }
         public string Cognome { get; set; }
-        public Nullable<bool> Sesso { get; set; }
+        public string Sesso { get; set; }
         public string LuogoNascita { get; set; }
         public Nullable<System.DateTime> DataNascita { get; set; }
         public string Nazionalità { get; set; }
         public string Domicilio { get; set; }
         public string Ruolo { get; set; }
         public Nullable<int> NumeroEscussioni { get; set; }
+        public Nullable<int> IdScheda { get; set; }
     
         public virtual collaboratore collaboratore { get; set; }
+        public virtual consulente consulente { get; set; }
         public virtual difensore difensore { get; set; }
         public virtual gip gip { get; set; }
         public virtual indagato indagato { get; set; }
-        public virtual ICollection<persona_atto> persona_atto { get; set; }
-        public virtual ICollection<persona_cosa> persona_cosa { get; set; }
-        public virtual ICollection<persona_reato> persona_reato { get; set; }
+        public virtual interprete interprete { get; set; }
+        public virtual ICollection<PersonaAtto> PersonaAtto { get; set; }
+        public virtual ICollection<PersonaCosa> PersonaCosa { get; set; }
+        public virtual ICollection<PersonaReato> PersonaReato { get; set; }
         public virtual persona_informata persona_informata { get; set; }
         public virtual persona_offesa persona_offesa { get; set; }
+        public virtual pg pg { get; set; }
         public virtual pm pm { get; set; }
+        public virtual scheda scheda { get; set; }
         public virtual ICollection<utente> utente { get; set; }
-        public virtual ICollection<scheda> scheda { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace Novus_Daedalus.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class atto_cosa
+    public partial class AttoCosa
     {
         public int IdAtto { get; set; }
         public int IdCosa { get; set; }

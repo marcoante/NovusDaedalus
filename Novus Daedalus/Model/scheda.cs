@@ -17,40 +17,33 @@ namespace Novus_Daedalus.Model
         public scheda()
         {
             this.atto = new HashSet<atto>();
-            this.atto_cosa = new HashSet<atto_cosa>();
+            this.AttoCosa = new HashSet<AttoCosa>();
             this.cosa = new HashSet<cosa>();
-            this.persona_atto = new HashSet<persona_atto>();
-            this.persona_cosa = new HashSet<persona_cosa>();
-            this.persona_reato = new HashSet<persona_reato>();
-            this.reato = new HashSet<reato>();
-            this.reato_atto = new HashSet<reato_atto>();
-            this.reato_cosa = new HashSet<reato_cosa>();
             this.persona = new HashSet<persona>();
+            this.PersonaAtto = new HashSet<PersonaAtto>();
+            this.PersonaCosa = new HashSet<PersonaCosa>();
+            this.PersonaReato = new HashSet<PersonaReato>();
+            this.reato = new HashSet<reato>();
+            this.ReatoAtto = new HashSet<ReatoAtto>();
+            this.ReatoCosa = new HashSet<ReatoCosa>();
         }
     
         public int Id { get; set; }
         public string NumeroRegistro { get; set; }
+        public string PosizioneFascicolo { get; set; }
         public Nullable<System.DateTime> DataRegistrazione { get; set; }
-        public string Ufficio { get; set; }
-        public string Sede { get; set; }
-        public string Referente { get; set; }
-        public Nullable<System.DateTime> DataIscrizione { get; set; }
-        public Nullable<System.DateTime> DataScadenza { get; set; }
-        public string Stato { get; set; }
-        public string ArchiviazioneImmediata { get; set; }
-        public Nullable<bool> AvvisoArchiviazione { get; set; }
-        public string Memo { get; set; }
-        public string IndaginiPG { get; set; }
+        public Nullable<int> IdIscrizione { get; set; }
     
         public virtual ICollection<atto> atto { get; set; }
-        public virtual ICollection<atto_cosa> atto_cosa { get; set; }
+        public virtual ICollection<AttoCosa> AttoCosa { get; set; }
         public virtual ICollection<cosa> cosa { get; set; }
-        public virtual ICollection<persona_atto> persona_atto { get; set; }
-        public virtual ICollection<persona_cosa> persona_cosa { get; set; }
-        public virtual ICollection<persona_reato> persona_reato { get; set; }
-        public virtual ICollection<reato> reato { get; set; }
-        public virtual ICollection<reato_atto> reato_atto { get; set; }
-        public virtual ICollection<reato_cosa> reato_cosa { get; set; }
+        public virtual iscrizione iscrizione { get; set; }
         public virtual ICollection<persona> persona { get; set; }
+        public virtual ICollection<PersonaAtto> PersonaAtto { get; set; }
+        public virtual ICollection<PersonaCosa> PersonaCosa { get; set; }
+        public virtual ICollection<PersonaReato> PersonaReato { get; set; }
+        public virtual ICollection<reato> reato { get; set; }
+        public virtual ICollection<ReatoAtto> ReatoAtto { get; set; }
+        public virtual ICollection<ReatoCosa> ReatoCosa { get; set; }
     }
 }

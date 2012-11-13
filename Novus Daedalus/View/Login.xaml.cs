@@ -20,9 +20,12 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class Login : Page
     {
+        private Model.novus_daedalus_dbEntities db_connection;
+
         public Login()
         {
             InitializeComponent();
+            db_connection = new Model.novus_daedalus_dbEntities();
         }
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
@@ -34,7 +37,7 @@ namespace Novus_Daedalus.View
             hashing_data = hash_provider.ComputeHash(hashing_data);
             String password_md5_hash = System.Text.Encoding.ASCII.GetString(hashing_data);
 
-            user_query_result = ((Model.novus_daedalus_dbEntities)Application.Current.Properties["db_connection"]).utente.Find(Username_Textbox.Text);
+            user_query_result = db_connection.utente.Find(Username_Textbox.Text);
             if (user_query_result != null)
             {
                 if (user_query_result.Password.Equals(password_md5_hash))
@@ -59,12 +62,12 @@ namespace Novus_Daedalus.View
             Model.utente utente_prova = new Model.utente();
             utente_prova.Username = "mariorossi";
             utente_prova.Password = password_md5_hash;
-            utente_prova.CodiceFiscaleUtente = "ciao";
-            utente_prova.persona = ((Model.novus_daedalus_dbEntities)Application.Current.Properties["db_connection"]).persona.Find(utente_prova.CodiceFiscaleUtente);
+            utente_prova.Id = 1;
+            utente_prova.persona = db_connection.persona.Find(utente_prova.Id);
             //
 
-            ((Model.novus_daedalus_dbEntities)Application.Current.Properties["db_connection"]).utente.Add(utente_prova);
-            ((Model.novus_daedalus_dbEntities)Application.Current.Properties["db_connection"]).SaveChanges();
+            db_connection.utente.Add(utente_prova);
+            db_connection.SaveChanges();
         }
 
         private void Esci_Button_Click(object sender, RoutedEventArgs e)

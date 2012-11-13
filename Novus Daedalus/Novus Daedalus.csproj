@@ -71,7 +71,7 @@
     <Compile Include="Model\atto.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\atto_cosa.cs">
+    <Compile Include="Model\AttoCosa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\collaboratore.cs">
@@ -97,9 +97,13 @@
     <Compile Include="Model\interprete.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Iscrive.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\iscrizione.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\iscrizione_extended.cs" />
     <Compile Include="Model\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,10 +125,13 @@
     <Compile Include="Model\persona.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\persona_atto.cs">
+    <Compile Include="Model\PersonaAtto.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\persona_cosa.cs">
+    <Compile Include="Model\PersonaCosa.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PersonaReato.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\persona_extended.cs" />
@@ -135,28 +142,26 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\persona_offesa_extended.cs" />
-    <Compile Include="Model\persona_reato.cs">
+    <Compile Include="Model\pg.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\pm.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\polizia_giudiziaria.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\reato.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\reato_atto.cs">
+    <Compile Include="Model\ReatoAtto.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\reato_cosa.cs">
+    <Compile Include="Model\ReatoCosa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\reato_extended.cs" />
     <Compile Include="Model\scheda.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\scheda_extended.cs" />
     <Compile Include="Model\utente.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -257,6 +262,9 @@
     </Compile>
     <Compile Include="View\Persone\PersoneMainWindow.xaml.cs">
       <DependentUpon>PersoneMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Persone\SetDatiPersona.xaml.cs">
+      <DependentUpon>SetDatiPersona.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Posta\Posta_Generica.xaml.cs">
       <DependentUpon>Posta_Generica.xaml</DependentUpon>
@@ -401,16 +409,20 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Persone\MostraIndagato.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\Persone\MostraPersona.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\Persone\PersoneMainWindow.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Persone\SetDatiPersona.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\Posta\Posta_Generica.xaml">
       <SubType>Designer</SubType>
@@ -481,8 +493,10 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.indagato.datasource" />
+    <None Include="Properties\DataSources\Novus_Daedalus.Model.iscrizione.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.notizia_reato.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.persona.datasource" />
+    <None Include="Properties\DataSources\Novus_Daedalus.Model.persona_offesa.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.reato.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.scheda.datasource" />
     <None Include="Properties\Settings.settings">

@@ -45,7 +45,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             i.persona = p;
             p.persona_offesa = i;
             p.Ruolo = "persona offesa";
-            p.Sesso = true;
+            p.Sesso = "M";
+            p.NumeroEscussioni = 0;
+            p.persona_offesa.AvvisoArchiviazione = false;
 
             po_binding_source = p;
             modalità_modifica = false;
@@ -64,7 +66,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             i.persona = p;
             p.persona_offesa = i;
 
-            if (p.Sesso == true) sessoMRadioButton.IsChecked = true;
+            if (p.Sesso == "M") sessoMRadioButton.IsChecked = true;
             else sessoFRadioButton.IsChecked = true;
 
             po_binding_source = p;
@@ -75,6 +77,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         private void SetDatiPOLoaded(object sender, RoutedEventArgs e)
         {
             PO_Grid.DataContext = po_binding_source;
+            AvvArch_Grid.DataContext = po_binding_source.persona_offesa;
         }
 
         private void InserisciButtonClick(object sender, RoutedEventArgs e)
@@ -85,33 +88,10 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 MessageBox.Show("Uno o più dati anagrafici della persona offesa sono mancanti.");
                 return;
             }
-            // Se la nuova persona offesa ha un codice fiscale già presente nell'elenco delle nuove persone offese
-            // si mostra un messaggio di errore
-            Model.persona find_result_persona;
-            find_result_persona = nuova_iscrizione_data.Persone_offese_list.Find(item => item.CodiceFiscale == po_binding_source.CodiceFiscale);
-            if (find_result_persona != null)
-            {
-                if (modalità_modifica == false)
-                {
-                    MessageBox.Show("La persona offesa con Codice Fiscale \"" +
-                        po_binding_source.CodiceFiscale +
-                        "\" è già stata inserita.");
-                    return;
-                }
-                else if (find_result_persona.CodiceFiscale != po_originale.CodiceFiscale)
-                {
-                    MessageBox.Show("La persona offesa con Codice Fiscale \"" +
-                        po_binding_source.CodiceFiscale +
-                        "\" è già stata inserita.");
-                    return;
-                }
-            }
 
-            // Si impostano alcuni campi dell'indagato, a seconda delle selezioni dell'utente
-            po_binding_source.persona_offesa.CodiceFiscale = po_binding_source.CodiceFiscale;
-            if (sessoMRadioButton.IsChecked == true) po_binding_source.Sesso = true;
-            else po_binding_source.Sesso = false;
-            po_binding_source.persona_offesa.Escusso = false;
+            // Si impostano alcuni campi della persona offesa, a seconda delle selezioni dell'utente
+            if (sessoMRadioButton.IsChecked == true) po_binding_source.Sesso = "M";
+            else po_binding_source.Sesso = "F";
 
             // Se si è in modalità modifica si invoca l'evento persona offesa modificata,
             // che verrà gestito dalla pagina "SetDatiReato"

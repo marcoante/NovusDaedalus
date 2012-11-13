@@ -26,7 +26,7 @@ namespace Novus_Daedalus.Model
         }
     
         public DbSet<atto> atto { get; set; }
-        public DbSet<atto_cosa> atto_cosa { get; set; }
+        public DbSet<AttoCosa> AttoCosa { get; set; }
         public DbSet<collaboratore> collaboratore { get; set; }
         public DbSet<consulente> consulente { get; set; }
         public DbSet<cosa> cosa { get; set; }
@@ -34,19 +34,20 @@ namespace Novus_Daedalus.Model
         public DbSet<gip> gip { get; set; }
         public DbSet<indagato> indagato { get; set; }
         public DbSet<interprete> interprete { get; set; }
+        public DbSet<Iscrive> Iscrive { get; set; }
         public DbSet<iscrizione> iscrizione { get; set; }
         public DbSet<notizia_reato> notizia_reato { get; set; }
         public DbSet<persona> persona { get; set; }
-        public DbSet<persona_atto> persona_atto { get; set; }
-        public DbSet<persona_cosa> persona_cosa { get; set; }
         public DbSet<persona_informata> persona_informata { get; set; }
         public DbSet<persona_offesa> persona_offesa { get; set; }
-        public DbSet<persona_reato> persona_reato { get; set; }
+        public DbSet<PersonaAtto> PersonaAtto { get; set; }
+        public DbSet<PersonaCosa> PersonaCosa { get; set; }
+        public DbSet<PersonaReato> PersonaReato { get; set; }
+        public DbSet<pg> pg { get; set; }
         public DbSet<pm> pm { get; set; }
-        public DbSet<polizia_giudiziaria> polizia_giudiziaria { get; set; }
         public DbSet<reato> reato { get; set; }
-        public DbSet<reato_atto> reato_atto { get; set; }
-        public DbSet<reato_cosa> reato_cosa { get; set; }
+        public DbSet<ReatoAtto> ReatoAtto { get; set; }
+        public DbSet<ReatoCosa> ReatoCosa { get; set; }
         public DbSet<scheda> scheda { get; set; }
         public DbSet<utente> utente { get; set; }
     }

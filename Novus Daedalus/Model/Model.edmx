@@ -7,7 +7,7 @@
       <Schema Namespace="novus_daedalus_dbModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="novus_daedalus_dbModelStoreContainer">
           <EntitySet Name="atto" EntityType="novus_daedalus_dbModel.Store.atto" store:Type="Tables" Schema="novus_daedalus_db" />
-          <EntitySet Name="atto_cosa" EntityType="novus_daedalus_dbModel.Store.atto_cosa" store:Type="Tables" Schema="novus_daedalus_db" />
+          <EntitySet Name="AttoCosa" EntityType="novus_daedalus_dbModel.Store.AttoCosa" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="collaboratore" EntityType="novus_daedalus_dbModel.Store.collaboratore" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="consulente" EntityType="novus_daedalus_dbModel.Store.consulente" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="cosa" EntityType="novus_daedalus_dbModel.Store.cosa" store:Type="Tables" Schema="novus_daedalus_db" />
@@ -15,181 +15,185 @@
           <EntitySet Name="gip" EntityType="novus_daedalus_dbModel.Store.gip" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="indagato" EntityType="novus_daedalus_dbModel.Store.indagato" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="interprete" EntityType="novus_daedalus_dbModel.Store.interprete" store:Type="Tables" Schema="novus_daedalus_db" />
+          <EntitySet Name="Iscrive" EntityType="novus_daedalus_dbModel.Store.Iscrive" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="iscrizione" EntityType="novus_daedalus_dbModel.Store.iscrizione" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="notizia_reato" EntityType="novus_daedalus_dbModel.Store.notizia_reato" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="persona" EntityType="novus_daedalus_dbModel.Store.persona" store:Type="Tables" Schema="novus_daedalus_db" />
-          <EntitySet Name="persona_atto" EntityType="novus_daedalus_dbModel.Store.persona_atto" store:Type="Tables" Schema="novus_daedalus_db" />
-          <EntitySet Name="persona_cosa" EntityType="novus_daedalus_dbModel.Store.persona_cosa" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="persona_informata" EntityType="novus_daedalus_dbModel.Store.persona_informata" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="persona_offesa" EntityType="novus_daedalus_dbModel.Store.persona_offesa" store:Type="Tables" Schema="novus_daedalus_db" />
-          <EntitySet Name="persona_reato" EntityType="novus_daedalus_dbModel.Store.persona_reato" store:Type="Tables" Schema="novus_daedalus_db" />
+          <EntitySet Name="PersonaAtto" EntityType="novus_daedalus_dbModel.Store.PersonaAtto" store:Type="Tables" Schema="novus_daedalus_db" />
+          <EntitySet Name="PersonaCosa" EntityType="novus_daedalus_dbModel.Store.PersonaCosa" store:Type="Tables" Schema="novus_daedalus_db" />
+          <EntitySet Name="PersonaReato" EntityType="novus_daedalus_dbModel.Store.PersonaReato" store:Type="Tables" Schema="novus_daedalus_db" />
+          <EntitySet Name="pg" EntityType="novus_daedalus_dbModel.Store.pg" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="pm" EntityType="novus_daedalus_dbModel.Store.pm" store:Type="Tables" Schema="novus_daedalus_db" />
-          <EntitySet Name="polizia_giudiziaria" EntityType="novus_daedalus_dbModel.Store.polizia_giudiziaria" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="reato" EntityType="novus_daedalus_dbModel.Store.reato" store:Type="Tables" Schema="novus_daedalus_db" />
-          <EntitySet Name="reato_atto" EntityType="novus_daedalus_dbModel.Store.reato_atto" store:Type="Tables" Schema="novus_daedalus_db" />
-          <EntitySet Name="reato_cosa" EntityType="novus_daedalus_dbModel.Store.reato_cosa" store:Type="Tables" Schema="novus_daedalus_db" />
+          <EntitySet Name="ReatoAtto" EntityType="novus_daedalus_dbModel.Store.ReatoAtto" store:Type="Tables" Schema="novus_daedalus_db" />
+          <EntitySet Name="ReatoCosa" EntityType="novus_daedalus_dbModel.Store.ReatoCosa" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="scheda" EntityType="novus_daedalus_dbModel.Store.scheda" store:Type="Tables" Schema="novus_daedalus_db" />
-          <EntitySet Name="scheda_persona" EntityType="novus_daedalus_dbModel.Store.scheda_persona" store:Type="Tables" Schema="novus_daedalus_db" />
           <EntitySet Name="utente" EntityType="novus_daedalus_dbModel.Store.utente" store:Type="Tables" Schema="novus_daedalus_db" />
-          <AssociationSet Name="CodiceFiscaleCollaboratore" Association="novus_daedalus_dbModel.Store.CodiceFiscaleCollaboratore">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="collaboratore" EntitySet="collaboratore" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleConsulente" Association="novus_daedalus_dbModel.Store.CodiceFiscaleConsulente">
-            <End Role="collaboratore" EntitySet="collaboratore" />
-            <End Role="consulente" EntitySet="consulente" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleDifensore" Association="novus_daedalus_dbModel.Store.CodiceFiscaleDifensore">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="difensore" EntitySet="difensore" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleDifensore1" Association="novus_daedalus_dbModel.Store.CodiceFiscaleDifensore1">
-            <End Role="difensore" EntitySet="difensore" />
-            <End Role="indagato" EntitySet="indagato" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleDifensore2" Association="novus_daedalus_dbModel.Store.CodiceFiscaleDifensore2">
-            <End Role="difensore" EntitySet="difensore" />
-            <End Role="indagato" EntitySet="indagato" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleGip" Association="novus_daedalus_dbModel.Store.CodiceFiscaleGip">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="gip" EntitySet="gip" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleIndagato" Association="novus_daedalus_dbModel.Store.CodiceFiscaleIndagato">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="indagato" EntitySet="indagato" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleIndagatoIscrizione" Association="novus_daedalus_dbModel.Store.CodiceFiscaleIndagatoIscrizione">
-            <End Role="indagato" EntitySet="indagato" />
-            <End Role="iscrizione" EntitySet="iscrizione" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleInterprete" Association="novus_daedalus_dbModel.Store.CodiceFiscaleInterprete">
-            <End Role="collaboratore" EntitySet="collaboratore" />
-            <End Role="interprete" EntitySet="interprete" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersona_PersonaAtto" Association="novus_daedalus_dbModel.Store.CodiceFiscalePersona_PersonaAtto">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="persona_atto" EntitySet="persona_atto" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersona_PersonaCosa" Association="novus_daedalus_dbModel.Store.CodiceFiscalePersona_PersonaCosa">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="persona_cosa" EntitySet="persona_cosa" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersona_PersonaReato" Association="novus_daedalus_dbModel.Store.CodiceFiscalePersona_PersonaReato">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="persona_reato" EntitySet="persona_reato" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersona_SchedaPersona" Association="novus_daedalus_dbModel.Store.CodiceFiscalePersona_SchedaPersona">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="scheda_persona" EntitySet="scheda_persona" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersonaInformata" Association="novus_daedalus_dbModel.Store.CodiceFiscalePersonaInformata">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="persona_informata" EntitySet="persona_informata" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersonaOffesa" Association="novus_daedalus_dbModel.Store.CodiceFiscalePersonaOffesa">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="persona_offesa" EntitySet="persona_offesa" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePm" Association="novus_daedalus_dbModel.Store.CodiceFiscalePm">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="pm" EntitySet="pm" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePMIscrizione" Association="novus_daedalus_dbModel.Store.CodiceFiscalePMIscrizione">
-            <End Role="pm" EntitySet="pm" />
-            <End Role="iscrizione" EntitySet="iscrizione" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePoliziaGiudiziaria" Association="novus_daedalus_dbModel.Store.CodiceFiscalePoliziaGiudiziaria">
-            <End Role="collaboratore" EntitySet="collaboratore" />
-            <End Role="polizia_giudiziaria" EntitySet="polizia_giudiziaria" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleUtente" Association="novus_daedalus_dbModel.Store.CodiceFiscaleUtente">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="utente" EntitySet="utente" />
-          </AssociationSet>
           <AssociationSet Name="IdAtto_AttoCosa" Association="novus_daedalus_dbModel.Store.IdAtto_AttoCosa">
             <End Role="atto" EntitySet="atto" />
-            <End Role="atto_cosa" EntitySet="atto_cosa" />
+            <End Role="AttoCosa" EntitySet="AttoCosa" />
           </AssociationSet>
           <AssociationSet Name="IdAtto_PersonaAtto" Association="novus_daedalus_dbModel.Store.IdAtto_PersonaAtto">
             <End Role="atto" EntitySet="atto" />
-            <End Role="persona_atto" EntitySet="persona_atto" />
+            <End Role="PersonaAtto" EntitySet="PersonaAtto" />
           </AssociationSet>
           <AssociationSet Name="IdAtto_ReatoAtto" Association="novus_daedalus_dbModel.Store.IdAtto_ReatoAtto">
             <End Role="atto" EntitySet="atto" />
-            <End Role="reato_atto" EntitySet="reato_atto" />
+            <End Role="ReatoAtto" EntitySet="ReatoAtto" />
+          </AssociationSet>
+          <AssociationSet Name="IdCollaboratore" Association="novus_daedalus_dbModel.Store.IdCollaboratore">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="collaboratore" EntitySet="collaboratore" />
+          </AssociationSet>
+          <AssociationSet Name="IdConsulente" Association="novus_daedalus_dbModel.Store.IdConsulente">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="consulente" EntitySet="consulente" />
           </AssociationSet>
           <AssociationSet Name="IdCosa_AttoCosa" Association="novus_daedalus_dbModel.Store.IdCosa_AttoCosa">
             <End Role="cosa" EntitySet="cosa" />
-            <End Role="atto_cosa" EntitySet="atto_cosa" />
+            <End Role="AttoCosa" EntitySet="AttoCosa" />
           </AssociationSet>
           <AssociationSet Name="IdCosa_PersonaCosa" Association="novus_daedalus_dbModel.Store.IdCosa_PersonaCosa">
             <End Role="cosa" EntitySet="cosa" />
-            <End Role="persona_cosa" EntitySet="persona_cosa" />
+            <End Role="PersonaCosa" EntitySet="PersonaCosa" />
           </AssociationSet>
           <AssociationSet Name="IdCosa_ReatoCosa" Association="novus_daedalus_dbModel.Store.IdCosa_ReatoCosa">
             <End Role="cosa" EntitySet="cosa" />
-            <End Role="reato_cosa" EntitySet="reato_cosa" />
+            <End Role="ReatoCosa" EntitySet="ReatoCosa" />
           </AssociationSet>
-          <AssociationSet Name="IdNotiziaReatoIscrizione" Association="novus_daedalus_dbModel.Store.IdNotiziaReatoIscrizione">
-            <End Role="notizia_reato" EntitySet="notizia_reato" />
+          <AssociationSet Name="IdDifensore" Association="novus_daedalus_dbModel.Store.IdDifensore">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="difensore" EntitySet="difensore" />
+          </AssociationSet>
+          <AssociationSet Name="IdDifensore1_Indagato" Association="novus_daedalus_dbModel.Store.IdDifensore1_Indagato">
+            <End Role="difensore" EntitySet="difensore" />
+            <End Role="indagato" EntitySet="indagato" />
+          </AssociationSet>
+          <AssociationSet Name="IdDifensore2_Indagato" Association="novus_daedalus_dbModel.Store.IdDifensore2_Indagato">
+            <End Role="difensore" EntitySet="difensore" />
+            <End Role="indagato" EntitySet="indagato" />
+          </AssociationSet>
+          <AssociationSet Name="IdGip" Association="novus_daedalus_dbModel.Store.IdGip">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="gip" EntitySet="gip" />
+          </AssociationSet>
+          <AssociationSet Name="IdIndagato" Association="novus_daedalus_dbModel.Store.IdIndagato">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="indagato" EntitySet="indagato" />
+          </AssociationSet>
+          <AssociationSet Name="IdIndagato_Iscrive" Association="novus_daedalus_dbModel.Store.IdIndagato_Iscrive">
+            <End Role="indagato" EntitySet="indagato" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
+          </AssociationSet>
+          <AssociationSet Name="IdInterprete" Association="novus_daedalus_dbModel.Store.IdInterprete">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="interprete" EntitySet="interprete" />
+          </AssociationSet>
+          <AssociationSet Name="IdIscrizione_Iscrive" Association="novus_daedalus_dbModel.Store.IdIscrizione_Iscrive">
             <End Role="iscrizione" EntitySet="iscrizione" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
+          </AssociationSet>
+          <AssociationSet Name="IdIscrizione_Scheda" Association="novus_daedalus_dbModel.Store.IdIscrizione_Scheda">
+            <End Role="iscrizione" EntitySet="iscrizione" />
+            <End Role="scheda" EntitySet="scheda" />
+          </AssociationSet>
+          <AssociationSet Name="IdNotiziaReato_Iscrive" Association="novus_daedalus_dbModel.Store.IdNotiziaReato_Iscrive">
+            <End Role="notizia_reato" EntitySet="notizia_reato" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
+          </AssociationSet>
+          <AssociationSet Name="IdPersona_PersonaAtto" Association="novus_daedalus_dbModel.Store.IdPersona_PersonaAtto">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="PersonaAtto" EntitySet="PersonaAtto" />
+          </AssociationSet>
+          <AssociationSet Name="IdPersona_PersonaCosa" Association="novus_daedalus_dbModel.Store.IdPersona_PersonaCosa">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="PersonaCosa" EntitySet="PersonaCosa" />
+          </AssociationSet>
+          <AssociationSet Name="IdPersona_PersonaReato" Association="novus_daedalus_dbModel.Store.IdPersona_PersonaReato">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="PersonaReato" EntitySet="PersonaReato" />
+          </AssociationSet>
+          <AssociationSet Name="IdPersonaInformata" Association="novus_daedalus_dbModel.Store.IdPersonaInformata">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="persona_informata" EntitySet="persona_informata" />
+          </AssociationSet>
+          <AssociationSet Name="IdPersonaOffesa" Association="novus_daedalus_dbModel.Store.IdPersonaOffesa">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="persona_offesa" EntitySet="persona_offesa" />
+          </AssociationSet>
+          <AssociationSet Name="IdPg" Association="novus_daedalus_dbModel.Store.IdPg">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="pg" EntitySet="pg" />
+          </AssociationSet>
+          <AssociationSet Name="IdPm" Association="novus_daedalus_dbModel.Store.IdPm">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="pm" EntitySet="pm" />
+          </AssociationSet>
+          <AssociationSet Name="IdPm_Iscrive" Association="novus_daedalus_dbModel.Store.IdPm_Iscrive">
+            <End Role="pm" EntitySet="pm" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
+          </AssociationSet>
+          <AssociationSet Name="IdReato_Iscrive" Association="novus_daedalus_dbModel.Store.IdReato_Iscrive">
+            <End Role="reato" EntitySet="reato" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
           </AssociationSet>
           <AssociationSet Name="IdReato_PersonaReato" Association="novus_daedalus_dbModel.Store.IdReato_PersonaReato">
             <End Role="reato" EntitySet="reato" />
-            <End Role="persona_reato" EntitySet="persona_reato" />
+            <End Role="PersonaReato" EntitySet="PersonaReato" />
           </AssociationSet>
           <AssociationSet Name="IdReato_ReatoAtto" Association="novus_daedalus_dbModel.Store.IdReato_ReatoAtto">
             <End Role="reato" EntitySet="reato" />
-            <End Role="reato_atto" EntitySet="reato_atto" />
+            <End Role="ReatoAtto" EntitySet="ReatoAtto" />
           </AssociationSet>
           <AssociationSet Name="IdReato_ReatoCosa" Association="novus_daedalus_dbModel.Store.IdReato_ReatoCosa">
             <End Role="reato" EntitySet="reato" />
-            <End Role="reato_cosa" EntitySet="reato_cosa" />
+            <End Role="ReatoCosa" EntitySet="ReatoCosa" />
           </AssociationSet>
-          <AssociationSet Name="IdReatoIscrizione" Association="novus_daedalus_dbModel.Store.IdReatoIscrizione">
-            <End Role="reato" EntitySet="reato" />
-            <End Role="iscrizione" EntitySet="iscrizione" />
-          </AssociationSet>
-          <AssociationSet Name="IdScheda_AttoCosa" Association="novus_daedalus_dbModel.Store.IdScheda_AttoCosa">
+          <AssociationSet Name="IdScheda" Association="novus_daedalus_dbModel.Store.IdScheda">
             <End Role="scheda" EntitySet="scheda" />
-            <End Role="atto_cosa" EntitySet="atto_cosa" />
+            <End Role="PersonaAtto" EntitySet="PersonaAtto" />
           </AssociationSet>
-          <AssociationSet Name="IdScheda_PersonaCosa" Association="novus_daedalus_dbModel.Store.IdScheda_PersonaCosa">
-            <End Role="scheda" EntitySet="scheda" />
-            <End Role="persona_cosa" EntitySet="persona_cosa" />
-          </AssociationSet>
-          <AssociationSet Name="IdScheda_PersonaReato" Association="novus_daedalus_dbModel.Store.IdScheda_PersonaReato">
-            <End Role="scheda" EntitySet="scheda" />
-            <End Role="persona_reato" EntitySet="persona_reato" />
-          </AssociationSet>
-          <AssociationSet Name="IdScheda_ReatoAtto" Association="novus_daedalus_dbModel.Store.IdScheda_ReatoAtto">
-            <End Role="scheda" EntitySet="scheda" />
-            <End Role="reato_atto" EntitySet="reato_atto" />
-          </AssociationSet>
-          <AssociationSet Name="IdScheda_ReatoCosa" Association="novus_daedalus_dbModel.Store.IdScheda_ReatoCosa">
-            <End Role="scheda" EntitySet="scheda" />
-            <End Role="reato_cosa" EntitySet="reato_cosa" />
-          </AssociationSet>
-          <AssociationSet Name="IdScheda_SchedaPersona" Association="novus_daedalus_dbModel.Store.IdScheda_SchedaPersona">
-            <End Role="scheda" EntitySet="scheda" />
-            <End Role="scheda_persona" EntitySet="scheda_persona" />
-          </AssociationSet>
-          <AssociationSet Name="IdSchedaAtto" Association="novus_daedalus_dbModel.Store.IdSchedaAtto">
+          <AssociationSet Name="IdScheda_Atto" Association="novus_daedalus_dbModel.Store.IdScheda_Atto">
             <End Role="scheda" EntitySet="scheda" />
             <End Role="atto" EntitySet="atto" />
           </AssociationSet>
-          <AssociationSet Name="IdSchedaCosa" Association="novus_daedalus_dbModel.Store.IdSchedaCosa">
+          <AssociationSet Name="IdScheda_AttoCosa" Association="novus_daedalus_dbModel.Store.IdScheda_AttoCosa">
+            <End Role="scheda" EntitySet="scheda" />
+            <End Role="AttoCosa" EntitySet="AttoCosa" />
+          </AssociationSet>
+          <AssociationSet Name="IdScheda_Cosa" Association="novus_daedalus_dbModel.Store.IdScheda_Cosa">
             <End Role="scheda" EntitySet="scheda" />
             <End Role="cosa" EntitySet="cosa" />
           </AssociationSet>
-          <AssociationSet Name="IdSchedaReato" Association="novus_daedalus_dbModel.Store.IdSchedaReato">
+          <AssociationSet Name="IdScheda_Persona" Association="novus_daedalus_dbModel.Store.IdScheda_Persona">
+            <End Role="scheda" EntitySet="scheda" />
+            <End Role="persona" EntitySet="persona" />
+          </AssociationSet>
+          <AssociationSet Name="IdScheda_PersonaCosa" Association="novus_daedalus_dbModel.Store.IdScheda_PersonaCosa">
+            <End Role="scheda" EntitySet="scheda" />
+            <End Role="PersonaCosa" EntitySet="PersonaCosa" />
+          </AssociationSet>
+          <AssociationSet Name="IdScheda_PersonaReato" Association="novus_daedalus_dbModel.Store.IdScheda_PersonaReato">
+            <End Role="scheda" EntitySet="scheda" />
+            <End Role="PersonaReato" EntitySet="PersonaReato" />
+          </AssociationSet>
+          <AssociationSet Name="IdScheda_Reato" Association="novus_daedalus_dbModel.Store.IdScheda_Reato">
             <End Role="scheda" EntitySet="scheda" />
             <End Role="reato" EntitySet="reato" />
           </AssociationSet>
-          <AssociationSet Name="IsScheda_PersonaAtto" Association="novus_daedalus_dbModel.Store.IsScheda_PersonaAtto">
+          <AssociationSet Name="IdScheda_ReatoAtto" Association="novus_daedalus_dbModel.Store.IdScheda_ReatoAtto">
             <End Role="scheda" EntitySet="scheda" />
-            <End Role="persona_atto" EntitySet="persona_atto" />
+            <End Role="ReatoAtto" EntitySet="ReatoAtto" />
+          </AssociationSet>
+          <AssociationSet Name="IdScheda_ReatoCosa" Association="novus_daedalus_dbModel.Store.IdScheda_ReatoCosa">
+            <End Role="scheda" EntitySet="scheda" />
+            <End Role="ReatoCosa" EntitySet="ReatoCosa" />
+          </AssociationSet>
+          <AssociationSet Name="IdUtente" Association="novus_daedalus_dbModel.Store.IdUtente">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="utente" EntitySet="utente" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="atto">
@@ -200,12 +204,12 @@
           <Property Name="Scopo" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="Tipo" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="DataEsecuzione" Type="varchar" MaxLength="255" />
+          <Property Name="DataEsecuzione" Type="date" />
           <Property Name="Stato" Type="varchar" MaxLength="255" />
           <Property Name="Esito" Type="varchar" MaxLength="255" />
           <Property Name="IdScheda" Type="int" />
         </EntityType>
-        <EntityType Name="atto_cosa">
+        <EntityType Name="AttoCosa">
           <Key>
             <PropertyRef Name="IdAtto" />
             <PropertyRef Name="IdCosa" />
@@ -216,15 +220,15 @@
         </EntityType>
         <EntityType Name="collaboratore">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="consulente">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Professione" Type="varchar" MaxLength="255" />
           <Property Name="AmbienteAttività" Type="varchar" MaxLength="255" />
         </EntityType>
@@ -232,7 +236,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Qualità" Type="varchar" MaxLength="255" />
           <Property Name="Origine" Type="varchar" MaxLength="255" />
           <Property Name="Acquisizione" Type="varchar" MaxLength="255" />
@@ -243,46 +247,63 @@
         </EntityType>
         <EntityType Name="difensore">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Qualità" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="gip">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="indagato">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="Stato" Type="varchar" MaxLength="255" />
-          <Property Name="PrecedentiPenali" Type="varchar" MaxLength="255" />
-          <Property Name="QualitàDifesa" Type="varchar" MaxLength="255" />
-          <Property Name="Difensore1" Type="varchar" MaxLength="255" />
-          <Property Name="Difensore2" Type="varchar" MaxLength="255" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Stato" Type="varchar" MaxLength="45" />
+          <Property Name="PrecedentiPenali" Type="varchar" MaxLength="45" />
+          <Property Name="QualitàDifesa" Type="varchar" MaxLength="45" />
+          <Property Name="Difensore1" Type="int" />
+          <Property Name="Difensore2" Type="int" />
+          <Property Name="InizioMisuraCautelare" Type="date" />
         </EntityType>
         <EntityType Name="interprete">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Lingua" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Iscrive">
+          <Key>
+            <PropertyRef Name="IdPm" />
+            <PropertyRef Name="IdNotiziaReato" />
+            <PropertyRef Name="IdIndagato" />
+            <PropertyRef Name="IdReato" />
+          </Key>
+          <Property Name="IdPm" Type="int" Nullable="false" />
+          <Property Name="IdNotiziaReato" Type="int" Nullable="false" />
+          <Property Name="IdIndagato" Type="int" Nullable="false" />
+          <Property Name="IdReato" Type="int" Nullable="false" />
+          <Property Name="IdIscrizione" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="iscrizione">
           <Key>
-            <PropertyRef Name="IdNotiziaReato" />
-            <PropertyRef Name="CodiceFiscaleIndagato" />
-            <PropertyRef Name="CodiceFiscalePM" />
-            <PropertyRef Name="IdReato" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="IdNotiziaReato" Type="int" Nullable="false" />
-          <Property Name="CodiceFiscaleIndagato" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="CodiceFiscalePM" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="IdReato" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ufficio" Type="varchar" MaxLength="255" />
+          <Property Name="Sede" Type="varchar" MaxLength="255" />
+          <Property Name="Referente" Type="varchar" MaxLength="255" />
+          <Property Name="Data" Type="date" />
+          <Property Name="DataScadenza" Type="date" />
+          <Property Name="Stato" Type="varchar" MaxLength="255" />
+          <Property Name="ArchiviazioneImmediata" Type="varchar" MaxLength="255" />
+          <Property Name="Memo" Type="varchar" MaxLength="1024" />
+          <Property Name="IndaginiPG" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="notizia_reato">
           <Key>
@@ -294,88 +315,89 @@
         </EntityType>
         <EntityType Name="persona">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="Cognome" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="Sesso" Type="bool" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CodiceFiscale" Type="varchar" MaxLength="45" />
+          <Property Name="Nome" Type="varchar" MaxLength="255" />
+          <Property Name="Cognome" Type="varchar" MaxLength="255" />
+          <Property Name="Sesso" Type="varchar" MaxLength="1" />
           <Property Name="LuogoNascita" Type="varchar" MaxLength="255" />
           <Property Name="DataNascita" Type="date" />
           <Property Name="Nazionalità" Type="varchar" MaxLength="255" />
           <Property Name="Domicilio" Type="varchar" MaxLength="255" />
-          <Property Name="Ruolo" Type="varchar" MaxLength="255" />
+          <Property Name="Ruolo" Type="varchar" MaxLength="45" />
           <Property Name="NumeroEscussioni" Type="int" />
-        </EntityType>
-        <EntityType Name="persona_atto">
-          <Key>
-            <PropertyRef Name="CodiceFiscalePersona" />
-            <PropertyRef Name="IdAtto" />
-          </Key>
-          <Property Name="CodiceFiscalePersona" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="IdAtto" Type="int" Nullable="false" />
-          <Property Name="IdScheda" Type="int" />
-        </EntityType>
-        <EntityType Name="persona_cosa">
-          <Key>
-            <PropertyRef Name="CodiceFiscalePersona" />
-            <PropertyRef Name="IdCosa" />
-          </Key>
-          <Property Name="CodiceFiscalePersona" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="IdCosa" Type="int" Nullable="false" />
           <Property Name="IdScheda" Type="int" />
         </EntityType>
         <EntityType Name="persona_informata">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="Escusso" Type="bool" />
+          <Property Name="Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="persona_offesa">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="Escusso" Type="bool" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="AvvisoArchiviazione" Type="bool" />
         </EntityType>
-        <EntityType Name="persona_reato">
+        <EntityType Name="PersonaAtto">
           <Key>
-            <PropertyRef Name="CodiceFiscalePersona" />
+            <PropertyRef Name="IdPersona" />
+            <PropertyRef Name="IdAtto" />
+          </Key>
+          <Property Name="IdPersona" Type="int" Nullable="false" />
+          <Property Name="IdAtto" Type="int" Nullable="false" />
+          <Property Name="IdScheda" Type="int" />
+        </EntityType>
+        <EntityType Name="PersonaCosa">
+          <Key>
+            <PropertyRef Name="IdPersona" />
+            <PropertyRef Name="IdCosa" />
+          </Key>
+          <Property Name="IdPersona" Type="int" Nullable="false" />
+          <Property Name="IdCosa" Type="int" Nullable="false" />
+          <Property Name="IdScheda" Type="int" />
+        </EntityType>
+        <EntityType Name="PersonaReato">
+          <Key>
+            <PropertyRef Name="IdPersona" />
             <PropertyRef Name="IdReato" />
           </Key>
-          <Property Name="CodiceFiscalePersona" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="IdPersona" Type="int" Nullable="false" />
           <Property Name="IdReato" Type="int" Nullable="false" />
           <Property Name="IdScheda" Type="int" />
         </EntityType>
-        <EntityType Name="pm">
+        <EntityType Name="pg">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
-        </EntityType>
-        <EntityType Name="polizia_giudiziaria">
-          <Key>
-            <PropertyRef Name="CodiceFiscale" />
-          </Key>
-          <Property Name="CodiceFiscale" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Nome" Type="varchar" MaxLength="255" />
           <Property Name="Sede" Type="varchar" MaxLength="255" />
           <Property Name="Funzione" Type="varchar" MaxLength="255" />
           <Property Name="Grado" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="pm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="reato">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Codice" Type="varchar" MaxLength="255" />
-          <Property Name="NomenIuris" Type="varchar" MaxLength="255" />
+          <Property Name="Codice" Type="varchar" MaxLength="45" />
+          <Property Name="NomenIuris" Type="varchar" MaxLength="45" />
           <Property Name="Luogo" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="Data" Type="date" Nullable="false" />
           <Property Name="IdScheda" Type="int" />
         </EntityType>
-        <EntityType Name="reato_atto">
+        <EntityType Name="ReatoAtto">
           <Key>
             <PropertyRef Name="IdReato" />
             <PropertyRef Name="IdAtto" />
@@ -384,7 +406,7 @@
           <Property Name="IdAtto" Type="int" Nullable="false" />
           <Property Name="IdScheda" Type="int" />
         </EntityType>
-        <EntityType Name="reato_cosa">
+        <EntityType Name="ReatoCosa">
           <Key>
             <PropertyRef Name="IdReato" />
             <PropertyRef Name="IdCosa" />
@@ -398,26 +420,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="NumeroRegistro" Type="varchar" MaxLength="255" />
+          <Property Name="NumeroRegistro" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="PosizioneFascicolo" Type="varchar" MaxLength="45" />
           <Property Name="DataRegistrazione" Type="date" />
-          <Property Name="Ufficio" Type="varchar" MaxLength="255" />
-          <Property Name="Sede" Type="varchar" MaxLength="255" />
-          <Property Name="Referente" Type="varchar" MaxLength="255" />
-          <Property Name="DataIscrizione" Type="date" />
-          <Property Name="DataScadenza" Type="date" />
-          <Property Name="Stato" Type="varchar" MaxLength="255" />
-          <Property Name="ArchiviazioneImmediata" Type="varchar" MaxLength="255" />
-          <Property Name="AvvisoArchiviazione" Type="bool" />
-          <Property Name="Memo" Type="varchar" MaxLength="255" />
-          <Property Name="IndaginiPG" Type="varchar" MaxLength="255" />
-        </EntityType>
-        <EntityType Name="scheda_persona">
-          <Key>
-            <PropertyRef Name="IdScheda" />
-            <PropertyRef Name="CodiceFiscalePersona" />
-          </Key>
-          <Property Name="IdScheda" Type="int" Nullable="false" />
-          <Property Name="CodiceFiscalePersona" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="IdIscrizione" Type="int" />
         </EntityType>
         <EntityType Name="utente">
           <Key>
@@ -425,284 +431,18 @@
           </Key>
           <Property Name="Username" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="Password" Type="varchar" MaxLength="255" />
-          <Property Name="CodiceFiscaleUtente" Type="varchar" MaxLength="255" />
+          <Property Name="Id" Type="int" />
         </EntityType>
-        <Association Name="CodiceFiscaleCollaboratore">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="collaboratore" Type="novus_daedalus_dbModel.Store.collaboratore" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="collaboratore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleConsulente">
-          <End Role="collaboratore" Type="novus_daedalus_dbModel.Store.collaboratore" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="consulente" Type="novus_daedalus_dbModel.Store.consulente" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="collaboratore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="consulente">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleDifensore">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="difensore" Type="novus_daedalus_dbModel.Store.difensore" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="difensore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleDifensore1">
-          <End Role="difensore" Type="novus_daedalus_dbModel.Store.difensore" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="indagato" Type="novus_daedalus_dbModel.Store.indagato" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="difensore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="indagato">
-              <PropertyRef Name="Difensore1" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleDifensore2">
-          <End Role="difensore" Type="novus_daedalus_dbModel.Store.difensore" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="indagato" Type="novus_daedalus_dbModel.Store.indagato" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="difensore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="indagato">
-              <PropertyRef Name="Difensore2" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleGip">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="gip" Type="novus_daedalus_dbModel.Store.gip" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="gip">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleIndagato">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="indagato" Type="novus_daedalus_dbModel.Store.indagato" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="indagato">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleIndagatoIscrizione">
-          <End Role="indagato" Type="novus_daedalus_dbModel.Store.indagato" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="iscrizione" Type="novus_daedalus_dbModel.Store.iscrizione" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="indagato">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="iscrizione">
-              <PropertyRef Name="CodiceFiscaleIndagato" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleInterprete">
-          <End Role="collaboratore" Type="novus_daedalus_dbModel.Store.collaboratore" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="interprete" Type="novus_daedalus_dbModel.Store.interprete" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="collaboratore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="interprete">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePersona_PersonaAtto">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="persona_atto" Type="novus_daedalus_dbModel.Store.persona_atto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="persona_atto">
-              <PropertyRef Name="CodiceFiscalePersona" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePersona_PersonaCosa">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="persona_cosa" Type="novus_daedalus_dbModel.Store.persona_cosa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="persona_cosa">
-              <PropertyRef Name="CodiceFiscalePersona" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePersona_PersonaReato">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="persona_reato" Type="novus_daedalus_dbModel.Store.persona_reato" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="persona_reato">
-              <PropertyRef Name="CodiceFiscalePersona" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePersona_SchedaPersona">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="scheda_persona" Type="novus_daedalus_dbModel.Store.scheda_persona" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="scheda_persona">
-              <PropertyRef Name="CodiceFiscalePersona" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePersonaInformata">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="persona_informata" Type="novus_daedalus_dbModel.Store.persona_informata" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="persona_informata">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePersonaOffesa">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="persona_offesa" Type="novus_daedalus_dbModel.Store.persona_offesa" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="persona_offesa">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePm">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="pm" Type="novus_daedalus_dbModel.Store.pm" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="pm">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePMIscrizione">
-          <End Role="pm" Type="novus_daedalus_dbModel.Store.pm" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="iscrizione" Type="novus_daedalus_dbModel.Store.iscrizione" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="pm">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="iscrizione">
-              <PropertyRef Name="CodiceFiscalePM" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePoliziaGiudiziaria">
-          <End Role="collaboratore" Type="novus_daedalus_dbModel.Store.collaboratore" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="polizia_giudiziaria" Type="novus_daedalus_dbModel.Store.polizia_giudiziaria" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="collaboratore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="polizia_giudiziaria">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleUtente">
-          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="utente" Type="novus_daedalus_dbModel.Store.utente" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="utente">
-              <PropertyRef Name="CodiceFiscaleUtente" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="IdAtto_AttoCosa">
           <End Role="atto" Type="novus_daedalus_dbModel.Store.atto" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="atto_cosa" Type="novus_daedalus_dbModel.Store.atto_cosa" Multiplicity="*" />
+          <End Role="AttoCosa" Type="novus_daedalus_dbModel.Store.AttoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="atto">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="atto_cosa">
+            <Dependent Role="AttoCosa">
               <PropertyRef Name="IdAtto" />
             </Dependent>
           </ReferentialConstraint>
@@ -711,12 +451,12 @@
           <End Role="atto" Type="novus_daedalus_dbModel.Store.atto" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_atto" Type="novus_daedalus_dbModel.Store.persona_atto" Multiplicity="*" />
+          <End Role="PersonaAtto" Type="novus_daedalus_dbModel.Store.PersonaAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="atto">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_atto">
+            <Dependent Role="PersonaAtto">
               <PropertyRef Name="IdAtto" />
             </Dependent>
           </ReferentialConstraint>
@@ -725,13 +465,41 @@
           <End Role="atto" Type="novus_daedalus_dbModel.Store.atto" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_atto" Type="novus_daedalus_dbModel.Store.reato_atto" Multiplicity="*" />
+          <End Role="ReatoAtto" Type="novus_daedalus_dbModel.Store.ReatoAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="atto">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_atto">
+            <Dependent Role="ReatoAtto">
               <PropertyRef Name="IdAtto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdCollaboratore">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="collaboratore" Type="novus_daedalus_dbModel.Store.collaboratore" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="collaboratore">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdConsulente">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="consulente" Type="novus_daedalus_dbModel.Store.consulente" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="consulente">
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -739,12 +507,12 @@
           <End Role="cosa" Type="novus_daedalus_dbModel.Store.cosa" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="atto_cosa" Type="novus_daedalus_dbModel.Store.atto_cosa" Multiplicity="*" />
+          <End Role="AttoCosa" Type="novus_daedalus_dbModel.Store.AttoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cosa">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="atto_cosa">
+            <Dependent Role="AttoCosa">
               <PropertyRef Name="IdCosa" />
             </Dependent>
           </ReferentialConstraint>
@@ -753,12 +521,12 @@
           <End Role="cosa" Type="novus_daedalus_dbModel.Store.cosa" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_cosa" Type="novus_daedalus_dbModel.Store.persona_cosa" Multiplicity="*" />
+          <End Role="PersonaCosa" Type="novus_daedalus_dbModel.Store.PersonaCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cosa">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_cosa">
+            <Dependent Role="PersonaCosa">
               <PropertyRef Name="IdCosa" />
             </Dependent>
           </ReferentialConstraint>
@@ -767,27 +535,275 @@
           <End Role="cosa" Type="novus_daedalus_dbModel.Store.cosa" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_cosa" Type="novus_daedalus_dbModel.Store.reato_cosa" Multiplicity="*" />
+          <End Role="ReatoCosa" Type="novus_daedalus_dbModel.Store.ReatoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cosa">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_cosa">
+            <Dependent Role="ReatoCosa">
               <PropertyRef Name="IdCosa" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdNotiziaReatoIscrizione">
+        <Association Name="IdDifensore">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="difensore" Type="novus_daedalus_dbModel.Store.difensore" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="difensore">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdDifensore1_Indagato">
+          <End Role="difensore" Type="novus_daedalus_dbModel.Store.difensore" Multiplicity="0..1" />
+          <End Role="indagato" Type="novus_daedalus_dbModel.Store.indagato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="difensore">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="indagato">
+              <PropertyRef Name="Difensore1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdDifensore2_Indagato">
+          <End Role="difensore" Type="novus_daedalus_dbModel.Store.difensore" Multiplicity="0..1" />
+          <End Role="indagato" Type="novus_daedalus_dbModel.Store.indagato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="difensore">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="indagato">
+              <PropertyRef Name="Difensore2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdGip">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="gip" Type="novus_daedalus_dbModel.Store.gip" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="gip">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdIndagato">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="indagato" Type="novus_daedalus_dbModel.Store.indagato" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="indagato">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdIndagato_Iscrive">
+          <End Role="indagato" Type="novus_daedalus_dbModel.Store.indagato" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Store.Iscrive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="indagato">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Iscrive">
+              <PropertyRef Name="IdIndagato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdInterprete">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="interprete" Type="novus_daedalus_dbModel.Store.interprete" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="interprete">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdIscrizione_Iscrive">
+          <End Role="iscrizione" Type="novus_daedalus_dbModel.Store.iscrizione" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Store.Iscrive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iscrizione">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Iscrive">
+              <PropertyRef Name="IdIscrizione" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdIscrizione_Scheda">
+          <End Role="iscrizione" Type="novus_daedalus_dbModel.Store.iscrizione" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iscrizione">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="scheda">
+              <PropertyRef Name="IdIscrizione" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdNotiziaReato_Iscrive">
           <End Role="notizia_reato" Type="novus_daedalus_dbModel.Store.notizia_reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="iscrizione" Type="novus_daedalus_dbModel.Store.iscrizione" Multiplicity="*" />
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Store.Iscrive" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="notizia_reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="iscrizione">
+            <Dependent Role="Iscrive">
               <PropertyRef Name="IdNotiziaReato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPersona_PersonaAtto">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PersonaAtto" Type="novus_daedalus_dbModel.Store.PersonaAtto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonaAtto">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPersona_PersonaCosa">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PersonaCosa" Type="novus_daedalus_dbModel.Store.PersonaCosa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonaCosa">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPersona_PersonaReato">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PersonaReato" Type="novus_daedalus_dbModel.Store.PersonaReato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonaReato">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPersonaInformata">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="persona_informata" Type="novus_daedalus_dbModel.Store.persona_informata" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="persona_informata">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPersonaOffesa">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="persona_offesa" Type="novus_daedalus_dbModel.Store.persona_offesa" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="persona_offesa">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPg">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="pg" Type="novus_daedalus_dbModel.Store.pg" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="pg">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPm">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="pm" Type="novus_daedalus_dbModel.Store.pm" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="pm">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPm_Iscrive">
+          <End Role="pm" Type="novus_daedalus_dbModel.Store.pm" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Store.Iscrive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pm">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Iscrive">
+              <PropertyRef Name="IdPm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdReato_Iscrive">
+          <End Role="reato" Type="novus_daedalus_dbModel.Store.reato" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Store.Iscrive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="reato">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Iscrive">
+              <PropertyRef Name="IdReato" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -795,12 +811,12 @@
           <End Role="reato" Type="novus_daedalus_dbModel.Store.reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_reato" Type="novus_daedalus_dbModel.Store.persona_reato" Multiplicity="*" />
+          <End Role="PersonaReato" Type="novus_daedalus_dbModel.Store.PersonaReato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_reato">
+            <Dependent Role="PersonaReato">
               <PropertyRef Name="IdReato" />
             </Dependent>
           </ReferentialConstraint>
@@ -809,12 +825,12 @@
           <End Role="reato" Type="novus_daedalus_dbModel.Store.reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_atto" Type="novus_daedalus_dbModel.Store.reato_atto" Multiplicity="*" />
+          <End Role="ReatoAtto" Type="novus_daedalus_dbModel.Store.ReatoAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_atto">
+            <Dependent Role="ReatoAtto">
               <PropertyRef Name="IdReato" />
             </Dependent>
           </ReferentialConstraint>
@@ -823,115 +839,31 @@
           <End Role="reato" Type="novus_daedalus_dbModel.Store.reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_cosa" Type="novus_daedalus_dbModel.Store.reato_cosa" Multiplicity="*" />
+          <End Role="ReatoCosa" Type="novus_daedalus_dbModel.Store.ReatoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_cosa">
+            <Dependent Role="ReatoCosa">
               <PropertyRef Name="IdReato" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdReatoIscrizione">
-          <End Role="reato" Type="novus_daedalus_dbModel.Store.reato" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="iscrizione" Type="novus_daedalus_dbModel.Store.iscrizione" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="reato">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="iscrizione">
-              <PropertyRef Name="IdReato" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="IdScheda_AttoCosa">
+        <Association Name="IdScheda">
           <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="atto_cosa" Type="novus_daedalus_dbModel.Store.atto_cosa" Multiplicity="*" />
+          <End Role="PersonaAtto" Type="novus_daedalus_dbModel.Store.PersonaAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="scheda">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="atto_cosa">
+            <Dependent Role="PersonaAtto">
               <PropertyRef Name="IdScheda" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdScheda_PersonaCosa">
-          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="persona_cosa" Type="novus_daedalus_dbModel.Store.persona_cosa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="scheda">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="persona_cosa">
-              <PropertyRef Name="IdScheda" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="IdScheda_PersonaReato">
-          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="persona_reato" Type="novus_daedalus_dbModel.Store.persona_reato" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="scheda">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="persona_reato">
-              <PropertyRef Name="IdScheda" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="IdScheda_ReatoAtto">
-          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="reato_atto" Type="novus_daedalus_dbModel.Store.reato_atto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="scheda">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="reato_atto">
-              <PropertyRef Name="IdScheda" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="IdScheda_ReatoCosa">
-          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="reato_cosa" Type="novus_daedalus_dbModel.Store.reato_cosa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="scheda">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="reato_cosa">
-              <PropertyRef Name="IdScheda" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="IdScheda_SchedaPersona">
-          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="scheda_persona" Type="novus_daedalus_dbModel.Store.scheda_persona" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="scheda">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="scheda_persona">
-              <PropertyRef Name="IdScheda" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="IdSchedaAtto">
+        <Association Name="IdScheda_Atto">
           <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -945,7 +877,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdSchedaCosa">
+        <Association Name="IdScheda_AttoCosa">
+          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AttoCosa" Type="novus_daedalus_dbModel.Store.AttoCosa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="scheda">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AttoCosa">
+              <PropertyRef Name="IdScheda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdScheda_Cosa">
           <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -959,7 +905,49 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdSchedaReato">
+        <Association Name="IdScheda_Persona">
+          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="scheda">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="persona">
+              <PropertyRef Name="IdScheda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdScheda_PersonaCosa">
+          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PersonaCosa" Type="novus_daedalus_dbModel.Store.PersonaCosa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="scheda">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonaCosa">
+              <PropertyRef Name="IdScheda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdScheda_PersonaReato">
+          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PersonaReato" Type="novus_daedalus_dbModel.Store.PersonaReato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="scheda">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonaReato">
+              <PropertyRef Name="IdScheda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdScheda_Reato">
           <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -973,17 +961,45 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IsScheda_PersonaAtto">
+        <Association Name="IdScheda_ReatoAtto">
           <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_atto" Type="novus_daedalus_dbModel.Store.persona_atto" Multiplicity="*" />
+          <End Role="ReatoAtto" Type="novus_daedalus_dbModel.Store.ReatoAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="scheda">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_atto">
+            <Dependent Role="ReatoAtto">
               <PropertyRef Name="IdScheda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdScheda_ReatoCosa">
+          <End Role="scheda" Type="novus_daedalus_dbModel.Store.scheda" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ReatoCosa" Type="novus_daedalus_dbModel.Store.ReatoCosa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="scheda">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ReatoCosa">
+              <PropertyRef Name="IdScheda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdUtente">
+          <End Role="persona" Type="novus_daedalus_dbModel.Store.persona" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="utente" Type="novus_daedalus_dbModel.Store.utente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="utente">
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -994,7 +1010,7 @@
       <Schema Namespace="novus_daedalus_dbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="novus_daedalus_dbEntities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="atto" EntityType="novus_daedalus_dbModel.atto" />
-          <EntitySet Name="atto_cosa" EntityType="novus_daedalus_dbModel.atto_cosa" />
+          <EntitySet Name="AttoCosa" EntityType="novus_daedalus_dbModel.AttoCosa" />
           <EntitySet Name="collaboratore" EntityType="novus_daedalus_dbModel.collaboratore" />
           <EntitySet Name="consulente" EntityType="novus_daedalus_dbModel.consulente" />
           <EntitySet Name="cosa" EntityType="novus_daedalus_dbModel.cosa" />
@@ -1002,176 +1018,185 @@
           <EntitySet Name="gip" EntityType="novus_daedalus_dbModel.gip" />
           <EntitySet Name="indagato" EntityType="novus_daedalus_dbModel.indagato" />
           <EntitySet Name="interprete" EntityType="novus_daedalus_dbModel.interprete" />
+          <EntitySet Name="Iscrive" EntityType="novus_daedalus_dbModel.Iscrive" />
           <EntitySet Name="iscrizione" EntityType="novus_daedalus_dbModel.iscrizione" />
           <EntitySet Name="notizia_reato" EntityType="novus_daedalus_dbModel.notizia_reato" />
           <EntitySet Name="persona" EntityType="novus_daedalus_dbModel.persona" />
-          <EntitySet Name="persona_atto" EntityType="novus_daedalus_dbModel.persona_atto" />
-          <EntitySet Name="persona_cosa" EntityType="novus_daedalus_dbModel.persona_cosa" />
           <EntitySet Name="persona_informata" EntityType="novus_daedalus_dbModel.persona_informata" />
           <EntitySet Name="persona_offesa" EntityType="novus_daedalus_dbModel.persona_offesa" />
-          <EntitySet Name="persona_reato" EntityType="novus_daedalus_dbModel.persona_reato" />
+          <EntitySet Name="PersonaAtto" EntityType="novus_daedalus_dbModel.PersonaAtto" />
+          <EntitySet Name="PersonaCosa" EntityType="novus_daedalus_dbModel.PersonaCosa" />
+          <EntitySet Name="PersonaReato" EntityType="novus_daedalus_dbModel.PersonaReato" />
+          <EntitySet Name="pg" EntityType="novus_daedalus_dbModel.pg" />
           <EntitySet Name="pm" EntityType="novus_daedalus_dbModel.pm" />
-          <EntitySet Name="polizia_giudiziaria" EntityType="novus_daedalus_dbModel.polizia_giudiziaria" />
           <EntitySet Name="reato" EntityType="novus_daedalus_dbModel.reato" />
-          <EntitySet Name="reato_atto" EntityType="novus_daedalus_dbModel.reato_atto" />
-          <EntitySet Name="reato_cosa" EntityType="novus_daedalus_dbModel.reato_cosa" />
+          <EntitySet Name="ReatoAtto" EntityType="novus_daedalus_dbModel.ReatoAtto" />
+          <EntitySet Name="ReatoCosa" EntityType="novus_daedalus_dbModel.ReatoCosa" />
           <EntitySet Name="scheda" EntityType="novus_daedalus_dbModel.scheda" />
           <EntitySet Name="utente" EntityType="novus_daedalus_dbModel.utente" />
           <AssociationSet Name="IdAtto_AttoCosa" Association="novus_daedalus_dbModel.IdAtto_AttoCosa">
             <End Role="atto" EntitySet="atto" />
-            <End Role="atto_cosa" EntitySet="atto_cosa" />
+            <End Role="AttoCosa" EntitySet="AttoCosa" />
           </AssociationSet>
           <AssociationSet Name="IdAtto_PersonaAtto" Association="novus_daedalus_dbModel.IdAtto_PersonaAtto">
             <End Role="atto" EntitySet="atto" />
-            <End Role="persona_atto" EntitySet="persona_atto" />
+            <End Role="PersonaAtto" EntitySet="PersonaAtto" />
           </AssociationSet>
           <AssociationSet Name="IdAtto_ReatoAtto" Association="novus_daedalus_dbModel.IdAtto_ReatoAtto">
             <End Role="atto" EntitySet="atto" />
-            <End Role="reato_atto" EntitySet="reato_atto" />
+            <End Role="ReatoAtto" EntitySet="ReatoAtto" />
           </AssociationSet>
-          <AssociationSet Name="IdSchedaAtto" Association="novus_daedalus_dbModel.IdSchedaAtto">
+          <AssociationSet Name="IdScheda_Atto" Association="novus_daedalus_dbModel.IdScheda_Atto">
             <End Role="scheda" EntitySet="scheda" />
             <End Role="atto" EntitySet="atto" />
           </AssociationSet>
           <AssociationSet Name="IdCosa_AttoCosa" Association="novus_daedalus_dbModel.IdCosa_AttoCosa">
             <End Role="cosa" EntitySet="cosa" />
-            <End Role="atto_cosa" EntitySet="atto_cosa" />
+            <End Role="AttoCosa" EntitySet="AttoCosa" />
           </AssociationSet>
           <AssociationSet Name="IdScheda_AttoCosa" Association="novus_daedalus_dbModel.IdScheda_AttoCosa">
             <End Role="scheda" EntitySet="scheda" />
-            <End Role="atto_cosa" EntitySet="atto_cosa" />
+            <End Role="AttoCosa" EntitySet="AttoCosa" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleCollaboratore" Association="novus_daedalus_dbModel.CodiceFiscaleCollaboratore">
+          <AssociationSet Name="IdCollaboratore" Association="novus_daedalus_dbModel.IdCollaboratore">
             <End Role="persona" EntitySet="persona" />
             <End Role="collaboratore" EntitySet="collaboratore" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleConsulente" Association="novus_daedalus_dbModel.CodiceFiscaleConsulente">
-            <End Role="collaboratore" EntitySet="collaboratore" />
+          <AssociationSet Name="IdConsulente" Association="novus_daedalus_dbModel.IdConsulente">
+            <End Role="persona" EntitySet="persona" />
             <End Role="consulente" EntitySet="consulente" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleInterprete" Association="novus_daedalus_dbModel.CodiceFiscaleInterprete">
-            <End Role="collaboratore" EntitySet="collaboratore" />
-            <End Role="interprete" EntitySet="interprete" />
-          </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePoliziaGiudiziaria" Association="novus_daedalus_dbModel.CodiceFiscalePoliziaGiudiziaria">
-            <End Role="collaboratore" EntitySet="collaboratore" />
-            <End Role="polizia_giudiziaria" EntitySet="polizia_giudiziaria" />
           </AssociationSet>
           <AssociationSet Name="IdCosa_PersonaCosa" Association="novus_daedalus_dbModel.IdCosa_PersonaCosa">
             <End Role="cosa" EntitySet="cosa" />
-            <End Role="persona_cosa" EntitySet="persona_cosa" />
+            <End Role="PersonaCosa" EntitySet="PersonaCosa" />
           </AssociationSet>
           <AssociationSet Name="IdCosa_ReatoCosa" Association="novus_daedalus_dbModel.IdCosa_ReatoCosa">
             <End Role="cosa" EntitySet="cosa" />
-            <End Role="reato_cosa" EntitySet="reato_cosa" />
+            <End Role="ReatoCosa" EntitySet="ReatoCosa" />
           </AssociationSet>
-          <AssociationSet Name="IdSchedaCosa" Association="novus_daedalus_dbModel.IdSchedaCosa">
+          <AssociationSet Name="IdScheda_Cosa" Association="novus_daedalus_dbModel.IdScheda_Cosa">
             <End Role="scheda" EntitySet="scheda" />
             <End Role="cosa" EntitySet="cosa" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleDifensore" Association="novus_daedalus_dbModel.CodiceFiscaleDifensore">
+          <AssociationSet Name="IdDifensore" Association="novus_daedalus_dbModel.IdDifensore">
             <End Role="persona" EntitySet="persona" />
             <End Role="difensore" EntitySet="difensore" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleDifensore1" Association="novus_daedalus_dbModel.CodiceFiscaleDifensore1">
+          <AssociationSet Name="IdDifensore1_Indagato" Association="novus_daedalus_dbModel.IdDifensore1_Indagato">
             <End Role="difensore" EntitySet="difensore" />
             <End Role="indagato" EntitySet="indagato" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleDifensore2" Association="novus_daedalus_dbModel.CodiceFiscaleDifensore2">
+          <AssociationSet Name="IdDifensore2_Indagato" Association="novus_daedalus_dbModel.IdDifensore2_Indagato">
             <End Role="difensore" EntitySet="difensore" />
             <End Role="indagato" EntitySet="indagato" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleGip" Association="novus_daedalus_dbModel.CodiceFiscaleGip">
+          <AssociationSet Name="IdGip" Association="novus_daedalus_dbModel.IdGip">
             <End Role="persona" EntitySet="persona" />
             <End Role="gip" EntitySet="gip" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleIndagato" Association="novus_daedalus_dbModel.CodiceFiscaleIndagato">
+          <AssociationSet Name="IdIndagato" Association="novus_daedalus_dbModel.IdIndagato">
             <End Role="persona" EntitySet="persona" />
             <End Role="indagato" EntitySet="indagato" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleIndagatoIscrizione" Association="novus_daedalus_dbModel.CodiceFiscaleIndagatoIscrizione">
+          <AssociationSet Name="IdIndagato_Iscrive" Association="novus_daedalus_dbModel.IdIndagato_Iscrive">
             <End Role="indagato" EntitySet="indagato" />
-            <End Role="iscrizione" EntitySet="iscrizione" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePMIscrizione" Association="novus_daedalus_dbModel.CodiceFiscalePMIscrizione">
-            <End Role="pm" EntitySet="pm" />
-            <End Role="iscrizione" EntitySet="iscrizione" />
+          <AssociationSet Name="IdInterprete" Association="novus_daedalus_dbModel.IdInterprete">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="interprete" EntitySet="interprete" />
           </AssociationSet>
-          <AssociationSet Name="IdNotiziaReatoIscrizione" Association="novus_daedalus_dbModel.IdNotiziaReatoIscrizione">
+          <AssociationSet Name="IdIscrizione_Iscrive" Association="novus_daedalus_dbModel.IdIscrizione_Iscrive">
+            <End Role="iscrizione" EntitySet="iscrizione" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
+          </AssociationSet>
+          <AssociationSet Name="IdNotiziaReato_Iscrive" Association="novus_daedalus_dbModel.IdNotiziaReato_Iscrive">
             <End Role="notizia_reato" EntitySet="notizia_reato" />
-            <End Role="iscrizione" EntitySet="iscrizione" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
           </AssociationSet>
-          <AssociationSet Name="IdReatoIscrizione" Association="novus_daedalus_dbModel.IdReatoIscrizione">
+          <AssociationSet Name="IdPm_Iscrive" Association="novus_daedalus_dbModel.IdPm_Iscrive">
+            <End Role="pm" EntitySet="pm" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
+          </AssociationSet>
+          <AssociationSet Name="IdReato_Iscrive" Association="novus_daedalus_dbModel.IdReato_Iscrive">
             <End Role="reato" EntitySet="reato" />
+            <End Role="Iscrive" EntitySet="Iscrive" />
+          </AssociationSet>
+          <AssociationSet Name="IdIscrizione_Scheda" Association="novus_daedalus_dbModel.IdIscrizione_Scheda">
             <End Role="iscrizione" EntitySet="iscrizione" />
+            <End Role="scheda" EntitySet="scheda" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersona_PersonaAtto" Association="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaAtto">
+          <AssociationSet Name="IdPersona_PersonaAtto" Association="novus_daedalus_dbModel.IdPersona_PersonaAtto">
             <End Role="persona" EntitySet="persona" />
-            <End Role="persona_atto" EntitySet="persona_atto" />
+            <End Role="PersonaAtto" EntitySet="PersonaAtto" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersona_PersonaCosa" Association="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaCosa">
+          <AssociationSet Name="IdPersona_PersonaCosa" Association="novus_daedalus_dbModel.IdPersona_PersonaCosa">
             <End Role="persona" EntitySet="persona" />
-            <End Role="persona_cosa" EntitySet="persona_cosa" />
+            <End Role="PersonaCosa" EntitySet="PersonaCosa" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersona_PersonaReato" Association="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaReato">
+          <AssociationSet Name="IdPersona_PersonaReato" Association="novus_daedalus_dbModel.IdPersona_PersonaReato">
             <End Role="persona" EntitySet="persona" />
-            <End Role="persona_reato" EntitySet="persona_reato" />
+            <End Role="PersonaReato" EntitySet="PersonaReato" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersonaInformata" Association="novus_daedalus_dbModel.CodiceFiscalePersonaInformata">
+          <AssociationSet Name="IdPersonaInformata" Association="novus_daedalus_dbModel.IdPersonaInformata">
             <End Role="persona" EntitySet="persona" />
             <End Role="persona_informata" EntitySet="persona_informata" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePersonaOffesa" Association="novus_daedalus_dbModel.CodiceFiscalePersonaOffesa">
+          <AssociationSet Name="IdPersonaOffesa" Association="novus_daedalus_dbModel.IdPersonaOffesa">
             <End Role="persona" EntitySet="persona" />
             <End Role="persona_offesa" EntitySet="persona_offesa" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscalePm" Association="novus_daedalus_dbModel.CodiceFiscalePm">
+          <AssociationSet Name="IdPg" Association="novus_daedalus_dbModel.IdPg">
+            <End Role="persona" EntitySet="persona" />
+            <End Role="pg" EntitySet="pg" />
+          </AssociationSet>
+          <AssociationSet Name="IdPm" Association="novus_daedalus_dbModel.IdPm">
             <End Role="persona" EntitySet="persona" />
             <End Role="pm" EntitySet="pm" />
           </AssociationSet>
-          <AssociationSet Name="CodiceFiscaleUtente" Association="novus_daedalus_dbModel.CodiceFiscaleUtente">
+          <AssociationSet Name="IdScheda_Persona" Association="novus_daedalus_dbModel.IdScheda_Persona">
+            <End Role="scheda" EntitySet="scheda" />
+            <End Role="persona" EntitySet="persona" />
+          </AssociationSet>
+          <AssociationSet Name="IdUtente" Association="novus_daedalus_dbModel.IdUtente">
             <End Role="persona" EntitySet="persona" />
             <End Role="utente" EntitySet="utente" />
           </AssociationSet>
-          <AssociationSet Name="IsScheda_PersonaAtto" Association="novus_daedalus_dbModel.IsScheda_PersonaAtto">
+          <AssociationSet Name="IdScheda" Association="novus_daedalus_dbModel.IdScheda">
             <End Role="scheda" EntitySet="scheda" />
-            <End Role="persona_atto" EntitySet="persona_atto" />
+            <End Role="PersonaAtto" EntitySet="PersonaAtto" />
           </AssociationSet>
           <AssociationSet Name="IdScheda_PersonaCosa" Association="novus_daedalus_dbModel.IdScheda_PersonaCosa">
             <End Role="scheda" EntitySet="scheda" />
-            <End Role="persona_cosa" EntitySet="persona_cosa" />
+            <End Role="PersonaCosa" EntitySet="PersonaCosa" />
           </AssociationSet>
           <AssociationSet Name="IdReato_PersonaReato" Association="novus_daedalus_dbModel.IdReato_PersonaReato">
             <End Role="reato" EntitySet="reato" />
-            <End Role="persona_reato" EntitySet="persona_reato" />
+            <End Role="PersonaReato" EntitySet="PersonaReato" />
           </AssociationSet>
           <AssociationSet Name="IdScheda_PersonaReato" Association="novus_daedalus_dbModel.IdScheda_PersonaReato">
             <End Role="scheda" EntitySet="scheda" />
-            <End Role="persona_reato" EntitySet="persona_reato" />
+            <End Role="PersonaReato" EntitySet="PersonaReato" />
           </AssociationSet>
           <AssociationSet Name="IdReato_ReatoAtto" Association="novus_daedalus_dbModel.IdReato_ReatoAtto">
             <End Role="reato" EntitySet="reato" />
-            <End Role="reato_atto" EntitySet="reato_atto" />
+            <End Role="ReatoAtto" EntitySet="ReatoAtto" />
           </AssociationSet>
           <AssociationSet Name="IdReato_ReatoCosa" Association="novus_daedalus_dbModel.IdReato_ReatoCosa">
             <End Role="reato" EntitySet="reato" />
-            <End Role="reato_cosa" EntitySet="reato_cosa" />
+            <End Role="ReatoCosa" EntitySet="ReatoCosa" />
           </AssociationSet>
-          <AssociationSet Name="IdSchedaReato" Association="novus_daedalus_dbModel.IdSchedaReato">
+          <AssociationSet Name="IdScheda_Reato" Association="novus_daedalus_dbModel.IdScheda_Reato">
             <End Role="scheda" EntitySet="scheda" />
             <End Role="reato" EntitySet="reato" />
           </AssociationSet>
           <AssociationSet Name="IdScheda_ReatoAtto" Association="novus_daedalus_dbModel.IdScheda_ReatoAtto">
             <End Role="scheda" EntitySet="scheda" />
-            <End Role="reato_atto" EntitySet="reato_atto" />
+            <End Role="ReatoAtto" EntitySet="ReatoAtto" />
           </AssociationSet>
           <AssociationSet Name="IdScheda_ReatoCosa" Association="novus_daedalus_dbModel.IdScheda_ReatoCosa">
             <End Role="scheda" EntitySet="scheda" />
-            <End Role="reato_cosa" EntitySet="reato_cosa" />
-          </AssociationSet>
-          <AssociationSet Name="scheda_persona" Association="novus_daedalus_dbModel.scheda_persona">
-            <End Role="persona" EntitySet="persona" />
-            <End Role="scheda" EntitySet="scheda" />
+            <End Role="ReatoCosa" EntitySet="ReatoCosa" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="atto">
@@ -1182,16 +1207,16 @@
           <Property Name="Scopo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Tipo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Nome" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="DataEsecuzione" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="DataEsecuzione" Type="DateTime" Precision="0" />
           <Property Name="Stato" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Esito" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="atto_cosa" Relationship="novus_daedalus_dbModel.IdAtto_AttoCosa" FromRole="atto" ToRole="atto_cosa" />
-          <NavigationProperty Name="persona_atto" Relationship="novus_daedalus_dbModel.IdAtto_PersonaAtto" FromRole="atto" ToRole="persona_atto" />
-          <NavigationProperty Name="reato_atto" Relationship="novus_daedalus_dbModel.IdAtto_ReatoAtto" FromRole="atto" ToRole="reato_atto" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdSchedaAtto" FromRole="atto" ToRole="scheda" />
+          <NavigationProperty Name="AttoCosa" Relationship="novus_daedalus_dbModel.IdAtto_AttoCosa" FromRole="atto" ToRole="AttoCosa" />
+          <NavigationProperty Name="PersonaAtto" Relationship="novus_daedalus_dbModel.IdAtto_PersonaAtto" FromRole="atto" ToRole="PersonaAtto" />
+          <NavigationProperty Name="ReatoAtto" Relationship="novus_daedalus_dbModel.IdAtto_ReatoAtto" FromRole="atto" ToRole="ReatoAtto" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_Atto" FromRole="atto" ToRole="scheda" />
         </EntityType>
-        <EntityType Name="atto_cosa">
+        <EntityType Name="AttoCosa">
           <Key>
             <PropertyRef Name="IdAtto" />
             <PropertyRef Name="IdCosa" />
@@ -1199,34 +1224,31 @@
           <Property Name="IdAtto" Type="Int32" Nullable="false" />
           <Property Name="IdCosa" Type="Int32" Nullable="false" />
           <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdAtto_AttoCosa" FromRole="atto_cosa" ToRole="atto" />
-          <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdCosa_AttoCosa" FromRole="atto_cosa" ToRole="cosa" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_AttoCosa" FromRole="atto_cosa" ToRole="scheda" />
+          <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdAtto_AttoCosa" FromRole="AttoCosa" ToRole="atto" />
+          <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdCosa_AttoCosa" FromRole="AttoCosa" ToRole="cosa" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_AttoCosa" FromRole="AttoCosa" ToRole="scheda" />
         </EntityType>
         <EntityType Name="collaboratore">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscaleCollaboratore" FromRole="collaboratore" ToRole="persona" />
-          <NavigationProperty Name="consulente" Relationship="novus_daedalus_dbModel.CodiceFiscaleConsulente" FromRole="collaboratore" ToRole="consulente" />
-          <NavigationProperty Name="interprete" Relationship="novus_daedalus_dbModel.CodiceFiscaleInterprete" FromRole="collaboratore" ToRole="interprete" />
-          <NavigationProperty Name="polizia_giudiziaria" Relationship="novus_daedalus_dbModel.CodiceFiscalePoliziaGiudiziaria" FromRole="collaboratore" ToRole="polizia_giudiziaria" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdCollaboratore" FromRole="collaboratore" ToRole="persona" />
         </EntityType>
         <EntityType Name="consulente">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Professione" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="AmbienteAttività" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="collaboratore" Relationship="novus_daedalus_dbModel.CodiceFiscaleConsulente" FromRole="consulente" ToRole="collaboratore" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdConsulente" FromRole="consulente" ToRole="persona" />
         </EntityType>
         <EntityType Name="cosa">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Qualità" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Origine" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Acquisizione" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
@@ -1234,66 +1256,86 @@
           <Property Name="Evento" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="AttoOrigine" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="atto_cosa" Relationship="novus_daedalus_dbModel.IdCosa_AttoCosa" FromRole="cosa" ToRole="atto_cosa" />
-          <NavigationProperty Name="persona_cosa" Relationship="novus_daedalus_dbModel.IdCosa_PersonaCosa" FromRole="cosa" ToRole="persona_cosa" />
-          <NavigationProperty Name="reato_cosa" Relationship="novus_daedalus_dbModel.IdCosa_ReatoCosa" FromRole="cosa" ToRole="reato_cosa" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdSchedaCosa" FromRole="cosa" ToRole="scheda" />
+          <NavigationProperty Name="AttoCosa" Relationship="novus_daedalus_dbModel.IdCosa_AttoCosa" FromRole="cosa" ToRole="AttoCosa" />
+          <NavigationProperty Name="PersonaCosa" Relationship="novus_daedalus_dbModel.IdCosa_PersonaCosa" FromRole="cosa" ToRole="PersonaCosa" />
+          <NavigationProperty Name="ReatoCosa" Relationship="novus_daedalus_dbModel.IdCosa_ReatoCosa" FromRole="cosa" ToRole="ReatoCosa" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_Cosa" FromRole="cosa" ToRole="scheda" />
         </EntityType>
         <EntityType Name="difensore">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Qualità" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscaleDifensore" FromRole="difensore" ToRole="persona" />
-          <NavigationProperty Name="indagato" Relationship="novus_daedalus_dbModel.CodiceFiscaleDifensore1" FromRole="difensore" ToRole="indagato" />
-          <NavigationProperty Name="indagato1" Relationship="novus_daedalus_dbModel.CodiceFiscaleDifensore2" FromRole="difensore" ToRole="indagato" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdDifensore" FromRole="difensore" ToRole="persona" />
+          <NavigationProperty Name="indagato" Relationship="novus_daedalus_dbModel.IdDifensore1_Indagato" FromRole="difensore" ToRole="indagato" />
+          <NavigationProperty Name="indagato1" Relationship="novus_daedalus_dbModel.IdDifensore2_Indagato" FromRole="difensore" ToRole="indagato" />
         </EntityType>
         <EntityType Name="gip">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscaleGip" FromRole="gip" ToRole="persona" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdGip" FromRole="gip" ToRole="persona" />
         </EntityType>
         <EntityType Name="indagato">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Stato" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="PrecedentiPenali" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="QualitàDifesa" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Difensore1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Difensore2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="difensore" Relationship="novus_daedalus_dbModel.CodiceFiscaleDifensore1" FromRole="indagato" ToRole="difensore" />
-          <NavigationProperty Name="difensore3" Relationship="novus_daedalus_dbModel.CodiceFiscaleDifensore2" FromRole="indagato" ToRole="difensore" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscaleIndagato" FromRole="indagato" ToRole="persona" />
-          <NavigationProperty Name="iscrizione" Relationship="novus_daedalus_dbModel.CodiceFiscaleIndagatoIscrizione" FromRole="indagato" ToRole="iscrizione" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Stato" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="PrecedentiPenali" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="QualitàDifesa" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Difensore1" Type="Int32" />
+          <Property Name="Difensore2" Type="Int32" />
+          <Property Name="InizioMisuraCautelare" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="difensore" Relationship="novus_daedalus_dbModel.IdDifensore1_Indagato" FromRole="indagato" ToRole="difensore" />
+          <NavigationProperty Name="difensore3" Relationship="novus_daedalus_dbModel.IdDifensore2_Indagato" FromRole="indagato" ToRole="difensore" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdIndagato" FromRole="indagato" ToRole="persona" />
+          <NavigationProperty Name="Iscrive" Relationship="novus_daedalus_dbModel.IdIndagato_Iscrive" FromRole="indagato" ToRole="Iscrive" />
         </EntityType>
         <EntityType Name="interprete">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Lingua" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="collaboratore" Relationship="novus_daedalus_dbModel.CodiceFiscaleInterprete" FromRole="interprete" ToRole="collaboratore" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdInterprete" FromRole="interprete" ToRole="persona" />
+        </EntityType>
+        <EntityType Name="Iscrive">
+          <Key>
+            <PropertyRef Name="IdPm" />
+            <PropertyRef Name="IdNotiziaReato" />
+            <PropertyRef Name="IdIndagato" />
+            <PropertyRef Name="IdReato" />
+          </Key>
+          <Property Name="IdPm" Type="Int32" Nullable="false" />
+          <Property Name="IdNotiziaReato" Type="Int32" Nullable="false" />
+          <Property Name="IdIndagato" Type="Int32" Nullable="false" />
+          <Property Name="IdReato" Type="Int32" Nullable="false" />
+          <Property Name="IdIscrizione" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="indagato" Relationship="novus_daedalus_dbModel.IdIndagato_Iscrive" FromRole="Iscrive" ToRole="indagato" />
+          <NavigationProperty Name="iscrizione" Relationship="novus_daedalus_dbModel.IdIscrizione_Iscrive" FromRole="Iscrive" ToRole="iscrizione" />
+          <NavigationProperty Name="notizia_reato" Relationship="novus_daedalus_dbModel.IdNotiziaReato_Iscrive" FromRole="Iscrive" ToRole="notizia_reato" />
+          <NavigationProperty Name="pm" Relationship="novus_daedalus_dbModel.IdPm_Iscrive" FromRole="Iscrive" ToRole="pm" />
+          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdReato_Iscrive" FromRole="Iscrive" ToRole="reato" />
         </EntityType>
         <EntityType Name="iscrizione">
           <Key>
-            <PropertyRef Name="IdNotiziaReato" />
-            <PropertyRef Name="CodiceFiscaleIndagato" />
-            <PropertyRef Name="CodiceFiscalePM" />
-            <PropertyRef Name="IdReato" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="IdNotiziaReato" Type="Int32" Nullable="false" />
-          <Property Name="CodiceFiscaleIndagato" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="CodiceFiscalePM" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="IdReato" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="indagato" Relationship="novus_daedalus_dbModel.CodiceFiscaleIndagatoIscrizione" FromRole="iscrizione" ToRole="indagato" />
-          <NavigationProperty Name="pm" Relationship="novus_daedalus_dbModel.CodiceFiscalePMIscrizione" FromRole="iscrizione" ToRole="pm" />
-          <NavigationProperty Name="notizia_reato" Relationship="novus_daedalus_dbModel.IdNotiziaReatoIscrizione" FromRole="iscrizione" ToRole="notizia_reato" />
-          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdReatoIscrizione" FromRole="iscrizione" ToRole="reato" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Ufficio" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Sede" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Referente" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Data" Type="DateTime" Precision="0" />
+          <Property Name="DataScadenza" Type="DateTime" Precision="0" />
+          <Property Name="Stato" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ArchiviazioneImmediata" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Memo" Type="String" MaxLength="1024" Unicode="false" FixedLength="false" />
+          <Property Name="IndaginiPG" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Iscrive" Relationship="novus_daedalus_dbModel.IdIscrizione_Iscrive" FromRole="iscrizione" ToRole="Iscrive" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdIscrizione_Scheda" FromRole="iscrizione" ToRole="scheda" />
         </EntityType>
         <EntityType Name="notizia_reato">
           <Key>
@@ -1302,123 +1344,127 @@
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Specie" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Fonte" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="iscrizione" Relationship="novus_daedalus_dbModel.IdNotiziaReatoIscrizione" FromRole="notizia_reato" ToRole="iscrizione" />
+          <NavigationProperty Name="Iscrive" Relationship="novus_daedalus_dbModel.IdNotiziaReato_Iscrive" FromRole="notizia_reato" ToRole="Iscrive" />
         </EntityType>
         <EntityType Name="persona">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Nome" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Cognome" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Sesso" Type="Boolean" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CodiceFiscale" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Nome" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Cognome" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Sesso" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
           <Property Name="LuogoNascita" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="DataNascita" Type="DateTime" Precision="0" />
           <Property Name="Nazionalità" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Domicilio" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Ruolo" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Ruolo" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="NumeroEscussioni" Type="Int32" />
-          <NavigationProperty Name="collaboratore" Relationship="novus_daedalus_dbModel.CodiceFiscaleCollaboratore" FromRole="persona" ToRole="collaboratore" />
-          <NavigationProperty Name="difensore" Relationship="novus_daedalus_dbModel.CodiceFiscaleDifensore" FromRole="persona" ToRole="difensore" />
-          <NavigationProperty Name="gip" Relationship="novus_daedalus_dbModel.CodiceFiscaleGip" FromRole="persona" ToRole="gip" />
-          <NavigationProperty Name="indagato" Relationship="novus_daedalus_dbModel.CodiceFiscaleIndagato" FromRole="persona" ToRole="indagato" />
-          <NavigationProperty Name="persona_atto" Relationship="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaAtto" FromRole="persona" ToRole="persona_atto" />
-          <NavigationProperty Name="persona_cosa" Relationship="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaCosa" FromRole="persona" ToRole="persona_cosa" />
-          <NavigationProperty Name="persona_reato" Relationship="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaReato" FromRole="persona" ToRole="persona_reato" />
-          <NavigationProperty Name="persona_informata" Relationship="novus_daedalus_dbModel.CodiceFiscalePersonaInformata" FromRole="persona" ToRole="persona_informata" />
-          <NavigationProperty Name="persona_offesa" Relationship="novus_daedalus_dbModel.CodiceFiscalePersonaOffesa" FromRole="persona" ToRole="persona_offesa" />
-          <NavigationProperty Name="pm" Relationship="novus_daedalus_dbModel.CodiceFiscalePm" FromRole="persona" ToRole="pm" />
-          <NavigationProperty Name="utente" Relationship="novus_daedalus_dbModel.CodiceFiscaleUtente" FromRole="persona" ToRole="utente" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.scheda_persona" FromRole="persona" ToRole="scheda" />
-        </EntityType>
-        <EntityType Name="persona_atto">
-          <Key>
-            <PropertyRef Name="CodiceFiscalePersona" />
-            <PropertyRef Name="IdAtto" />
-          </Key>
-          <Property Name="CodiceFiscalePersona" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="IdAtto" Type="Int32" Nullable="false" />
           <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdAtto_PersonaAtto" FromRole="persona_atto" ToRole="atto" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaAtto" FromRole="persona_atto" ToRole="persona" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IsScheda_PersonaAtto" FromRole="persona_atto" ToRole="scheda" />
-        </EntityType>
-        <EntityType Name="persona_cosa">
-          <Key>
-            <PropertyRef Name="CodiceFiscalePersona" />
-            <PropertyRef Name="IdCosa" />
-          </Key>
-          <Property Name="CodiceFiscalePersona" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="IdCosa" Type="Int32" Nullable="false" />
-          <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdCosa_PersonaCosa" FromRole="persona_cosa" ToRole="cosa" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaCosa" FromRole="persona_cosa" ToRole="persona" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_PersonaCosa" FromRole="persona_cosa" ToRole="scheda" />
+          <NavigationProperty Name="collaboratore" Relationship="novus_daedalus_dbModel.IdCollaboratore" FromRole="persona" ToRole="collaboratore" />
+          <NavigationProperty Name="consulente" Relationship="novus_daedalus_dbModel.IdConsulente" FromRole="persona" ToRole="consulente" />
+          <NavigationProperty Name="difensore" Relationship="novus_daedalus_dbModel.IdDifensore" FromRole="persona" ToRole="difensore" />
+          <NavigationProperty Name="gip" Relationship="novus_daedalus_dbModel.IdGip" FromRole="persona" ToRole="gip" />
+          <NavigationProperty Name="indagato" Relationship="novus_daedalus_dbModel.IdIndagato" FromRole="persona" ToRole="indagato" />
+          <NavigationProperty Name="interprete" Relationship="novus_daedalus_dbModel.IdInterprete" FromRole="persona" ToRole="interprete" />
+          <NavigationProperty Name="PersonaAtto" Relationship="novus_daedalus_dbModel.IdPersona_PersonaAtto" FromRole="persona" ToRole="PersonaAtto" />
+          <NavigationProperty Name="PersonaCosa" Relationship="novus_daedalus_dbModel.IdPersona_PersonaCosa" FromRole="persona" ToRole="PersonaCosa" />
+          <NavigationProperty Name="PersonaReato" Relationship="novus_daedalus_dbModel.IdPersona_PersonaReato" FromRole="persona" ToRole="PersonaReato" />
+          <NavigationProperty Name="persona_informata" Relationship="novus_daedalus_dbModel.IdPersonaInformata" FromRole="persona" ToRole="persona_informata" />
+          <NavigationProperty Name="persona_offesa" Relationship="novus_daedalus_dbModel.IdPersonaOffesa" FromRole="persona" ToRole="persona_offesa" />
+          <NavigationProperty Name="pg" Relationship="novus_daedalus_dbModel.IdPg" FromRole="persona" ToRole="pg" />
+          <NavigationProperty Name="pm" Relationship="novus_daedalus_dbModel.IdPm" FromRole="persona" ToRole="pm" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_Persona" FromRole="persona" ToRole="scheda" />
+          <NavigationProperty Name="utente" Relationship="novus_daedalus_dbModel.IdUtente" FromRole="persona" ToRole="utente" />
         </EntityType>
         <EntityType Name="persona_informata">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Escusso" Type="Boolean" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscalePersonaInformata" FromRole="persona_informata" ToRole="persona" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdPersonaInformata" FromRole="persona_informata" ToRole="persona" />
         </EntityType>
         <EntityType Name="persona_offesa">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Escusso" Type="Boolean" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscalePersonaOffesa" FromRole="persona_offesa" ToRole="persona" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="AvvisoArchiviazione" Type="Boolean" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdPersonaOffesa" FromRole="persona_offesa" ToRole="persona" />
         </EntityType>
-        <EntityType Name="persona_reato">
+        <EntityType Name="PersonaAtto">
           <Key>
-            <PropertyRef Name="CodiceFiscalePersona" />
+            <PropertyRef Name="IdPersona" />
+            <PropertyRef Name="IdAtto" />
+          </Key>
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
+          <Property Name="IdAtto" Type="Int32" Nullable="false" />
+          <Property Name="IdScheda" Type="Int32" />
+          <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdAtto_PersonaAtto" FromRole="PersonaAtto" ToRole="atto" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdPersona_PersonaAtto" FromRole="PersonaAtto" ToRole="persona" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda" FromRole="PersonaAtto" ToRole="scheda" />
+        </EntityType>
+        <EntityType Name="PersonaCosa">
+          <Key>
+            <PropertyRef Name="IdPersona" />
+            <PropertyRef Name="IdCosa" />
+          </Key>
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
+          <Property Name="IdCosa" Type="Int32" Nullable="false" />
+          <Property Name="IdScheda" Type="Int32" />
+          <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdCosa_PersonaCosa" FromRole="PersonaCosa" ToRole="cosa" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdPersona_PersonaCosa" FromRole="PersonaCosa" ToRole="persona" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_PersonaCosa" FromRole="PersonaCosa" ToRole="scheda" />
+        </EntityType>
+        <EntityType Name="PersonaReato">
+          <Key>
+            <PropertyRef Name="IdPersona" />
             <PropertyRef Name="IdReato" />
           </Key>
-          <Property Name="CodiceFiscalePersona" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
           <Property Name="IdReato" Type="Int32" Nullable="false" />
           <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscalePersona_PersonaReato" FromRole="persona_reato" ToRole="persona" />
-          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdReato_PersonaReato" FromRole="persona_reato" ToRole="reato" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_PersonaReato" FromRole="persona_reato" ToRole="scheda" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdPersona_PersonaReato" FromRole="PersonaReato" ToRole="persona" />
+          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdReato_PersonaReato" FromRole="PersonaReato" ToRole="reato" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_PersonaReato" FromRole="PersonaReato" ToRole="scheda" />
         </EntityType>
-        <EntityType Name="pm">
+        <EntityType Name="pg">
           <Key>
-            <PropertyRef Name="CodiceFiscale" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="iscrizione" Relationship="novus_daedalus_dbModel.CodiceFiscalePMIscrizione" FromRole="pm" ToRole="iscrizione" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscalePm" FromRole="pm" ToRole="persona" />
-        </EntityType>
-        <EntityType Name="polizia_giudiziaria">
-          <Key>
-            <PropertyRef Name="CodiceFiscale" />
-          </Key>
-          <Property Name="CodiceFiscale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Nome" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Sede" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Funzione" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Grado" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="collaboratore" Relationship="novus_daedalus_dbModel.CodiceFiscalePoliziaGiudiziaria" FromRole="polizia_giudiziaria" ToRole="collaboratore" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdPg" FromRole="pg" ToRole="persona" />
+        </EntityType>
+        <EntityType Name="pm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Iscrive" Relationship="novus_daedalus_dbModel.IdPm_Iscrive" FromRole="pm" ToRole="Iscrive" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdPm" FromRole="pm" ToRole="persona" />
         </EntityType>
         <EntityType Name="reato">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Codice" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="NomenIuris" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Codice" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="NomenIuris" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="Luogo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Data" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="iscrizione" Relationship="novus_daedalus_dbModel.IdReatoIscrizione" FromRole="reato" ToRole="iscrizione" />
-          <NavigationProperty Name="persona_reato" Relationship="novus_daedalus_dbModel.IdReato_PersonaReato" FromRole="reato" ToRole="persona_reato" />
-          <NavigationProperty Name="reato_atto" Relationship="novus_daedalus_dbModel.IdReato_ReatoAtto" FromRole="reato" ToRole="reato_atto" />
-          <NavigationProperty Name="reato_cosa" Relationship="novus_daedalus_dbModel.IdReato_ReatoCosa" FromRole="reato" ToRole="reato_cosa" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdSchedaReato" FromRole="reato" ToRole="scheda" />
+          <NavigationProperty Name="Iscrive" Relationship="novus_daedalus_dbModel.IdReato_Iscrive" FromRole="reato" ToRole="Iscrive" />
+          <NavigationProperty Name="PersonaReato" Relationship="novus_daedalus_dbModel.IdReato_PersonaReato" FromRole="reato" ToRole="PersonaReato" />
+          <NavigationProperty Name="ReatoAtto" Relationship="novus_daedalus_dbModel.IdReato_ReatoAtto" FromRole="reato" ToRole="ReatoAtto" />
+          <NavigationProperty Name="ReatoCosa" Relationship="novus_daedalus_dbModel.IdReato_ReatoCosa" FromRole="reato" ToRole="ReatoCosa" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_Reato" FromRole="reato" ToRole="scheda" />
         </EntityType>
-        <EntityType Name="reato_atto">
+        <EntityType Name="ReatoAtto">
           <Key>
             <PropertyRef Name="IdReato" />
             <PropertyRef Name="IdAtto" />
@@ -1426,11 +1472,11 @@
           <Property Name="IdReato" Type="Int32" Nullable="false" />
           <Property Name="IdAtto" Type="Int32" Nullable="false" />
           <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdAtto_ReatoAtto" FromRole="reato_atto" ToRole="atto" />
-          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdReato_ReatoAtto" FromRole="reato_atto" ToRole="reato" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_ReatoAtto" FromRole="reato_atto" ToRole="scheda" />
+          <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdAtto_ReatoAtto" FromRole="ReatoAtto" ToRole="atto" />
+          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdReato_ReatoAtto" FromRole="ReatoAtto" ToRole="reato" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_ReatoAtto" FromRole="ReatoAtto" ToRole="scheda" />
         </EntityType>
-        <EntityType Name="reato_cosa">
+        <EntityType Name="ReatoCosa">
           <Key>
             <PropertyRef Name="IdReato" />
             <PropertyRef Name="IdCosa" />
@@ -1438,37 +1484,30 @@
           <Property Name="IdReato" Type="Int32" Nullable="false" />
           <Property Name="IdCosa" Type="Int32" Nullable="false" />
           <Property Name="IdScheda" Type="Int32" />
-          <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdCosa_ReatoCosa" FromRole="reato_cosa" ToRole="cosa" />
-          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdReato_ReatoCosa" FromRole="reato_cosa" ToRole="reato" />
-          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_ReatoCosa" FromRole="reato_cosa" ToRole="scheda" />
+          <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdCosa_ReatoCosa" FromRole="ReatoCosa" ToRole="cosa" />
+          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdReato_ReatoCosa" FromRole="ReatoCosa" ToRole="reato" />
+          <NavigationProperty Name="scheda" Relationship="novus_daedalus_dbModel.IdScheda_ReatoCosa" FromRole="ReatoCosa" ToRole="scheda" />
         </EntityType>
         <EntityType Name="scheda">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="NumeroRegistro" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="NumeroRegistro" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="PosizioneFascicolo" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="DataRegistrazione" Type="DateTime" Precision="0" />
-          <Property Name="Ufficio" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Sede" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Referente" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="DataIscrizione" Type="DateTime" Precision="0" />
-          <Property Name="DataScadenza" Type="DateTime" Precision="0" />
-          <Property Name="Stato" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="ArchiviazioneImmediata" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="AvvisoArchiviazione" Type="Boolean" />
-          <Property Name="Memo" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="IndaginiPG" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdSchedaAtto" FromRole="scheda" ToRole="atto" />
-          <NavigationProperty Name="atto_cosa" Relationship="novus_daedalus_dbModel.IdScheda_AttoCosa" FromRole="scheda" ToRole="atto_cosa" />
-          <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdSchedaCosa" FromRole="scheda" ToRole="cosa" />
-          <NavigationProperty Name="persona_atto" Relationship="novus_daedalus_dbModel.IsScheda_PersonaAtto" FromRole="scheda" ToRole="persona_atto" />
-          <NavigationProperty Name="persona_cosa" Relationship="novus_daedalus_dbModel.IdScheda_PersonaCosa" FromRole="scheda" ToRole="persona_cosa" />
-          <NavigationProperty Name="persona_reato" Relationship="novus_daedalus_dbModel.IdScheda_PersonaReato" FromRole="scheda" ToRole="persona_reato" />
-          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdSchedaReato" FromRole="scheda" ToRole="reato" />
-          <NavigationProperty Name="reato_atto" Relationship="novus_daedalus_dbModel.IdScheda_ReatoAtto" FromRole="scheda" ToRole="reato_atto" />
-          <NavigationProperty Name="reato_cosa" Relationship="novus_daedalus_dbModel.IdScheda_ReatoCosa" FromRole="scheda" ToRole="reato_cosa" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.scheda_persona" FromRole="scheda" ToRole="persona" />
+          <Property Name="IdIscrizione" Type="Int32" />
+          <NavigationProperty Name="atto" Relationship="novus_daedalus_dbModel.IdScheda_Atto" FromRole="scheda" ToRole="atto" />
+          <NavigationProperty Name="AttoCosa" Relationship="novus_daedalus_dbModel.IdScheda_AttoCosa" FromRole="scheda" ToRole="AttoCosa" />
+          <NavigationProperty Name="cosa" Relationship="novus_daedalus_dbModel.IdScheda_Cosa" FromRole="scheda" ToRole="cosa" />
+          <NavigationProperty Name="iscrizione" Relationship="novus_daedalus_dbModel.IdIscrizione_Scheda" FromRole="scheda" ToRole="iscrizione" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdScheda_Persona" FromRole="scheda" ToRole="persona" />
+          <NavigationProperty Name="PersonaAtto" Relationship="novus_daedalus_dbModel.IdScheda" FromRole="scheda" ToRole="PersonaAtto" />
+          <NavigationProperty Name="PersonaCosa" Relationship="novus_daedalus_dbModel.IdScheda_PersonaCosa" FromRole="scheda" ToRole="PersonaCosa" />
+          <NavigationProperty Name="PersonaReato" Relationship="novus_daedalus_dbModel.IdScheda_PersonaReato" FromRole="scheda" ToRole="PersonaReato" />
+          <NavigationProperty Name="reato" Relationship="novus_daedalus_dbModel.IdScheda_Reato" FromRole="scheda" ToRole="reato" />
+          <NavigationProperty Name="ReatoAtto" Relationship="novus_daedalus_dbModel.IdScheda_ReatoAtto" FromRole="scheda" ToRole="ReatoAtto" />
+          <NavigationProperty Name="ReatoCosa" Relationship="novus_daedalus_dbModel.IdScheda_ReatoCosa" FromRole="scheda" ToRole="ReatoCosa" />
         </EntityType>
         <EntityType Name="utente">
           <Key>
@@ -1476,19 +1515,19 @@
           </Key>
           <Property Name="Username" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Password" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="CodiceFiscaleUtente" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.CodiceFiscaleUtente" FromRole="utente" ToRole="persona" />
+          <Property Name="Id" Type="Int32" />
+          <NavigationProperty Name="persona" Relationship="novus_daedalus_dbModel.IdUtente" FromRole="utente" ToRole="persona" />
         </EntityType>
         <Association Name="IdAtto_AttoCosa">
           <End Role="atto" Type="novus_daedalus_dbModel.atto" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="atto_cosa" Type="novus_daedalus_dbModel.atto_cosa" Multiplicity="*" />
+          <End Role="AttoCosa" Type="novus_daedalus_dbModel.AttoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="atto">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="atto_cosa">
+            <Dependent Role="AttoCosa">
               <PropertyRef Name="IdAtto" />
             </Dependent>
           </ReferentialConstraint>
@@ -1497,12 +1536,12 @@
           <End Role="atto" Type="novus_daedalus_dbModel.atto" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_atto" Type="novus_daedalus_dbModel.persona_atto" Multiplicity="*" />
+          <End Role="PersonaAtto" Type="novus_daedalus_dbModel.PersonaAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="atto">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_atto">
+            <Dependent Role="PersonaAtto">
               <PropertyRef Name="IdAtto" />
             </Dependent>
           </ReferentialConstraint>
@@ -1511,17 +1550,17 @@
           <End Role="atto" Type="novus_daedalus_dbModel.atto" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_atto" Type="novus_daedalus_dbModel.reato_atto" Multiplicity="*" />
+          <End Role="ReatoAtto" Type="novus_daedalus_dbModel.ReatoAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="atto">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_atto">
+            <Dependent Role="ReatoAtto">
               <PropertyRef Name="IdAtto" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdSchedaAtto">
+        <Association Name="IdScheda_Atto">
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -1539,12 +1578,12 @@
           <End Role="cosa" Type="novus_daedalus_dbModel.cosa" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="atto_cosa" Type="novus_daedalus_dbModel.atto_cosa" Multiplicity="*" />
+          <End Role="AttoCosa" Type="novus_daedalus_dbModel.AttoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cosa">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="atto_cosa">
+            <Dependent Role="AttoCosa">
               <PropertyRef Name="IdCosa" />
             </Dependent>
           </ReferentialConstraint>
@@ -1553,69 +1592,41 @@
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="atto_cosa" Type="novus_daedalus_dbModel.atto_cosa" Multiplicity="*" />
+          <End Role="AttoCosa" Type="novus_daedalus_dbModel.AttoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="scheda">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="atto_cosa">
+            <Dependent Role="AttoCosa">
               <PropertyRef Name="IdScheda" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleCollaboratore">
+        <Association Name="IdCollaboratore">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="collaboratore" Type="novus_daedalus_dbModel.collaboratore" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="collaboratore">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleConsulente">
-          <End Role="collaboratore" Type="novus_daedalus_dbModel.collaboratore" Multiplicity="1">
+        <Association Name="IdConsulente">
+          <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="consulente" Type="novus_daedalus_dbModel.consulente" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="collaboratore">
-              <PropertyRef Name="CodiceFiscale" />
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="consulente">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscaleInterprete">
-          <End Role="collaboratore" Type="novus_daedalus_dbModel.collaboratore" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="interprete" Type="novus_daedalus_dbModel.interprete" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="collaboratore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="interprete">
-              <PropertyRef Name="CodiceFiscale" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CodiceFiscalePoliziaGiudiziaria">
-          <End Role="collaboratore" Type="novus_daedalus_dbModel.collaboratore" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="polizia_giudiziaria" Type="novus_daedalus_dbModel.polizia_giudiziaria" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="collaboratore">
-              <PropertyRef Name="CodiceFiscale" />
-            </Principal>
-            <Dependent Role="polizia_giudiziaria">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1623,12 +1634,12 @@
           <End Role="cosa" Type="novus_daedalus_dbModel.cosa" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_cosa" Type="novus_daedalus_dbModel.persona_cosa" Multiplicity="*" />
+          <End Role="PersonaCosa" Type="novus_daedalus_dbModel.PersonaCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cosa">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_cosa">
+            <Dependent Role="PersonaCosa">
               <PropertyRef Name="IdCosa" />
             </Dependent>
           </ReferentialConstraint>
@@ -1637,17 +1648,17 @@
           <End Role="cosa" Type="novus_daedalus_dbModel.cosa" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_cosa" Type="novus_daedalus_dbModel.reato_cosa" Multiplicity="*" />
+          <End Role="ReatoCosa" Type="novus_daedalus_dbModel.ReatoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cosa">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_cosa">
+            <Dependent Role="ReatoCosa">
               <PropertyRef Name="IdCosa" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdSchedaCosa">
+        <Association Name="IdScheda_Cosa">
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -1661,240 +1672,306 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleDifensore">
+        <Association Name="IdDifensore">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="difensore" Type="novus_daedalus_dbModel.difensore" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="difensore">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleDifensore1">
-          <End Role="difensore" Type="novus_daedalus_dbModel.difensore" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="IdDifensore1_Indagato">
+          <End Role="difensore" Type="novus_daedalus_dbModel.difensore" Multiplicity="0..1" />
           <End Role="indagato" Type="novus_daedalus_dbModel.indagato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="difensore">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="indagato">
               <PropertyRef Name="Difensore1" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleDifensore2">
-          <End Role="difensore" Type="novus_daedalus_dbModel.difensore" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="IdDifensore2_Indagato">
+          <End Role="difensore" Type="novus_daedalus_dbModel.difensore" Multiplicity="0..1" />
           <End Role="indagato" Type="novus_daedalus_dbModel.indagato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="difensore">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="indagato">
               <PropertyRef Name="Difensore2" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleGip">
+        <Association Name="IdGip">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="gip" Type="novus_daedalus_dbModel.gip" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="gip">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleIndagato">
+        <Association Name="IdIndagato">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="indagato" Type="novus_daedalus_dbModel.indagato" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="indagato">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleIndagatoIscrizione">
+        <Association Name="IdIndagato_Iscrive">
           <End Role="indagato" Type="novus_daedalus_dbModel.indagato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="iscrizione" Type="novus_daedalus_dbModel.iscrizione" Multiplicity="*" />
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Iscrive" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="indagato">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="iscrizione">
-              <PropertyRef Name="CodiceFiscaleIndagato" />
+            <Dependent Role="Iscrive">
+              <PropertyRef Name="IdIndagato" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscalePMIscrizione">
-          <End Role="pm" Type="novus_daedalus_dbModel.pm" Multiplicity="1">
+        <Association Name="IdInterprete">
+          <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="iscrizione" Type="novus_daedalus_dbModel.iscrizione" Multiplicity="*" />
+          <End Role="interprete" Type="novus_daedalus_dbModel.interprete" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="pm">
-              <PropertyRef Name="CodiceFiscale" />
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="iscrizione">
-              <PropertyRef Name="CodiceFiscalePM" />
+            <Dependent Role="interprete">
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdNotiziaReatoIscrizione">
+        <Association Name="IdIscrizione_Iscrive">
+          <End Role="iscrizione" Type="novus_daedalus_dbModel.iscrizione" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Iscrive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iscrizione">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Iscrive">
+              <PropertyRef Name="IdIscrizione" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdNotiziaReato_Iscrive">
           <End Role="notizia_reato" Type="novus_daedalus_dbModel.notizia_reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="iscrizione" Type="novus_daedalus_dbModel.iscrizione" Multiplicity="*" />
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Iscrive" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="notizia_reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="iscrizione">
+            <Dependent Role="Iscrive">
               <PropertyRef Name="IdNotiziaReato" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdReatoIscrizione">
+        <Association Name="IdPm_Iscrive">
+          <End Role="pm" Type="novus_daedalus_dbModel.pm" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Iscrive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pm">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Iscrive">
+              <PropertyRef Name="IdPm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdReato_Iscrive">
           <End Role="reato" Type="novus_daedalus_dbModel.reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="iscrizione" Type="novus_daedalus_dbModel.iscrizione" Multiplicity="*" />
+          <End Role="Iscrive" Type="novus_daedalus_dbModel.Iscrive" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="iscrizione">
+            <Dependent Role="Iscrive">
               <PropertyRef Name="IdReato" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscalePersona_PersonaAtto">
-          <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
+        <Association Name="IdIscrizione_Scheda">
+          <End Role="iscrizione" Type="novus_daedalus_dbModel.iscrizione" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_atto" Type="novus_daedalus_dbModel.persona_atto" Multiplicity="*" />
+          <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+            <Principal Role="iscrizione">
+              <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_atto">
-              <PropertyRef Name="CodiceFiscalePersona" />
+            <Dependent Role="scheda">
+              <PropertyRef Name="IdIscrizione" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscalePersona_PersonaCosa">
+        <Association Name="IdPersona_PersonaAtto">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_cosa" Type="novus_daedalus_dbModel.persona_cosa" Multiplicity="*" />
+          <End Role="PersonaAtto" Type="novus_daedalus_dbModel.PersonaAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_cosa">
-              <PropertyRef Name="CodiceFiscalePersona" />
+            <Dependent Role="PersonaAtto">
+              <PropertyRef Name="IdPersona" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscalePersona_PersonaReato">
+        <Association Name="IdPersona_PersonaCosa">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_reato" Type="novus_daedalus_dbModel.persona_reato" Multiplicity="*" />
+          <End Role="PersonaCosa" Type="novus_daedalus_dbModel.PersonaCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_reato">
-              <PropertyRef Name="CodiceFiscalePersona" />
+            <Dependent Role="PersonaCosa">
+              <PropertyRef Name="IdPersona" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscalePersonaInformata">
+        <Association Name="IdPersona_PersonaReato">
+          <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PersonaReato" Type="novus_daedalus_dbModel.PersonaReato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonaReato">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPersonaInformata">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="persona_informata" Type="novus_daedalus_dbModel.persona_informata" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="persona_informata">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscalePersonaOffesa">
+        <Association Name="IdPersonaOffesa">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="persona_offesa" Type="novus_daedalus_dbModel.persona_offesa" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="persona_offesa">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscalePm">
+        <Association Name="IdPg">
+          <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="pg" Type="novus_daedalus_dbModel.pg" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="pg">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdPm">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="pm" Type="novus_daedalus_dbModel.pm" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="pm">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CodiceFiscaleUtente">
+        <Association Name="IdScheda_Persona">
+          <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="scheda">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="persona">
+              <PropertyRef Name="IdScheda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IdUtente">
           <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="utente" Type="novus_daedalus_dbModel.utente" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="persona">
-              <PropertyRef Name="CodiceFiscale" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="utente">
-              <PropertyRef Name="CodiceFiscaleUtente" />
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IsScheda_PersonaAtto">
+        <Association Name="IdScheda">
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_atto" Type="novus_daedalus_dbModel.persona_atto" Multiplicity="*" />
+          <End Role="PersonaAtto" Type="novus_daedalus_dbModel.PersonaAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="scheda">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_atto">
+            <Dependent Role="PersonaAtto">
               <PropertyRef Name="IdScheda" />
             </Dependent>
           </ReferentialConstraint>
@@ -1903,12 +1980,12 @@
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_cosa" Type="novus_daedalus_dbModel.persona_cosa" Multiplicity="*" />
+          <End Role="PersonaCosa" Type="novus_daedalus_dbModel.PersonaCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="scheda">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_cosa">
+            <Dependent Role="PersonaCosa">
               <PropertyRef Name="IdScheda" />
             </Dependent>
           </ReferentialConstraint>
@@ -1917,12 +1994,12 @@
           <End Role="reato" Type="novus_daedalus_dbModel.reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_reato" Type="novus_daedalus_dbModel.persona_reato" Multiplicity="*" />
+          <End Role="PersonaReato" Type="novus_daedalus_dbModel.PersonaReato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_reato">
+            <Dependent Role="PersonaReato">
               <PropertyRef Name="IdReato" />
             </Dependent>
           </ReferentialConstraint>
@@ -1931,12 +2008,12 @@
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="persona_reato" Type="novus_daedalus_dbModel.persona_reato" Multiplicity="*" />
+          <End Role="PersonaReato" Type="novus_daedalus_dbModel.PersonaReato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="scheda">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="persona_reato">
+            <Dependent Role="PersonaReato">
               <PropertyRef Name="IdScheda" />
             </Dependent>
           </ReferentialConstraint>
@@ -1945,12 +2022,12 @@
           <End Role="reato" Type="novus_daedalus_dbModel.reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_atto" Type="novus_daedalus_dbModel.reato_atto" Multiplicity="*" />
+          <End Role="ReatoAtto" Type="novus_daedalus_dbModel.ReatoAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_atto">
+            <Dependent Role="ReatoAtto">
               <PropertyRef Name="IdReato" />
             </Dependent>
           </ReferentialConstraint>
@@ -1959,17 +2036,17 @@
           <End Role="reato" Type="novus_daedalus_dbModel.reato" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_cosa" Type="novus_daedalus_dbModel.reato_cosa" Multiplicity="*" />
+          <End Role="ReatoCosa" Type="novus_daedalus_dbModel.ReatoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="reato">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_cosa">
+            <Dependent Role="ReatoCosa">
               <PropertyRef Name="IdReato" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="IdSchedaReato">
+        <Association Name="IdScheda_Reato">
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -1987,12 +2064,12 @@
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_atto" Type="novus_daedalus_dbModel.reato_atto" Multiplicity="*" />
+          <End Role="ReatoAtto" Type="novus_daedalus_dbModel.ReatoAtto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="scheda">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_atto">
+            <Dependent Role="ReatoAtto">
               <PropertyRef Name="IdScheda" />
             </Dependent>
           </ReferentialConstraint>
@@ -2001,19 +2078,15 @@
           <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="reato_cosa" Type="novus_daedalus_dbModel.reato_cosa" Multiplicity="*" />
+          <End Role="ReatoCosa" Type="novus_daedalus_dbModel.ReatoCosa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="scheda">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="reato_cosa">
+            <Dependent Role="ReatoCosa">
               <PropertyRef Name="IdScheda" />
             </Dependent>
           </ReferentialConstraint>
-        </Association>
-        <Association Name="scheda_persona">
-          <End Role="persona" Type="novus_daedalus_dbModel.persona" Multiplicity="*" />
-          <End Role="scheda" Type="novus_daedalus_dbModel.scheda" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -2035,9 +2108,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="atto_cosa">
-            <EntityTypeMapping TypeName="novus_daedalus_dbModel.atto_cosa">
-              <MappingFragment StoreEntitySet="atto_cosa">
+          <EntitySetMapping Name="AttoCosa">
+            <EntityTypeMapping TypeName="novus_daedalus_dbModel.AttoCosa">
+              <MappingFragment StoreEntitySet="AttoCosa">
                 <ScalarProperty Name="IdAtto" ColumnName="IdAtto" />
                 <ScalarProperty Name="IdCosa" ColumnName="IdCosa" />
                 <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />
@@ -2047,14 +2120,14 @@
           <EntitySetMapping Name="collaboratore">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.collaboratore">
               <MappingFragment StoreEntitySet="collaboratore">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="consulente">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.consulente">
               <MappingFragment StoreEntitySet="consulente">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Professione" ColumnName="Professione" />
                 <ScalarProperty Name="AmbienteAttività" ColumnName="AmbienteAttività" />
               </MappingFragment>
@@ -2077,7 +2150,7 @@
           <EntitySetMapping Name="difensore">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.difensore">
               <MappingFragment StoreEntitySet="difensore">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Qualità" ColumnName="Qualità" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -2085,37 +2158,55 @@
           <EntitySetMapping Name="gip">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.gip">
               <MappingFragment StoreEntitySet="gip">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="indagato">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.indagato">
               <MappingFragment StoreEntitySet="indagato">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Stato" ColumnName="Stato" />
                 <ScalarProperty Name="PrecedentiPenali" ColumnName="PrecedentiPenali" />
                 <ScalarProperty Name="QualitàDifesa" ColumnName="QualitàDifesa" />
                 <ScalarProperty Name="Difensore1" ColumnName="Difensore1" />
                 <ScalarProperty Name="Difensore2" ColumnName="Difensore2" />
+                <ScalarProperty Name="InizioMisuraCautelare" ColumnName="InizioMisuraCautelare" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="interprete">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.interprete">
               <MappingFragment StoreEntitySet="interprete">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Lingua" ColumnName="Lingua" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Iscrive">
+            <EntityTypeMapping TypeName="novus_daedalus_dbModel.Iscrive">
+              <MappingFragment StoreEntitySet="Iscrive">
+                <ScalarProperty Name="IdPm" ColumnName="IdPm" />
+                <ScalarProperty Name="IdNotiziaReato" ColumnName="IdNotiziaReato" />
+                <ScalarProperty Name="IdIndagato" ColumnName="IdIndagato" />
+                <ScalarProperty Name="IdReato" ColumnName="IdReato" />
+                <ScalarProperty Name="IdIscrizione" ColumnName="IdIscrizione" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="iscrizione">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.iscrizione">
               <MappingFragment StoreEntitySet="iscrizione">
-                <ScalarProperty Name="IdNotiziaReato" ColumnName="IdNotiziaReato" />
-                <ScalarProperty Name="CodiceFiscaleIndagato" ColumnName="CodiceFiscaleIndagato" />
-                <ScalarProperty Name="CodiceFiscalePM" ColumnName="CodiceFiscalePM" />
-                <ScalarProperty Name="IdReato" ColumnName="IdReato" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Ufficio" ColumnName="Ufficio" />
+                <ScalarProperty Name="Sede" ColumnName="Sede" />
+                <ScalarProperty Name="Referente" ColumnName="Referente" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="DataScadenza" ColumnName="DataScadenza" />
+                <ScalarProperty Name="Stato" ColumnName="Stato" />
+                <ScalarProperty Name="ArchiviazioneImmediata" ColumnName="ArchiviazioneImmediata" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="IndaginiPG" ColumnName="IndaginiPG" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2131,6 +2222,7 @@
           <EntitySetMapping Name="persona">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.persona">
               <MappingFragment StoreEntitySet="persona">
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
                 <ScalarProperty Name="Nome" ColumnName="Nome" />
                 <ScalarProperty Name="Cognome" ColumnName="Cognome" />
@@ -2141,23 +2233,6 @@
                 <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
                 <ScalarProperty Name="Ruolo" ColumnName="Ruolo" />
                 <ScalarProperty Name="NumeroEscussioni" ColumnName="NumeroEscussioni" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="persona_atto">
-            <EntityTypeMapping TypeName="novus_daedalus_dbModel.persona_atto">
-              <MappingFragment StoreEntitySet="persona_atto">
-                <ScalarProperty Name="CodiceFiscalePersona" ColumnName="CodiceFiscalePersona" />
-                <ScalarProperty Name="IdAtto" ColumnName="IdAtto" />
-                <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="persona_cosa">
-            <EntityTypeMapping TypeName="novus_daedalus_dbModel.persona_cosa">
-              <MappingFragment StoreEntitySet="persona_cosa">
-                <ScalarProperty Name="CodiceFiscalePersona" ColumnName="CodiceFiscalePersona" />
-                <ScalarProperty Name="IdCosa" ColumnName="IdCosa" />
                 <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -2165,43 +2240,60 @@
           <EntitySetMapping Name="persona_informata">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.persona_informata">
               <MappingFragment StoreEntitySet="persona_informata">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
-                <ScalarProperty Name="Escusso" ColumnName="Escusso" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="persona_offesa">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.persona_offesa">
               <MappingFragment StoreEntitySet="persona_offesa">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
-                <ScalarProperty Name="Escusso" ColumnName="Escusso" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AvvisoArchiviazione" ColumnName="AvvisoArchiviazione" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="persona_reato">
-            <EntityTypeMapping TypeName="novus_daedalus_dbModel.persona_reato">
-              <MappingFragment StoreEntitySet="persona_reato">
-                <ScalarProperty Name="CodiceFiscalePersona" ColumnName="CodiceFiscalePersona" />
+          <EntitySetMapping Name="PersonaAtto">
+            <EntityTypeMapping TypeName="novus_daedalus_dbModel.PersonaAtto">
+              <MappingFragment StoreEntitySet="PersonaAtto">
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="IdAtto" ColumnName="IdAtto" />
+                <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonaCosa">
+            <EntityTypeMapping TypeName="novus_daedalus_dbModel.PersonaCosa">
+              <MappingFragment StoreEntitySet="PersonaCosa">
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="IdCosa" ColumnName="IdCosa" />
+                <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonaReato">
+            <EntityTypeMapping TypeName="novus_daedalus_dbModel.PersonaReato">
+              <MappingFragment StoreEntitySet="PersonaReato">
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
                 <ScalarProperty Name="IdReato" ColumnName="IdReato" />
                 <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pg">
+            <EntityTypeMapping TypeName="novus_daedalus_dbModel.pg">
+              <MappingFragment StoreEntitySet="pg">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Sede" ColumnName="Sede" />
+                <ScalarProperty Name="Funzione" ColumnName="Funzione" />
+                <ScalarProperty Name="Grado" ColumnName="Grado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="pm">
             <EntityTypeMapping TypeName="novus_daedalus_dbModel.pm">
               <MappingFragment StoreEntitySet="pm">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="polizia_giudiziaria">
-            <EntityTypeMapping TypeName="novus_daedalus_dbModel.polizia_giudiziaria">
-              <MappingFragment StoreEntitySet="polizia_giudiziaria">
-                <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscale" />
-                <ScalarProperty Name="Nome" ColumnName="Nome" />
-                <ScalarProperty Name="Sede" ColumnName="Sede" />
-                <ScalarProperty Name="Funzione" ColumnName="Funzione" />
-                <ScalarProperty Name="Grado" ColumnName="Grado" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2217,18 +2309,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="reato_atto">
-            <EntityTypeMapping TypeName="novus_daedalus_dbModel.reato_atto">
-              <MappingFragment StoreEntitySet="reato_atto">
+          <EntitySetMapping Name="ReatoAtto">
+            <EntityTypeMapping TypeName="novus_daedalus_dbModel.ReatoAtto">
+              <MappingFragment StoreEntitySet="ReatoAtto">
                 <ScalarProperty Name="IdReato" ColumnName="IdReato" />
                 <ScalarProperty Name="IdAtto" ColumnName="IdAtto" />
                 <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="reato_cosa">
-            <EntityTypeMapping TypeName="novus_daedalus_dbModel.reato_cosa">
-              <MappingFragment StoreEntitySet="reato_cosa">
+          <EntitySetMapping Name="ReatoCosa">
+            <EntityTypeMapping TypeName="novus_daedalus_dbModel.ReatoCosa">
+              <MappingFragment StoreEntitySet="ReatoCosa">
                 <ScalarProperty Name="IdReato" ColumnName="IdReato" />
                 <ScalarProperty Name="IdCosa" ColumnName="IdCosa" />
                 <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />
@@ -2240,17 +2332,9 @@
               <MappingFragment StoreEntitySet="scheda">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="NumeroRegistro" ColumnName="NumeroRegistro" />
+                <ScalarProperty Name="PosizioneFascicolo" ColumnName="PosizioneFascicolo" />
                 <ScalarProperty Name="DataRegistrazione" ColumnName="DataRegistrazione" />
-                <ScalarProperty Name="Ufficio" ColumnName="Ufficio" />
-                <ScalarProperty Name="Sede" ColumnName="Sede" />
-                <ScalarProperty Name="Referente" ColumnName="Referente" />
-                <ScalarProperty Name="DataIscrizione" ColumnName="DataIscrizione" />
-                <ScalarProperty Name="DataScadenza" ColumnName="DataScadenza" />
-                <ScalarProperty Name="Stato" ColumnName="Stato" />
-                <ScalarProperty Name="ArchiviazioneImmediata" ColumnName="ArchiviazioneImmediata" />
-                <ScalarProperty Name="AvvisoArchiviazione" ColumnName="AvvisoArchiviazione" />
-                <ScalarProperty Name="Memo" ColumnName="Memo" />
-                <ScalarProperty Name="IndaginiPG" ColumnName="IndaginiPG" />
+                <ScalarProperty Name="IdIscrizione" ColumnName="IdIscrizione" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2259,18 +2343,10 @@
               <MappingFragment StoreEntitySet="utente">
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="CodiceFiscaleUtente" ColumnName="CodiceFiscaleUtente" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="scheda_persona" TypeName="novus_daedalus_dbModel.scheda_persona" StoreEntitySet="scheda_persona">
-            <EndProperty Name="persona">
-              <ScalarProperty Name="CodiceFiscale" ColumnName="CodiceFiscalePersona" />
-            </EndProperty>
-            <EndProperty Name="scheda">
-              <ScalarProperty Name="Id" ColumnName="IdScheda" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

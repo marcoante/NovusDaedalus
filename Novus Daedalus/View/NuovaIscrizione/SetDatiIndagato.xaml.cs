@@ -35,6 +35,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         private Model.persona persona_indagata_binding_source;
         private Model.indagato indagato_binding_source;
 
+        private Model.difensore difensore1;
+        private Model.difensore difensore2;
+
         // Costruttore per la modalità di creazione nuovo indagato
         public SetDatiIndagato()
         {
@@ -47,11 +50,16 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             i.persona = p;
             p.indagato = i;
             p.Ruolo = "indagato";
-            p.Sesso = true;
+            p.Sesso = "M";
             p.NumeroEscussioni = 0;
 
             persona_indagata_binding_source = p;
             indagato_binding_source = i;
+
+            difensore1 = new Model.difensore();
+            difensore2 = new Model.difensore();
+            difensore1.persona = new Model.persona();
+            difensore2.persona = new Model.persona();
 
             modalità_modifica = false;
         }
@@ -69,13 +77,25 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             i.persona = p;
             p.indagato = i;
 
-            if (p.Sesso == true) sessoMRadioButton.IsChecked = true;
+            if (p.Sesso == "M") sessoMRadioButton.IsChecked = true;
             else sessoFRadioButton.IsChecked = true;
             statoComboBox.Text = i.Stato;
             precedenti_penaliComboBox.Text = i.PrecedentiPenali;
 
             persona_indagata_binding_source = p;
             indagato_binding_source = i;
+
+            difensore1 = new Model.difensore();
+            difensore2 = new Model.difensore();
+            if (persona_indagata.indagato.difensore != null)
+                difensore1.persona = new Model.persona(persona_indagata.indagato.difensore.persona);
+            else
+                difensore1.persona = new Model.persona();
+
+            if (persona_indagata.indagato.difensore3 != null)
+                difensore2.persona = new Model.persona(persona_indagata.indagato.difensore3.persona);
+            else
+                difensore2.persona = new Model.persona();
 
             modalità_modifica = true;
         }
@@ -85,6 +105,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         {
             Dati_Persona_Grid.DataContext = persona_indagata_binding_source;
             Dati_Indagato_Grid.DataContext = indagato_binding_source;
+            Dif1_Grid.DataContext = difensore1.persona;
+            Dif2_Grid.DataContext = difensore2.persona;
         }
 
         private void InserisciButtonClick(object sender, RoutedEventArgs e)
@@ -95,34 +117,24 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 MessageBox.Show("Uno o più dati anagrafici dell'indagato sono mancanti.");
                 return;
             }
-            // Se il nuovo indagato ha un codice fiscale già presente nell'elenco dei nuovi indagati
-            // si mostra un messaggio di errore
-            Model.persona find_result_persona;
-            find_result_persona = nuova_iscrizione_data.Persone_indagate_list.Find(item => item.CodiceFiscale == indagato_binding_source.persona.CodiceFiscale);
-            if (find_result_persona != null)
-            {
-                if (modalità_modifica == false)
-                {
-                    MessageBox.Show("L'indagato con Codice Fiscale \"" +
-                        indagato_binding_source.persona.CodiceFiscale +
-                        "\" è già stato inserito.");
-                    return;
-                }
-                else if (find_result_persona.CodiceFiscale != indagato_originale.persona.CodiceFiscale)
-                {
-                    MessageBox.Show("L'indagato con Codice Fiscale \"" +
-                        indagato_binding_source.persona.CodiceFiscale +
-                        "\" è già stato inserito.");
-                    return;
-                }
-            }
 
             // Si impostano alcuni campi dell'indagato, a seconda delle selezioni dell'utente
-            indagato_binding_source.CodiceFiscale = persona_indagata_binding_source.CodiceFiscale;
             indagato_binding_source.Stato = statoComboBox.Text;
-            if (sessoMRadioButton.IsChecked == true) indagato_binding_source.persona.Sesso = true;
-            else indagato_binding_source.persona.Sesso = false;
+            if (sessoMRadioButton.IsChecked == true) indagato_binding_source.persona.Sesso = "M";
+            else indagato_binding_source.persona.Sesso = "F";
             indagato_binding_source.PrecedentiPenali = precedenti_penaliComboBox.Text;
+
+            if (nomeDif1TextBox.Text != null && nomeDif1TextBox.Text != "")
+            {
+                if(difensore1.persona.IsValid)
+                    indagato_binding_source.difensore = difensore1;
+            }
+
+            if (nomeDif2TextBox.Text != null && nomeDif2TextBox.Text != "")
+            {
+                if (difensore2.persona.IsValid)
+                    indagato_binding_source.difensore3 = difensore2;
+            }
 
             // Se si è in modalità modifica si invoca l'evento indagato modificato,
             // che verrà gestito dalla pagina "Inserisci indagati"

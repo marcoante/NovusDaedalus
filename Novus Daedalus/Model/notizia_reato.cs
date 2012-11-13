@@ -16,13 +16,13 @@ namespace Novus_Daedalus.Model
     {
         public notizia_reato()
         {
-            this.iscrizione = new HashSet<iscrizione>();
+            this.Iscrive = new HashSet<Iscrive>();
         }
     
         public int Id { get; set; }
         public string Specie { get; set; }
         public string Fonte { get; set; }
     
-        public virtual ICollection<iscrizione> iscrizione { get; set; }
+        public virtual ICollection<Iscrive> Iscrive { get; set; }
     }
 }

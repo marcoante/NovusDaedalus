@@ -14,8 +14,8 @@ namespace Novus_Daedalus.Model
         // Costruttore per la copia di un indagato
         public persona_offesa(Model.persona_offesa i)
         {
-            this.CodiceFiscale = i.CodiceFiscale;
-            this.Escusso = i.Escusso;
+            this.Id = i.Id;
+            this.AvvisoArchiviazione = i.AvvisoArchiviazione;
         }
     }
 }

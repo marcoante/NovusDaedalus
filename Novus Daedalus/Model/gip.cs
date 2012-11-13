@@ -14,7 +14,7 @@ namespace Novus_Daedalus.Model
     
     public partial class gip
     {
-        public string CodiceFiscale { get; set; }
+        public int Id { get; set; }
     
         public virtual persona persona { get; set; }
     }

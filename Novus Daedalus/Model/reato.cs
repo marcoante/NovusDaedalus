@@ -16,10 +16,10 @@ namespace Novus_Daedalus.Model
     {
         public reato()
         {
-            this.iscrizione = new HashSet<iscrizione>();
-            this.persona_reato = new HashSet<persona_reato>();
-            this.reato_atto = new HashSet<reato_atto>();
-            this.reato_cosa = new HashSet<reato_cosa>();
+            this.Iscrive = new HashSet<Iscrive>();
+            this.PersonaReato = new HashSet<PersonaReato>();
+            this.ReatoAtto = new HashSet<ReatoAtto>();
+            this.ReatoCosa = new HashSet<ReatoCosa>();
         }
     
         public int Id { get; set; }
@@ -29,10 +29,10 @@ namespace Novus_Daedalus.Model
         public System.DateTime Data { get; set; }
         public Nullable<int> IdScheda { get; set; }
     
-        public virtual ICollection<iscrizione> iscrizione { get; set; }
-        public virtual ICollection<persona_reato> persona_reato { get; set; }
-        public virtual ICollection<reato_atto> reato_atto { get; set; }
-        public virtual ICollection<reato_cosa> reato_cosa { get; set; }
+        public virtual ICollection<Iscrive> Iscrive { get; set; }
+        public virtual ICollection<PersonaReato> PersonaReato { get; set; }
+        public virtual ICollection<ReatoAtto> ReatoAtto { get; set; }
+        public virtual ICollection<ReatoCosa> ReatoCosa { get; set; }
         public virtual scheda scheda { get; set; }
     }
 }

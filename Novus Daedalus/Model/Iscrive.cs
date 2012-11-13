@@ -12,14 +12,18 @@ namespace Novus_Daedalus.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class reato_atto
+    public partial class Iscrive
     {
+        public int IdPm { get; set; }
+        public int IdNotiziaReato { get; set; }
+        public int IdIndagato { get; set; }
         public int IdReato { get; set; }
-        public int IdAtto { get; set; }
-        public Nullable<int> IdScheda { get; set; }
+        public int IdIscrizione { get; set; }
     
-        public virtual atto atto { get; set; }
+        public virtual indagato indagato { get; set; }
+        public virtual iscrizione iscrizione { get; set; }
+        public virtual notizia_reato notizia_reato { get; set; }
+        public virtual pm pm { get; set; }
         public virtual reato reato { get; set; }
-        public virtual scheda scheda { get; set; }
     }
 }
