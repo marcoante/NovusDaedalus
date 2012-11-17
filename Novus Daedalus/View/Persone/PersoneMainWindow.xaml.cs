@@ -45,7 +45,6 @@ namespace Novus_Daedalus.View.Persone
             System.Windows.Data.CollectionViewSource personaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource")));
             // Caricare i dati impostando la proprietà CollectionViewSource.Source:
             // personaViewSource.Source = [origine dati generica]
-            //personaViewSource.Source = scheda.persona;
             personaViewSource.Source = persona_binding_source;
         }
 
@@ -66,35 +65,19 @@ namespace Novus_Daedalus.View.Persone
 
         private void RimuoviButtonClick(object sender, RoutedEventArgs e)
         {
-            //selezione = (Model.persona)personaDataGrid.SelectedItem;
-            //if (selezione.indagato != null)
-            //{
-            //    MessageBox.Show("Non è possibile rimuovere un indagato.");
-            //    return;
-            //}
-            //scheda.persona.Remove(selezione);
-            //List<Model.persona_atto> pa_ass_list = db_connection.persona_atto.Where(item => item.IdScheda == scheda.Id && item.CodiceFiscalePersona == selezione.CodiceFiscale).ToList();
-            //foreach (Model.persona_atto pa in pa_ass_list)
-            //{
-            //    db_connection.persona_atto.Remove(pa);
-            //}
+            Model.persona selezione = (Model.persona)personaDataGrid.SelectedItem;
+            if (selezione.indagato != null)
+            {
+                MessageBox.Show("Non è possibile rimuovere un indagato.");
+                return;
+            }
+            db_connection.persona.Remove(selezione);
 
-            //List<Model.persona_cosa> pc_ass_list = db_connection.persona_cosa.Where(item => item.IdScheda == scheda.Id && item.CodiceFiscalePersona == selezione.CodiceFiscale).ToList();
-            //foreach (Model.persona_cosa pc in pc_ass_list)
-            //{
-            //    db_connection.persona_cosa.Remove(pc);
-            //}
+            db_connection.SaveChanges();
 
-            //List<Model.persona_reato> pr_ass_list = db_connection.persona_reato.Where(item => item.IdScheda == scheda.Id && item.CodiceFiscalePersona == selezione.CodiceFiscale).ToList();
-            //foreach (Model.persona_reato pr in pr_ass_list)
-            //{
-            //    db_connection.persona_reato.Remove(pr);
-            //}
-
-            //db_connection.SaveChanges();
-
-            //personaDataGrid.SelectedItem = null;
-            //personaDataGrid.Items.Refresh();
+            persona_binding_source.Remove(selezione);
+            personaDataGrid.SelectedItem = null;
+            personaDataGrid.Items.Refresh();
         }
 
         private void ChiudiButtonClick(object sender, RoutedEventArgs e)

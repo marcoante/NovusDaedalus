@@ -60,6 +60,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             difensore2 = new Model.difensore();
             difensore1.persona = new Model.persona();
             difensore2.persona = new Model.persona();
+            difensore1.persona.Ruolo = "Difensore";
+            difensore2.persona.Ruolo = "Difensore";
 
             modalità_modifica = false;
         }
@@ -90,12 +92,18 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             if (persona_indagata.indagato.difensore != null)
                 difensore1.persona = new Model.persona(persona_indagata.indagato.difensore.persona);
             else
+            {
                 difensore1.persona = new Model.persona();
+                difensore1.persona.Ruolo = "Difensore";
+            }
 
             if (persona_indagata.indagato.difensore3 != null)
                 difensore2.persona = new Model.persona(persona_indagata.indagato.difensore3.persona);
             else
+            {
                 difensore2.persona = new Model.persona();
+                difensore2.persona.Ruolo = "Difensore";
+            }
 
             modalità_modifica = true;
         }

@@ -31,7 +31,7 @@
                     </Setter>
                 </Style>
             </Grid.Resources>
-            <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
+            <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -42,7 +42,7 @@
                 <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="120"/>
             </Grid>
-            <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top">
+            <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -53,7 +53,7 @@
                 <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <TextBox x:Name="cognomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Cognome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="120"/>
             </Grid>
-            <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="219">
+            <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="219">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -65,7 +65,7 @@
                 <RadioButton x:Name="sessoMRadioButton" Grid.Column="1" HorizontalAlignment="Left" Margin="16,8,0,8" Grid.Row="0" VerticalAlignment="Center" Content="M" IsChecked="True"/>
                 <RadioButton x:Name="sessoFRadioButton" Content="F" Grid.Column="1" HorizontalAlignment="Left" Margin="67,8,0,0" VerticalAlignment="Top"/>
             </Grid>
-            <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
+            <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -76,7 +76,7 @@
                 <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <TextBox x:Name="luogoNascitaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding LuogoNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
             </Grid>
-            <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top">
+            <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -87,7 +87,7 @@
                 <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <DatePicker x:Name="dataNascitaDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" SelectedDate="{Binding DataNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center"/>
             </Grid>
-            <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top">
+            <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>

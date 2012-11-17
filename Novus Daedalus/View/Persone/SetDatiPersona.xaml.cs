@@ -22,7 +22,7 @@ namespace Novus_Daedalus.View.Persone
         private bool modalità_modifica;
 
         // Copia della persona da modificare, usata solo nel caso di modalità modifica
-        private Model.persona p;
+        private Model.persona p_originale;
 
         // Eventi che segnalano alla finestra "PersoneMainWindow" la creazione o la modifica di una persona
         public event SetPersonaHandler evento_p_creata;
@@ -30,9 +30,18 @@ namespace Novus_Daedalus.View.Persone
 
         Model.novus_daedalus_dbEntities db_connection;
 
+        private Model.persona p_binding_source;
+
         public SetDatiPersona()
         {
             InitializeComponent();
+
+            Model.persona p = new Model.persona();
+            p.Sesso = "M";
+            p.NumeroEscussioni = 0;
+
+            p_binding_source = p;
+            modalità_modifica = false;
         }
 
         public SetDatiPersona(Model.persona p)
@@ -49,7 +58,10 @@ namespace Novus_Daedalus.View.Persone
 
         private void SetDatiPersona_Loaded(object sender, RoutedEventArgs e)
         {
-            DatiPersona_Grid.DataContext = p;
+            DatiPersona_Grid.DataContext = p_originale;
+            System.Windows.Data.CollectionViewSource personaViewSource1 = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource1")));
+            // Caricare i dati impostando la proprietà CollectionViewSource.Source:
+            // personaViewSource1.Source = [origine dati generica]
         }
 
         private void AnnullaButtonClick(object sender, RoutedEventArgs e)
