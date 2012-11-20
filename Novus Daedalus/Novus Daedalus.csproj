@@ -162,6 +162,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\scheda_extended.cs" />
+    <Compile Include="Model\tavola_reati.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\utente.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

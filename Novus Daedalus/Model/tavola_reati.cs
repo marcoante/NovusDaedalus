@@ -12,11 +12,11 @@ namespace Novus_Daedalus.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class interprete
+    public partial class tavola_reati
     {
-        public int Id { get; set; }
-        public string Lingua { get; set; }
-    
-        public virtual collaboratore collaboratore { get; set; }
+        public string Codice { get; set; }
+        public string Categoria { get; set; }
+        public string NomenIuris { get; set; }
+        public string Descrizione { get; set; }
     }
 }

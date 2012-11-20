@@ -18,6 +18,6 @@ namespace Novus_Daedalus.Model
         public string Professione { get; set; }
         public string AmbienteAttività { get; set; }
     
-        public virtual persona persona { get; set; }
+        public virtual collaboratore collaboratore { get; set; }
     }
 }

@@ -20,6 +20,6 @@ namespace Novus_Daedalus.Model
         public string Funzione { get; set; }
         public string Grado { get; set; }
     
-        public virtual persona persona { get; set; }
+        public virtual collaboratore collaboratore { get; set; }
     }
 }

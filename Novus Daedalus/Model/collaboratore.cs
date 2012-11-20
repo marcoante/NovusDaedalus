@@ -17,5 +17,8 @@ namespace Novus_Daedalus.Model
         public int Id { get; set; }
     
         public virtual persona persona { get; set; }
+        public virtual consulente consulente { get; set; }
+        public virtual interprete interprete { get; set; }
+        public virtual pg pg { get; set; }
     }
 }

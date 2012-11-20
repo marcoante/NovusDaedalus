@@ -36,17 +36,14 @@ namespace Novus_Daedalus.Model
         public Nullable<int> IdScheda { get; set; }
     
         public virtual collaboratore collaboratore { get; set; }
-        public virtual consulente consulente { get; set; }
         public virtual difensore difensore { get; set; }
         public virtual gip gip { get; set; }
         public virtual indagato indagato { get; set; }
-        public virtual interprete interprete { get; set; }
         public virtual ICollection<PersonaAtto> PersonaAtto { get; set; }
         public virtual ICollection<PersonaCosa> PersonaCosa { get; set; }
         public virtual ICollection<PersonaReato> PersonaReato { get; set; }
         public virtual persona_informata persona_informata { get; set; }
         public virtual persona_offesa persona_offesa { get; set; }
-        public virtual pg pg { get; set; }
         public virtual pm pm { get; set; }
         public virtual scheda scheda { get; set; }
         public virtual ICollection<utente> utente { get; set; }

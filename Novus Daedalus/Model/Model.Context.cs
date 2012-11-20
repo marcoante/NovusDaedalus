@@ -49,6 +49,7 @@ namespace Novus_Daedalus.Model
         public DbSet<ReatoAtto> ReatoAtto { get; set; }
         public DbSet<ReatoCosa> ReatoCosa { get; set; }
         public DbSet<scheda> scheda { get; set; }
+        public DbSet<tavola_reati> tavola_reati { get; set; }
         public DbSet<utente> utente { get; set; }
     }
 }
