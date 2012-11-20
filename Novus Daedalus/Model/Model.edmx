@@ -394,6 +394,7 @@
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Codice" Type="varchar" MaxLength="45" />
           <Property Name="NomenIuris" Type="varchar" MaxLength="45" />
+          <Property Name="Descrizione" Type="varchar" MaxLength="255" />
           <Property Name="Luogo" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="Data" Type="date" Nullable="false" />
           <Property Name="IdScheda" Type="int" />
@@ -1466,6 +1467,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Codice" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="NomenIuris" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Descrizione" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Luogo" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Data" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IdScheda" Type="Int32" />
@@ -2323,6 +2325,7 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Codice" ColumnName="Codice" />
                 <ScalarProperty Name="NomenIuris" ColumnName="NomenIuris" />
+                <ScalarProperty Name="Descrizione" ColumnName="Descrizione" />
                 <ScalarProperty Name="Luogo" ColumnName="Luogo" />
                 <ScalarProperty Name="Data" ColumnName="Data" />
                 <ScalarProperty Name="IdScheda" ColumnName="IdScheda" />

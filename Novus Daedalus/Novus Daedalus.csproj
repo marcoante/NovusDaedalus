@@ -502,6 +502,7 @@
     <None Include="Properties\DataSources\Novus_Daedalus.Model.persona_offesa.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.reato.datasource" />
     <None Include="Properties\DataSources\Novus_Daedalus.Model.scheda.datasource" />
+    <None Include="Properties\DataSources\Novus_Daedalus.Model.tavola_reati.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

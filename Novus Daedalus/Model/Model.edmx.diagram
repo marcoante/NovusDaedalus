@@ -4,32 +4,32 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c9f5cdf713794a4bbcb10e1a80630418" Name="Diagramma1">
+      <Diagram DiagramId="1a22238844b54db8bd608dadd38f9096" Name="Diagramma1">
         <EntityTypeShape EntityType="novus_daedalus_dbModel.atto" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.AttoCosa" Width="1.5" PointX="7.5" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.AttoCosa" Width="1.5" PointX="7.5" PointY="21.375" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.collaboratore" Width="1.5" PointX="7.5" PointY="24.75" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.consulente" Width="1.5" PointX="9.75" PointY="22.125" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.cosa" Width="1.5" PointX="5.25" PointY="18.125" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.difensore" Width="1.5" PointX="7.5" PointY="30" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.gip" Width="1.5" PointX="7.5" PointY="32.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.indagato" Width="1.5" PointX="12.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.indagato" Width="1.5" PointX="14.75" PointY="31.25" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.interprete" Width="1.5" PointX="9.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.Iscrive" Width="1.5" PointX="9.75" PointY="34.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.iscrizione" Width="1.5" PointX="0.75" PointY="25.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.notizia_reato" Width="1.5" PointX="7.5" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.Iscrive" Width="1.5" PointX="9.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.iscrizione" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.notizia_reato" Width="1.5" PointX="7.5" PointY="39.625" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.persona" Width="1.5" PointX="5.25" PointY="30" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_informata" Width="1.5" PointX="7.5" PointY="34.875" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.persona_offesa" Width="1.5" PointX="7.5" PointY="37" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.PersonaAtto" Width="1.5" PointX="12.5" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.PersonaCosa" Width="1.5" PointX="12.5" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.PersonaReato" Width="1.5" PointX="10.5" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.PersonaCosa" Width="1.5" PointX="12.5" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.PersonaReato" Width="1.5" PointX="10.5" PointY="39.125" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.pg" Width="1.5" PointX="9.75" PointY="27" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.pm" Width="1.5" PointX="7.5" PointY="42.25" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.reato" Width="1.5" PointX="5.25" PointY="44.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.ReatoAtto" Width="1.5" PointX="10.5" PointY="30.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.ReatoCosa" Width="1.5" PointX="12.5" PointY="33.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.scheda" Width="1.5" PointX="3" PointY="28.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="novus_daedalus_dbModel.tavola_reati" Width="1.5" PointX="0.875" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.ReatoAtto" Width="1.5" PointX="10.5" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.ReatoCosa" Width="1.5" PointX="12.5" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.scheda" Width="1.5" PointX="3" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="novus_daedalus_dbModel.tavola_reati" Width="1.5" PointX="1.375" PointY="23.125" IsExpanded="true" />
         <EntityTypeShape EntityType="novus_daedalus_dbModel.utente" Width="1.5" PointX="7.5" PointY="44.625" IsExpanded="true" />
         <AssociationConnector Association="novus_daedalus_dbModel.IdAtto_AttoCosa" ManuallyRouted="false" />
         <AssociationConnector Association="novus_daedalus_dbModel.IdAtto_PersonaAtto" ManuallyRouted="false" />

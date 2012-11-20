@@ -25,6 +25,7 @@ namespace Novus_Daedalus.Model
         public int Id { get; set; }
         public string Codice { get; set; }
         public string NomenIuris { get; set; }
+        public string Descrizione { get; set; }
         public string Luogo { get; set; }
         public System.DateTime Data { get; set; }
         public Nullable<int> IdScheda { get; set; }

@@ -6,6 +6,7 @@
     <Window.Resources>
         <CollectionViewSource x:Key="reatoViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}"/>
         <CollectionViewSource x:Key="POViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:persona}, CreateList=True}"/>
+        <CollectionViewSource x:Key="tavola_reatiViewSource" d:DesignSource="{d:DesignInstance {x:Type local:tavola_reati}, CreateList=True}"/>
         <!-- Convertitore per i messaggi di convalida -->
         <local:ErrorsToMessageConverter x:Key="eToMConverter" />
     </Window.Resources>
@@ -57,26 +58,6 @@
             </Grid.RowDefinitions>
             <Label Content="Data:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <DatePicker x:Name="dataDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-91,4" Grid.Row="0" SelectedDate="{Binding Data, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="239"/>
-        </Grid>
-        
-        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="286">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Content="Nomen Iuris:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="nomenIurisComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-75,5" Grid.Row="0" VerticalAlignment="Center" Width="199">
-                <ComboBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel/>
-                    </ItemsPanelTemplate>
-                </ComboBox.ItemsPanel>
-                <ComboBoxItem Content="Art. 1 c.p." IsSelected="True"/>
-                <ComboBoxItem Content="Art. 2 c.p."/>
-            </ComboBox>
         </Grid>
         <Label Content="Seleziona gli indagati per il reato:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
         <ListView x:Name="Reato_Indagati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,167,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
@@ -165,5 +146,22 @@
         </ListView>
         <Button x:Name="Inserisci_Button" Content="Ok" HorizontalAlignment="Left" Margin="221,477,0,0" VerticalAlignment="Top" Width="75" Click="InserisciButtonClick"/>
         <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,477,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
+        <Grid x:Name="descrizione_reatoGrid" DataContext="{StaticResource tavola_reatiViewSource}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="286">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Descrizione:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <ComboBox x:Name="descrizione_reatoComboBox" Grid.Column="1" DisplayMemberPath="Descrizione" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-79,5" Grid.Row="0" VerticalAlignment="Center" Width="203">
+                <ComboBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel/>
+                    </ItemsPanelTemplate>
+                </ComboBox.ItemsPanel>
+            </ComboBox>
+        </Grid>
     </Grid>
 </Window>

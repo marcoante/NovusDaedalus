@@ -34,6 +34,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private Model.reato reato_binding_source;
 
+        private Model.novus_daedalus_dbEntities db_connection;
+
         public SetDatiReato()
         {
             InitializeComponent();
@@ -55,7 +57,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             po_binding_source = new List<ReatoPO>();
 
             reato_originale = reato;
-            nomenIurisComboBox.Text = reato_originale.NomenIuris;
 
             reato_binding_source = new Model.reato();
             reato_binding_source.NomenIuris = reato_originale.NomenIuris;
@@ -96,6 +97,15 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 po_binding_source.Add(rp);
             }
             Reato_PO_List_View.DataContext = po_binding_source;
+
+            db_connection = new Model.novus_daedalus_dbEntities();
+
+            System.Windows.Data.CollectionViewSource tavola_reatiViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("tavola_reatiViewSource")));
+            // Caricare i dati impostando la proprietà CollectionViewSource.Source:
+            // tavola_reatiViewSource.Source = [origine dati generica]
+            tavola_reatiViewSource.Source = db_connection.tavola_reati.ToList();
+            if (modalità_modifica == true)
+                descrizione_reatoComboBox.SelectedItem = db_connection.tavola_reati.Find(reato_binding_source.Codice);
         }
 
         private void chkAllIndagatiClick(object sender, RoutedEventArgs e)
@@ -180,7 +190,10 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             }
 
             // Si impostano alcuni campi del reato, a seconda delle selezioni dell'utente
-            reato_binding_source.NomenIuris = nomenIurisComboBox.Text;
+            Model.tavola_reati reato_selezionato = (Model.tavola_reati)descrizione_reatoComboBox.SelectedItem;
+            reato_binding_source.NomenIuris = reato_selezionato.NomenIuris;
+            reato_binding_source.Codice = reato_selezionato.Codice;
+            reato_binding_source.Descrizione = reato_selezionato.Descrizione;
 
             // Se il nuovo reato ha un codice già presente nell'elenco dei nuovi reati
             // si mostra un messaggio di errore
