@@ -96,6 +96,26 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                     rp.IsSelected = false;
                 po_binding_source.Add(rp);
             }
+            if (indagati_binding_source.Count == 0)
+                chkAllIndagati.IsChecked = false;
+            else
+                chkAllIndagati.IsChecked = true;
+            foreach (ReatoIndagati ri in indagati_binding_source)
+            {
+                if (ri.IsSelected == false)
+                    chkAllIndagati.IsChecked = false;
+            }
+
+            if (po_binding_source.Count == 0)
+                chkAllPO.IsChecked = false;
+            else
+                chkAllPO.IsChecked = true;
+            foreach (ReatoPO rp in po_binding_source)
+            {
+                if (rp.IsSelected == false)
+                    chkAllPO.IsChecked = false;
+            }
+
             Reato_PO_List_View.DataContext = po_binding_source;
 
             db_connection = new Model.novus_daedalus_dbEntities();

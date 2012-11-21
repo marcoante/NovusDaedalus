@@ -94,7 +94,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         {
             // Si rimuove dall'elenco l'oggetto corrispondente al reato da modificare
             nuova_iscrizione_data.Reati_list.Remove((Model.reato) reatoDataGrid.SelectedItem);
-            // Si inserisce nell'elenco l'indagato modificato
+            // Si inserisce nell'elenco il reato modificato
             nuova_iscrizione_data.Reati_list.Add(dati_evento.Nuovo_reato);
             foreach (Model.persona p in nuova_iscrizione_data.Persone_indagate_list)
             {

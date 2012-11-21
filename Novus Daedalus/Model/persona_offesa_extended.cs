@@ -11,7 +11,7 @@ namespace Novus_Daedalus.Model
         // Costruttore vuoto
         public persona_offesa() { }
 
-        // Costruttore per la copia di un indagato
+        // Costruttore per la copia di una persona offesa
         public persona_offesa(Model.persona_offesa i)
         {
             this.Id = i.Id;

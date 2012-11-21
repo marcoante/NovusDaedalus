@@ -138,6 +138,7 @@
     <Compile Include="Model\persona_informata.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\persona_informata_extended.cs" />
     <Compile Include="Model\persona_offesa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -263,6 +264,7 @@
     <Compile Include="View\Persone\MostraPersona.xaml.cs">
       <DependentUpon>MostraPersona.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Persone\PersonaReati.cs" />
     <Compile Include="View\Persone\PersoneMainWindow.xaml.cs">
       <DependentUpon>PersoneMainWindow.xaml</DependentUpon>
     </Compile>

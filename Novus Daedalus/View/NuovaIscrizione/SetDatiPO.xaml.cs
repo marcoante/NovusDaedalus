@@ -82,7 +82,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void InserisciButtonClick(object sender, RoutedEventArgs e)
         {
-            // Si controlla se tutti i dati obbligatori di una persona offesa sono presenti
+            // Si controlla se tutti i dati obbligatori di una persona offesa siano presenti
             if (!po_binding_source.IsValid)
             {
                 MessageBox.Show("Uno o più dati anagrafici della persona offesa sono mancanti.");

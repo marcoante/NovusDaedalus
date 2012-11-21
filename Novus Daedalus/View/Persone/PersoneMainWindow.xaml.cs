@@ -87,26 +87,37 @@ namespace Novus_Daedalus.View.Persone
 
         private void ModificaButtonClick(object sender, RoutedEventArgs e)
         {
-            //selezione = (Model.persona)personaDataGrid.SelectedItem;
-            //if (selezione == null) MessageBox.Show("Devi selezionare una persona dalla lista, prima di poterla modificare.");
-            //else
-            //{
-            //    if (selezione.indagato == null)
-            //    {
-            //        SetDatiPersona modifica_window = new SetDatiPersona(selezione);                // Si registra l'handler per la modifica di una persona offesa
-            //        modifica_window.evento_p_modificata += new SetPersonaHandler(PersonaModificataHandler);
-            //        modifica_window.ShowDialog();
-            //        return;
-            //    }
-            //    MessageBox.Show("La funzione di modifica indagato non è ancora disponibile.");
-            //}
+            Model.persona selezione = (Model.persona)personaDataGrid.SelectedItem;
+            if (selezione == null) MessageBox.Show("Devi selezionare una persona dalla lista, prima di poterla modificare.");
+            else
+            {
+                if (selezione.indagato == null)
+                {
+                    SetDatiPersona modifica_window = new SetDatiPersona(selezione);
+                    // Si registra l'handler per la modifica di una persona
+                    modifica_window.evento_p_modificata += new SetPersonaHandler(PersonaModificataHandler);
+                    modifica_window.ShowDialog();
+                    return;
+                }
+                MessageBox.Show("La funzione di modifica indagato non è ancora disponibile.");
+            }
 
         }
 
-        void PersonaModificataHandler(object sender)
+        void PersonaModificataHandler(object sender, DatiPEventArgs dati_evento)
         {
-           // UpdatePersonaViewSource();
 
+            persona_binding_source.Clear();
+            db_connection = new Model.novus_daedalus_dbEntities();
+            scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
+
+            foreach (Model.persona p in scheda.persona)
+            {
+                if (p.Ruolo == "indagato" || p.Ruolo == "persona offesa")
+                    persona_binding_source.Add(p);
+            }
+            personaDataGrid.SelectedItem = persona_binding_source.Find(item => item.Id == dati_evento.Nuova_persona.Id);
+            personaDataGrid.Items.Refresh();
         }
 
         //private void UpdatePersonaViewSource()
