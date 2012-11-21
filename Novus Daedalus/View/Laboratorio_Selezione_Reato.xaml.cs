@@ -69,7 +69,7 @@ namespace Novus_Daedalus.View
             /*
              * il sistema torna alla Deadalus_Main_Page
              */
-            Laboratorio_Pagina.NavigationService.GoBack();
+            //Laboratorio_Pagina.NavigationService.GoBack();
             this.Close();
         }
     }

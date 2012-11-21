@@ -10,8 +10,8 @@
     </Window.Background>
     <Grid>
         <Label x:Name="Seleziona_Modalità_Label" Content="Seleziona la modalità di cmoposizione" HorizontalAlignment="Left" Margin="38,32,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="Autocomposizione_Button" Content="Autocomposizione" HorizontalAlignment="Left" Margin="28,111,0,0" VerticalAlignment="Top" Width="112" Height="89" Cursor="Hand" Click="Autocomposizione_Button_Click"/>
-        <Button x:Name="Assemblaggio_Button" Content="Assemblaggio" HorizontalAlignment="Left" Margin="145,111,0,0" VerticalAlignment="Top" Width="112" Height="89" Cursor="Hand" Click="Assemblaggio_Button_Click"/>
+        <Button x:Name="Autocomposizione_Button" Content="Autocomposizione" HorizontalAlignment="Left" Margin="19,111,0,0" VerticalAlignment="Top" Width="121" Height="89" Cursor="Hand" Click="Autocomposizione_Button_Click"/>
+        <Button x:Name="Assemblaggio_Button" Content="Assemblaggio" HorizontalAlignment="Left" Margin="145,111,0,0" VerticalAlignment="Top" Width="121" Height="89" Cursor="Hand" Click="Assemblaggio_Button_Click"/>
 
     </Grid>
 </Window>

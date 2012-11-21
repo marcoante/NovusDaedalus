@@ -54,12 +54,6 @@ namespace Novus_Daedalus.View
 
         private void LaboratorioButtonClick(object sender, RoutedEventArgs e)
         {
-            /*if (Application.Current.Properties["Scheda"] == null)
-            {
-                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
-                    "oppure il pulsante \"Nuova iscrizione\"");
-                return;
-            }*/
             new View.Laboratorio_Selezione_Modalità(this).Show();
         }
 
@@ -110,6 +104,10 @@ namespace Novus_Daedalus.View
         {
             //inizializzazione pagina
             Scheda_Label.Content = "Scheda selezionata: "+((Model.scheda)Application.Current.Properties["Scheda"]).NumeroRegistro;
+            Persone_Button.Visibility = Visibility.Visible;
+            Atti_Button.Visibility = Visibility.Visible;
+            Seguiti_Button.Visibility = Visibility.Visible;
+            Posta_Button.Visibility = Visibility.Visible;
         }
 
         private void LogoutButtonClick(object sender, RoutedEventArgs e)

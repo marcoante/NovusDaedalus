@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:Model="clr-namespace:Novus_Daedalus.Model"
         xmlns:Novus_Daedalus="clr-namespace:Novus_Daedalus" x:Name="Laboratorio_Selezione_Reato1" x:Class="Novus_Daedalus.View.Laboratorio_Selezione_Reato"
-        Title="Laboratorio_Selezione_Reato" Height="422.388" Width="474.627" Loaded="Laboratorio_Selezione_Reato1_Loaded_1" SizeToContent="WidthAndHeight" WindowStyle="None">
+        Title="Laboratorio_Selezione_Reato" Height="379.388" Width="427.627" Loaded="Laboratorio_Selezione_Reato1_Loaded_1" SizeToContent="WidthAndHeight">
     
     <Window.Resources>
         <Novus_Daedalus:novus_daedalus_dbDataSet x:Key="novus_daedalus_dbDataSet"/>
@@ -21,7 +21,7 @@
     <Grid DataContext="{StaticResource reatoViewSource}">
         <Label x:Name="Selezione_Reato_Label" Content="Seleziona un reato" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
 
-        <DataGrid x:Name="reatoDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource reatoViewSource}}" Margin="26,55,41,137" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True">
+        <DataGrid x:Name="reatoDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource reatoViewSource}}" Margin="10,36,10,91" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="codiceColumn" Binding="{Binding Codice}" Header="Codice" Width="SizeToHeader"/>
@@ -39,8 +39,8 @@
             </DataGrid.Columns>
         </DataGrid>
         
-        <Button x:Name="Apri_Button" Content="Apri" HorizontalAlignment="Left" Margin="384,356,0,0" VerticalAlignment="Top" Width="75" Click="Apri_Button_Click"/>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="26,356,0,0" VerticalAlignment="Top" Width="75" Click="Chiudi_Button_Click"/>
+        <Button x:Name="Apri_Button" Content="Apri" Margin="0,0,10,10" Click="Apri_Button_Click" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="Chiudi_Button_Click" Height="26" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>

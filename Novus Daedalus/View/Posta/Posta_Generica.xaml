@@ -8,7 +8,7 @@
 	Title="Posta_Generica" Background="Black">
 
     <Grid>
-        <Button x:Name="Indietro_Button" Content="Indietro" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Width="75" Click="Indietro_Button_Click"/>
+        <Button x:Name="Indietro_Button" Content="Indietro" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="75" Click="Indietro_Button_Click"/>
 
     </Grid>
 </Page>

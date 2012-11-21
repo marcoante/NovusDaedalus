@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Magazzino_Esame_Imputazioni" Height="406.375" WindowStartupLocation="CenterScreen" Background="#FF268526" Loaded="Magazzino_Esame_Imputazioni_Loaded">
     <Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="675,344,0,0" VerticalAlignment="Top" Width="75" Click="Chiudi_Button_Click" Cursor="Hand"/>
-        <Label x:Name="Capo_Imputazione_Label" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="-0.598,0.244" FontWeight="Bold"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" Margin="0,0,10,6" Click="Chiudi_Button_Click" Cursor="Hand" HorizontalAlignment="Right" Width="75" Height="26" VerticalAlignment="Bottom"/>
+        <Label x:Name="Capo_Imputazione_Label" Content="Label" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="-0.598,0.244" FontWeight="Bold" HorizontalAlignment="Left" Width="110"/>
         <Label Content="Testo dell'imputazione:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="Testo_Imputazione_Label" Content="Label" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Persone accusate:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>

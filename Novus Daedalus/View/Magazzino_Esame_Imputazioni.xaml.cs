@@ -28,8 +28,8 @@ namespace Novus_Daedalus.View
         {
             //Codice eseguito al caricamento della pagina(DA AGGIORNARE)
             Capo_Imputazione_Label.Content = "Esame del capo A di imputazione";
-            Testo_Imputazione_Label.Content = "Testo dell'imputazione di prova..potrebbe essere un vero capo, in realtà è solo una prova LOL :D";
-            Persone_Accusate_Label.Content = "Mario rossi (sempre il solito)";
+            Testo_Imputazione_Label.Content = "Testo dell'imputazione di prova";
+            Persone_Accusate_Label.Content = "Paolo Bianchi";
             Elementi_da_provare_Label.Content = "Tutti gli elementi da provare";
         }
 

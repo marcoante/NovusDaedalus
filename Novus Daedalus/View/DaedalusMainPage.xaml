@@ -14,24 +14,24 @@
     </Page.Background>
 
     <Grid Cursor="Hand">
-        <Button x:Name="Nuova_Iscrizione_Button" Content="Nuova iscrizione" HorizontalAlignment="Left" Margin="50,194,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand" Click="NuovaIscrizioneButtonClick"/>
+        <Button x:Name="Nuova_Iscrizione_Button" Content="Nuova iscrizione" HorizontalAlignment="Left" Margin="50,194,0,0" Width="123" Cursor="Hand" Click="NuovaIscrizioneButtonClick" Height="40" VerticalAlignment="Top"/>
         <Label x:Name="Benvenuto_label" Content="Label" HorizontalAlignment="Left" Margin="50,74,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" FontFamily="Times New Roman"/>
         <Button x:Name="Apri_Scheda_Button" Content="Apri scheda" HorizontalAlignment="Left" Margin="50,239,0,0" VerticalAlignment="Top" Width="123" Height="40" Click="ApriSchedaButtonClick" Cursor="Hand"/>
         <Button x:Name="Laboratorio_Button" Content="Laboratorio" HorizontalAlignment="Left" Margin="213,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF44D301" BorderThickness="0" Click="LaboratorioButtonClick" Cursor="Hand"/>
         <Button x:Name="Magazzino_Button" Content="Magazzino" HorizontalAlignment="Left" Margin="213,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFE82AC5" BorderThickness="0" Click="MagazzinoButtonClick" Cursor="Hand"/>
-        <Button x:Name="Persone_Button" Content="Persone" HorizontalAlignment="Left" Margin="398,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF36C8D6" BorderThickness="0" Click="PersoneButtonClick" Cursor="Hand"/>
-        <Button x:Name="Atti_Button" Content="Atti" HorizontalAlignment="Left" Margin="398,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF17F0C" BorderThickness="0" Click="AttiButtonClick" Cursor="Hand"/>
-        <Button x:Name="Seguiti_Button" Content="Seguiti" HorizontalAlignment="Left" Margin="583,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF9D90A" BorderThickness="0" Click="SeguitiButtonClick" Cursor="Hand"/>
-        <Button x:Name="Officina_Button" Content="Officina" HorizontalAlignment="Left" Margin="583,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFD41212" BorderThickness="0" Click="OfficinaButtonClick" Cursor="Hand"/>
+        <Button x:Name="Persone_Button" Content="Persone" HorizontalAlignment="Left" Margin="768,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF36C8D6" BorderThickness="0" Click="PersoneButtonClick" Cursor="Hand" Visibility="Hidden"/>
+        <Button x:Name="Atti_Button" Content="Atti" HorizontalAlignment="Left" Margin="583,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF17F0C" BorderThickness="0" Click="AttiButtonClick" Cursor="Hand" Visibility="Hidden"/>
+        <Button x:Name="Seguiti_Button" Content="Seguiti" HorizontalAlignment="Left" Margin="583,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF9D90A" BorderThickness="0" Click="SeguitiButtonClick" Cursor="Hand" Visibility="Hidden"/>
+        <Button x:Name="Officina_Button" Content="Officina" HorizontalAlignment="Left" Margin="398,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFD41212" BorderThickness="0" Click="OfficinaButtonClick" Cursor="Hand"/>
         <Button x:Name="Impostazioni_Button" Content="Impostazioni" HorizontalAlignment="Left" Margin="50,284,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand" Click="Impostazioni_Button_Click"/>
-        <Button x:Name="Logout_Button" Content="Logout" Margin="1058,580,0,0" Click="LogoutButtonClick" Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Label x:Name="Scheda_Label" Content="" HorizontalAlignment="Left" Margin="638,74,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" FontFamily="Times New Roman"/>
-        <Button x:Name="Informazioni_Generali_Button" Content="Informazioni generali" HorizontalAlignment="Left" Margin="768,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Click="Informazioni_Generali_Button_Click" Cursor="Hand" Background="#FFA26B98"/>
-        <Button x:Name="Posta_Button" Content="Posta" HorizontalAlignment="Left" Margin="768,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF95FFFF" Cursor="Hand" Click="Posta_Button_Click"/>
+        <Button x:Name="Logout_Button" Content="Logout" Margin="0,0,10,10" Click="LogoutButtonClick" Cursor="Hand" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="58"/>
+        <Label x:Name="Scheda_Label" Content="" Margin="398,76,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" FontFamily="Times New Roman" HorizontalAlignment="Left" Width="550" HorizontalContentAlignment="Right"/>
+        <Button x:Name="Informazioni_Generali_Button" Content="Informazioni generali" HorizontalAlignment="Left" Margin="398,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Click="Informazioni_Generali_Button_Click" Cursor="Hand" Background="#FFA26B98"/>
+        <Button x:Name="Posta_Button" Content="Posta" HorizontalAlignment="Left" Margin="768,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF95FFFF" Cursor="Hand" Click="Posta_Button_Click" Visibility="Hidden"/>
         <Button x:Name="Anteprima_Button" Content="Anteprima" HorizontalAlignment="Left" Margin="50,329,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand" IsEnabled="False"/>
-        <Button x:Name="Esci_Button" Content="Esci da daedalus" HorizontalAlignment="Left" Margin="10,552,0,0" VerticalAlignment="Top" Height="51" Click="Esci_Button_Click"/>
-        <StackPanel x:Name="Scadenze_Importanti_panel" HorizontalAlignment="Left" Height="357" Margin="965,194,0,0" VerticalAlignment="Top" Width="163" Background="#B27C7777"/>
-        <Label Content="Scadenze importanti" HorizontalAlignment="Left" Margin="965,163,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="Esci_Button" Content="Esci da daedalus" Margin="10,0,0,10" VerticalAlignment="Bottom" Height="26" Click="Esci_Button_Click" HorizontalAlignment="Left" Width="107"/>
+        <StackPanel x:Name="Scadenze_Importanti_panel" HorizontalAlignment="Right" Margin="0,194,10,0" Width="163" Background="#B27C7777" Height="357" VerticalAlignment="Top"/>
+        <Label Content="Scadenze importanti" HorizontalAlignment="Right" Margin="0,163,10,0" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold" FontSize="16"/>
 
     </Grid>
 </Page>
