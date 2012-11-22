@@ -20,7 +20,8 @@ namespace Novus_Daedalus.View
     /// </summary>
     public partial class DaedalusMainPage : Page
     {
-
+        private Model.novus_daedalus_dbEntities db_connection;
+        private Model.scheda scheda;
         ApriScheda apriSchedaPage = null;
 
         public DaedalusMainPage()
@@ -36,6 +37,9 @@ namespace Novus_Daedalus.View
                 Scheda_Label.Content = "scheda numero: ";
             else
                 Scheda_Label.Content = "nessuna scheda selezionata";
+
+            db_connection = new Model.novus_daedalus_dbEntities();
+            
 
             //inizializzazione scadenze importanti
         }
@@ -103,7 +107,8 @@ namespace Novus_Daedalus.View
         void SelezioneSchedaHandler(object sender)
         {
             //inizializzazione pagina
-            Scheda_Label.Content = "Scheda selezionata: "+((Model.scheda)Application.Current.Properties["Scheda"]).NumeroRegistro;
+            scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
+            Scheda_Label.Content = "Scheda selezionata: " + scheda.NumeroRegistro;
             Persone_Button.Visibility = Visibility.Visible;
             Atti_Button.Visibility = Visibility.Visible;
             Seguiti_Button.Visibility = Visibility.Visible;

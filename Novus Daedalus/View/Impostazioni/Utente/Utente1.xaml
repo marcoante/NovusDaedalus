@@ -8,7 +8,7 @@
 	Title="Utente1" Background="Black">
 
     <Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="42,447,0,0" VerticalAlignment="Top" Width="75" IsCancel="True"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" Height="26" VerticalAlignment="Bottom"/>
         <Label Content="Magistrato" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Cognome:" HorizontalAlignment="Left" Margin="39,67,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Nome:" HorizontalAlignment="Left" Margin="237,67,0,0" VerticalAlignment="Top" Foreground="White"/>
@@ -22,7 +22,7 @@
         <Label x:Name="Cognome_Assistente_Label" Content="Cognome" HorizontalAlignment="Left" Margin="104,210,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
         <Label Content="Nome:" HorizontalAlignment="Left" Margin="237,210,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="Nome_Assistente_Label" Content="Nome" HorizontalAlignment="Left" Margin="287,210,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
-        <Button x:Name="Modifica_Assistente_Button" Content="Modifica" HorizontalAlignment="Left" Margin="362,214,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Modifica_Assistente_Button" Content="Modifica" HorizontalAlignment="Left" Margin="395,210,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Page>

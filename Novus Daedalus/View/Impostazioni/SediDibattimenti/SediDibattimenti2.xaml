@@ -13,8 +13,8 @@
         <Label Content="Indirizzo:" HorizontalAlignment="Left" Margin="35,165,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Codice:" HorizontalAlignment="Left" Margin="35,243,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Num. Dipartimento:" HorizontalAlignment="Left" Margin="35,324,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="35,453,0,0" VerticalAlignment="Top" Width="75" Click="Annulla_Button_Click"/>
-        <Button x:Name="Aggiungi_Button" Content="Aggiungi" HorizontalAlignment="Left" Margin="400,453,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="Annulla_Button_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Aggiungi_Button" Content="Aggiungi" Margin="0,0,10,10" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
 
     </Grid>
 </Page>

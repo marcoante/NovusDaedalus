@@ -8,7 +8,7 @@
 	Title="Posta_Ufficio_Giudiziario" Background="Black">
 
     <Grid>
-        <Button x:Name="Indietro_Button" Content="Indietro" HorizontalAlignment="Left" Margin="13,449,0,0" VerticalAlignment="Top" Width="75" Click="Indietro_Button_Click"/>
+        <Button x:Name="Indietro_Button" Content="Indietro" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="Indietro_Button_Click" Height="26" VerticalAlignment="Bottom"/>
         <Label Content="Ufficio giudiziario" HorizontalAlignment="Left" Margin="13,23,0,0" VerticalAlignment="Top" Foreground="White"/>
         <RadioButton GroupName="Ufficio" Content="Procura generale" HorizontalAlignment="Left" Margin="22,54,0,0" VerticalAlignment="Top" Foreground="White"/>
         <RadioButton GroupName="Ufficio" Content="Procura tribunale" HorizontalAlignment="Left" Margin="22,75,0,0" VerticalAlignment="Top" Foreground="White"/>
@@ -19,7 +19,7 @@
         <RadioButton GroupName="Ufficio" Content="GIP tribunale" HorizontalAlignment="Left" Margin="22,180,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Sede dell'ufficio:" HorizontalAlignment="Left" Margin="13,285,0,0" VerticalAlignment="Top" Foreground="White"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="125,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
-        <Button x:Name="Avanti_Button" Content="Avanti" HorizontalAlignment="Left" Margin="403,449,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Avanti_Button" Content="Avanti" Margin="0,0,10,10" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
 
     </Grid>
 </Page>

@@ -47,7 +47,7 @@ namespace Novus_Daedalus.View
 
         private void ApriButtonClick(object sender, RoutedEventArgs e)
         {
-            Application.Current.Properties["Scheda"] = (Model.scheda)schedaDataGrid.SelectedItem;
+            Application.Current.Properties["Scheda"] = ((Model.scheda)schedaDataGrid.SelectedItem).Id;
             On_evento_scheda_selezionata();
             this.Close();
         }
