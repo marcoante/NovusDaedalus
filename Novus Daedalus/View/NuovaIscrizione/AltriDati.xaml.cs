@@ -118,8 +118,8 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                     db_connection.Iscrive.Add(iscrive_ass);
                 }
             }
-            //db_connection.SaveChanges();
-            //Application.Current.Properties["Scheda"] = scheda_binding_source.Id;
+            db_connection.SaveChanges();
+            Application.Current.Properties["Scheda"] = scheda_binding_source.Id;
 
             //Si ottiene la finestra corrente e si chiude
             Window closing_window = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "NuovaIscrizioneMainWindow");

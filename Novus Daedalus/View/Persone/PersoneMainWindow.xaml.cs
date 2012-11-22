@@ -99,7 +99,9 @@ namespace Novus_Daedalus.View.Persone
                     modifica_window.ShowDialog();
                     return;
                 }
-                MessageBox.Show("La funzione di modifica indagato non è ancora disponibile.");
+                SetDatiIndagato modifica_indagato_window = new SetDatiIndagato(selezione);
+                modifica_indagato_window.evento_p_modificata += new SetIndagatoHandler(IndagatoModificatoHandler);
+                modifica_indagato_window.ShowDialog();
             }
 
         }
@@ -113,7 +115,23 @@ namespace Novus_Daedalus.View.Persone
 
             foreach (Model.persona p in scheda.persona)
             {
-                if (p.Ruolo == "indagato" || p.Ruolo == "persona offesa")
+                if (p.Ruolo == "persona offesa")
+                    persona_binding_source.Add(p);
+            }
+            personaDataGrid.SelectedItem = persona_binding_source.Find(item => item.Id == dati_evento.Nuova_persona.Id);
+            personaDataGrid.Items.Refresh();
+        }
+
+        void IndagatoModificatoHandler(object sender, DatiIndagatoEventArgs dati_evento)
+        {
+
+            persona_binding_source.Clear();
+            db_connection = new Model.novus_daedalus_dbEntities();
+            scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
+
+            foreach (Model.persona p in scheda.persona)
+            {
+                if (p.Ruolo == "indagato")
                     persona_binding_source.Add(p);
             }
             personaDataGrid.SelectedItem = persona_binding_source.Find(item => item.Id == dati_evento.Nuova_persona.Id);

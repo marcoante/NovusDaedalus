@@ -268,6 +268,9 @@
     <Compile Include="View\Persone\PersoneMainWindow.xaml.cs">
       <DependentUpon>PersoneMainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Persone\SetDatiIndagato.xaml.cs">
+      <DependentUpon>SetDatiIndagato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Persone\SetDatiPersona.xaml.cs">
       <DependentUpon>SetDatiPersona.xaml</DependentUpon>
     </Compile>
@@ -424,6 +427,10 @@
     <Page Include="View\Persone\PersoneMainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Persone\SetDatiIndagato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Persone\SetDatiPersona.xaml">
       <Generator>MSBuild:Compile</Generator>
