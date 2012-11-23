@@ -56,8 +56,6 @@ namespace Novus_Daedalus.View.Persone
                 difensore1.persona = new Model.persona();
                 difensore1.persona.Ruolo = "Difensore";
             }
-            else
-                difensore1 = p_originale.indagato.difensore;
 
             //Model.persona p_copia = new Model.persona(p);
             //if (p.Ruolo == "persona offesa")
@@ -88,6 +86,10 @@ namespace Novus_Daedalus.View.Persone
                 i_binding_source = db_connection.indagato.Find(p_originale.indagato.Id);
                 statoComboBox.Text = p_originale.indagato.Stato;
                 precedenti_penaliComboBox.Text = p_originale.indagato.PrecedentiPenali;
+            }
+            if(i_binding_source.difensore != null)
+            {
+                difensore1 = i_binding_source.difensore;
             }
 
             DatiPersona_Grid.DataContext = p_binding_source;
