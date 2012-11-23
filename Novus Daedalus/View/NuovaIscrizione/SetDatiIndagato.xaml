@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.NuovaIscrizione.SetDatiIndagato"
         xmlns:src="clr-namespace:Novus_Daedalus.Model"
-        Title="Inserisci i dati dell'indagato" Height="673.776" Width="298.149" Loaded="SetDatiIndagatoLoaded" xmlns:local="clr-namespace:Novus_Daedalus.Model">
+        Title="Inserisci i dati dell'indagato" Height="673.776" Width="305.149" Loaded="SetDatiIndagatoLoaded" xmlns:local="clr-namespace:Novus_Daedalus.Model">
     <Window.Resources>
         <src:persona x:Key="personaViewSource"/>
         <src:indagato x:Key="indagatoViewSource"/>
@@ -215,7 +215,7 @@
                 <DatePicker x:Name="inizioMisuraCautelareDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-34,4" Grid.Row="0" SelectedDate="{Binding InizioMisuraCautelare, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="118"/>
             </Grid>
         </Grid>
-        <Button x:Name="Inserisci_Button" Content="Ok" HorizontalAlignment="Left" Margin="205,604,0,0" VerticalAlignment="Top" Width="75" Click="InserisciButtonClick" RenderTransformOrigin="-0.2,0.5"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,604,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
+        <Button x:Name="Inserisci_Button" Content="Ok" Margin="205,0,0,10" Click="InserisciButtonClick" RenderTransformOrigin="-0.2,0.5" HorizontalAlignment="Left" Width="75" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" Height="26" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

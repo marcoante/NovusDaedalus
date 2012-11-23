@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.Persone.SetDatiPersona"
-        Title="Dati della persona" Height="468.164" Width="277.612" Loaded="SetDatiPersona_Loaded">
+        Title="Dati della persona" Height="468.164" Width="281.612" Loaded="SetDatiPersona_Loaded">
     <Window.Resources>
         <Model:persona x:Key="personaViewSource"/>
         <Model:ErrorsToMessageConverter x:Key="eToMConverter" />
@@ -99,8 +99,8 @@
                 <TextBox x:Name="domicilioTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-53,4" Grid.Row="0" Text="{Binding Domicilio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="177"/>
             </Grid>
         </Grid>
-        <Button x:Name="Ok_Button" Content="Ok" HorizontalAlignment="Left" Margin="185,402,0,0" VerticalAlignment="Top" Width="75" Click="OkButtonClick"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,402,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
+        <Button x:Name="Ok_Button" Content="Ok" HorizontalAlignment="Left" Margin="185,0,0,10" Width="75" Click="OkButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" Height="26" VerticalAlignment="Bottom"/>
         <Label Content="Seleziona i reati collegati:" HorizontalAlignment="Left" Margin="10,234,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ListView x:Name="Persona_Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,265,0,0" VerticalAlignment="Top" Width="250" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Resources>

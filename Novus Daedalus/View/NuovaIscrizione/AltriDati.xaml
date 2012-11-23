@@ -251,8 +251,8 @@
 
             </Grid>
         </Border>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
-        <Button Content="Crea Scheda" HorizontalAlignment="Left" Margin="529,382,0,0" VerticalAlignment="Top" Width="92" Click="CreaSchedaButtonClick"/>
-        <Button Content="&lt; Indietro" HorizontalAlignment="Left" Margin="432,382,0,0" VerticalAlignment="Top" Width="92" Click="IndietroButtonClick"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button Content="Crea Scheda" HorizontalAlignment="Left" Margin="529,0,0,10" Width="92" Click="CreaSchedaButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button Content="&lt; Indietro" HorizontalAlignment="Left" Margin="432,0,0,10" Width="92" Click="IndietroButtonClick" Height="26" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

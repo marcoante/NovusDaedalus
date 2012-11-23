@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.NuovaIscrizione.SetDatiReato"
-        Title="Inserisci i dati del reato" Height="546.75" Width="329" Loaded="SetDatiReatoLoaded" xmlns:local="clr-namespace:Novus_Daedalus.Model">
+        Title="Inserisci i dati del reato" Height="546.75" Width="323" Loaded="SetDatiReatoLoaded" xmlns:local="clr-namespace:Novus_Daedalus.Model">
     <Window.Resources>
         <CollectionViewSource x:Key="reatoViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}"/>
         <CollectionViewSource x:Key="POViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:persona}, CreateList=True}"/>
@@ -144,8 +144,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="Inserisci_Button" Content="Ok" HorizontalAlignment="Left" Margin="221,477,0,0" VerticalAlignment="Top" Width="75" Click="InserisciButtonClick"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,477,0,0" VerticalAlignment="Top" Width="75" Click="AnnullaButtonClick"/>
+        <Button x:Name="Inserisci_Button" Content="Ok" HorizontalAlignment="Left" Margin="221,0,0,10" Width="75" Click="InserisciButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" Height="26" VerticalAlignment="Bottom"/>
         <Grid x:Name="descrizione_reatoGrid" DataContext="{StaticResource tavola_reatiViewSource}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="286">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>

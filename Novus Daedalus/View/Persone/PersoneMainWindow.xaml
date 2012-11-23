@@ -28,7 +28,7 @@
         <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="369,106,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
         <Button x:Name="Dati_Button" Content="Visualizza dati completi" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Width="167" Height="50" Click="DatiButtonClick"/>
         <Button x:Name="Contatto_Button" Content="Contatto" HorizontalAlignment="Left" Margin="197,269,0,0" Width="167" Height="50" VerticalAlignment="Top"/>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="369,364,0,0" VerticalAlignment="Top" Width="75" Click="ChiudiButtonClick"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="369,0,0,10" Width="75" Click="ChiudiButtonClick" Height="26" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>
