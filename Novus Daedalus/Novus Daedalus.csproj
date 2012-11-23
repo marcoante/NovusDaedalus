@@ -258,6 +258,9 @@
     <Compile Include="View\Officina.xaml.cs">
       <DependentUpon>Officina.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Persone\AggiungiPersona.xaml.cs">
+      <DependentUpon>AggiungiPersona.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Persone\MostraIndagato.xaml.cs">
       <DependentUpon>MostraIndagato.xaml</DependentUpon>
     </Compile>
@@ -413,6 +416,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Officina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Persone\AggiungiPersona.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -34,25 +34,21 @@ namespace Novus_Daedalus.View.Persone
 
         Model.scheda scheda;
 
+        public string Ruolo{set; get;}
+
         private Model.persona p_binding_source;
 
         public SetDatiPersona()
         {
             InitializeComponent();
             reati_binding_source = new List<PersonaReati>();
-
-            Model.persona p = new Model.persona();
-            p.Sesso = "M";
-            p.NumeroEscussioni = 0;
-
-            p_binding_source = p;
             modalità_modifica = false;
         }
+
 
         public SetDatiPersona(Model.persona p)
         {
             InitializeComponent();
-            reati_binding_source = new List<PersonaReati>();
             this.p_originale = p;
 
             //Model.persona p_copia = new Model.persona(p);
@@ -77,17 +73,44 @@ namespace Novus_Daedalus.View.Persone
 
         private void SetDatiPersona_Loaded(object sender, RoutedEventArgs e)
         {
+            if (modalità_modifica == false)
+            {
+                Model.persona p = new Model.persona();
+                p.Ruolo = Ruolo;
+                if (Ruolo == "Persona offesa")
+                {
+                    Model.persona_offesa i = new Model.persona_offesa();
+                    i.persona = p;
+                    p.persona_offesa = i;
+                    p.Ruolo = "persona offesa";
+                    p.persona_offesa.AvvisoArchiviazione = false;
+                }
+                if (Ruolo == "Persona informata")
+                {
+                    Model.persona_informata i = new Model.persona_informata();
+                    i.persona = p;
+                    p.persona_informata = i;
+                    p.Ruolo = "persona informata";
+                }
+
+                p.Sesso = "M";
+                p.NumeroEscussioni = 0;
+
+                p_binding_source = p;
+            }
+
+
+            reati_binding_source = new List<PersonaReati>();
             db_connection = new Model.novus_daedalus_dbEntities();
             if(modalità_modifica)
                 p_binding_source = db_connection.persona.Find(p_originale.Id);
 
 
             DatiPersona_Grid.DataContext = p_binding_source;
-            //System.Windows.Data.CollectionViewSource personaViewSource1 = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource1")));
-            //// Caricare i dati impostando la proprietà CollectionViewSource.Source:
-            //// personaViewSource1.Source = [origine dati generica]
 
             scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
+            if (modalità_modifica == false)
+                p_binding_source.scheda = scheda;
 
             foreach (Model.reato r in scheda.reato)
             {
@@ -156,6 +179,9 @@ namespace Novus_Daedalus.View.Persone
 
         private void OkButtonClick(object sender, RoutedEventArgs e)
         {
+            if (modalità_modifica == false)
+                db_connection.persona.Add(p_binding_source);
+
             // Si controlla se tutti i dati obbligatori di una persona siano presenti
             if (!p_binding_source.IsValid)
             {

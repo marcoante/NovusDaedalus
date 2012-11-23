@@ -23,7 +23,7 @@
                 <DataGridTextColumn x:Name="ruoloColumn" Binding="{Binding Ruolo}" Header="Ruolo" Width="80"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="Aggiungi_Button" Content="Aggiungi" Margin="369,44,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
+        <Button x:Name="Aggiungi_Button" Content="Aggiungi" Margin="369,44,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Click="AggiungiButtonClick"/>
         <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="369,75,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
         <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="369,106,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
         <Button x:Name="Dati_Button" Content="Visualizza dati completi" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Width="167" Height="50" Click="DatiButtonClick"/>

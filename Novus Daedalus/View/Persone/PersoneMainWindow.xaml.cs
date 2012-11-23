@@ -115,7 +115,7 @@ namespace Novus_Daedalus.View.Persone
 
             foreach (Model.persona p in scheda.persona)
             {
-                if (p.Ruolo == "persona offesa")
+                if (p.Ruolo != "Difensore")
                     persona_binding_source.Add(p);
             }
             personaDataGrid.SelectedItem = persona_binding_source.Find(item => item.Id == dati_evento.Nuova_persona.Id);
@@ -124,18 +124,28 @@ namespace Novus_Daedalus.View.Persone
 
         void IndagatoModificatoHandler(object sender, DatiIndagatoEventArgs dati_evento)
         {
-
             persona_binding_source.Clear();
             db_connection = new Model.novus_daedalus_dbEntities();
             scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
 
             foreach (Model.persona p in scheda.persona)
             {
-                if (p.Ruolo == "indagato")
+                if (p.Ruolo != "Difensore")
                     persona_binding_source.Add(p);
             }
             personaDataGrid.SelectedItem = persona_binding_source.Find(item => item.Id == dati_evento.Nuova_persona.Id);
             personaDataGrid.Items.Refresh();
+        }
+
+        private void AggiungiButtonClick(object sender, RoutedEventArgs e)
+        {
+            SetDatiPersona mod_persona_win = new SetDatiPersona();
+            SetDatiIndagato mod_indagato_win = new SetDatiIndagato();
+            mod_persona_win.evento_p_creata += new SetPersonaHandler(PersonaModificataHandler);
+            mod_indagato_win.evento_p_creata += new SetIndagatoHandler(IndagatoModificatoHandler);
+
+            AggiungiPersona aggiungi_p_win = new AggiungiPersona(mod_persona_win, mod_indagato_win);
+            aggiungi_p_win.ShowDialog();
         }
 
         //private void UpdatePersonaViewSource()

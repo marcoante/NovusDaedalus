@@ -42,12 +42,28 @@ namespace Novus_Daedalus.View.Persone
         public SetDatiIndagato()
         {
             InitializeComponent();
+
+            Model.persona p = new Model.persona();
+            Model.indagato i = new Model.indagato();
+            i.persona = p;
+            p.indagato = i;
+            p.Ruolo = "indagato";
+            p.Sesso = "M";
+            p.NumeroEscussioni = 0;
+
+            p_binding_source = p;
+            i_binding_source = i;
+
+            difensore1 = new Model.difensore();
+            difensore1.persona = new Model.persona();
+            difensore1.persona.Ruolo = "Difensore";
+
+            modalità_modifica = false;
         }
 
         public SetDatiIndagato(Model.persona p)
         {
             InitializeComponent();
-            reati_binding_source = new List<PersonaReati>();
             this.p_originale = p;
 
             if (p_originale.indagato.difensore == null)
@@ -79,6 +95,7 @@ namespace Novus_Daedalus.View.Persone
 
         private void SetDatiIndagato_Loaded(object sender, RoutedEventArgs e)
         {
+            reati_binding_source = new List<PersonaReati>();
             db_connection = new Model.novus_daedalus_dbEntities();
             if (modalità_modifica)
             {
@@ -97,6 +114,8 @@ namespace Novus_Daedalus.View.Persone
             Dif1_Grid.DataContext = difensore1.persona;
 
             scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
+            if (modalità_modifica == false)
+                p_binding_source.scheda = scheda;
 
             foreach (Model.reato r in scheda.reato)
             {
@@ -161,6 +180,9 @@ namespace Novus_Daedalus.View.Persone
 
         private void OkButtonClick(object sender, RoutedEventArgs e)
         {
+            if (modalità_modifica == false)
+                db_connection.persona.Add(p_binding_source);
+
             // Si controlla se tutti i dati obbligatori di una persona siano presenti
             if (!p_binding_source.IsValid)
             {
