@@ -103,6 +103,8 @@ namespace Novus_Daedalus.View.Persone
                 i_binding_source = db_connection.indagato.Find(p_originale.indagato.Id);
                 statoComboBox.Text = p_originale.indagato.Stato;
                 precedenti_penaliComboBox.Text = p_originale.indagato.PrecedentiPenali;
+                if (p_binding_source.Sesso == "M") sessoMRadioButton.IsChecked = true;
+                else sessoFRadioButton.IsChecked = true;
             }
             if(i_binding_source.difensore != null)
             {

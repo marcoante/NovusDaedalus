@@ -102,8 +102,12 @@ namespace Novus_Daedalus.View.Persone
 
             reati_binding_source = new List<PersonaReati>();
             db_connection = new Model.novus_daedalus_dbEntities();
-            if(modalità_modifica)
+            if (modalità_modifica)
+            {
                 p_binding_source = db_connection.persona.Find(p_originale.Id);
+                if (p_binding_source.Sesso == "M") sessoMRadioButton.IsChecked = true;
+                else sessoFRadioButton.IsChecked = true;
+            }
 
 
             DatiPersona_Grid.DataContext = p_binding_source;
