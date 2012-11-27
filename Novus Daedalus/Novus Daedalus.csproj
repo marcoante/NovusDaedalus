@@ -174,6 +174,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>novus_daedalus_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PasswordHash\PasswordHash.cs" />
     <Compile Include="View\ApriScheda.xaml.cs">
       <DependentUpon>ApriScheda.xaml</DependentUpon>
     </Compile>
