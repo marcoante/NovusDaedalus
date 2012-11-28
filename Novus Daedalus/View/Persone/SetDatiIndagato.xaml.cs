@@ -106,16 +106,17 @@ namespace Novus_Daedalus.View.Persone
                 if (p_binding_source.Sesso == "M") sessoMRadioButton.IsChecked = true;
                 else sessoFRadioButton.IsChecked = true;
             }
+            scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
             if(i_binding_source.difensore != null)
             {
                 difensore1 = i_binding_source.difensore;
             }
+            difensore1.persona.IdScheda = scheda.Id;
 
             DatiPersona_Grid.DataContext = p_binding_source;
             Dati_Indagato_Grid.DataContext = i_binding_source;
             Dif1_Grid.DataContext = difensore1.persona;
 
-            scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
             if (modalità_modifica == false)
                 p_binding_source.scheda = scheda;
 
@@ -200,7 +201,9 @@ namespace Novus_Daedalus.View.Persone
             if (nomeDif1TextBox.Text != null && nomeDif1TextBox.Text != "" && i_binding_source.difensore == null)
             {
                 if (difensore1.persona.IsValid)
+                {
                     i_binding_source.difensore = difensore1;
+                }
             }
 
 
