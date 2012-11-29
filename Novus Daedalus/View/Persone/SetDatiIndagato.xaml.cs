@@ -192,6 +192,15 @@ namespace Novus_Daedalus.View.Persone
                 MessageBox.Show("Uno o più dati anagrafici della persona sono mancanti.");
                 return;
             }
+
+            if(reati_binding_source.Find(item => item.IsSelected == true) == null)
+            {
+                {
+                    MessageBox.Show("Attenzione, non è stato associato alcun reato a carico dell'indagato.");
+                    return;
+                }
+            }
+
             // Si impostano alcuni campi della persona, a seconda delle selezioni dell'utente
             if (sessoMRadioButton.IsChecked == true) p_binding_source.Sesso = "M";
             else p_binding_source.Sesso = "F";
