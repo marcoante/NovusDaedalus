@@ -126,23 +126,33 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 return;
             }
 
-            // Si impostano alcuni campi dell'indagato, a seconda delle selezioni dell'utente
-            indagato_binding_source.Stato = statoComboBox.Text;
-            if (sessoMRadioButton.IsChecked == true) indagato_binding_source.persona.Sesso = "M";
-            else indagato_binding_source.persona.Sesso = "F";
-            indagato_binding_source.PrecedentiPenali = precedenti_penaliComboBox.Text;
-
             if (nomeDif1TextBox.Text != null && nomeDif1TextBox.Text != "")
             {
-                if(difensore1.persona.IsValid)
+                if (difensore1.persona.IsValid)
                     indagato_binding_source.difensore = difensore1;
+                else
+                {
+                    MessageBox.Show("Uno o più dati anagrafici del primo difensore sono mancanti.");
+                    return;
+                }
             }
 
             if (nomeDif2TextBox.Text != null && nomeDif2TextBox.Text != "")
             {
                 if (difensore2.persona.IsValid)
                     indagato_binding_source.difensore3 = difensore2;
+                else
+                {
+                    MessageBox.Show("Uno o più dati anagrafici del secondo difensore sono mancanti.");
+                    return;
+                }
             }
+
+            // Si impostano alcuni campi dell'indagato, a seconda delle selezioni dell'utente
+            indagato_binding_source.Stato = statoComboBox.Text;
+            if (sessoMRadioButton.IsChecked == true) indagato_binding_source.persona.Sesso = "M";
+            else indagato_binding_source.persona.Sesso = "F";
+            indagato_binding_source.PrecedentiPenali = precedenti_penaliComboBox.Text;
 
             // Se si è in modalità modifica si invoca l'evento indagato modificato,
             // che verrà gestito dalla pagina "Inserisci indagati"

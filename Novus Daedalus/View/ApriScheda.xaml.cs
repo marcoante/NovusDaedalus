@@ -47,9 +47,17 @@ namespace Novus_Daedalus.View
 
         private void ApriButtonClick(object sender, RoutedEventArgs e)
         {
-            Application.Current.Properties["Scheda"] = ((Model.scheda)schedaDataGrid.SelectedItem).Id;
-            On_evento_scheda_selezionata();
-            this.Close();
+            if (schedaDataGrid.SelectedItem != null)
+            {
+                Application.Current.Properties["Scheda"] = ((Model.scheda)schedaDataGrid.SelectedItem).Id;
+                On_evento_scheda_selezionata();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Attenzione, devi selezionare una scheda dall'elenco.");
+                return;
+            }
         }
 
         protected virtual void On_evento_scheda_selezionata()

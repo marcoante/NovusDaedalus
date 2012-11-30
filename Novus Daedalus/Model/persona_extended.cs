@@ -64,8 +64,8 @@ namespace Novus_Daedalus.Model
         {
             get
             {
-                if (this.Nome == null || this.Nome == ""
-                    || this.Cognome == null || this.Cognome == "") return false;
+                if (string.IsNullOrEmpty(Nome) ||
+                    string.IsNullOrEmpty(Cognome)) return false;
 
                 return true;
             }

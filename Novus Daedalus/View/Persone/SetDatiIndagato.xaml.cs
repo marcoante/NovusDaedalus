@@ -201,19 +201,24 @@ namespace Novus_Daedalus.View.Persone
                 }
             }
 
-            // Si impostano alcuni campi della persona, a seconda delle selezioni dell'utente
-            if (sessoMRadioButton.IsChecked == true) p_binding_source.Sesso = "M";
-            else p_binding_source.Sesso = "F";
-            i_binding_source.Stato = statoComboBox.Text;
-            i_binding_source.PrecedentiPenali = precedenti_penaliComboBox.Text;
-
             if (nomeDif1TextBox.Text != null && nomeDif1TextBox.Text != "" && i_binding_source.difensore == null)
             {
                 if (difensore1.persona.IsValid)
                 {
                     i_binding_source.difensore = difensore1;
                 }
+                else
+                {
+                    MessageBox.Show("Uno o più dati anagrafici del primo difensore sono mancanti.");
+                    return;
+                }
             }
+
+            // Si impostano alcuni campi della persona, a seconda delle selezioni dell'utente
+            if (sessoMRadioButton.IsChecked == true) p_binding_source.Sesso = "M";
+            else p_binding_source.Sesso = "F";
+            i_binding_source.Stato = statoComboBox.Text;
+            i_binding_source.PrecedentiPenali = precedenti_penaliComboBox.Text;
 
 
             DatiIndagatoEventArgs event_data;
