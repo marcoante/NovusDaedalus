@@ -21,7 +21,7 @@ namespace Novus_Daedalus.View
     public partial class DaedalusMainPage : Page
     {
         private Model.novus_daedalus_dbEntities db_connection;
-        private Model.scheda scheda;
+        private Model.scheda scheda = null;
         ApriScheda apriSchedaPage = null;
 
         public DaedalusMainPage()
@@ -33,8 +33,11 @@ namespace Novus_Daedalus.View
         private void MainPageLoaded(object sender, RoutedEventArgs e)
         {
             Benvenuto_label.Content = "Benvenuto " + ((Model.utente)Application.Current.Properties["User"]).persona.Nome;
-            if (Application.Current.Properties["Scheda"] != null)
-                Scheda_Label.Content = "scheda numero: ";
+            if (/*Application.Current.Properties["Scheda"]*/scheda != null)
+            {
+                //scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
+                Scheda_Label.Content = "scheda numero: " + scheda.NumeroRegistro;
+            }
             else
                 Scheda_Label.Content = "nessuna scheda selezionata";
 
@@ -118,6 +121,8 @@ namespace Novus_Daedalus.View
         private void LogoutButtonClick(object sender, RoutedEventArgs e)
         {
             Application.Current.Properties["User"] = null;
+            scheda = null;
+            Application.Current.Properties["Scheda"] = null;
             NavigationService.GoBack();
         }
 

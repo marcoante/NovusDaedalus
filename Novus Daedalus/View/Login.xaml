@@ -10,10 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="#FF5445E8" Offset="0.355"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_green_1366x768.jpg"/>
         </Grid.Background>
         <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="267,157,0,0" VerticalAlignment="Top" Width="75" Click="LoginButtonClick" Cursor="Hand"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="154,92,0,0" VerticalAlignment="Top" Foreground="White"/>

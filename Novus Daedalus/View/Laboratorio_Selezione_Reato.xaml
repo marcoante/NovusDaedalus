@@ -10,14 +10,11 @@
         <Novus_Daedalus:novus_daedalus_dbDataSet x:Key="novus_daedalus_dbDataSet"/>
         <CollectionViewSource x:Key="reatoViewSource" Source="{Binding reato, Source={StaticResource novus_daedalus_dbDataSet}}"/>
     </Window.Resources>
-    
+
     <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black" Offset="0"/>
-            <GradientStop Color="#FF53D616" Offset="0.467"/>
-        </LinearGradientBrush>
+        <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_green_1366x768.jpg"/>
     </Window.Background>
-    
+
     <Grid DataContext="{StaticResource reatoViewSource}">
         <Label x:Name="Selezione_Reato_Label" Content="Seleziona un reato" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
 

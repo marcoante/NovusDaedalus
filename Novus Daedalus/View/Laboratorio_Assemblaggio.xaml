@@ -7,10 +7,7 @@
       d:DesignHeight="326.866" d:DesignWidth="417.91"
 	Title="Laboratorio_Assemblaggio">
     <Page.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black" Offset="0"/>
-            <GradientStop Color="#FF40C30F" Offset="0.564"/>
-        </LinearGradientBrush>
+        <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_green_1366x768.jpg"/>
     </Page.Background>
 
     <Grid>

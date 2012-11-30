@@ -7,10 +7,7 @@
       d:DesignHeight="555.605" d:DesignWidth="1137.377"
 	Title="Magazzino">
     <Page.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black" Offset="0"/>
-            <GradientStop Color="#FFC307A1" Offset="0.587"/>
-        </LinearGradientBrush>
+        <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_purple_1366x768.jpg"/>
     </Page.Background>
 
     <Grid>

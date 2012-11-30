@@ -1,7 +1,10 @@
 ﻿<Window x:Class="Novus_Daedalus.View.Selezione_Tipo_Atti"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Selezione_Tipo_Atti" Height="375.59" Width="456.574" Background="#FF2F722C">
+        Title="Selezione_Tipo_Atti" Height="375.59" Width="456.574">
+    <Window.Background>
+        <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_orange_1366x768.jpg"/>
+    </Window.Background>
     <Grid x:Name="Griglia">
         <Grid.RowDefinitions>
             <RowDefinition Height="151*"/>

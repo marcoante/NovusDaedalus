@@ -531,7 +531,17 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="wallpapers\wallpaper_black_1366x768.jpg" />
+    <Resource Include="wallpapers\wallpaper_blue_1366x768.jpg" />
+    <Resource Include="wallpapers\wallpaper_grass_1366x768.jpg" />
+    <Resource Include="wallpapers\wallpaper_green_1366x768.jpg" />
+    <Resource Include="wallpapers\wallpaper_grey_1366x768.jpg" />
+    <Resource Include="wallpapers\wallpaper_orange_1366x768.jpg" />
+    <Resource Include="wallpapers\wallpaper_pink_1366x768.jpg" />
+    <Resource Include="wallpapers\wallpaper_purple_1366x768.jpg" />
+    <Resource Include="wallpapers\wallpaper_red_1366x768.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="login-button.png" />
   </ItemGroup>
