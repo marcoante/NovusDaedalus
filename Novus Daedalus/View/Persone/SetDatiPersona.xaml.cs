@@ -28,16 +28,20 @@ namespace Novus_Daedalus.View.Persone
         public event SetPersonaHandler evento_p_creata;
         public event SetPersonaHandler evento_p_modificata;
 
-        private List<PersonaReati> reati_binding_source;
-
         Model.novus_daedalus_dbEntities db_connection;
 
         Model.scheda scheda;
 
         public string Ruolo{set; get;}
 
-        private Model.persona p_binding_source;
+        // Binding sources per i controlli XAML
+        // ------------------------------------
+        private List<PersonaReati> reati_binding_source;
 
+        private Model.persona p_binding_source;
+        // ------------------------------------
+
+        // Costruttore per la creazione di una nuova persona
         public SetDatiPersona()
         {
             InitializeComponent();
@@ -45,28 +49,11 @@ namespace Novus_Daedalus.View.Persone
             modalità_modifica = false;
         }
 
-
+        // Costruttore per la modifica di una persona
         public SetDatiPersona(Model.persona p)
         {
             InitializeComponent();
             this.p_originale = p;
-
-            //Model.persona p_copia = new Model.persona(p);
-            //if (p.Ruolo == "persona offesa")
-            //{
-            //    Model.persona_offesa i = new Model.persona_offesa(p.persona_offesa);
-            //    i.persona = p_copia;
-            //    p_copia.persona_offesa = i;
-            //}
-            //if (p.Ruolo == "persona informata")
-            //{
-            //    Model.persona_informata i = new Model.persona_informata(p.persona_informata);
-            //    i.persona = p_copia;
-            //    p_copia.persona_informata = i;
-            //}
-
-            //if (p_copia.Sesso == "M") sessoMRadioButton.IsChecked = true;
-            //else sessoFRadioButton.IsChecked = true;
 
             modalità_modifica = true;
         }
@@ -116,6 +103,7 @@ namespace Novus_Daedalus.View.Persone
             if (modalità_modifica == false)
                 p_binding_source.scheda = scheda;
 
+            // Si recuperano le associazioni tra la persona e i reati
             foreach (Model.reato r in scheda.reato)
             {
                 PersonaReati pr = new PersonaReati();
@@ -171,9 +159,6 @@ namespace Novus_Daedalus.View.Persone
             if (selected_all)
                 chkAllReati.IsChecked = true;
         }
-
-
-
 
 
         private void AnnullaButtonClick(object sender, RoutedEventArgs e)

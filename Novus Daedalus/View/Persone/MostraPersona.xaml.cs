@@ -34,7 +34,6 @@ namespace Novus_Daedalus.View.Persone
 
         private void MostraPersona_Loaded(object sender, RoutedEventArgs e)
         {
-
             Window_Grid.DataContext = p;
             if (p.Sesso == "M")
                 sessoTextBlock.Text = "M";

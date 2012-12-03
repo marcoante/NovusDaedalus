@@ -78,7 +78,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         {
             // Si rimuove dall'elenco l'oggetto corrispondente all'indagato da modificare
             nuova_iscrizione_data.Persone_indagate_list.Remove((Model.persona)personaDataGrid.SelectedItem);
-            //nuova_iscrizione_data.Persone_indagate_list.RemoveAll(item => item.CodiceFiscale == dati_evento.Persona_indagata_originale.CodiceFiscale);
             // Si inserisce nell'elenco l'indagato modificato
             nuova_iscrizione_data.Persone_indagate_list.Add(dati_evento.Nuova_persona_indagata);
             // Si aggiorna il data grid contenete l'elenco dei nuovi indagati
@@ -94,8 +93,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             {
                 // Si rimuove dall'elenco la persona indagata selezionata
                 nuova_iscrizione_data.Persone_indagate_list.Remove((Model.persona)personaDataGrid.SelectedItem);
-                //Model.persona persona_da_rimuovere = (Model.persona)personaDataGrid.SelectedItem;
-                //nuova_iscrizione_data.Persone_indagate_list.RemoveAll(item => item.CodiceFiscale == persona_da_rimuovere.CodiceFiscale);
                 // Si aggiorna il data grid contenete l'elenco dei nuovi indagati
                 personaDataGrid.SelectedItem = null;
                 personaDataGrid.Items.Refresh();

@@ -94,9 +94,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             else po_binding_source.Sesso = "F";
 
             // Se si è in modalità modifica si invoca l'evento persona offesa modificata,
-            // che verrà gestito dalla pagina "SetDatiReato"
+            // che verrà gestito dalla pagina "InserisciPersoneOffese"
             // Altrimenti si invoca l'evento persona offesa creata, che verrà gestito
-            // sempre dalla pagina "SetDatiReato"
+            // sempre dalla pagina "InserisciPersoneOffese"
             if (modalità_modifica) On_evento_po_modificata(new DatiPOEventArgs(po_binding_source, po_originale));
             else On_evento_po_creata(new DatiPOEventArgs(po_binding_source));
             Close();

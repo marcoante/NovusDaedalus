@@ -28,14 +28,18 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         public event SetReatoHandler evento_reato_creato;
         public event SetReatoHandler evento_reato_modificato;
 
+        // Binding sources per i controlli XAML
+        // ------------------------------------
         private List<ReatoIndagati> indagati_binding_source;
         private List<ReatoPO> po_binding_source;
-        private NuovaIscrizione nuova_iscrizione_data;
-
         private Model.reato reato_binding_source;
+        // ------------------------------------
+
+        private NuovaIscrizione nuova_iscrizione_data;
 
         private Model.novus_daedalus_dbEntities db_connection;
 
+        // Costruttore per la modalità di creazione di un nuovo reato
         public SetDatiReato()
         {
             InitializeComponent();
@@ -70,6 +74,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void SetDatiReatoLoaded(object sender, RoutedEventArgs e)
         {
+            // Si aggiornano i controlli XAML
             Dati_Reato_Grid.DataContext = reato_binding_source;
 
             foreach (Model.persona p in nuova_iscrizione_data.Persone_indagate_list)
@@ -202,7 +207,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void InserisciButtonClick(object sender, RoutedEventArgs e)
         {
-            // Si controlla se tutti i dati obbligatori di una persona indagata sono presenti
+            // Si controlla se tutti i dati obbligatori di un reato sono presenti
             if (!reato_binding_source.IsValid)
             {
                 MessageBox.Show("Uno o più dati del reato sono mancanti.");
@@ -241,6 +246,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             if (modalità_modifica) event_data = new DatiReatoEventArgs(reato_binding_source, reato_originale);
             else event_data = new DatiReatoEventArgs(reato_binding_source);
 
+            // Si aggiornano le associazioni tra i reati e le persone
             foreach (ReatoIndagati ri in indagati_binding_source)
             {
                 if (ri.IsSelected == true)

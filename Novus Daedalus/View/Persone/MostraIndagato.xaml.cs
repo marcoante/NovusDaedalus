@@ -34,7 +34,6 @@ namespace Novus_Daedalus.View.Persone
 
         private void MostraIndagato_Loaded(object sender, RoutedEventArgs e)
         {
-            //db_connection = new Model.novus_daedalus_dbEntities();
 
             Window_Grid.DataContext = p;
             if (p.Sesso == "M")
@@ -48,10 +47,6 @@ namespace Novus_Daedalus.View.Persone
             {
                 difensore1TextBlock.Text = p.indagato.difensore.persona.Nome + " " + p.indagato.difensore.persona.Cognome;
             }
-            //if (p.indagato.difensore3 != null)
-            //{
-            //    difensore2TextBlock.Text = p.indagato.difensore3.persona.Nome + " " + p.indagato.difensore3.persona.Cognome;
-            //}
 
             List<Model.reato> reati_collegati = new List<Model.reato>();
             foreach (Model.PersonaReato pr in p.PersonaReato)

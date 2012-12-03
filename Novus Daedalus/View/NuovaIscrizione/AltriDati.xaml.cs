@@ -20,8 +20,11 @@ namespace Novus_Daedalus.View.NuovaIscrizione
     /// </summary>
     public partial class AltriDati : Page
     {
+        // Binding sources per i controlli XAML
+        // ------------------------------------
         Model.scheda scheda_binding_source;
         Model.notizia_reato notizia_reato;
+        // ------------------------------------
 
         NuovaIscrizione nuova_iscrizione_data;
 
@@ -60,6 +63,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
 
         private void CreaSchedaButtonClick(object sender, RoutedEventArgs e)
         {
+            // Si controlla la correttezza dei campi inseriti dall'utente
             if (!scheda_binding_source.IsValid || !scheda_binding_source.iscrizione.IsValid)
             {
                 MessageBox.Show("Alcuni dati obbligatori sono mancanti.");
@@ -76,7 +80,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             scheda_binding_source.iscrizione.ArchiviazioneImmediata = archiviazioneImmediataComboBox.Text;
             scheda_binding_source.iscrizione.IndaginiPG = indaginiPGComboBox.Text;
          
-
+            // Si aggiorna il database
             db_connection.notizia_reato.Add(notizia_reato);
             db_connection.scheda.Add(scheda_binding_source);
             foreach (Model.persona p in nuova_iscrizione_data.Persone_indagate_list)
@@ -119,6 +123,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
                 }
             }
             db_connection.SaveChanges();
+            // Si imposta la variabile di sessione con l'id della scheda
             Application.Current.Properties["Scheda"] = scheda_binding_source.Id;
 
             //Si ottiene la finestra corrente e si chiude

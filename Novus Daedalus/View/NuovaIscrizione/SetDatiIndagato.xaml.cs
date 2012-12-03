@@ -32,11 +32,14 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         // Dati sulla nuova iscrizione
         private NuovaIscrizione nuova_iscrizione_data;
 
+        // Binding sources per i controlli xaml
+        // -----------------------------------
         private Model.persona persona_indagata_binding_source;
         private Model.indagato indagato_binding_source;
 
         private Model.difensore difensore1;
         private Model.difensore difensore2;
+        // -----------------------------------
 
         // Costruttore per la modalità di creazione nuovo indagato
         public SetDatiIndagato()

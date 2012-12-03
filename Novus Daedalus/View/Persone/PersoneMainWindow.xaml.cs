@@ -21,8 +21,10 @@ namespace Novus_Daedalus.View.Persone
     {
         private Model.novus_daedalus_dbEntities db_connection;
 
+        // La scheda di riferimento
         private Model.scheda scheda;
 
+        // L'elenco delle persone
         private List<Model.persona> persona_binding_source;
 
         public PersoneMainWindow()
@@ -71,10 +73,12 @@ namespace Novus_Daedalus.View.Persone
                 MessageBox.Show("Non è possibile rimuovere un indagato.");
                 return;
             }
+            // Si rimuove la persona selezionata dal database
             db_connection.persona.Remove(selezione);
 
             db_connection.SaveChanges();
 
+            // Si aggiorna l'elenco delle persone
             persona_binding_source.Remove(selezione);
             personaDataGrid.SelectedItem = null;
             personaDataGrid.Items.Refresh();
@@ -108,7 +112,7 @@ namespace Novus_Daedalus.View.Persone
 
         void PersonaModificataHandler(object sender, DatiPEventArgs dati_evento)
         {
-
+            // Si aggiorna l'elenco delle persone
             persona_binding_source.Clear();
             db_connection = new Model.novus_daedalus_dbEntities();
             scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
@@ -124,6 +128,7 @@ namespace Novus_Daedalus.View.Persone
 
         void IndagatoModificatoHandler(object sender, DatiIndagatoEventArgs dati_evento)
         {
+            // Si aggiorna l'elenco delle persone
             persona_binding_source.Clear();
             db_connection = new Model.novus_daedalus_dbEntities();
             scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
@@ -147,22 +152,5 @@ namespace Novus_Daedalus.View.Persone
             AggiungiPersona aggiungi_p_win = new AggiungiPersona(mod_persona_win, mod_indagato_win);
             aggiungi_p_win.ShowDialog();
         }
-
-        //private void UpdatePersonaViewSource()
-        //{
-        //    db_connection = new Model.novus_daedalus_dbEntities();
-        //    scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
-
-        //    System.Windows.Data.CollectionViewSource personaViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personaViewSource")));
-        //    // Caricare i dati impostando la proprietà CollectionViewSource.Source:
-        //    // personaViewSource.Source = [origine dati generica]
-        //    personaViewSource.Source = scheda.persona;
-        //    if (selezione != null)
-        //    {
-        //        Model.persona selected_item = scheda.persona.Where(item => item.CodiceFiscale == selezione.CodiceFiscale).First();
-        //        personaDataGrid.SelectedItem = selected_item;
-        //        personaDataGrid.Items.Refresh();
-        //    }
-        //}
     }
 }

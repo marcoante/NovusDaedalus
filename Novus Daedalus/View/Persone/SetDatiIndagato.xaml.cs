@@ -28,17 +28,21 @@ namespace Novus_Daedalus.View.Persone
         public event SetIndagatoHandler evento_p_creata;
         public event SetIndagatoHandler evento_p_modificata;
 
-        private List<PersonaReati> reati_binding_source;
-
         Model.novus_daedalus_dbEntities db_connection;
 
         Model.scheda scheda;
+
+        // Binding sources per i controlli XAML
+        // ------------------------------------
+        private List<PersonaReati> reati_binding_source;
 
         private Model.persona p_binding_source;
         private Model.indagato i_binding_source;
 
         private Model.difensore difensore1;
+        // ------------------------------------
 
+        // Costruttore per la creazione di un nuovo indagato
         public SetDatiIndagato()
         {
             InitializeComponent();
@@ -61,6 +65,7 @@ namespace Novus_Daedalus.View.Persone
             modalità_modifica = false;
         }
 
+        // Costruttore per la modifica di un indagato
         public SetDatiIndagato(Model.persona p)
         {
             InitializeComponent();
@@ -73,23 +78,6 @@ namespace Novus_Daedalus.View.Persone
                 difensore1.persona.Ruolo = "Difensore";
             }
 
-            //Model.persona p_copia = new Model.persona(p);
-            //if (p.Ruolo == "persona offesa")
-            //{
-            //    Model.persona_offesa i = new Model.persona_offesa(p.persona_offesa);
-            //    i.persona = p_copia;
-            //    p_copia.persona_offesa = i;
-            //}
-            //if (p.Ruolo == "persona informata")
-            //{
-            //    Model.persona_informata i = new Model.persona_informata(p.persona_informata);
-            //    i.persona = p_copia;
-            //    p_copia.persona_informata = i;
-            //}
-
-            //if (p_copia.Sesso == "M") sessoMRadioButton.IsChecked = true;
-            //else sessoFRadioButton.IsChecked = true;
-
             modalità_modifica = true;
         }
 
@@ -99,6 +87,7 @@ namespace Novus_Daedalus.View.Persone
             db_connection = new Model.novus_daedalus_dbEntities();
             if (modalità_modifica)
             {
+                // Si recuperano i dati dal db
                 p_binding_source = db_connection.persona.Find(p_originale.Id);
                 i_binding_source = db_connection.indagato.Find(p_originale.indagato.Id);
                 statoComboBox.Text = p_originale.indagato.Stato;
@@ -120,6 +109,7 @@ namespace Novus_Daedalus.View.Persone
             if (modalità_modifica == false)
                 p_binding_source.scheda = scheda;
 
+            // Si ottengono le associazioni della persona con i reati
             foreach (Model.reato r in scheda.reato)
             {
                 PersonaReati pr = new PersonaReati();

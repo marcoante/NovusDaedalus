@@ -22,8 +22,6 @@ namespace Novus_Daedalus.View.NuovaIscrizione
     {
         private NuovaIscrizione nuova_iscrizione_data;
 
-        //private List<Model.reato> reati_binding_source;
-
         private SetDatiReato set_dati_reato_window;
 
         private AltriDati altri_dati_window;
@@ -56,6 +54,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
         {
             // Si aggiunge il reato nelle informazioni sulla nuova iscrizione
             nuova_iscrizione_data.Reati_list.Add(dati_evento.Nuovo_reato);
+            // Si creano le associazioni tra il reato e le persone associate
             foreach (Model.persona p in dati_evento.Persone_indagate_associate)
             {
                 Model.PersonaReato ass = new Model.PersonaReato();
@@ -96,6 +95,7 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             nuova_iscrizione_data.Reati_list.Remove((Model.reato) reatoDataGrid.SelectedItem);
             // Si inserisce nell'elenco il reato modificato
             nuova_iscrizione_data.Reati_list.Add(dati_evento.Nuovo_reato);
+            // Si aggiornano le associazioni tra il reato e le persone
             foreach (Model.persona p in nuova_iscrizione_data.Persone_indagate_list)
             {
                 nuova_iscrizione_data.Persone_reati_ass.RemoveAll(r => r.reato.NomenIuris == dati_evento.Reato_originale.NomenIuris && r.persona.Equals(p));
