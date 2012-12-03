@@ -8,6 +8,9 @@
         <src:persona x:Key="personaViewSource"/>
         <CollectionViewSource x:Key="reatoViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}"/>
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_blue_1366x768.jpg"/>
+    </Window.Background>
     <Grid x:Name="Window_Grid">
         <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>

@@ -1,4 +1,8 @@
 ﻿<NavigationWindow x:Class="Novus_Daedalus.View.Posta.Posta_MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Posta_MainWindow" Height="500" Width="500" Source="Posta_Selezione_Tipo.xaml" ShowsNavigationUI="False" ResizeMode="NoResize"/>
+        Title="Posta_MainWindow" Height="500" Width="500" Source="Posta_Selezione_Tipo.xaml" ShowsNavigationUI="False" ResizeMode="NoResize">
+    <NavigationWindow.Background>
+        <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_black_1366x768.jpg"/>
+    </NavigationWindow.Background>
+</NavigationWindow>

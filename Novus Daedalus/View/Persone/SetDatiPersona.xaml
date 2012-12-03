@@ -7,6 +7,9 @@
         <Model:persona x:Key="personaViewSource"/>
         <Model:ErrorsToMessageConverter x:Key="eToMConverter" />
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_blue_1366x768.jpg"/>
+    </Window.Background>
     <Grid>
         <Grid x:Name="DatiPersona_Grid" HorizontalAlignment="Left" Height="229" VerticalAlignment="Top" Width="270">
             <Grid.Resources>

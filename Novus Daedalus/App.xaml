@@ -18,7 +18,6 @@
 
         <Style TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
-            <!--<Setter Property="Background" Value="#EEEEEEEE"/>-->
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -44,13 +43,12 @@
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsPressed" Value="True">
-                                <!--<Setter Property="OpacityMask" Value="#AA888888"/>-->
                                 <Setter Property="Margin" Value="2 1" />
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="BorderThickness" Value="0"/>
                                 <Setter Property="Foreground" Value="White"/>
-                                <Setter Property="OpacityMask" Value="#CCDAD1D1"/>
+                                <Setter Property="OpacityMask" Value="#CCE6DDDD" />
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Foreground" Value="#ADADAD"/>

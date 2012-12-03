@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Novus_Daedalus.View.Magazzino_Selezione_Imputazioni"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Magazzino_Selezione_Imputazioni" Height="340.637" Width="340.637" Loaded="Magazzino_Selezione_Imputazioni_Loaded" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        Title="Magazzino_Selezione_Imputazioni" Height="340.637" Width="340.637" Loaded="Magazzino_Selezione_Imputazioni_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_purple_1366x768.jpg"/>

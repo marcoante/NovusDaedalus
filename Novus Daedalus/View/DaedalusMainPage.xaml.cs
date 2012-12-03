@@ -33,9 +33,8 @@ namespace Novus_Daedalus.View
         private void MainPageLoaded(object sender, RoutedEventArgs e)
         {
             Benvenuto_label.Content = "Benvenuto " + ((Model.utente)Application.Current.Properties["User"]).persona.Nome;
-            if (/*Application.Current.Properties["Scheda"]*/scheda != null)
+            if (scheda != null)
             {
-                //scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
                 Scheda_Label.Content = "scheda numero: " + scheda.NumeroRegistro;
             }
             else
@@ -55,8 +54,11 @@ namespace Novus_Daedalus.View
                     "oppure il pulsante \"Nuova iscrizione\"");
                 return;
             }
-            Persone.PersoneMainWindow persone_window = new Persone.PersoneMainWindow();
-            persone_window.ShowDialog();
+            else
+            {
+                Persone.PersoneMainWindow persone_window = new Persone.PersoneMainWindow();
+                persone_window.ShowDialog();
+            }
         }
 
         private void LaboratorioButtonClick(object sender, RoutedEventArgs e)
@@ -76,28 +78,26 @@ namespace Novus_Daedalus.View
 
         private void AttiButtonClick(object sender, RoutedEventArgs e)
         {
-            /*if (Application.Current.Properties["Scheda"] == null)
-            {
-                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
-                    "oppure il pulsante \"Nuova iscrizione\"");
-                return;
-            }*/
-            new Selezione_Tipo_Atti().Show();
-        }
-
-        private void MagazzinoButtonClick(object sender, RoutedEventArgs e)
-        {
-            /*if (Application.Current.Properties["Scheda"] == null)
+            if (Application.Current.Properties["Scheda"] == null)
             {
                 MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
                     "oppure il pulsante \"Nuova iscrizione\"");
                 return;
             }
             else
+                new Selezione_Tipo_Atti().ShowDialog();
+        }
+
+        private void MagazzinoButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.Properties["Scheda"] == null)
             {
+                MessageBox.Show("Non hai selezionato alcuna scheda, premi il pulsante \"Apri scheda\" " +
+                    "oppure il pulsante \"Nuova iscrizione\"");
+                return;
+            }
+            else
                 NavigationService.Navigate(new View.Magazzino());
-            }*/
-            NavigationService.Navigate(new View.Magazzino());
         }
 
         private void ApriSchedaButtonClick(object sender, RoutedEventArgs e)
@@ -110,18 +110,24 @@ namespace Novus_Daedalus.View
         void SelezioneSchedaHandler(object sender)
         {
             //inizializzazione pagina
+            //la variabile scheda contiene l'entità scheda prelevata dal DB in base all'ID preso da Application.Current.Properties["Scheda"]);
             scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
             Scheda_Label.Content = "Scheda selezionata: " + scheda.NumeroRegistro;
+            //i pulsanti nascosti sono resi visibili
             Persone_Button.Visibility = Visibility.Visible;
             Atti_Button.Visibility = Visibility.Visible;
             Seguiti_Button.Visibility = Visibility.Visible;
             Posta_Button.Visibility = Visibility.Visible;
+            Informazioni_Generali_Button.Visibility = Visibility.Visible;
         }
 
         private void LogoutButtonClick(object sender, RoutedEventArgs e)
         {
+            //la variabile globale utente è impostata a NULL
             Application.Current.Properties["User"] = null;
+            //la variabile scheda è impostata a NULL
             scheda = null;
+            //la variabile globale scheda(ID della scheda aperta) è impostata a NULL
             Application.Current.Properties["Scheda"] = null;
             NavigationService.GoBack();
         }

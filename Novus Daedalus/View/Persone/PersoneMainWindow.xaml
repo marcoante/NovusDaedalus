@@ -6,6 +6,9 @@
     <Window.Resources>
         <CollectionViewSource x:Key="personaViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:persona}, CreateList=True}"/>
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_blue_1366x768.jpg"/>
+    </Window.Background>
     <Grid DataContext="{StaticResource personaViewSource}">
         <Label Content="Persone coinvolte nel procedimento:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
 
