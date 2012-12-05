@@ -154,8 +154,16 @@ namespace Novus_Daedalus.View
         private void NuovaIscrizioneButtonClick(object sender, RoutedEventArgs e)
         {
             NuovaIscrizione.MainWindow nuova_iscrizione_window = new NuovaIscrizione.MainWindow();
+            nuova_iscrizione_window.evento_scheda_creata += new NuovaIscrizione.SchedaCreataHandler(CreazioneSchedaHandler);
             nuova_iscrizione_window.ShowDialog();
         }
+
+        void CreazioneSchedaHandler(object sender)
+        {
+            SelezioneSchedaHandler(this);
+        }
+
+
 
         private void Posta_Button_Click(object sender, RoutedEventArgs e)
         {

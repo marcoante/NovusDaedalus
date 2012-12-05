@@ -66,6 +66,6 @@ namespace Novus_Daedalus.View
         }
     }
 
-    // Gestione degli eventi per la selezione di un reato
+    // Gestione degli eventi per la selezione di una scheda
     public delegate void SchedaSelezionataHandler(object sender);
 }

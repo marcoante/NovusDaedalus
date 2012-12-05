@@ -127,8 +127,9 @@ namespace Novus_Daedalus.View.NuovaIscrizione
             Application.Current.Properties["Scheda"] = scheda_binding_source.Id;
 
             //Si ottiene la finestra corrente e si chiude
-            Window closing_window = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "NuovaIscrizioneMainWindow");
+            MainWindow closing_window = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "NuovaIscrizioneMainWindow");
             closing_window.Close();
+            closing_window.On_evento_scheda_creata();
         }
     }
 }
