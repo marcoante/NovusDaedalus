@@ -23,6 +23,7 @@ namespace Novus_Daedalus.View
         private Model.novus_daedalus_dbEntities db_connection;
         private Model.scheda scheda = null;
         ApriScheda apriSchedaPage = null;
+        string stato_pagina = "scheda";
 
         public DaedalusMainPage()
         {
@@ -114,11 +115,14 @@ namespace Novus_Daedalus.View
             scheda = db_connection.scheda.Find((int)Application.Current.Properties["Scheda"]);
             Scheda_Label.Content = "Scheda selezionata: " + scheda.NumeroRegistro;
             //i pulsanti nascosti sono resi visibili
-            Persone_Button.Visibility = Visibility.Visible;
+            /*Persone_Button.Visibility = Visibility.Visible;
             Atti_Button.Visibility = Visibility.Visible;
             Seguiti_Button.Visibility = Visibility.Visible;
             Posta_Button.Visibility = Visibility.Visible;
             Informazioni_Generali_Button.Visibility = Visibility.Visible;
+            Cose_button.Visibility = Visibility.Visible;
+            Magazzino_Button.Visibility = Visibility.Visible;*/
+            Visible_Button();
         }
 
         private void LogoutButtonClick(object sender, RoutedEventArgs e)
@@ -167,6 +171,55 @@ namespace Novus_Daedalus.View
         private void Esci_Button_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Switch_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (stato_pagina.Equals("scheda"))
+            {
+                stato_pagina = "gestione";
+                Switch_button.Content = "scheda";
+                Officina_Button.Visibility = Visibility.Visible;
+                Collapse_Button();
+            }
+            else
+            {
+                stato_pagina = "scheda";
+                Switch_button.Content = "gestione";
+                Officina_Button.Visibility = Visibility.Collapsed;
+                Visible_Button();
+            }
+        }
+
+        private void Collapse_Button()
+        {
+            Persone_Button.Visibility = Visibility.Collapsed;
+            Atti_Button.Visibility = Visibility.Collapsed;
+            Seguiti_Button.Visibility = Visibility.Collapsed;
+            Posta_Button.Visibility = Visibility.Collapsed;
+            Informazioni_Generali_Button.Visibility = Visibility.Collapsed;
+            Cose_button.Visibility = Visibility.Collapsed;
+            Magazzino_Button.Visibility = Visibility.Collapsed;
+            Laboratorio_Button.Visibility = Visibility.Collapsed;
+        }
+
+        private void Visible_Button()
+        {
+            if (scheda != null)
+            {
+                Persone_Button.Visibility = Visibility.Visible;
+                Atti_Button.Visibility = Visibility.Visible;
+                Seguiti_Button.Visibility = Visibility.Visible;
+                Posta_Button.Visibility = Visibility.Visible;
+                Informazioni_Generali_Button.Visibility = Visibility.Visible;
+                Cose_button.Visibility = Visibility.Visible;
+                Magazzino_Button.Visibility = Visibility.Visible;
+                Laboratorio_Button.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Laboratorio_Button.Visibility = Visibility.Visible;
+            }
         }
     }
 }
