@@ -20,7 +20,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="nomeTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Nome}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
@@ -31,7 +31,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="cognomeTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Cognome}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
@@ -42,7 +42,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="luogoNascitaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding LuogoNascita}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top">
@@ -53,7 +53,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="dataNascitaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding DataNascita}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top">
@@ -64,7 +64,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="domicilioTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Domicilio}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top">
@@ -75,7 +75,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Ruolo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Ruolo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="ruoloTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Ruolo}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid9" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top">
@@ -86,11 +86,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="sessoTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Sesso}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
-        <Label Content="Reati collegati:" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
-        <ListView x:Name="Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,300,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <Label Content="Reati collegati:" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" FontStyle="Italic" FontSize="14"/>
+        <ListView x:Name="Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,303,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Resources>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -116,6 +116,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="221,0,0,10" Width="75" Click="ChiudiButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" Margin="0,0,10,10" Click="ChiudiButtonClick" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
     </Grid>
 </Window>

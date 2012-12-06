@@ -21,11 +21,11 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="Aggiungi_Button" Content="Aggiungi" HorizontalAlignment="Left" Margin="301,44,0,0" VerticalAlignment="Top" Width="75" Click="AggiungiButtonClick"/>
-        <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="301,71,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
-        <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="301,98,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" Height="26" VerticalAlignment="Bottom"/>
-        <Button x:Name="Avanti_Button" Content="Avanti &gt;" HorizontalAlignment="Left" Margin="314,0,0,10" Width="75" Click="AvantiButtonClick" Height="26" VerticalAlignment="Bottom"/>
-        <Button x:Name="Indietro_Button" Content="&lt; Indietro" HorizontalAlignment="Left" Margin="234,0,0,10" Width="75" Click="IndietroButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="301,78,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
+        <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="301,112,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" VerticalAlignment="Bottom"/>
+        <Button x:Name="Avanti_Button" Content="Avanti &gt;" Margin="0,0,10,10" Click="AvantiButtonClick" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="Indietro_Button" Content="&lt; Indietro" HorizontalAlignment="Right" Margin="0,0,90,10" Click="IndietroButtonClick" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Page>

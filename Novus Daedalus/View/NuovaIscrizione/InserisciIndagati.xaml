@@ -14,8 +14,8 @@
     <Grid DataContext="{StaticResource personaViewSource}">
         <Label Content="Inserisci i dati sulle persone indagate:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Button x:Name="Aggiungi_Indagato_Button" Content="Aggiungi" Margin="301,44,0,0" VerticalAlignment="Top" Click="AggiungiIndagatoButtonClick" HorizontalAlignment="Left" Width="75"/>
-        <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="301,71,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
-        <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="301,98,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
+        <Button x:Name="Modifica_Button" Content="Modifica" HorizontalAlignment="Left" Margin="301,82,0,0" VerticalAlignment="Top" Width="75" Click="ModificaButtonClick"/>
+        <Button x:Name="Rimuovi_Button" Content="Rimuovi" HorizontalAlignment="Left" Margin="301,116,0,0" VerticalAlignment="Top" Width="75" Click="RimuoviButtonClick"/>
         <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,347,0,10" Width="75" Click="AnnullaButtonClick"/>
         <Button x:Name="Avanti_Button" Content="Avanti &gt;" Margin="314,347,10,10" Click="AvantiButtonClick"/>
 

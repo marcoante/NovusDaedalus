@@ -11,10 +11,10 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="32*"/>
         </Grid.RowDefinitions>
-        <RadioButton Grid.Row="0" Content="Sviluppo dell'indagine" HorizontalAlignment="Left" Margin="33,47,0,0" VerticalAlignment="Top" Foreground="White" GroupName="Tipo_Reato" Click="Sviluppo_Click"/>
-        <RadioButton Grid.Row="0" Content="Gestione dell'indagine" HorizontalAlignment="Left" Margin="33,80,0,0" VerticalAlignment="Top" Foreground="White" GroupName="Tipo_Reato" Click="Gestione_Click"/>
-        <RadioButton Grid.Row="0" Content="Conclusione dell'indagine" HorizontalAlignment="Left" Margin="33,116,0,0" VerticalAlignment="Top" Foreground="White" GroupName="Tipo_Reato" Click="Conclusione_Click"/>
-        <Button x:Name="Ok_Button" Content="Ok" Margin="0,0,10,10" Grid.Row="2" HorizontalAlignment="Right" Width="75" Height="26" VerticalAlignment="Bottom"/>
+        <RadioButton Grid.Row="0" Content="Sviluppo dell'indagine" HorizontalAlignment="Left" Margin="33,47,0,0" VerticalAlignment="Top" Foreground="White" GroupName="Tipo_Reato" Click="Sviluppo_Click" FontSize="14"/>
+        <RadioButton Grid.Row="0" Content="Gestione dell'indagine" HorizontalAlignment="Left" Margin="33,80,0,0" VerticalAlignment="Top" Foreground="White" GroupName="Tipo_Reato" Click="Gestione_Click" FontSize="14"/>
+        <RadioButton Grid.Row="0" Content="Conclusione dell'indagine" HorizontalAlignment="Left" Margin="33,116,0,0" VerticalAlignment="Top" Foreground="White" GroupName="Tipo_Reato" Click="Conclusione_Click" FontSize="14"/>
+        <Button x:Name="Ok_Button" Content="Ok" Margin="0,0,10,10" Grid.Row="2" HorizontalAlignment="Right" Width="75" VerticalAlignment="Bottom"/>
         <Label Content="Attività:" HorizontalAlignment="Left" Margin="33,10,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
         <RadioButton Content="Richiesta di collaborazione" HorizontalAlignment="Left" Margin="33,41,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <RadioButton Content="Ricerca tracce reato" HorizontalAlignment="Left" Margin="33,62,0,0" Grid.Row="1" VerticalAlignment="Top"/>

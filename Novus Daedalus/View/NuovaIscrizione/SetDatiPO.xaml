@@ -38,8 +38,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-38,4" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" VerticalAlignment="Center" Width="164"/>
+            <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-38,4" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" VerticalAlignment="Center" Width="164" FontSize="14"/>
         </Grid>
         <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="219">
             <Grid.ColumnDefinitions>
@@ -49,8 +49,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="cognomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-19,4" Grid.Row="0" Text="{Binding Cognome, Mode=TwoWay, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" VerticalAlignment="Center" Width="144"/>
+            <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="cognomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-19,4" Grid.Row="0" Text="{Binding Cognome, Mode=TwoWay, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true}" VerticalAlignment="Center" Width="144" FontSize="14"/>
         </Grid>
         <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="219">
             <Grid.ColumnDefinitions>
@@ -60,7 +60,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <RadioButton x:Name="sessoMRadioButton" Grid.Column="1" HorizontalAlignment="Left" Margin="16,8,0,8" Grid.Row="0" VerticalAlignment="Center" Content="M" IsChecked="True"/>
             <RadioButton x:Name="sessoFRadioButton" Content="F" Grid.Column="1" HorizontalAlignment="Left" Margin="67,8,0,0" VerticalAlignment="Top"/>
         </Grid>
@@ -72,8 +72,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="luogoNascitaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-51,4" Grid.Row="0" Text="{Binding LuogoNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="121"/>
+            <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="luogoNascitaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-51,4" Grid.Row="0" Text="{Binding LuogoNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="121" FontSize="14"/>
         </Grid>
         <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="219">
             <Grid.ColumnDefinitions>
@@ -83,7 +83,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <DatePicker x:Name="dataNascitaDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-36,4" Grid.Row="0" SelectedDate="{Binding DataNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="130"/>
         </Grid>
         <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="219">
@@ -94,11 +94,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="domicilioTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-30,4" Grid.Row="0" Text="{Binding Domicilio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="146"/>
+            <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="domicilioTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-30,4" Grid.Row="0" Text="{Binding Domicilio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="146" FontSize="14"/>
         </Grid>
-        <Button x:Name="Inserisci_Button" Content="Ok" HorizontalAlignment="Left" Margin="161,0,0,10" Width="75" Click="InserisciButtonClick" Height="26" VerticalAlignment="Bottom"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="Annulla_Button_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Inserisci_Button" Content="Ok" Margin="0,0,10,10" Click="InserisciButtonClick" VerticalAlignment="Bottom" RenderTransformOrigin="0.988,0.608" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="Annulla_Button_Click" VerticalAlignment="Bottom"/>
         <Grid x:Name="AvvArch_Grid" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -107,7 +107,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Avviso Archiviazione:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Avviso Archiviazione:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <CheckBox x:Name="avvisoArchiviazioneCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding AvvisoArchiviazione, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
         </Grid>
 

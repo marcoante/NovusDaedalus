@@ -8,7 +8,7 @@
 	Title="Referenti1" Background="Black">
 
     <Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Page>

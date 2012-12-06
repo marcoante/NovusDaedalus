@@ -6,9 +6,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_purple_1366x768.jpg"/>
         </Grid.Background>
-        <Label x:Name="Selezione_Imputazioni_Label" Content="Seleziona un capo di imputazione" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Left" Width="188"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" Margin="10,0,0,10" IsCancel="True" Cursor="Hand" Click="Annulla_Button_Click" HorizontalAlignment="Left" Width="75" Height="26" VerticalAlignment="Bottom"/>
-        <Button x:Name="Ok_Button" Content="Ok" Margin="0,0,10,10" IsDefault="True" Cursor="Hand" Click="Ok_Button_Click" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <Label x:Name="Selezione_Imputazioni_Label" Content="Seleziona un capo di imputazione" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Left" Width="188" FontSize="14"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" Margin="10,0,0,10" IsCancel="True" Cursor="Hand" Click="Annulla_Button_Click" HorizontalAlignment="Left" Width="75" VerticalAlignment="Bottom"/>
+        <Button x:Name="Ok_Button" Content="Ok" Margin="0,0,10,10" IsDefault="True" Cursor="Hand" Click="Ok_Button_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
 
     </Grid>
 </Window>

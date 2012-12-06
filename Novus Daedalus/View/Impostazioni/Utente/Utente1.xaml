@@ -9,20 +9,20 @@
 
     <Grid>
         <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" Height="26" VerticalAlignment="Bottom"/>
-        <Label Content="Magistrato" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Cognome:" HorizontalAlignment="Left" Margin="39,67,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Nome:" HorizontalAlignment="Left" Margin="237,67,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Qualità:" HorizontalAlignment="Left" Margin="42,109,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label x:Name="Cognome_Label" Content="Cognome" HorizontalAlignment="Left" Margin="104,67,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
-        <Label x:Name="Nome_Label" Content="Nome" HorizontalAlignment="Left" Margin="287,67,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
-        <Label x:Name="Qualità_Label" Content="Qualità" HorizontalAlignment="Left" Margin="93,109,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
+        <Label Content="Magistrato" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label Content="Cognome:" HorizontalAlignment="Left" Margin="39,67,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="237,67,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label Content="Qualità:" HorizontalAlignment="Left" Margin="42,109,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label x:Name="Cognome_Label" Content="Cognome" HorizontalAlignment="Left" Margin="110,67,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD" FontSize="14"/>
+        <Label x:Name="Nome_Label" Content="Nome" HorizontalAlignment="Left" Margin="287,67,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD" FontSize="14"/>
+        <Label x:Name="Qualità_Label" Content="Qualità" HorizontalAlignment="Left" Margin="99,109,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD" FontSize="14"/>
         <Button x:Name="Modifica_Magistrato_Button" Content="Modifica" HorizontalAlignment="Left" Margin="255,113,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Assistente del P.M." HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Cognome:" HorizontalAlignment="Left" Margin="39,210,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label x:Name="Cognome_Assistente_Label" Content="Cognome" HorizontalAlignment="Left" Margin="104,210,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
-        <Label Content="Nome:" HorizontalAlignment="Left" Margin="237,210,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label x:Name="Nome_Assistente_Label" Content="Nome" HorizontalAlignment="Left" Margin="287,210,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD"/>
-        <Button x:Name="Modifica_Assistente_Button" Content="Modifica" HorizontalAlignment="Left" Margin="395,210,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Assistente del P.M." HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label Content="Cognome:" HorizontalAlignment="Left" Margin="39,210,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label x:Name="Cognome_Assistente_Label" Content="Cognome" HorizontalAlignment="Left" Margin="109,210,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD" FontSize="14"/>
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="237,210,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label x:Name="Nome_Assistente_Label" Content="Nome" HorizontalAlignment="Left" Margin="288,210,0,0" VerticalAlignment="Top" Foreground="#FF26A2BD" FontSize="14"/>
+        <Button x:Name="Modifica_Assistente_Button" Content="Modifica" HorizontalAlignment="Left" Margin="398,210,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Page>

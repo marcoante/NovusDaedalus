@@ -6,8 +6,8 @@
         <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_green_1366x768.jpg"/>
     </Window.Background>
     <Grid>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" Height="26" VerticalAlignment="Bottom"/>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" Margin="0,0,10,8" Click="Chiudi_Button_Click" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" VerticalAlignment="Bottom"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" Margin="0,0,10,10" Click="Chiudi_Button_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
         <Label Content="Desideri veramente chiudere senza salvare?" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" FontSize="16"/>
 
     </Grid>

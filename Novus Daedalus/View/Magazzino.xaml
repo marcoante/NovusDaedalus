@@ -11,13 +11,13 @@
     </Page.Background>
 
     <Grid>
-        <Button x:Name="Chiudi_Magazzino_Button" Content="Chiudi magazzino" Margin="0,0,10,6" VerticalAlignment="Bottom" Click="Chiudi_Magazzino_Button_Click" Cursor="Hand" HorizontalAlignment="Right" Width="122"/>
-        <Label x:Name="Dati_di_Gestione_Label" Content="Dati di gestione" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="Esame_Imputazioni_Button" Content="Esame imputazioni" HorizontalAlignment="Right" Margin="0,58,10,0" VerticalAlignment="Top" Height="31" Width="136" Foreground="White" Background="#FFD80F0F" Cursor="Hand" Click="Esame_Imputazioni_Button_Click"/>
-        <Button x:Name="Modifica_Button" Content="Modifica" Margin="0,94,10,0" VerticalAlignment="Top" Height="31" Foreground="White" Background="#FFF7D603" Cursor="Hand" Click="Modifica_Button_Click" HorizontalAlignment="Right" Width="136"/>
-        <Button x:Name="ristruttura_Button" Content="Ristruttura magazzino" Margin="0,130,10,0" VerticalAlignment="Top" Height="31" Foreground="White" Background="#FF15E845" Cursor="Hand" HorizontalAlignment="Right" Width="136"/>
-        <Button x:Name="Controllo_Recidiva_Button" Content="Controllo recidiva" Margin="0,166,10,0" VerticalAlignment="Top" Height="31" Foreground="White" Background="#FF4FEEDF" Cursor="Hand" HorizontalAlignment="Right" Width="136"/>
-        <Label x:Name="Capi_di_Imputazione_Label" Content="Capi di imputazione" HorizontalAlignment="Left" Margin="10,413,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="Chiudi_Magazzino_Button" Content="Chiudi magazzino" Margin="0,0,10,6" VerticalAlignment="Bottom" Click="Chiudi_Magazzino_Button_Click" Cursor="Hand" HorizontalAlignment="Right"/>
+        <Label x:Name="Dati_di_Gestione_Label" Content="Dati di gestione" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Button x:Name="Esame_Imputazioni_Button" Content="Esame imputazioni" HorizontalAlignment="Right" Margin="0,58,10,0" VerticalAlignment="Top" Height="31" Width="155" Foreground="White" Background="#FFD80F0F" Cursor="Hand" Click="Esame_Imputazioni_Button_Click"/>
+        <Button x:Name="Modifica_Button" Content="Modifica" Margin="0,94,10,0" VerticalAlignment="Top" Height="31" Foreground="White" Background="#FFF7D603" Cursor="Hand" Click="Modifica_Button_Click" HorizontalAlignment="Right" Width="155"/>
+        <Button x:Name="ristruttura_Button" Content="Ristruttura magazzino" Margin="0,130,10,0" VerticalAlignment="Top" Height="31" Foreground="White" Background="#FF15E845" Cursor="Hand" HorizontalAlignment="Right"/>
+        <Button x:Name="Controllo_Recidiva_Button" Content="Controllo recidiva" Margin="0,166,10,0" VerticalAlignment="Top" Height="31" Foreground="White" Background="#FF4FEEDF" Cursor="Hand" HorizontalAlignment="Right" Width="155"/>
+        <Label x:Name="Capi_di_Imputazione_Label" Content="Capi di imputazione" HorizontalAlignment="Left" Margin="10,413,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
 
     </Grid>
 </Page>

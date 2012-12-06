@@ -22,8 +22,8 @@
                 <DataGridTextColumn x:Name="idRegistroColumn" Binding="{Binding NumeroRegistro}" Header="Id Registro" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="Apri_Button" Content="Apri" Margin="0,0,10,10" Click="ApriButtonClick" HorizontalAlignment="Right" Width="75" Height="26" VerticalAlignment="Bottom"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Apri_Button" Content="Apri" Margin="0,0,10,10" Click="ApriButtonClick" HorizontalAlignment="Right" Width="75" VerticalAlignment="Bottom"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>

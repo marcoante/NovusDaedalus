@@ -1,14 +1,14 @@
 ﻿<Window x:Class="Novus_Daedalus.View.Laboratorio_Selezione_Modalità"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Laboratorio_Selezione_Modalità" Height="300" Width="300">
+        Title="Laboratorio_Selezione_Modalità" Height="318" Width="327">
     <Window.Background>
         <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_green_1366x768.jpg"/>
     </Window.Background>
     <Grid>
-        <Label x:Name="Seleziona_Modalità_Label" Content="Seleziona la modalità di composizione" HorizontalAlignment="Left" Margin="38,32,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="Autocomposizione_Button" Content="Autocomposizione" HorizontalAlignment="Left" Margin="19,111,0,0" VerticalAlignment="Top" Width="121" Height="89" Cursor="Hand" Click="Autocomposizione_Button_Click"/>
-        <Button x:Name="Assemblaggio_Button" Content="Assemblaggio" HorizontalAlignment="Left" Margin="145,111,0,0" VerticalAlignment="Top" Width="121" Height="89" Cursor="Hand" Click="Assemblaggio_Button_Click"/>
+        <Label x:Name="Seleziona_Modalità_Label" Content="Seleziona la modalità di composizione" HorizontalAlignment="Left" Margin="38,32,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Button x:Name="Autocomposizione_Button" Content="Autocomposizione" HorizontalAlignment="Left" Margin="19,111,0,0" VerticalAlignment="Top" Width="137" Height="89" Cursor="Hand" Click="Autocomposizione_Button_Click"/>
+        <Button x:Name="Assemblaggio_Button" Content="Assemblaggio" Margin="161,111,19,0" VerticalAlignment="Top" Height="89" Cursor="Hand" Click="Assemblaggio_Button_Click"/>
 
     </Grid>
 </Window>

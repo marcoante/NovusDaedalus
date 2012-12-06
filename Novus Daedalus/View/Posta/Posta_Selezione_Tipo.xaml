@@ -9,8 +9,8 @@
 
     <Grid>
         <Button x:Name="Ufficio_Giudiziario_Button" Content="Ad ufficio giudiziario" HorizontalAlignment="Left" Margin="186,209,0,0" VerticalAlignment="Top" Click="Ufficio_Giudiziario_Button_Click"/>
-        <Button x:Name="Generica_Button" Content="Generica" HorizontalAlignment="Left" Margin="186,262,0,0" VerticalAlignment="Top" Width="129" Click="Generica_Button_Click"/>
-        <Button Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Generica_Button" Content="Generica" HorizontalAlignment="Left" Margin="186,262,0,0" VerticalAlignment="Top" Width="148" Click="Generica_Button_Click"/>
+        <Button Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Page>

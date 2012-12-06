@@ -8,8 +8,8 @@
 	Title="SediDibattimenti1" Background="Black">
 
     <Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" Height="26" VerticalAlignment="Bottom"/>
-        <Button x:Name="Aggiungi_Button" Content="Aggiungi sede" Margin="371,0,10,10" Click="Aggiungi_Button_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" IsCancel="True" VerticalAlignment="Bottom"/>
+        <Button x:Name="Aggiungi_Button" Content="Aggiungi sede" Margin="371,0,10,10" Click="Aggiungi_Button_Click" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Page>

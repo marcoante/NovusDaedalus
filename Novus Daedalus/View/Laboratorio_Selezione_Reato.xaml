@@ -16,9 +16,9 @@
     </Window.Background>
 
     <Grid DataContext="{StaticResource reatoViewSource}">
-        <Label x:Name="Selezione_Reato_Label" Content="Seleziona un reato" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="Selezione_Reato_Label" Content="Seleziona un reato" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
 
-        <DataGrid x:Name="reatoDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource reatoViewSource}}" Margin="10,36,10,91" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True">
+        <DataGrid x:Name="reatoDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource reatoViewSource}}" Margin="10,36,10,91" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" FontSize="14">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="codiceColumn" Binding="{Binding Codice}" Header="Codice" Width="SizeToHeader"/>
@@ -36,8 +36,8 @@
             </DataGrid.Columns>
         </DataGrid>
         
-        <Button x:Name="Apri_Button" Content="Apri" Margin="0,0,10,10" Click="Apri_Button_Click" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="Chiudi_Button_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Apri_Button" Content="Apri" Margin="0,0,10,10" Click="Apri_Button_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="Chiudi_Button_Click" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>

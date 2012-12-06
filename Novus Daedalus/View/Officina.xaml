@@ -11,7 +11,7 @@
     </Page.Background>
 
     <Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi officina" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="105" Click="ChiudiButtonClick"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi officina" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="ChiudiButtonClick"/>
 
     </Grid>
 </Page>

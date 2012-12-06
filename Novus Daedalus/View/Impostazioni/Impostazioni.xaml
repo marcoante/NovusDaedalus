@@ -14,7 +14,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,6" Width="75" Click="Chiudi_Button_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="10,0,0,6" Width="75" Click="Chiudi_Button_Click" VerticalAlignment="Bottom"/>
         <Button x:Name="Sedi_Dibattimento_Button" Content="Sedi di dibattimento" HorizontalAlignment="Left" Margin="15,125,0,0" VerticalAlignment="Top" Click="Sedi_Dibattimento_Button_Click"/>
         <Label Content="Sede della Procura della Repubblica:" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="Sede_Procura_Repubblica_Label" Content="Sede attuale" HorizontalAlignment="Left" Margin="222,15,0,0" VerticalAlignment="Top" Foreground="#FF51D4C3"/>

@@ -41,7 +41,7 @@
 
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="347" VerticalAlignment="Top" Width="303" Margin="10,10,0,0">
             <Grid x:Name="Scheda_Grid" Margin="-1,1,-1,-1" HorizontalAlignment="Left" Width="303" Height="345" VerticalAlignment="Top">
-                <Label Content="Altri dati:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="Altri dati:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                 <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="283">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -50,7 +50,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Numero registro:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <Label Content="Numero registro:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                     <TextBox x:Name="numeroRegistroTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-37,4" Grid.Row="0" Text="{Binding NumeroRegistro, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="163"/>
                 </Grid>
                 <Grid x:Name="DataIscrizione_Grid" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="283">
@@ -61,7 +61,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Data iscrizione:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <Label Content="Data iscrizione:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                     <DatePicker x:Name="dataDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-33,4" Grid.Row="0" SelectedDate="{Binding Data, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="173"/>
                 </Grid>
                 <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="283">
@@ -72,7 +72,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Posizione fascicolo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <Label Content="Posizione fascicolo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                     <TextBox x:Name="posizioneFascicoloTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-35,4" Grid.Row="0" Text="{Binding PosizioneFascicolo, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="151"/>
                 </Grid>
 
@@ -84,7 +84,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Fonte notizia di reato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <Label Content="Fonte notizia di reato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                     <ComboBox x:Name="fonteComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-13,5" Grid.Row="0" VerticalAlignment="Center" Width="138">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -108,7 +108,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Specie notizia di reato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <Label Content="Specie notizia di reato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                     <ComboBox x:Name="specieComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-12,5" Grid.Row="0" VerticalAlignment="Center" Width="133">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -130,7 +130,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Label Content="Stato dell'indagine:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                        <Label Content="Stato dell'indagine:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                         <ComboBox x:Name="statoComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-26,5" Grid.Row="0" VerticalAlignment="Center" Width="152">
                             <ComboBox.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -152,7 +152,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Label Content="Referente:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                        <Label Content="Referente:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                         <ComboBox x:Name="referenteComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-73,5" Grid.Row="0" VerticalAlignment="Center" Width="199">
                             <ComboBox.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -167,7 +167,7 @@
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="346" Margin="318,11,0,0" VerticalAlignment="Top" Width="303">
             <Grid x:Name="Iscrizione_Grid2">
-                <Label Content="Atti e note:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="Atti e note:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
 
                 <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="281">
                     <Grid.ColumnDefinitions>
@@ -177,7 +177,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Archiviazione immediata:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <Label Content="Archiviazione immediata:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                     <ComboBox x:Name="archiviazioneImmediataComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-9,5" Grid.Row="0" VerticalAlignment="Center" Width="119">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -202,7 +202,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Indagini PG:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <Label Content="Indagini PG:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                     <ComboBox x:Name="indaginiPGComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="3,5,-62,5" Grid.Row="0" VerticalAlignment="Center" Width="187">
                         <ComboBox.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -225,15 +225,15 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Memo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <Label Content="Memo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                     <TextBox x:Name="memoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="90" Margin="3,6,-85,-58" Grid.Row="0" Text="{Binding Memo, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="214" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"/>
                 </Grid>
 
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="118" Margin="10,215,0,0" VerticalAlignment="Top" Width="281">
                     <Grid x:Name="UffComp_Grid">
-                        <Label Content="Ufficio competente:" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
-                        <RadioButton x:Name="TribRadioButton" Content="Procura presso il Tribunale" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton" IsChecked="True"/>
-                        <RadioButton x:Name="TribMinRadioButton" Content="Procura presso il Tribunale per i minorenni" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton"/>
+                        <Label Content="Ufficio competente:" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+                        <RadioButton x:Name="TribRadioButton" Content="Procura presso il Tribunale" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton" IsChecked="True" FontSize="14"/>
+                        <RadioButton x:Name="TribMinRadioButton" Content="Procura presso il Tribunale per i minorenni" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" GroupName="UffCompRadioButton" FontSize="14"/>
                         <Grid x:Name="grid9" HorizontalAlignment="Left" Margin="0,73,0,0" VerticalAlignment="Top" Width="269">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -242,7 +242,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <Label Content="Sede:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                            <Label Content="Sede:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                             <TextBox x:Name="sedeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-85,4" Grid.Row="0" Text="{Binding Sede, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="210"/>
                         </Grid>
                     </Grid>
@@ -251,8 +251,8 @@
 
             </Grid>
         </Border>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" Height="26" VerticalAlignment="Bottom"/>
-        <Button Content="Crea Scheda" HorizontalAlignment="Left" Margin="529,0,0,10" Width="92" Click="CreaSchedaButtonClick" Height="26" VerticalAlignment="Bottom"/>
-        <Button Content="&lt; Indietro" HorizontalAlignment="Left" Margin="432,0,0,10" Width="92" Click="IndietroButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" VerticalAlignment="Bottom"/>
+        <Button Content="Crea Scheda" Margin="0,0,10,10" Click="CreaSchedaButtonClick" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="96"/>
+        <Button Content="&lt; Indietro" HorizontalAlignment="Right" Margin="0,0,120,10" Width="92" Click="IndietroButtonClick" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

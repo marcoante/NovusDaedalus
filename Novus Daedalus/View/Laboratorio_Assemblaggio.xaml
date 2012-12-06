@@ -11,8 +11,8 @@
     </Page.Background>
 
     <Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi laboratorio" Margin="0,0,10,10" Click="Chiudi_Button_Click" HorizontalAlignment="Right" Width="116" Height="26" VerticalAlignment="Bottom"/>
-        <Label x:Name="Modalità_Label" Content="Laboratorio - Modalità assemblaggio" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi laboratorio" Margin="0,0,10,10" Click="Chiudi_Button_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="Modalità_Label" Content="Laboratorio - Modalità assemblaggio" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
 
     </Grid>
 </Page>

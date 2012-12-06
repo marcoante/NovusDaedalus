@@ -6,14 +6,14 @@
         <ImageBrush ImageSource="/Novus Daedalus;component/wallpapers/wallpaper_grass_1366x768.jpg"/>
     </Window.Background>
     <Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" Margin="0,0,10,6" Click="Chiudi_Button_Click" Cursor="Hand" HorizontalAlignment="Right" Width="75" Height="26" VerticalAlignment="Bottom"/>
-        <Label x:Name="Capo_Imputazione_Label" Content="Label" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="-0.598,0.244" FontWeight="Bold" HorizontalAlignment="Left" Width="110"/>
-        <Label Content="Testo dell'imputazione:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="Testo_Imputazione_Label" Content="Label" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Persone accusate:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="Persone_Accusate_Label" Content="Label" HorizontalAlignment="Left" Margin="12,162,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Elementi da provare:" HorizontalAlignment="Left" Margin="10,228,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="Elementi_da_provare_Label" Content="Label" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" Margin="0,0,10,6" Click="Chiudi_Button_Click" Cursor="Hand" HorizontalAlignment="Right" Width="75" VerticalAlignment="Bottom"/>
+        <Label x:Name="Capo_Imputazione_Label" Content="Label" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="-0.598,0.244" FontWeight="Bold" HorizontalAlignment="Left" Width="110" FontSize="14"/>
+        <Label Content="Testo dell'imputazione:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="Testo_Imputazione_Label" Content="Label" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label Content="Persone accusate:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="Persone_Accusate_Label" Content="Label" HorizontalAlignment="Left" Margin="12,162,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+        <Label Content="Elementi da provare:" HorizontalAlignment="Left" Margin="10,228,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="Elementi_da_provare_Label" Content="Label" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
 
     </Grid>
 </Window>

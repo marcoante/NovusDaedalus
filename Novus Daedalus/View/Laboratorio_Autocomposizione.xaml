@@ -14,13 +14,13 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Button x:Name="Chiudi_Button" Content="Salva e Chiudi" Margin="0,0,10,10" Click="Chiudi_Button_Click" Cursor="Hand" HorizontalAlignment="Right" Width="94" Height="26" VerticalAlignment="Bottom"/>
-        <Label x:Name="Modalità_Label" Content="Laboratorio - Modalità autocomposizione" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="Chiudi_Button" Content="Salva e Chiudi" Margin="0,0,10,10" Click="Chiudi_Button_Click" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="Modalità_Label" Content="Laboratorio - Modalità autocomposizione" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
         <Button x:Name="Casistica_Button" Content="Casistica" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="75" Cursor="Hand"/>
         <Button x:Name="Dati_Button" Content="Dati" HorizontalAlignment="Left" Margin="90,41,0,0" VerticalAlignment="Top" Width="75" Cursor="Hand" ToolTip="Recupera dati dalla scheda e li inserisce nel capo di imputazione"/>
         <Button x:Name="Reato_Tentato_Button" Content="Reato tentato" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top" Cursor="Hand"/>
-        <Button x:Name="Aggravanti_Button" Content="Aggravanti" HorizontalAlignment="Left" Margin="267,41,0,0" VerticalAlignment="Top" Cursor="Hand"/>
-        <Button x:Name="Menù_principale_Button" Content="Menù principale" HorizontalAlignment="Left" Margin="10,0,0,10" Cursor="Hand" Click="Menù_principale_Button_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Aggravanti_Button" Content="Aggravanti" HorizontalAlignment="Left" Margin="279,41,0,0" VerticalAlignment="Top" Cursor="Hand"/>
+        <Button x:Name="Menù_principale_Button" Content="Menù principale" HorizontalAlignment="Left" Margin="10,0,0,10" Cursor="Hand" Click="Menù_principale_Button_Click" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Page>

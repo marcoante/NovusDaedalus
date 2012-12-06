@@ -45,8 +45,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Luogo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="luogoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-106,4" Grid.Row="0" Text="{Binding Luogo, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="230"/>
+            <Label Content="Luogo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="luogoTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-106,4" Grid.Row="0" Text="{Binding Luogo, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="230" FontSize="14"/>
         </Grid>
         <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="286">
             <Grid.ColumnDefinitions>
@@ -56,10 +56,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Data:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Data:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <DatePicker x:Name="dataDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-91,4" Grid.Row="0" SelectedDate="{Binding Data, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="239"/>
         </Grid>
-        <Label Content="Seleziona gli indagati per il reato:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
+        <Label Content="Seleziona gli indagati per il reato:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" FontSize="14"/>
         <ListView x:Name="Reato_Indagati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,167,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Resources>
                 <Style TargetType="ListViewItem">
@@ -101,7 +101,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Seleziona le persone offese per il reato:" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
+        <Label Content="Seleziona le persone offese per il reato:" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" FontSize="14"/>
         <ListView x:Name="Reato_PO_List_View" HorizontalAlignment="Left" Height="100" Margin="10,314,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Resources>
                 <Style TargetType="ListViewItem">
@@ -144,8 +144,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="Inserisci_Button" Content="Ok" HorizontalAlignment="Left" Margin="221,0,0,10" Width="75" Click="InserisciButtonClick" Height="26" VerticalAlignment="Bottom"/>
-        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Inserisci_Button" Content="Ok" Margin="0,0,10,10" Click="InserisciButtonClick" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" VerticalAlignment="Bottom"/>
         <Grid x:Name="descrizione_reatoGrid" DataContext="{StaticResource tavola_reatiViewSource}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="286">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -154,8 +154,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Descrizione:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="descrizione_reatoComboBox" Grid.Column="1" DisplayMemberPath="Descrizione" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-79,5" Grid.Row="0" VerticalAlignment="Center" Width="203">
+            <Label Content="Descrizione:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
+            <ComboBox x:Name="descrizione_reatoComboBox" Grid.Column="1" DisplayMemberPath="Descrizione" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3,5,-79,5" Grid.Row="0" VerticalAlignment="Center" Width="203" FontSize="14">
                 <ComboBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel/>

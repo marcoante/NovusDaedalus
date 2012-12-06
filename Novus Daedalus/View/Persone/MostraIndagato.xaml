@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.Persone.MostraIndagato"
         xmlns:src="clr-namespace:Novus_Daedalus.Model"
-        Title="Dati sull'indagato" Height="667.104" Width="317.911" Loaded="MostraIndagato_Loaded">
+        Title="Dati sull'indagato" Height="714.865" Width="353.732" Loaded="MostraIndagato_Loaded">
     <Window.Resources>
         <src:persona x:Key="personaViewSource"/>
         <CollectionViewSource x:Key="reatoViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}"/>
@@ -20,7 +20,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="nomeTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Nome}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top">
@@ -31,7 +31,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="cognomeTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Cognome}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top">
@@ -42,7 +42,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="luogoNascitaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding LuogoNascita}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top">
@@ -53,7 +53,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="dataNascitaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding DataNascita}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top">
@@ -64,7 +64,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="domicilioTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Domicilio}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="11,84,0,0" VerticalAlignment="Top">
@@ -75,7 +75,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Ruolo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Ruolo:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="ruoloTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Ruolo}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
         <Grid x:Name="grid9" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top">
@@ -86,11 +86,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Sesso:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
             <TextBlock x:Name="sessoTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Sesso}" VerticalAlignment="Center" FontWeight="Bold"/>
         </Grid>
-        <Label Content="Reati collegati:" HorizontalAlignment="Left" Margin="10,451,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
-        <ListView x:Name="Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,482,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <Label Content="Reati collegati:" HorizontalAlignment="Left" Margin="10,451,0,0" VerticalAlignment="Top" FontStyle="Italic" FontSize="14"/>
+        <ListView x:Name="Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,501,0,0" VerticalAlignment="Top" Width="286" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Resources>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -125,7 +125,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="Stato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <Label Content="Stato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                 <TextBlock x:Name="statoTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Stato}" VerticalAlignment="Center" FontWeight="Bold"/>
             </Grid>
             <Grid x:Name="grid11" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top">
@@ -136,7 +136,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="Precedenti Penali:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <Label Content="Precedenti Penali:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                 <TextBlock x:Name="precedentiPenaliTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding PrecedentiPenali}" VerticalAlignment="Center" FontWeight="Bold"/>
             </Grid>
             <Grid x:Name="Dif1_Grid" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top">
@@ -147,7 +147,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="Primo difensore:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <Label Content="Primo difensore:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                 <TextBlock x:Name="difensore1TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding Difensore1}" VerticalAlignment="Center" FontWeight="Bold"/>
             </Grid>
             <Grid x:Name="grid14" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top">
@@ -158,7 +158,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="Qualità Difesa:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <Label Content="Qualità Difesa:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                 <TextBlock x:Name="qualitàDifesaTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding QualitàDifesa}" VerticalAlignment="Center" FontWeight="Bold"/>
             </Grid>
             <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top">
@@ -169,10 +169,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Label Content="Inizio Misura Cautelare:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <Label Content="Inizio Misura Cautelare:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
                 <TextBlock x:Name="inizioMisuraCautelareTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding InizioMisuraCautelare}" VerticalAlignment="Center" FontWeight="Bold"/>
             </Grid>
         </Grid>
-        <Button x:Name="Chiudi_Button" Content="Chiudi" HorizontalAlignment="Left" Margin="221,0,0,10" Width="75" Click="ChiudiButtonClick" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="Chiudi_Button" Content="Chiudi" Margin="0,0,10,10" Click="ChiudiButtonClick" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
     </Grid>
 </Window>
