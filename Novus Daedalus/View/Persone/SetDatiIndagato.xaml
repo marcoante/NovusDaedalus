@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Novus_Daedalus.View.Persone.SetDatiIndagato"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Dati dell'indagato" Height="698.014" Width="304.523" xmlns:Model="clr-namespace:Novus_Daedalus.Model" Loaded="SetDatiIndagato_Loaded">
+        Title="Dati dell'indagato" Height="698.014" Width="312.523" xmlns:Model="clr-namespace:Novus_Daedalus.Model" Loaded="SetDatiIndagato_Loaded">
     <Window.Resources>
         <Model:persona x:Key="personaViewSource"/>
         <Model:ErrorsToMessageConverter x:Key="eToMConverter" />
@@ -33,7 +33,7 @@
                     </Setter>
                 </Style>
             </Grid.Resources>
-            <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -42,9 +42,9 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Nome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-88,4" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="213" FontSize="14"/>
+                <TextBox x:Name="nomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,6,-91,5" Grid.Row="0" Text="{Binding Nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="217" FontSize="14"/>
             </Grid>
-            <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid3" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -53,9 +53,9 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Cognome:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <TextBox x:Name="cognomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-68,4" Grid.Row="0" Text="{Binding Cognome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="193" FontSize="14"/>
+                <TextBox x:Name="cognomeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,6,-68,5" Grid.Row="0" Text="{Binding Cognome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnDataErrors=true, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="194" FontSize="14"/>
             </Grid>
-            <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid4" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -67,7 +67,7 @@
                 <RadioButton x:Name="sessoMRadioButton" Grid.Column="1" HorizontalAlignment="Left" Margin="16,8,0,8" Grid.Row="0" VerticalAlignment="Center" Content="M" IsChecked="True"/>
                 <RadioButton x:Name="sessoFRadioButton" Content="F" Grid.Column="1" HorizontalAlignment="Left" Margin="67,8,0,0" VerticalAlignment="Top"/>
             </Grid>
-            <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid5" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -76,9 +76,9 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Luogo Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <TextBox x:Name="luogoNascitaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-45,4" Grid.Row="0" Text="{Binding LuogoNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="170" FontSize="14"/>
+                <TextBox x:Name="luogoNascitaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,6,-41,5" Grid.Row="0" Text="{Binding LuogoNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="167" FontSize="14"/>
             </Grid>
-            <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid6" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -87,9 +87,9 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Data Nascita:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <DatePicker x:Name="dataNascitaDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-30,4" Grid.Row="0" SelectedDate="{Binding DataNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="179"/>
+                <DatePicker x:Name="dataNascitaDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,6,-27,5" Grid.Row="0" SelectedDate="{Binding DataNascita, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="177"/>
             </Grid>
-            <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid7" HorizontalAlignment="Left" Margin="10,195,0,-1" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -98,11 +98,11 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Domicilio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <TextBox x:Name="domicilioTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-69,4" Grid.Row="0" Text="{Binding Domicilio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="195" FontSize="14"/>
+                <TextBox x:Name="domicilioTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,6,-70,5" Grid.Row="0" Text="{Binding Domicilio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="197" FontSize="14"/>
             </Grid>
         </Grid>
         <Grid x:Name="Dati_Indagato_Grid" HorizontalAlignment="Left" Height="235" Margin="0,229,0,0" VerticalAlignment="Top" Width="288">
-            <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid8" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -111,7 +111,7 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Stato:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <ComboBox x:Name="statoComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="77,5,-84,5" Grid.Row="0" VerticalAlignment="Center" Width="144">
+                <ComboBox x:Name="statoComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" Margin="77,6,-88,7" Grid.Row="0" VerticalAlignment="Center" Width="149">
                     <ComboBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <VirtualizingStackPanel/>
@@ -126,7 +126,7 @@
                     <ComboBoxItem Content="Fermo"/>
                 </ComboBox>
             </Grid>
-            <Grid x:Name="grid11" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid11" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -135,9 +135,9 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Qualità Difesa:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <TextBox x:Name="qualitàDifesaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-47,4" Grid.Row="0" Text="{Binding QualitàDifesa, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="172" FontSize="14"/>
+                <TextBox x:Name="qualitàDifesaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,6,-43,5" Grid.Row="0" Text="{Binding QualitàDifesa, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="169" FontSize="14"/>
             </Grid>
-            <Grid x:Name="grid12" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid12" HorizontalAlignment="Left" Margin="10,202,0,-2" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -146,7 +146,7 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Precedenti Penali:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <ComboBox x:Name="precedenti_penaliComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="16,3,-150,0" VerticalAlignment="Top" Width="141">
+                <ComboBox x:Name="precedenti_penaliComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="16,3,-144,0" VerticalAlignment="Top" Width="136">
                     <ComboBoxItem Content="Non verificati" IsSelected="True"/>
                     <ComboBoxItem Content="Si"/>
                     <ComboBoxItem Content="Nessuno"/>
@@ -177,7 +177,7 @@
                     <TextBox x:Name="cognomeTextBox1" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-10,4" Grid.Row="0" Text="{Binding Cognome, Mode=TwoWay}" VerticalAlignment="Center" Width="65" FontSize="14"/>
                 </Grid>
             </Grid>
-            <Grid x:Name="grid14" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="268">
+            <Grid x:Name="grid14" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="278">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -186,14 +186,14 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Inizio Misura Cautelare:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" FontSize="14"/>
-                <DatePicker x:Name="inizioMisuraCautelareDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-40,4" Grid.Row="0" SelectedDate="{Binding InizioMisuraCautelare, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="125"/>
+                <DatePicker x:Name="inizioMisuraCautelareDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,6,-28,5" Grid.Row="0" SelectedDate="{Binding InizioMisuraCautelare, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="114"/>
             </Grid>
         </Grid>
 
         <Button x:Name="Ok_Button" Content="Ok" Margin="0,0,10,10" Click="OkButtonClick" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
         <Button x:Name="Annulla_Button" Content="Annulla" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="AnnullaButtonClick" VerticalAlignment="Bottom"/>
         <Label Content="Seleziona i reati collegati:" HorizontalAlignment="Left" Margin="10,469,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <ListView x:Name="Persona_Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,500,0,0" VerticalAlignment="Top" Width="268" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListView x:Name="Persona_Reati_List_View" HorizontalAlignment="Left" Height="100" Margin="10,500,0,0" VerticalAlignment="Top" Width="277" ItemsSource="{Binding}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Resources>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -210,7 +210,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Width="148">
+                    <GridViewColumn Width="157">
                         <GridViewColumn.Header>
                             <CheckBox HorizontalAlignment="Center"
                                   Click="chkAllReatiClick"

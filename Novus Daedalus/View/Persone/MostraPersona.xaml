@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Model="clr-namespace:Novus_Daedalus.Model" mc:Ignorable="d" x:Class="Novus_Daedalus.View.Persone.MostraPersona"
         xmlns:src="clr-namespace:Novus_Daedalus.Model"
-        Title="Dati sulla persona" Height="493.179" Width="317.911" Loaded="MostraPersona_Loaded">
+        Title="Dati sulla persona" Height="493.179" Width="320.911" Loaded="MostraPersona_Loaded">
     <Window.Resources>
         <src:persona x:Key="personaViewSource"/>
         <CollectionViewSource x:Key="reatoViewSource" d:DesignSource="{d:DesignInstance {x:Type Model:reato}, CreateList=True}"/>
@@ -106,7 +106,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="Descrizione" >
+                    <GridViewColumn Header="Descrizione" Width="212" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=Descrizione}" />
