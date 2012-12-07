@@ -16,9 +16,13 @@
         <Button x:Name="Apri_Scheda_Button" Content="Apri scheda" HorizontalAlignment="Left" Margin="50,239,0,0" VerticalAlignment="Top" Width="123" Height="40" Click="ApriSchedaButtonClick" Cursor="Hand"/>
         <Button x:Name="Laboratorio_Button" Content="Laboratorio" HorizontalAlignment="Left" Margin="213,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF44D301" BorderThickness="0" Click="LaboratorioButtonClick" Cursor="Hand"/>
         <Button x:Name="Magazzino_Button" Content="Magazzino" HorizontalAlignment="Left" Margin="213,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFE82AC5" BorderThickness="0" Click="MagazzinoButtonClick" Cursor="Hand" Visibility="Hidden"/>
-        <Button x:Name="Persone_Button" Content="Persone" HorizontalAlignment="Left" Margin="768,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FF36C8D6" BorderThickness="0" Click="PersoneButtonClick" Cursor="Hand" Visibility="Hidden"/>
+        <Button x:Name="Persone_Button" Content="Persone" HorizontalAlignment="Left" Margin="583,194,0,0" VerticalAlignment="Top" Width="180" Height="100" BorderThickness="0" Click="PersoneButtonClick" Cursor="Hand" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
         <Button x:Name="Atti_Button" Content="Atti" HorizontalAlignment="Left" Margin="583,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF17F0C" BorderThickness="0" Click="AttiButtonClick" Cursor="Hand" Visibility="Hidden"/>
-        <Button x:Name="Seguiti_Button" Content="Seguiti" HorizontalAlignment="Left" Margin="583,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF9D90A" BorderThickness="0" Click="SeguitiButtonClick" Cursor="Hand" Visibility="Hidden"/>
+        <Button x:Name="Seguiti_Button" Content="Seguiti" HorizontalAlignment="Left" Margin="768,299,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFF9D90A" BorderThickness="0" Click="SeguitiButtonClick" Cursor="Hand" Visibility="Hidden"/>
         <Button x:Name="Officina_Button" Content="Officina" HorizontalAlignment="Left" Margin="213,194,0,0" VerticalAlignment="Top" Width="180" Height="100" Background="#FFD41212" BorderThickness="0" Click="OfficinaButtonClick" Cursor="Hand" Visibility="Collapsed"/>
         <Button x:Name="Impostazioni_Button" Content="Impostazioni" HorizontalAlignment="Left" Margin="50,284,0,0" VerticalAlignment="Top" Width="123" Height="40" Cursor="Hand" Click="Impostazioni_Button_Click"/>
         <Button x:Name="Logout_Button" Content="Logout" Margin="0,0,10,10" Click="LogoutButtonClick" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
